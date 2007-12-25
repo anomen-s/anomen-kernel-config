@@ -2,7 +2,7 @@ Todo:
 SMB/CIFS
 CONFIG_FORCEDETH=m	network drivers are usually modules
 CONFIG_CRYPTO*=m	usually not required
-
+LOCALVERSION_AUTO=n	
 ----------------------
 Done:
 s9 - CONFIG_USB_ACM
