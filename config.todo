@@ -3,6 +3,8 @@ SMB/CIFS
 CONFIG_FORCEDETH=m	network drivers are usually modules
 CONFIG_CRYPTO*=m	usually not required
 LOCALVERSION_AUTO=n	
+CONFIG_X86_REBOOTFIXUPS disable, unused
+CONFIG_SMP=		set correctly
 ----------------------
 Done:
 s9 - CONFIG_USB_ACM
