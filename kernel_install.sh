@@ -14,7 +14,7 @@ read
 
 cp -v ./arch/$ARCH/boot/bzImage "/boot/kernel-$KERVER" || exit 1
 cp -v ./System.map "/boot/System.map-$KERVER" || exit 2
-cp -v ./.config "/boot/config-$KERVER" || exit 3
+cp -v ./.config "/boot/Config-$KERVER" || exit 3
 
 
 echo "" >> /boot/grub/grub.conf
