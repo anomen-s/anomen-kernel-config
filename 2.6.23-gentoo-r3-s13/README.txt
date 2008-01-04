@@ -1,0 +1,1 @@
+- added CONFIG_SENSORS_ADM1021 (detected by sensors-detect, with low certanity)
