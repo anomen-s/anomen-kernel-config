@@ -1,16 +1,13 @@
 Todo:
 =====
-CONFIG_CRYPTO*=m	usually not required, set to m
-SMB/CIFS		some more testing...
 
 Todo -sN kernel:
 ================
-LOCALVERSION_AUTO=n	
-CONFIG_FORCEDETH=m	network drivers are usually modules
-CONFIG_8139CP		probably causes hangups
 
 Todo -tN kernel:
 ================
+CONFIG_CRYPTO*=m	usually not required, set to m
+SMB/CIFS		some more testing...
 
 Done:
 =====
@@ -18,3 +15,6 @@ CONFIG_USB_ACM		usb modem
 CONFIG_SMP=		set correctly
 CONFIG_X86_REBOOTFIXUPS disable, unused
 CONFIG_NETFILTER_NETLINK=m required for openswan
+LOCALVERSION_AUTO=n	
+CONFIG_FORCEDETH=m	network drivers are usually modules
+CONFIG_8139CP		probably causes hangups
