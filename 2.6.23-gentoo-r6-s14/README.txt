@@ -1,3 +1,3 @@
-2.6.23-gentoo-r3-s14
+2.6.23-gentoo-r6-s14
 ====================
 - removed git LOCALVERSION_AUTO
