@@ -1,8 +1,16 @@
 #!/bin/sh
 
+#echo Building kernel
+
+make all module_install || exit 10
+
 # System settings:
-ROOT=/dev/hda2
-ARCH=i386 #x86_64
+ROOT=`cat /etc/fstab | sed -ne 's@^[ \t]*\([^ \t][^ \t]*\)[ \t][ \t]*/[ \t].*@\1@p'`
+grep -q 'CONFIG_X86_32=y' .config && ARCH=i386
+grep -q 'CONFIG_X86_64=y' .config && ARCH=x86_64
+
+#ROOT=/dev/hda2
+#ARCH=i386 #x86_64
 
 # extract verions
 KERNEL=`pwd | sed -e 's@.*/linux-@@'`
@@ -20,3 +28,8 @@ cp -v ./.config "/boot/Config-$KERVER" || exit 3
 echo "" >> /boot/grub/grub.conf
 echo "title=Linux $KERVER" >> /boot/grub/grub.conf
 echo kernel "/boot/kernel-$KERVER" "root=$ROOT" >> /boot/grub/grub.conf
+
+echo * INFO *
+echo grub.conf was updated, but manual cleanup is recomended.
+echo ""
+echo Finished.
