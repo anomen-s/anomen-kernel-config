@@ -2,7 +2,7 @@
 
 #echo Building kernel
 
-make all module_install || exit 10
+make all modules_install || exit 10
 
 # System settings:
 ROOT=`cat /etc/fstab | sed -ne 's@^[ \t]*\([^ \t][^ \t]*\)[ \t][ \t]*/[ \t].*@\1@p'`
@@ -29,7 +29,7 @@ echo "" >> /boot/grub/grub.conf
 echo "title=Linux $KERVER" >> /boot/grub/grub.conf
 echo kernel "/boot/kernel-$KERVER" "root=$ROOT" >> /boot/grub/grub.conf
 
-echo * INFO *
+echo "* INFO *"
 echo grub.conf was updated, but manual cleanup is recomended.
 echo ""
 echo Finished.
