@@ -11,3 +11,5 @@
 2.6.23-gentoo-r6-s15
 ====================
 - added PPP
+- returned UHCI - causes failed asserts in vmware ?
+- forcedeth in kernel
