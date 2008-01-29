@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #echo Building kernel
-
+make clean
 make all modules_install || exit 10
 
 # System settings:
