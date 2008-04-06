@@ -26,7 +26,9 @@
 
 2.6.23-gentoo-r9-s16
 ====================
-- 
-
-
+- kernel debug
++ printf timestamps
+- cpufreq powersave governor
+- crypto HW
++ cifs stats
 
