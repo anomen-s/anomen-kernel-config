@@ -36,3 +36,7 @@
 2.6.24-gentoo-r4-s17
 ====================
 . no changes
+
+not yet used
+====================
+* reduced number of ramdisks to 4
