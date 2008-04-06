@@ -10,12 +10,10 @@ grep -q 'CONFIG_X86_32=y' .config && ARCH=i386
 grep -q 'CONFIG_X86_64=y' .config && ARCH=x86_64
 
 #ROOT=/dev/hda2
-#ARCH=i386 #x86_64
 
 # extract verions
-KERNEL=`pwd | sed -e 's@.*/linux-@@'`
-KERBUILD=`sed -ne 's/CONFIG_LOCALVERSION="\(.*\)"/\1/p' .config`
-KERVER="$KERNEL$KERBUILD"
+KERNEL=`make kernelversion`
+KERVER=`make kernelrelease`
 
 echo -n install kernel "$KERVER" ' ?'
 read 
