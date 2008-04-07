@@ -40,3 +40,4 @@
 not yet used
 ====================
 * reduced number of ramdisks to 4
+* in-kernel USB
