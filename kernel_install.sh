@@ -7,6 +7,8 @@ grep -q 'CONFIG_X86_64=y' .config && ARCH=x86_64
 
 #ROOT=/dev/hda2
 
+make prepare
+
 # extract verions
 #KERNEL=`make kernelversion`
 KERVER=`make kernelrelease`
