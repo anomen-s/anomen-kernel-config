@@ -44,3 +44,7 @@
 + EFI MBR
 * preemptive kernel
 * max 2 CPUs
+
+2.6.25-gentoo-r6-s19
+====================
+* meddling with PREEMT, freq,...
