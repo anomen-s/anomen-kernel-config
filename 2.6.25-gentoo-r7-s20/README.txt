@@ -51,4 +51,5 @@
 
 2.6.25-gentoo-r7-s20
 ====================
-
++ PPP
+* minor meddling with PREEMT, freq,...
