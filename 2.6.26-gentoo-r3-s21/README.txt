@@ -51,4 +51,14 @@
 
 2.6.25-gentoo-r7-s20
 ====================
++ PPP
+* minor meddling with PREEMT, freq,...
 
+2.6.26-gentoo-r3-s21
+====================
+- compat. VDSO
++ PAT
++ Packet socket: mmapped IO
+- PATA
+* RTC experiments
++ nvram
