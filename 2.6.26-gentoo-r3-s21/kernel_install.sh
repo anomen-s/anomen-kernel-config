@@ -25,8 +25,13 @@ read
 echo make clean...
 make clean
 
+
 echo make all...
-make all modules_install || exit 10
+
+chown portage . -R
+su portage -c make all
+
+make modules_install || exit 10
 
 cp -v ./arch/$ARCH/boot/bzImage "/boot/kernel-$KERVER" || exit 1
 cp -v ./System.map "/boot/System.map-$KERVER" || exit 2
