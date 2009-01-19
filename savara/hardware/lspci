@@ -1,0 +1,200 @@
+00:00.0 RAM memory: nVidia Corporation MCP55 Memory Controller (rev a1)
+	Subsystem: Micro-Star International Co., Ltd. Device 7250
+	Flags: bus master, 66MHz, fast devsel, latency 0
+	Capabilities: [44] HyperTransport: Slave or Primary Interface
+	Capabilities: [dc] HyperTransport: MSI Mapping Enable+ Fixed-
+
+00:01.0 ISA bridge: nVidia Corporation MCP55 LPC Bridge (rev a2)
+	Subsystem: Micro-Star International Co., Ltd. Device 7250
+	Flags: bus master, 66MHz, fast devsel, latency 0
+	I/O ports at 2f00 [size=128]
+
+00:01.1 SMBus: nVidia Corporation MCP55 SMBus (rev a2)
+	Subsystem: Micro-Star International Co., Ltd. Device 7250
+	Flags: 66MHz, fast devsel, IRQ 11
+	I/O ports at 2900 [size=64]
+	I/O ports at 2d00 [size=64]
+	I/O ports at 2e00 [size=64]
+	Capabilities: [44] Power Management version 2
+	Kernel driver in use: nForce2_smbus
+	Kernel modules: i2c-nforce2
+
+00:02.0 USB Controller: nVidia Corporation MCP55 USB Controller (rev a1) (prog-if 10 [OHCI])
+	Subsystem: Micro-Star International Co., Ltd. Device 7250
+	Flags: bus master, 66MHz, fast devsel, latency 0, IRQ 22
+	Memory at fbffb000 (32-bit, non-prefetchable) [size=4K]
+	Capabilities: [44] Power Management version 2
+	Kernel driver in use: ohci_hcd
+
+00:02.1 USB Controller: nVidia Corporation MCP55 USB Controller (rev a2) (prog-if 20 [EHCI])
+	Subsystem: Micro-Star International Co., Ltd. Device 7250
+	Flags: bus master, 66MHz, fast devsel, latency 0, IRQ 23
+	Memory at fbffac00 (32-bit, non-prefetchable) [size=256]
+	Capabilities: [44] Debug port: BAR=1 offset=0098
+	Capabilities: [80] Power Management version 2
+	Kernel driver in use: ehci_hcd
+
+00:05.0 IDE interface: nVidia Corporation MCP55 SATA Controller (rev a2) (prog-if 85 [Master SecO PriO])
+	Subsystem: Micro-Star International Co., Ltd. Device 7250
+	Flags: bus master, 66MHz, fast devsel, latency 0, IRQ 22
+	I/O ports at d480 [size=8]
+	I/O ports at d400 [size=4]
+	I/O ports at d080 [size=8]
+	I/O ports at d000 [size=4]
+	I/O ports at cc00 [size=16]
+	Memory at fbff9000 (32-bit, non-prefetchable) [size=4K]
+	Capabilities: [44] Power Management version 2
+	Capabilities: [b0] Message Signalled Interrupts: Mask- 64bit+ Queue=0/2 Enable-
+	Capabilities: [cc] HyperTransport: MSI Mapping Enable+ Fixed+
+	Kernel driver in use: sata_nv
+
+00:05.1 IDE interface: nVidia Corporation MCP55 SATA Controller (rev a2) (prog-if 85 [Master SecO PriO])
+	Subsystem: Micro-Star International Co., Ltd. Device 7250
+	Flags: bus master, 66MHz, fast devsel, latency 0, IRQ 21
+	I/O ports at c880 [size=8]
+	I/O ports at c800 [size=4]
+	I/O ports at c480 [size=8]
+	I/O ports at c400 [size=4]
+	I/O ports at c080 [size=16]
+	Memory at fbff8000 (32-bit, non-prefetchable) [size=4K]
+	Capabilities: [44] Power Management version 2
+	Capabilities: [b0] Message Signalled Interrupts: Mask- 64bit+ Queue=0/2 Enable-
+	Capabilities: [cc] HyperTransport: MSI Mapping Enable+ Fixed+
+	Kernel driver in use: sata_nv
+
+00:05.2 IDE interface: nVidia Corporation MCP55 SATA Controller (rev a2) (prog-if 85 [Master SecO PriO])
+	Subsystem: Micro-Star International Co., Ltd. Device 7250
+	Flags: bus master, 66MHz, fast devsel, latency 0, IRQ 20
+	I/O ports at c000 [size=8]
+	I/O ports at bc00 [size=4]
+	I/O ports at b880 [size=8]
+	I/O ports at b800 [size=4]
+	I/O ports at b480 [size=16]
+	Memory at fbff7000 (32-bit, non-prefetchable) [size=4K]
+	Capabilities: [44] Power Management version 2
+	Capabilities: [b0] Message Signalled Interrupts: Mask- 64bit+ Queue=0/2 Enable-
+	Capabilities: [cc] HyperTransport: MSI Mapping Enable+ Fixed+
+	Kernel driver in use: sata_nv
+
+00:06.0 PCI bridge: nVidia Corporation MCP55 PCI bridge (rev a2) (prog-if 01 [Subtractive decode])
+	Flags: bus master, 66MHz, fast devsel, latency 0
+	Bus: primary=00, secondary=01, subordinate=01, sec-latency=64
+	Capabilities: [b8] Subsystem: Micro-Star International Co., Ltd. Device 7250
+	Capabilities: [8c] HyperTransport: MSI Mapping Enable+ Fixed-
+
+00:06.1 Audio device: nVidia Corporation MCP55 High Definition Audio (rev a2)
+	Subsystem: Micro-Star International Co., Ltd. Device 7250
+	Flags: bus master, 66MHz, fast devsel, latency 0, IRQ 21
+	Memory at fbff0000 (32-bit, non-prefetchable) [size=16K]
+	Capabilities: [44] Power Management version 2
+	Capabilities: [50] Message Signalled Interrupts: Mask+ 64bit+ Queue=0/0 Enable-
+	Capabilities: [6c] HyperTransport: MSI Mapping Enable+ Fixed+
+	Kernel driver in use: HDA Intel
+	Kernel modules: snd-hda-intel
+
+00:08.0 Bridge: nVidia Corporation MCP55 Ethernet (rev a2)
+	Subsystem: Micro-Star International Co., Ltd. Device 7250
+	Flags: bus master, 66MHz, fast devsel, latency 0, IRQ 313
+	Memory at fbff6000 (32-bit, non-prefetchable) [size=4K]
+	I/O ports at b400 [size=8]
+	Memory at fbffa800 (32-bit, non-prefetchable) [size=256]
+	Memory at fbffa400 (32-bit, non-prefetchable) [size=16]
+	Capabilities: [44] Power Management version 2
+	Capabilities: [70] MSI-X: Enable- Mask- TabSize=8
+	Capabilities: [50] Message Signalled Interrupts: Mask+ 64bit+ Queue=0/3 Enable+
+	Capabilities: [6c] HyperTransport: MSI Mapping Enable+ Fixed+
+	Kernel driver in use: forcedeth
+
+00:0a.0 PCI bridge: nVidia Corporation MCP55 PCI Express bridge (rev a2) (prog-if 00 [Normal decode])
+	Flags: bus master, fast devsel, latency 0
+	Bus: primary=00, secondary=02, subordinate=02, sec-latency=0
+	Capabilities: [40] Subsystem: nVidia Corporation Device 0000
+	Capabilities: [48] Power Management version 2
+	Capabilities: [50] Message Signalled Interrupts: Mask- 64bit+ Queue=0/1 Enable+
+	Capabilities: [60] HyperTransport: MSI Mapping Enable+ Fixed-
+	Capabilities: [80] Express Root Port (Slot+), MSI 00
+	Kernel driver in use: pcieport-driver
+
+00:0b.0 PCI bridge: nVidia Corporation MCP55 PCI Express bridge (rev a2) (prog-if 00 [Normal decode])
+	Flags: bus master, fast devsel, latency 0
+	Bus: primary=00, secondary=03, subordinate=03, sec-latency=0
+	Capabilities: [40] Subsystem: nVidia Corporation Device 0000
+	Capabilities: [48] Power Management version 2
+	Capabilities: [50] Message Signalled Interrupts: Mask- 64bit+ Queue=0/1 Enable+
+	Capabilities: [60] HyperTransport: MSI Mapping Enable+ Fixed-
+	Capabilities: [80] Express Root Port (Slot+), MSI 00
+	Kernel driver in use: pcieport-driver
+
+00:0c.0 PCI bridge: nVidia Corporation MCP55 PCI Express bridge (rev a2) (prog-if 00 [Normal decode])
+	Flags: bus master, fast devsel, latency 0
+	Bus: primary=00, secondary=04, subordinate=04, sec-latency=0
+	Capabilities: [40] Subsystem: nVidia Corporation Device 0000
+	Capabilities: [48] Power Management version 2
+	Capabilities: [50] Message Signalled Interrupts: Mask- 64bit+ Queue=0/1 Enable+
+	Capabilities: [60] HyperTransport: MSI Mapping Enable+ Fixed-
+	Capabilities: [80] Express Root Port (Slot+), MSI 00
+	Kernel driver in use: pcieport-driver
+
+00:0d.0 PCI bridge: nVidia Corporation MCP55 PCI Express bridge (rev a2) (prog-if 00 [Normal decode])
+	Flags: bus master, fast devsel, latency 0
+	Bus: primary=00, secondary=05, subordinate=05, sec-latency=0
+	Capabilities: [40] Subsystem: nVidia Corporation Device 0000
+	Capabilities: [48] Power Management version 2
+	Capabilities: [50] Message Signalled Interrupts: Mask- 64bit+ Queue=0/1 Enable+
+	Capabilities: [60] HyperTransport: MSI Mapping Enable+ Fixed-
+	Capabilities: [80] Express Root Port (Slot+), MSI 00
+	Kernel driver in use: pcieport-driver
+
+00:0e.0 PCI bridge: nVidia Corporation MCP55 PCI Express bridge (rev a2) (prog-if 00 [Normal decode])
+	Flags: bus master, fast devsel, latency 0
+	Bus: primary=00, secondary=06, subordinate=06, sec-latency=0
+	Capabilities: [40] Subsystem: nVidia Corporation Device 0000
+	Capabilities: [48] Power Management version 2
+	Capabilities: [50] Message Signalled Interrupts: Mask- 64bit+ Queue=0/1 Enable+
+	Capabilities: [60] HyperTransport: MSI Mapping Enable+ Fixed-
+	Capabilities: [80] Express Root Port (Slot+), MSI 00
+	Kernel driver in use: pcieport-driver
+
+00:0f.0 PCI bridge: nVidia Corporation MCP55 PCI Express bridge (rev a2) (prog-if 00 [Normal decode])
+	Flags: bus master, fast devsel, latency 0
+	Bus: primary=00, secondary=07, subordinate=07, sec-latency=0
+	I/O behind bridge: 0000e000-0000efff
+	Memory behind bridge: fc000000-febfffff
+	Prefetchable memory behind bridge: 00000000c0000000-00000000cfffffff
+	Capabilities: [40] Subsystem: nVidia Corporation Device 0000
+	Capabilities: [48] Power Management version 2
+	Capabilities: [50] Message Signalled Interrupts: Mask- 64bit+ Queue=0/1 Enable+
+	Capabilities: [60] HyperTransport: MSI Mapping Enable+ Fixed-
+	Capabilities: [80] Express Root Port (Slot+), MSI 00
+	Kernel driver in use: pcieport-driver
+
+00:18.0 Host bridge: Advanced Micro Devices [AMD] K8 [Athlon64/Opteron] HyperTransport Technology Configuration
+	Flags: fast devsel
+	Capabilities: [80] HyperTransport: Host or Secondary Interface
+
+00:18.1 Host bridge: Advanced Micro Devices [AMD] K8 [Athlon64/Opteron] Address Map
+	Flags: fast devsel
+
+00:18.2 Host bridge: Advanced Micro Devices [AMD] K8 [Athlon64/Opteron] DRAM Controller
+	Flags: fast devsel
+
+00:18.3 Host bridge: Advanced Micro Devices [AMD] K8 [Athlon64/Opteron] Miscellaneous Control
+	Flags: fast devsel
+	Capabilities: [f0] Secure device <?>
+	Kernel driver in use: k8temp
+	Kernel modules: k8temp
+
+07:00.0 VGA compatible controller: nVidia Corporation G70 [GeForce 7600 GS] (rev a1) (prog-if 00 [VGA controller])
+	Subsystem: CardExpert Technology Device 0401
+	Flags: bus master, fast devsel, latency 0, IRQ 19
+	Memory at fd000000 (32-bit, non-prefetchable) [size=16M]
+	Memory at c0000000 (64-bit, prefetchable) [size=256M]
+	Memory at fc000000 (64-bit, non-prefetchable) [size=16M]
+	I/O ports at ec00 [size=128]
+	[virtual] Expansion ROM at febe0000 [disabled] [size=128K]
+	Capabilities: [60] Power Management version 2
+	Capabilities: [68] Message Signalled Interrupts: Mask- 64bit+ Queue=0/0 Enable-
+	Capabilities: [78] Express Endpoint, MSI 00
+	Kernel driver in use: nvidia
+	Kernel modules: nvidia
+

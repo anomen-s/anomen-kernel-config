@@ -1,0 +1,36 @@
+Module                  Size  Used by
+usb_storage            48832  0 
+cdc_acm                19040  0 
+vmnet                  34176  11 
+ppdev                  10888  0 
+parport_pc             45192  0 
+parport                45040  2 ppdev,parport_pc
+vmmon                1844300  7 
+w83627ehf              26576  0 
+hwmon_vid               4160  1 w83627ehf
+fuse                   54528  3 
+cpufreq_ondemand       10192  1 
+snd_seq_oss            35904  0 
+snd_seq_midi_event      9152  1 snd_seq_oss
+snd_seq                61344  4 snd_seq_oss,snd_seq_midi_event
+snd_seq_device          9300  2 snd_seq_oss,snd_seq
+snd_pcm_oss            43808  0 
+snd_mixer_oss          19136  2 snd_pcm_oss
+powernow_k8            15748  1 
+freq_table              5584  2 cpufreq_ondemand,powernow_k8
+nvidia               7813544  26 
+snd_hda_intel         424468  2 
+i2c_nforce2             8256  0 
+i2c_core               28448  2 nvidia,i2c_nforce2
+snd_pcm                84232  2 snd_pcm_oss,snd_hda_intel
+snd_timer              26640  2 snd_seq,snd_pcm
+snd                    68104  10 snd_seq_oss,snd_seq,snd_seq_device,snd_pcm_oss,snd_mixer_oss,snd_hda_intel,snd_pcm,snd_timer
+snd_page_alloc         11408  2 snd_hda_intel,snd_pcm
+pcspkr                  3840  0 
+8250_pnp               12544  0 
+sr_mod                 20036  0 
+sg                     37408  0 
+k8temp                  6592  0 
+rtc                    16768  0 
+thermal                22496  0 
+button                  9760  0 
