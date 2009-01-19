@@ -3,6 +3,7 @@ Todo:
 + PPP :  CONFIG_PPPOE,  CONFIG_PPP_MPPE, CONFIG_PPP_SYNC_TTY, CONFIG_PPP_BSDCOMP
 - NTFS only as module
 * remove PREEMP ?
++ USB_SERIAL for garmin
 
 Todo -sN kernel:
 ================
