@@ -68,8 +68,10 @@
 ====================
 *** never used ***
 
-2.6.27-gentoo-r7-s23
+2.6.27-gentoo-r8-s23
 ====================
 + CONFIG_UNUSED_SYMBOLS for vmware
 * some kernel hacks (STRICT_DEVMEM, EARLY_PRINTK)
 + AMD IOMMU
++ USB_SERIAL for garmin
+
