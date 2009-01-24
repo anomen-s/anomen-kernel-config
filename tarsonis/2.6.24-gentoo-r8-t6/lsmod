@@ -1,0 +1,38 @@
+Module                  Size  Used by
+sg                     22816  0 
+usb_storage            35680  0 
+cdc_acm                10656  0 
+it87                   11788  0 
+hwmon_vid               1600  1 it87
+ipv6                  178788  19 
+snd_pcm_oss            28768  0 
+snd_mixer_oss          11712  1 snd_pcm_oss
+snd_seq_oss            20736  0 
+snd_seq_midi_event      3328  1 snd_seq_oss
+snd_seq                28368  4 snd_seq_oss,snd_seq_midi_event
+fuse                   33492  0 
+usbhid                 20800  0 
+nvidia               3653352  12 
+snd_via82xx            17428  1 
+snd_ac97_codec         69664  1 snd_via82xx
+ac97_bus                1024  1 snd_ac97_codec
+snd_pcm                40456  4 snd_pcm_oss,snd_via82xx,snd_ac97_codec
+snd_timer              13252  2 snd_seq,snd_pcm
+snd_page_alloc          6280  2 snd_via82xx,snd_pcm
+snd_mpu401_uart         4288  1 snd_via82xx
+snd_rawmidi            13728  1 snd_mpu401_uart
+snd_seq_device          4364  3 snd_seq_oss,snd_seq,snd_rawmidi
+snd                    28324  12 snd_pcm_oss,snd_mixer_oss,snd_seq_oss,snd_seq,snd_via82xx,snd_ac97_codec,snd_pcm,snd_timer,snd_mpu401_uart,snd_rawmidi,snd_seq_device
+floppy                 43460  0 
+uhci_hcd               17356  0 
+parport_pc             28004  0 
+parport                23752  1 parport_pc
+i2c_viapro              5524  0 
+i2c_core               12752  1 i2c_viapro
+usbcore                87468  5 usb_storage,cdc_acm,usbhid,uhci_hcd
+8139too                17344  0 
+mii                     3008  1 8139too
+via_agp                 6400  1 
+agpgart                18032  2 nvidia,via_agp
+processor              15520  0 
+button                  5584  0 

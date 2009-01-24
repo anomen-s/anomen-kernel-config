@@ -1,0 +1,84 @@
+00:00.0 Host bridge: VIA Technologies, Inc. VT8366/A/7 [Apollo KT266/A/333]
+	Subsystem: VIA Technologies, Inc. VT8366/A/7 [Apollo KT266/A/333]
+	Flags: bus master, medium devsel, latency 0
+	Memory at e8000000 (32-bit, prefetchable) [size=64M]
+	Capabilities: [a0] AGP version 2.0
+	Capabilities: [c0] Power Management version 2
+	Kernel driver in use: agpgart-via
+	Kernel modules: via-agp
+
+00:01.0 PCI bridge: VIA Technologies, Inc. VT8366/A/7 [Apollo KT266/A/333 AGP] (prog-if 00 [Normal decode])
+	Flags: bus master, 66MHz, medium devsel, latency 0
+	Bus: primary=00, secondary=01, subordinate=01, sec-latency=0
+	Memory behind bridge: ec000000-edffffff
+	Prefetchable memory behind bridge: e0000000-e7ffffff
+	Capabilities: [80] Power Management version 2
+
+00:0c.0 Ethernet controller: Realtek Semiconductor Co., Ltd. RTL-8139/8139C/8139C+ (rev 10)
+	Subsystem: Device 4554:434e
+	Flags: bus master, medium devsel, latency 32, IRQ 11
+	I/O ports at d000 [size=256]
+	Memory at ee000000 (32-bit, non-prefetchable) [size=256]
+	Capabilities: [50] Power Management version 2
+	Kernel driver in use: 8139too
+	Kernel modules: 8139too
+
+00:11.0 ISA bridge: VIA Technologies, Inc. VT8233 PCI to ISA Bridge
+	Subsystem: VIA Technologies, Inc. VT8233 PCI to ISA Bridge
+	Flags: bus master, stepping, medium devsel, latency 0
+	Capabilities: [c0] Power Management version 2
+	Kernel modules: i2c-viapro
+
+00:11.1 IDE interface: VIA Technologies, Inc. VT82C586A/B/VT82C686/A/B/VT823x/A/C PIPC Bus Master IDE (rev 06) (prog-if 8a [Master SecP PriP])
+	Subsystem: VIA Technologies, Inc. VT82C586/B/VT82C686/A/B/VT8233/A/C/VT8235 PIPC Bus Master IDE
+	Flags: bus master, medium devsel, latency 32, IRQ 11
+	[virtual] Memory at 000001f0 (32-bit, non-prefetchable) [size=8]
+	[virtual] Memory at 000003f0 (type 3, non-prefetchable) [size=1]
+	[virtual] Memory at 00000170 (32-bit, non-prefetchable) [size=8]
+	[virtual] Memory at 00000370 (type 3, non-prefetchable) [size=1]
+	I/O ports at d400 [size=16]
+	Capabilities: [c0] Power Management version 2
+	Kernel driver in use: VIA_IDE
+
+00:11.2 USB Controller: VIA Technologies, Inc. VT82xxxxx UHCI USB 1.1 Controller (rev 1b) (prog-if 00 [UHCI])
+	Subsystem: VIA Technologies, Inc. (Wrong ID) USB Controller
+	Flags: bus master, medium devsel, latency 32, IRQ 5
+	I/O ports at d800 [size=32]
+	Capabilities: [80] Power Management version 2
+	Kernel driver in use: uhci_hcd
+	Kernel modules: uhci-hcd
+
+00:11.3 USB Controller: VIA Technologies, Inc. VT82xxxxx UHCI USB 1.1 Controller (rev 1b) (prog-if 00 [UHCI])
+	Subsystem: VIA Technologies, Inc. (Wrong ID) USB Controller
+	Flags: bus master, medium devsel, latency 32, IRQ 5
+	I/O ports at dc00 [size=32]
+	Capabilities: [80] Power Management version 2
+	Kernel driver in use: uhci_hcd
+	Kernel modules: uhci-hcd
+
+00:11.4 USB Controller: VIA Technologies, Inc. VT82xxxxx UHCI USB 1.1 Controller (rev 1b) (prog-if 00 [UHCI])
+	Subsystem: VIA Technologies, Inc. (Wrong ID) USB Controller
+	Flags: bus master, medium devsel, latency 32, IRQ 5
+	I/O ports at e000 [size=32]
+	Capabilities: [80] Power Management version 2
+	Kernel driver in use: uhci_hcd
+	Kernel modules: uhci-hcd
+
+00:11.5 Multimedia audio controller: VIA Technologies, Inc. VT8233/A/8235/8237 AC97 Audio Controller (rev 30)
+	Subsystem: VIA Technologies, Inc. Device 4511
+	Flags: medium devsel, IRQ 12
+	I/O ports at e400 [size=256]
+	Capabilities: [c0] Power Management version 2
+	Kernel driver in use: VIA 82xx Audio
+	Kernel modules: snd-via82xx
+
+01:00.0 VGA compatible controller: nVidia Corporation NV15DDR [GeForce2 Ti] (rev a4) (prog-if 00 [VGA controller])
+	Flags: bus master, 66MHz, medium devsel, latency 248, IRQ 11
+	Memory at ec000000 (32-bit, non-prefetchable) [size=16M]
+	Memory at e0000000 (32-bit, prefetchable) [size=128M]
+	[virtual] Expansion ROM at ed000000 [disabled] [size=64K]
+	Capabilities: [60] Power Management version 1
+	Capabilities: [44] AGP version 2.0
+	Kernel driver in use: nvidia
+	Kernel modules: nvidia
+
