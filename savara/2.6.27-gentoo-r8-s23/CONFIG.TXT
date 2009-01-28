@@ -74,4 +74,4 @@
 * some kernel hacks (STRICT_DEVMEM, EARLY_PRINTK)
 + AMD IOMMU
 + USB_SERIAL for garmin
-
++ Bluetooth modules
