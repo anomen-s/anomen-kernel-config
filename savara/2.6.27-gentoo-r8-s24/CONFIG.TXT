@@ -75,3 +75,7 @@
 + AMD IOMMU
 + USB_SERIAL for garmin
 + Bluetooth modules
+
+2.6.27-gentoo-r8-s24
+====================
++ Creative WebCam
