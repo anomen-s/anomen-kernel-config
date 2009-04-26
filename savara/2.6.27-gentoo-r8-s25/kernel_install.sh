@@ -5,31 +5,27 @@
 # $Id$ 
 
 # System settings:
-ROOT=`cat /etc/fstab | sed -ne 's@^[ \t]*\([^ \t][^ \t]*\)[ \t][ \t]*/[ \t].*@\1@p'`
+ROOT=/dev/sda2
 
 echo chown portage...
-chown portage . -R
+chown portage . -R || exit 4
 
 echo make prepare
-make prepare
+make prepare || exit 5
 
 # extract verions
-#KERNEL=`make kernelversion`
 KERVER=`make kernelrelease`
 
 echo "Root: $ROOT"
-#echo "Kern: $KERNEL"
-#echo "KVer: $KERVER"
 
 echo -n Build '&' install kernel "$KERVER" ' ?'
 read 
 
-#echo Building kernel
 echo make clean...
-make clean
+make clean || exit 6
 
 echo make all...
-su portage -c make all
+su portage -c make all || exit 7
 
 echo make modules_install...
 make modules_install || exit 10
@@ -40,6 +36,7 @@ cp -v ./.config "/boot/Config-$KERVER" || exit 3
 
 
 echo "" >> /boot/grub/grub.conf
+echo "# #" >> /boot/grub/grub.conf
 echo "title=Linux $KERVER" >> /boot/grub/grub.conf
 echo "kernel" "/boot/kernel-$KERVER" "root=$ROOT" "ro" >> /boot/grub/grub.conf
 

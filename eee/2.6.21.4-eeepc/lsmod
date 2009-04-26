@@ -1,0 +1,41 @@
+Module                  Size  Used by
+nls_cp850               3904  1 
+vfat                   10112  1 
+fat                    39260  1 vfat
+acpi_cpufreq            5004  0 
+cpufreq_ondemand        5116  0 
+freq_table              1988  2 acpi_cpufreq,cpufreq_ondemand
+usb_storage            22980  1 
+libusual                6352  1 usb_storage
+pciehp                 31172  0 
+pci_hotplug             9672  1 pciehp
+ehci_hcd               25420  0 
+wlan_scan_sta           9664  1 
+uhci_hcd               18636  0 
+usbhid                 13444  0 
+usbcore                91992  6 usb_storage,libusual,ehci_hcd,uhci_hcd,usbhid
+snd_pcm_oss            33568  0 
+snd_mixer_oss          13056  1 snd_pcm_oss
+ath_pci                76704  0 
+ath_rate_atheros       25408  1 ath_pci
+wlan                  153112  4 wlan_scan_sta,ath_pci,ath_rate_atheros
+ath_dfs                25860  1 ath_pci
+ath_hal               147456  3 ath_pci,ath_rate_atheros
+atl1e                  26388  0 
+asus_acpi               6240  0 
+fuse                   34516  0 
+button                  5648  0 
+processor              19820  1 acpi_cpufreq
+battery                 7940  0 
+ac                      3524  0 
+autofs4                15876  0 
+sr_mod                 13284  0 
+cdrom                  30624  1 sr_mod
+snd_hda_intel         287120  1 
+snd_pcm                50696  2 snd_pcm_oss,snd_hda_intel
+snd_timer              15556  1 snd_pcm
+snd_page_alloc          6728  2 snd_hda_intel,snd_pcm
+snd_hwdep               6084  1 snd_hda_intel
+snd                    34916  8 snd_pcm_oss,snd_mixer_oss,snd_hda_intel,snd_pcm,snd_timer,snd_hwdep
+soundcore               3744  1 snd
+genrtc                  6028  0 
