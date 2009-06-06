@@ -14,4 +14,4 @@
 
 TODO
 ====
-
+? PCI hotplug for wlan

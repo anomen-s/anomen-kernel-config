@@ -90,3 +90,7 @@
 
 2.6.28-tuxonice-r5-s27
 ======================
+
+TODO
+====
+* lower CONFIG_TOI_DEFAULT_EXTRA_PAGES_ALLOWANCE to 1000
