@@ -29,6 +29,9 @@ read
 echo make clean...
 make clean
 
+echo make prepare...
+make prepare
+
 echo make all...
 su portage -c make all
 

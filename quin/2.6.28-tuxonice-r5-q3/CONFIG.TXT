@@ -11,7 +11,7 @@
 + TuxOnIce
 + WIFI
 - PS/2
++ PCI hotplug
 
 TODO
 ====
-? PCI hotplug for wlan
