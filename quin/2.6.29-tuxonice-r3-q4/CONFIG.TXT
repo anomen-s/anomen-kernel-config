@@ -13,5 +13,13 @@
 - PS/2
 + PCI hotplug
 
+2.6.29-tuxonice-r3-q4
+=====================
+- IPv6
+- unused I2C
+- PATA
+- NUMA
++ IEEE80211
+
 TODO
 ====
