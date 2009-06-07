@@ -12,11 +12,11 @@ echo chown portage...
 chown portage . -R
 
 echo make prepare
-make prepare
+su portage -c "make prepare"
 
 # extract verions
 #KERNEL=`make kernelversion`
-KERVER=`make kernelrelease`
+KERVER=`su portage -c "make kernelrelease"`
 
 echo "Root: $ROOT"
 #echo "Kern: $KERNEL"
@@ -27,13 +27,13 @@ read
 
 #echo Building kernel
 echo make clean...
-make clean
+su portage -c "make clean"
 
 echo make prepare...
-make prepare
+su portage -c "make prepare"
 
 echo make all...
-su portage -c make all
+su portage -c "make all"
 
 echo make modules_install...
 make modules_install || exit 10
