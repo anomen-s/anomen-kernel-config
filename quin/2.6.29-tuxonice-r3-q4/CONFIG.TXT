@@ -1,0 +1,17 @@
+2.6.27-gentoo-r7-q1
+===================
+* from 2.6.27-gentoo-r8-s23
++ memory cards
+
+2.6.28-gentoo-r5-q2
+===================
+
+2.6.28-tuxonice-r5-q3
+=====================
++ TuxOnIce
++ WIFI
+- PS/2
++ PCI hotplug
+
+TODO
+====
