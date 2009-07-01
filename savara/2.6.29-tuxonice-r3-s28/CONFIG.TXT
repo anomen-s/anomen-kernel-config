@@ -100,6 +100,7 @@
 + CONFIG_NO_HZ
 - all CONFIG_SND_HDA_CODEC_* but REALTEK
 - CONFIG_FRAME_POINTER
+* CFQ sheduler as default
 
 TODO:
 =====
