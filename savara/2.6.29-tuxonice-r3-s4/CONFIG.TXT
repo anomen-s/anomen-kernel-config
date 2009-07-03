@@ -112,6 +112,5 @@
 
 TODO:
 =====
-enable TOI compression (how?)
 disable unused HDA codecs
 
