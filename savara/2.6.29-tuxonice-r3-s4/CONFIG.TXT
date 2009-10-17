@@ -113,4 +113,5 @@
 TODO:
 =====
 disable unused HDA codecs
-
+CONFIG_TOI_USERUI_DEFAULT_PATH=""
++USB_SERIAL_VISOR
