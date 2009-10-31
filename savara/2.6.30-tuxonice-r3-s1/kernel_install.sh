@@ -33,6 +33,9 @@ su portage -c "make all" || exit 8
 echo make modules_install...
 make modules_install || exit 10
 
+echo mount /boot with rw
+mount /boot -o remount,rw
+
 cp -v ./arch/x86/boot/bzImage "/boot/kernel-$KERVER" || exit 1
 cp -v ./System.map "/boot/System.map-$KERVER" || exit 2
 cp -v ./.config "/boot/Config-$KERVER" || exit 3
