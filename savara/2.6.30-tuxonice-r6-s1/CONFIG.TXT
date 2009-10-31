@@ -110,8 +110,12 @@
 ======================
 + needlesly added unused HDA codecs (genbug:232875)
 
+2.6.30-tuxonice-r6-s1
+============
++ USB_SERIAL_VISOR
+* disable unused HDA codecs
+- NUMA
+
 TODO:
 =====
-disable unused HDA codecs
 CONFIG_TOI_USERUI_DEFAULT_PATH=""
-+USB_SERIAL_VISOR
