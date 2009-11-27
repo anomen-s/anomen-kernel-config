@@ -46,7 +46,7 @@ echo "# ? & ?" >> /boot/grub/grub.conf
 echo "title=Linux $KERVER" >> /boot/grub/grub.conf
 echo "kernel" "/boot/kernel-$KERVER" "root=$ROOT" "ro" >> /boot/grub/grub.conf
 echo "title=Linux $KERVER noresume" >> /boot/grub/grub.conf
-echo "kernel" "/boot/kernel-$KERVER" "root=$ROOT" "ro" "noresume" >> /boot/grub/grub.conf 
+echo "kernel" "/boot/kernel-$KERVER" "root=$ROOT" "ro" "noresume" "nox" >> /boot/grub/grub.conf 
 
 echo "* INFO *"
 echo grub.conf was updated, but manual check is recomended.

@@ -1,0 +1,3 @@
+2.6.30-tuxonice-r6-s2
+=====================
+* USB SE W595 testing kernel
