@@ -3,11 +3,11 @@
 
 2.6.30-tuxonice-r6-a2
 =====================
-
-
-TODO:
-=====
 + CONFIG_HWMON
 + iTCO_wdt - Watchdog
 + Firewire 1394
 + intel RNG
+
+
+TODO:
+=====
