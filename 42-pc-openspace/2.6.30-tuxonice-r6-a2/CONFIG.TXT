@@ -7,3 +7,7 @@
 
 TODO:
 =====
++ CONFIG_HWMON
++ iTCO_wdt - Watchdog
++ Firewire 1394
++ intel RNG
