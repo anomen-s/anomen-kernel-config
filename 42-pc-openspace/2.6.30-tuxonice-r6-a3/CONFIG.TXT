@@ -8,7 +8,11 @@
 + Firewire 1394
 + intel RNG
 
+2.6.30-tuxonice-r6-a3
+=====================
++ ALSA sound
++ dmesg timestamps
++ LZO
 
 TODO:
 =====
-+ CONFIG_SOUND
