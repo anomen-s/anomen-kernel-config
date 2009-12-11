@@ -16,3 +16,5 @@
 
 TODO:
 =====
++ sensors: asb100, max6650, smartbatt; ? ITE IT8708F Super IO
+
