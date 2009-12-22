@@ -13,10 +13,10 @@
 + ALSA sound
 + dmesg timestamps
 + LZO
++ sensors: asb100, max6650, smartbatt; ITE IT8708F Super IO
++ USB_STORAGE
+-CONFIG_NF_CT_ACCT
 
 TODO:
 =====
-+ sensors: asb100, max6650, smartbatt; ? ITE IT8708F Super IO
-+ USB_STORAGE !!!
 
--CONFIG_NF_CT_ACCT 
