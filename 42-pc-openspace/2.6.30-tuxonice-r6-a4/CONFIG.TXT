@@ -1,0 +1,22 @@
+2.6.30-gentoo-r4-a1
+===================
+
+2.6.30-tuxonice-r6-a2
+=====================
++ CONFIG_HWMON
++ iTCO_wdt - Watchdog
++ Firewire 1394
++ intel RNG
+
+2.6.30-tuxonice-r6-a3
+=====================
++ ALSA sound
++ dmesg timestamps
++ LZO
+
+TODO:
+=====
++ sensors: asb100, max6650, smartbatt; ? ITE IT8708F Super IO
++ USB_STORAGE !!!
+
+-CONFIG_NF_CT_ACCT 
