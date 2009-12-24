@@ -15,8 +15,13 @@
 + LZO
 + sensors: asb100, max6650, smartbatt; ITE IT8708F Super IO
 + USB_STORAGE
--CONFIG_NF_CT_ACCT
+- CONFIG_NF_CT_ACCT
 
 TODO:
 =====
++ x86 PAT (?)
+- GENERIC CPU support
+
+
+
 
