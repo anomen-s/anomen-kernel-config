@@ -21,7 +21,7 @@ TODO:
 =====
 + x86 PAT (?)
 - GENERIC CPU support
-
+- USB_STORAGE debug
 
 
 
