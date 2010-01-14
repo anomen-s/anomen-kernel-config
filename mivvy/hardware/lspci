@@ -1,0 +1,124 @@
+00:00.0 Host bridge: Intel Corporation Mobile 945GME Express Memory Controller Hub (rev 03)
+	Subsystem: Micro-Star International Co., Ltd. Device 0110
+	Flags: bus master, fast devsel, latency 0
+	Capabilities: <access denied>
+	Kernel driver in use: agpgart-intel
+	Kernel modules: intel-agp
+
+00:02.0 VGA compatible controller: Intel Corporation Mobile 945GME Express Integrated Graphics Controller (rev 03)
+	Subsystem: Micro-Star International Co., Ltd. Device 0110
+	Flags: bus master, fast devsel, latency 0, IRQ 16
+	Memory at dfe80000 (32-bit, non-prefetchable) [size=512K]
+	I/O ports at d0f0 [size=8]
+	Memory at c0000000 (32-bit, prefetchable) [size=256M]
+	Memory at dff00000 (32-bit, non-prefetchable) [size=256K]
+	Capabilities: <access denied>
+	Kernel driver in use: i915
+	Kernel modules: i915
+
+00:02.1 Display controller: Intel Corporation Mobile 945GM/GMS/GME, 943/940GML Express Integrated Graphics Controller (rev 03)
+	Subsystem: Micro-Star International Co., Ltd. Device 0110
+	Flags: bus master, fast devsel, latency 0
+	Memory at dfe00000 (32-bit, non-prefetchable) [size=512K]
+	Capabilities: <access denied>
+
+00:1b.0 Audio device: Intel Corporation 82801G (ICH7 Family) High Definition Audio Controller (rev 02)
+	Subsystem: Micro-Star International Co., Ltd. Device 0110
+	Flags: bus master, fast devsel, latency 0, IRQ 16
+	Memory at ffe00000 (64-bit, non-prefetchable) [size=16K]
+	Capabilities: <access denied>
+	Kernel driver in use: HDA Intel
+	Kernel modules: snd-hda-intel
+
+00:1c.0 PCI bridge: Intel Corporation 82801G (ICH7 Family) PCI Express Port 1 (rev 02)
+	Flags: bus master, fast devsel, latency 0
+	Bus: primary=00, secondary=01, subordinate=01, sec-latency=0
+	I/O behind bridge: 0000c000-0000cfff
+	Memory behind bridge: dfd00000-dfdfffff
+	Prefetchable memory behind bridge: 00000000ffd00000-00000000ffdfffff
+	Capabilities: <access denied>
+	Kernel driver in use: pcieport-driver
+	Kernel modules: shpchp
+
+00:1c.1 PCI bridge: Intel Corporation 82801G (ICH7 Family) PCI Express Port 2 (rev 02)
+	Flags: bus master, fast devsel, latency 0
+	Bus: primary=00, secondary=02, subordinate=02, sec-latency=0
+	I/O behind bridge: 0000b000-0000bfff
+	Memory behind bridge: dfc00000-dfcfffff
+	Capabilities: <access denied>
+	Kernel driver in use: pcieport-driver
+	Kernel modules: shpchp
+
+00:1d.0 USB Controller: Intel Corporation 82801G (ICH7 Family) USB UHCI Controller #1 (rev 02)
+	Subsystem: Micro-Star International Co., Ltd. Device 0110
+	Flags: bus master, medium devsel, latency 0, IRQ 23
+	I/O ports at d080 [size=32]
+	Kernel driver in use: uhci_hcd
+
+00:1d.1 USB Controller: Intel Corporation 82801G (ICH7 Family) USB UHCI Controller #2 (rev 02)
+	Subsystem: Micro-Star International Co., Ltd. Device 0110
+	Flags: bus master, medium devsel, latency 0, IRQ 19
+	I/O ports at d060 [size=32]
+	Kernel driver in use: uhci_hcd
+
+00:1d.2 USB Controller: Intel Corporation 82801G (ICH7 Family) USB UHCI Controller #3 (rev 02)
+	Subsystem: Micro-Star International Co., Ltd. Device 0110
+	Flags: bus master, medium devsel, latency 0, IRQ 18
+	I/O ports at d040 [size=32]
+	Kernel driver in use: uhci_hcd
+
+00:1d.3 USB Controller: Intel Corporation 82801G (ICH7 Family) USB UHCI Controller #4 (rev 02)
+	Subsystem: Micro-Star International Co., Ltd. Device 0110
+	Flags: bus master, medium devsel, latency 0, IRQ 16
+	I/O ports at d020 [size=32]
+	Kernel driver in use: uhci_hcd
+
+00:1d.7 USB Controller: Intel Corporation 82801G (ICH7 Family) USB2 EHCI Controller (rev 02) (prog-if 20)
+	Subsystem: Micro-Star International Co., Ltd. Device 0110
+	Flags: bus master, medium devsel, latency 0, IRQ 23
+	Memory at dff40000 (32-bit, non-prefetchable) [size=1K]
+	Capabilities: <access denied>
+	Kernel driver in use: ehci_hcd
+
+00:1e.0 PCI bridge: Intel Corporation 82801 Mobile PCI Bridge (rev e2) (prog-if 01)
+	Flags: bus master, fast devsel, latency 0
+	Bus: primary=00, secondary=03, subordinate=03, sec-latency=32
+	Capabilities: <access denied>
+
+00:1f.0 ISA bridge: Intel Corporation 82801GBM (ICH7-M) LPC Interface Bridge (rev 02)
+	Subsystem: Micro-Star International Co., Ltd. Device 0110
+	Flags: bus master, medium devsel, latency 0
+	Capabilities: <access denied>
+	Kernel modules: iTCO_wdt, intel-rng
+
+00:1f.2 IDE interface: Intel Corporation 82801GBM/GHM (ICH7 Family) SATA IDE Controller (rev 02) (prog-if 80 [Master])
+	Subsystem: Micro-Star International Co., Ltd. Device 0110
+	Flags: bus master, 66MHz, medium devsel, latency 0, IRQ 19
+	I/O ports at 01f0 [size=8]
+	I/O ports at 03f4 [size=1]
+	I/O ports at 0170 [size=8]
+	I/O ports at 0374 [size=1]
+	I/O ports at d0a0 [size=16]
+	Capabilities: <access denied>
+	Kernel driver in use: ata_piix
+
+01:00.0 Ethernet controller: Realtek Semiconductor Co., Ltd. RTL8101E/RTL8102E PCI Express Fast Ethernet controller (rev 02)
+	Subsystem: Micro-Star International Co., Ltd. Device 0110
+	Flags: bus master, fast devsel, latency 0, IRQ 26
+	I/O ports at c000 [size=256]
+	Memory at ffd10000 (64-bit, prefetchable) [size=4K]
+	Memory at ffd00000 (64-bit, prefetchable) [size=64K]
+	Expansion ROM at dfd00000 [disabled] [size=64K]
+	Capabilities: <access denied>
+	Kernel driver in use: r8169
+	Kernel modules: r8169
+
+02:00.0 Network controller: Realtek Semiconductor Co., Ltd. RTL8187SE Wireless LAN Controller (rev 22)
+	Subsystem: Micro-Star International Co., Ltd. Device 6894
+	Flags: bus master, fast devsel, latency 0, IRQ 17
+	I/O ports at b000 [size=256]
+	Memory at dfc00000 (32-bit, non-prefetchable) [size=16K]
+	Capabilities: <access denied>
+	Kernel driver in use: r8180
+	Kernel modules: rtl8187se
+
