@@ -1,0 +1,40 @@
+Module                  Size  Used by
+squashfs               23192  0 
+usb_storage            55072  1 
+ppdev                   8856  0 
+vmnet                  40924  3 
+parport_pc             39816  0 
+parport                35056  2 ppdev,parport_pc
+vmblock                12960  1 
+vmci                   50920  0 
+vmmon                  70800  0 
+w83627ehf              24928  0 
+hwmon_vid               3536  1 w83627ehf
+fuse                   63120  1 
+snd_seq_oss            30880  0 
+snd_seq_midi_event      7280  1 snd_seq_oss
+snd_seq                55360  4 snd_seq_oss,snd_seq_midi_event
+snd_seq_device          7140  2 snd_seq_oss,snd_seq
+snd_pcm_oss            39552  0 
+snd_mixer_oss          16880  1 snd_pcm_oss
+dm_mod                 57512  0 
+cpufreq_stats           5780  0 
+powernow_k8            13748  1 
+snd_hda_codec_realtek   260916  1 
+nvidia              10314216  26 
+snd_hda_intel          26888  1 
+snd_hda_codec          53456  2 snd_hda_codec_realtek,snd_hda_intel
+snd_pcm                73368  3 snd_pcm_oss,snd_hda_intel,snd_hda_codec
+snd_timer              22112  2 snd_seq,snd_pcm
+snd                    63432  12 snd_seq_oss,snd_seq,snd_seq_device,snd_pcm_oss,snd_mixer_oss,snd_hda_codec_realtek,snd_hda_intel,snd_hda_codec,snd_pcm,snd_timer
+sr_mod                 16676  1 
+i2c_nforce2             7504  0 
+cdrom                  38280  1 sr_mod
+snd_page_alloc          9536  2 snd_hda_intel,snd_pcm
+sg                     30112  0 
+8250_pnp               18032  0 
+i2c_core               23808  2 nvidia,i2c_nforce2
+pcspkr                  2768  0 
+thermal                15856  0 
+k8temp                  5136  0 
+button                  6416  0 
