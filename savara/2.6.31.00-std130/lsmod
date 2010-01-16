@@ -1,0 +1,127 @@
+Module                  Size  Used by
+video                  16404  0 
+output                  1928  1 video
+forcedeth              45500  0 
+k8temp                  3488  0 
+hwmon                   2008  1 k8temp
+i2c_nforce2             5472  0 
+i2c_core               14732  1 i2c_nforce2
+raid10                 19900  0 
+raid456                42944  0 
+raid6_pq               78352  1 raid456
+async_xor               2312  1 raid456
+async_memcpy            1388  1 raid456
+async_tx                2224  3 raid456,async_xor,async_memcpy
+xor                    13788  2 raid456,async_xor
+raid1                  19208  0 
+raid0                   6712  0 
+sbp2                   18300  0 
+ohci1394               24820  0 
+ieee1394               60232  2 sbp2,ohci1394
+sl811_hcd               9248  0 
+usb_storage            33816  1 
+virtio_blk              5352  0 
+bnx2i                  33368  0 
+cnic                   20780  1 bnx2i
+uio                     7852  1 cnic
+ipv6                  236904  13 cnic
+fcoe                   14512  0 
+libfcoe                10916  1 fcoe
+libfc                  60592  2 fcoe,libfcoe
+osst                   42956  0 
+sym53c8xx              62028  0 
+atp870u                23596  0 
+hptiop                 10788  0 
+ses                     5360  0 
+enclosure               5184  1 ses
+aic79xx               105224  0 
+aic7xxx                95680  0 
+ppa                     9020  0 
+raid_class              3656  0 
+sym53c500_cs            6244  0 
+qlogic_cs               4460  0 
+qlogicfas408            4316  1 qlogic_cs
+aacraid                57140  0 
+imm                     9080  0 
+parport                26196  2 ppa,imm
+mvsas                  37364  0 
+3w_xxxx                20612  0 
+initio                 14440  0 
+gdth                   74296  0 
+arcmsr                 18752  0 
+stex                   11588  0 
+tmscsim                16456  0 
+dc395x                 27332  0 
+iscsi_tcp               9212  0 
+libiscsi_tcp           11416  1 iscsi_tcp
+3w_9xxx                26932  0 
+a100u2w                 8076  0 
+BusLogic               59180  0 
+libsrp                  5340  0 
+libiscsi               27408  3 bnx2i,iscsi_tcp,libiscsi_tcp
+st                     29588  0 
+ch                     10132  0 
+scsi_transport_srp      4296  0 
+scsi_transport_spi     17392  3 sym53c8xx,aic79xx,aic7xxx
+qla4xxx                45128  0 
+scsi_transport_iscsi    20752  4 bnx2i,iscsi_tcp,libiscsi,qla4xxx
+qla2xxx               192772  0 
+lpfc                  317968  0 
+scsi_transport_fc      32392  4 fcoe,libfc,qla2xxx,lpfc
+scsi_tgt                9424  3 libsrp,scsi_transport_srp,scsi_transport_fc
+qla1280                19152  0 
+megaraid_sas           27100  0 
+megaraid               35300  0 
+pdc_adma                5688  0 
+sata_vsc                4504  0 
+sata_via                7156  0 
+sata_uli                3308  0 
+sata_sx4                8628  0 
+sata_svw                4120  0 
+sata_sis                4252  0 
+sata_sil                7308  0 
+sata_sil24             10980  0 
+sata_qstor              5820  0 
+sata_promise            8712  0 
+sata_nv                17900  1 
+sata_mv                22256  0 
+sata_inic162x           7436  0 
+pata_via                7348  0 
+pata_triflex            3048  0 
+pata_sl82c105           3516  0 
+pata_sis                7808  1 sata_sis
+pata_sil680             4784  0 
+pata_serverworks        5160  0 
+pata_sch                2724  0 
+pata_pdc202xx_old       3936  0 
+pata_pdc2027x           5820  0 
+pata_pcmcia             8564  0 
+pata_opti               2804  0 
+pata_optidma            4312  0 
+pata_oldpiix            3124  0 
+pata_ns87415            3376  0 
+pata_ns87410            2944  0 
+pata_ninja32            3220  0 
+pata_netcell            2340  0 
+pata_mpiix              3192  0 
+pata_marvell            2640  0 
+pata_jmicron            2336  0 
+pata_it821x             8140  0 
+pata_it8213             3536  0 
+pata_hpt3x3             3432  0 
+pata_hpt3x2n            4676  0 
+pata_hpt37x             9144  0 
+pata_hpt366             4916  0 
+pata_efar               3496  0 
+pata_cypress            2784  0 
+pata_cs5530             4472  0 
+pata_cs5520             4348  0 
+pata_cmd64x             4804  0 
+pata_cmd640             3460  0 
+pata_atiixp             3608  0 
+pata_artop              4324  0 
+pata_amd                8212  0 
+pata_ali                7784  0 
+pata_acpi               3180  0 
+scsi_wait_scan           800  0 
+ata_generic             3344  0 
