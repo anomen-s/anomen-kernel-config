@@ -1,0 +1,434 @@
+savara
+    description: Desktop Computer
+    product: MS-7250
+    vendor: MSI
+    version: 2.0
+    serial: To Be Filled By O.E.M.
+    width: 64 bits
+    capabilities: smbios-2.5 dmi-2.5 vsyscall64 vsyscall32
+    configuration: chassis=desktop
+  *-core
+       description: Motherboard
+       product: MS-7250
+       vendor: MSI
+       physical id: 0
+       version: 2.0
+       serial: To be filled by O.E.M.
+       slot: To Be Filled By O.E.M.
+     *-firmware
+          description: BIOS
+          vendor: MS-7250
+          physical id: 0
+          version: V3.6 (05/17/2007)
+          size: 64KiB
+          capacity: 448KiB
+          capabilities: isa pci pnp apm upgrade shadowing escd cdboot bootselect socketedrom edd int13floppy1200 int13floppy720 int13floppy2880 int5printscreen int9keyboard int14serial int17printer int10video acpi usb ls120boot zipboot biosbootspecification
+     *-cpu
+          description: CPU
+          product: AMD Athlon(tm) 64 X2 Dual Core Processor 3800+
+          vendor: Advanced Micro Devices [AMD]
+          physical id: 4
+          bus info: cpu@0
+          version: AMD Athlon(tm) 64 X2 Dual Core Processor 3800+
+          serial: To Be Filled By O.E.M.
+          slot: CPU 1
+          size: 2GHz
+          capacity: 2GHz
+          width: 64 bits
+          clock: 200MHz
+          capabilities: fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt rdtscp x86-64 3dnowext 3dnow rep_good extd_apicid pni cx16 lahf_lm cmp_legacy svm extapic cr8_legacy cpufreq
+        *-cache:0
+             description: L1 cache
+             physical id: 5
+             slot: L1-Cache
+             size: 256KiB
+             capacity: 256KiB
+             capabilities: pipeline-burst internal varies data
+        *-cache:1
+             description: L2 cache
+             physical id: 6
+             slot: L2-Cache
+             size: 1MiB
+             capacity: 1MiB
+             capabilities: pipeline-burst internal varies unified
+        *-cache:2 DISABLED
+             description: L3 cache
+             physical id: 7
+             slot: L3-Cache
+             capabilities: internal
+     *-memory:0
+          description: System Memory
+          physical id: 2b
+          slot: System board or motherboard
+          size: 6GiB
+        *-bank:0
+             description: DIMM Synchronous
+             product: PartNum0
+             vendor: Manufacturer0
+             physical id: 0
+             serial: SerNum0
+             slot: DIMM0
+             size: 1GiB
+             width: 64 bits
+        *-bank:1
+             description: DIMM Synchronous
+             product: PartNum1
+             vendor: Manufacturer1
+             physical id: 1
+             serial: SerNum1
+             slot: DIMM1
+             size: 2GiB
+             width: 64 bits
+        *-bank:2
+             description: DIMM Synchronous
+             product: PartNum2
+             vendor: Manufacturer2
+             physical id: 2
+             serial: SerNum2
+             slot: DIMM2
+             size: 1GiB
+             width: 64 bits
+        *-bank:3
+             description: DIMM Synchronous
+             product: PartNum3
+             vendor: Manufacturer3
+             physical id: 3
+             serial: SerNum3
+             slot: DIMM3
+             size: 2GiB
+             width: 64 bits
+     *-memory:1 UNCLAIMED
+          description: RAM memory
+          product: MCP55 Memory Controller
+          vendor: nVidia Corporation
+          physical id: 3
+          bus info: pci@0000:00:00.0
+          version: a1
+          width: 32 bits
+          clock: 66MHz (15.2ns)
+          capabilities: ht bus_master cap_list
+          configuration: latency=0
+     *-isa
+          description: ISA bridge
+          product: MCP55 LPC Bridge
+          vendor: nVidia Corporation
+          physical id: 1
+          bus info: pci@0000:00:01.0
+          version: a2
+          width: 32 bits
+          clock: 66MHz
+          capabilities: isa bus_master
+          configuration: latency=0
+     *-serial
+          description: SMBus
+          product: MCP55 SMBus
+          vendor: nVidia Corporation
+          physical id: 1.1
+          bus info: pci@0000:00:01.1
+          version: a2
+          width: 32 bits
+          clock: 66MHz
+          capabilities: pm cap_list
+          configuration: driver=nForce2_smbus latency=0 module=i2c_nforce2
+     *-usb:0
+          description: USB Controller
+          product: MCP55 USB Controller
+          vendor: nVidia Corporation
+          physical id: 2
+          bus info: pci@0000:00:02.0
+          version: a1
+          width: 32 bits
+          clock: 66MHz
+          capabilities: pm ohci bus_master cap_list
+          configuration: driver=ohci_hcd latency=0 maxlatency=1 mingnt=3
+        *-usbhost
+             product: OHCI Host Controller
+             vendor: Linux 2.6.30-tuxonice-r10-s3 ohci_hcd
+             physical id: 1
+             bus info: usb@2
+             logical name: usb2
+             version: 2.06
+             capabilities: usb-1.10
+             configuration: driver=hub slots=10 speed=12.0MB/s
+     *-usb:1
+          description: USB Controller
+          product: MCP55 USB Controller
+          vendor: nVidia Corporation
+          physical id: 2.1
+          bus info: pci@0000:00:02.1
+          version: a2
+          width: 32 bits
+          clock: 66MHz
+          capabilities: debug pm ehci bus_master cap_list
+          configuration: driver=ehci_hcd latency=0 maxlatency=1 mingnt=3 module=ehci_hcd
+        *-usbhost
+             product: EHCI Host Controller
+             vendor: Linux 2.6.30-tuxonice-r10-s3 ehci_hcd
+             physical id: 1
+             bus info: usb@1
+             logical name: usb1
+             version: 2.06
+             capabilities: usb-2.00
+             configuration: driver=hub slots=10 speed=480.0MB/s
+     *-ide:0
+          description: IDE interface
+          product: MCP55 SATA Controller
+          vendor: nVidia Corporation
+          physical id: 5
+          bus info: pci@0000:00:05.0
+          logical name: scsi0
+          version: a2
+          width: 32 bits
+          clock: 66MHz
+          capabilities: ide pm bus_master cap_list emulated
+          configuration: driver=sata_nv latency=0 maxlatency=1 mingnt=3 module=sata_nv
+        *-disk
+             description: ATA Disk
+             product: WDC WD5000AAKS-0
+             vendor: Western Digital
+             physical id: 0.0.0
+             bus info: scsi@0:0.0.0
+             logical name: /dev/sda
+             version: 01.0
+             serial: WD-WMASY0241392
+             size: 465GiB (500GB)
+             capabilities: partitioned partitioned:dos
+             configuration: ansiversion=5 signature=befb2392
+           *-volume:0
+                description: EXT3 volume
+                vendor: Linux
+                physical id: 1
+                bus info: scsi@0:0.0.0,1
+                logical name: /dev/sda1
+                logical name: /boot
+                version: 1.0
+                serial: e71e03c2-ebc7-4961-94b3-0313697dbb8a
+                size: 400MiB
+                capacity: 400MiB
+                capabilities: primary bootable journaled extended_attributes large_files huge_files recover ext3 ext2 initialized
+                configuration: created=2008-05-28 10:23:05 filesystem=ext3 label=WD500_BOOT modified=2010-01-24 15:16:47 mount.fstype=ext2 mount.options=rw,relatime,errors=continue mounted=2010-01-23 19:12:11 state=mounted
+           *-volume:1
+                description: EXT3 volume
+                vendor: Linux
+                physical id: 2
+                bus info: scsi@0:0.0.0,2
+                logical name: /dev/sda2
+                logical name: /
+                version: 1.0
+                serial: 7a115017-0d69-4d68-8e87-d2ad3a80b1e8
+                size: 37GiB
+                capacity: 37GiB
+                capabilities: primary journaled extended_attributes large_files huge_files recover ext3 ext2 initialized
+                configuration: created=2008-05-28 10:20:07 filesystem=ext3 label=WD500_ROOT modified=2010-01-24 15:33:36 mount.fstype=ext3 mount.options=rw,relatime,errors=continue,data=writeback mounted=2010-01-24 15:33:36 state=mounted
+           *-volume:2
+                description: Linux swap volume
+                physical id: 3
+                bus info: scsi@0:0.0.0,3
+                logical name: /dev/sda3
+                version: 1
+                serial: 8c6fe8c4-5b55-447a-9ec4-927cc455623a
+                size: 5726MiB
+                capacity: 5726MiB
+                capabilities: primary nofs swap initialized
+                configuration: filesystem=swap pagesize=4096
+           *-volume:3
+                description: EXT3 volume
+                vendor: Linux
+                physical id: 4
+                bus info: scsi@0:0.0.0,4
+                logical name: /dev/sda4
+                logical name: /home
+                version: 1.0
+                serial: 24cdc151-5719-4c4a-9e99-edfbece2c02b
+                size: 422GiB
+                capacity: 422GiB
+                capabilities: primary journaled extended_attributes large_files huge_files recover ext3 ext2 initialized
+                configuration: created=2008-05-22 18:14:03 filesystem=ext3 label=WD500_SHARE modified=2010-01-24 15:33:38 mount.fstype=ext3 mount.options=rw,relatime,data=writeback mounted=2010-01-24 15:33:38 state=mounted
+     *-ide:1
+          description: IDE interface
+          product: MCP55 SATA Controller
+          vendor: nVidia Corporation
+          physical id: 5.1
+          bus info: pci@0000:00:05.1
+          version: a2
+          width: 32 bits
+          clock: 66MHz
+          capabilities: ide pm bus_master cap_list
+          configuration: driver=sata_nv latency=0 maxlatency=1 mingnt=3 module=sata_nv
+     *-ide:2
+          description: IDE interface
+          product: MCP55 SATA Controller
+          vendor: nVidia Corporation
+          physical id: 5.2
+          bus info: pci@0000:00:05.2
+          logical name: scsi4
+          version: a2
+          width: 32 bits
+          clock: 66MHz
+          capabilities: ide pm bus_master cap_list emulated
+          configuration: driver=sata_nv latency=0 maxlatency=1 mingnt=3 module=sata_nv
+        *-cdrom
+             description: DVD-RAM writer
+             product: DVDRW LH-20A1L
+             vendor: LITE-ON
+             physical id: 0.0.0
+             bus info: scsi@4:0.0.0
+             logical name: /dev/cdrom
+             logical name: /dev/cdrw
+             logical name: /dev/dvd
+             logical name: /dev/dvdrw
+             logical name: /dev/scd0
+             logical name: /dev/sr0
+             version: BL05
+             capabilities: removable audio cd-r cd-rw dvd dvd-r dvd-ram
+             configuration: ansiversion=5 status=nodisc
+     *-pci:0
+          description: PCI bridge
+          product: MCP55 PCI bridge
+          vendor: nVidia Corporation
+          physical id: 6
+          bus info: pci@0000:00:06.0
+          version: a2
+          width: 32 bits
+          clock: 66MHz
+          capabilities: pci ht subtractive_decode bus_master cap_list
+     *-multimedia
+          description: Audio device
+          product: MCP55 High Definition Audio
+          vendor: nVidia Corporation
+          physical id: 6.1
+          bus info: pci@0000:00:06.1
+          version: a2
+          width: 32 bits
+          clock: 66MHz
+          capabilities: pm msi ht bus_master cap_list
+          configuration: driver=HDA Intel latency=0 maxlatency=5 mingnt=2 module=snd_hda_intel
+     *-bridge
+          description: Ethernet interface
+          product: MCP55 Ethernet
+          vendor: nVidia Corporation
+          physical id: 8
+          bus info: pci@0000:00:08.0
+          logical name: eth0
+          version: a2
+          serial: 00:16:17:93:aa:7f
+          size: 100000000
+          capacity: 1000000000
+          width: 32 bits
+          clock: 66MHz
+          capabilities: bridge pm msix msi ht bus_master cap_list ethernet physical mii 10bt 10bt-fd 100bt 100bt-fd 1000bt-fd autonegotiation
+          configuration: autonegotiation=on broadcast=yes driver=forcedeth driverversion=0.64 duplex=full ip=172.24.24.40 latency=0 link=yes maxlatency=20 mingnt=1 multicast=yes port=MII speed=100MB/s
+     *-pci:1
+          description: PCI bridge
+          product: MCP55 PCI Express bridge
+          vendor: nVidia Corporation
+          physical id: a
+          bus info: pci@0000:00:0a.0
+          version: a2
+          width: 32 bits
+          clock: 33MHz
+          capabilities: pci pm msi ht pciexpress normal_decode bus_master cap_list
+          configuration: driver=pcieport-driver
+     *-pci:2
+          description: PCI bridge
+          product: MCP55 PCI Express bridge
+          vendor: nVidia Corporation
+          physical id: b
+          bus info: pci@0000:00:0b.0
+          version: a2
+          width: 32 bits
+          clock: 33MHz
+          capabilities: pci pm msi ht pciexpress normal_decode bus_master cap_list
+          configuration: driver=pcieport-driver
+     *-pci:3
+          description: PCI bridge
+          product: MCP55 PCI Express bridge
+          vendor: nVidia Corporation
+          physical id: c
+          bus info: pci@0000:00:0c.0
+          version: a2
+          width: 32 bits
+          clock: 33MHz
+          capabilities: pci pm msi ht pciexpress normal_decode bus_master cap_list
+          configuration: driver=pcieport-driver
+     *-pci:4
+          description: PCI bridge
+          product: MCP55 PCI Express bridge
+          vendor: nVidia Corporation
+          physical id: d
+          bus info: pci@0000:00:0d.0
+          version: a2
+          width: 32 bits
+          clock: 33MHz
+          capabilities: pci pm msi ht pciexpress normal_decode bus_master cap_list
+          configuration: driver=pcieport-driver
+     *-pci:5
+          description: PCI bridge
+          product: MCP55 PCI Express bridge
+          vendor: nVidia Corporation
+          physical id: e
+          bus info: pci@0000:00:0e.0
+          version: a2
+          width: 32 bits
+          clock: 33MHz
+          capabilities: pci pm msi ht pciexpress normal_decode bus_master cap_list
+          configuration: driver=pcieport-driver
+     *-pci:6
+          description: PCI bridge
+          product: MCP55 PCI Express bridge
+          vendor: nVidia Corporation
+          physical id: f
+          bus info: pci@0000:00:0f.0
+          version: a2
+          width: 32 bits
+          clock: 33MHz
+          capabilities: pci pm msi ht pciexpress normal_decode bus_master cap_list
+          configuration: driver=pcieport-driver
+        *-display
+             description: VGA compatible controller
+             product: G73 [GeForce 7600 GS]
+             vendor: nVidia Corporation
+             physical id: 0
+             bus info: pci@0000:07:00.0
+             version: a1
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm msi pciexpress vga_controller bus_master cap_list
+             configuration: driver=nvidia latency=0 module=nvidia
+     *-pci:7
+          description: Host bridge
+          product: K8 [Athlon64/Opteron] HyperTransport Technology Configuration
+          vendor: Advanced Micro Devices [AMD]
+          physical id: 100
+          bus info: pci@0000:00:18.0
+          version: 00
+          width: 32 bits
+          clock: 33MHz
+     *-pci:8
+          description: Host bridge
+          product: K8 [Athlon64/Opteron] Address Map
+          vendor: Advanced Micro Devices [AMD]
+          physical id: 101
+          bus info: pci@0000:00:18.1
+          version: 00
+          width: 32 bits
+          clock: 33MHz
+     *-pci:9
+          description: Host bridge
+          product: K8 [Athlon64/Opteron] DRAM Controller
+          vendor: Advanced Micro Devices [AMD]
+          physical id: 102
+          bus info: pci@0000:00:18.2
+          version: 00
+          width: 32 bits
+          clock: 33MHz
+     *-pci:10
+          description: Host bridge
+          product: K8 [Athlon64/Opteron] Miscellaneous Control
+          vendor: Advanced Micro Devices [AMD]
+          physical id: 103
+          bus info: pci@0000:00:18.3
+          version: 00
+          width: 32 bits
+          clock: 33MHz
+          configuration: driver=k8temp module=k8temp
