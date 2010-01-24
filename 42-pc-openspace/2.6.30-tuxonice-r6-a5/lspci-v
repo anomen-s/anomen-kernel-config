@@ -1,0 +1,125 @@
+00:00.0 Host bridge: Intel Corporation 82845G/GL[Brookdale-G]/GE/PE DRAM Controller/Host-Hub Interface (rev 02)
+	Subsystem: ASUSTeK Computer Inc. Device 80b2
+	Flags: bus master, fast devsel, latency 0
+	Memory at f0000000 (32-bit, prefetchable) [size=128M]
+	Capabilities: [e4] Vendor Specific Information <?>
+	Capabilities: [a0] AGP version 2.0
+	Kernel modules: intel-agp
+
+00:01.0 PCI bridge: Intel Corporation 82845G/GL[Brookdale-G]/GE/PE Host-to-AGP Bridge (rev 02) (prog-if 00 [Normal decode])
+	Flags: bus master, 66MHz, fast devsel, latency 64
+	Bus: primary=00, secondary=01, subordinate=01, sec-latency=0
+	Memory behind bridge: d6000000-d7efffff
+	Prefetchable memory behind bridge: e7f00000-efffffff
+
+00:1d.0 USB Controller: Intel Corporation 82801DB/DBL/DBM (ICH4/ICH4-L/ICH4-M) USB UHCI Controller #1 (rev 02) (prog-if 00 [UHCI])
+	Subsystem: ASUSTeK Computer Inc. P4B533
+	Flags: bus master, medium devsel, latency 0, IRQ 16
+	I/O ports at d800 [size=32]
+	Kernel driver in use: uhci_hcd
+	Kernel modules: uhci-hcd
+
+00:1d.1 USB Controller: Intel Corporation 82801DB/DBL/DBM (ICH4/ICH4-L/ICH4-M) USB UHCI Controller #2 (rev 02) (prog-if 00 [UHCI])
+	Subsystem: ASUSTeK Computer Inc. P4B533
+	Flags: bus master, medium devsel, latency 0, IRQ 19
+	I/O ports at d400 [size=32]
+	Kernel driver in use: uhci_hcd
+	Kernel modules: uhci-hcd
+
+00:1d.2 USB Controller: Intel Corporation 82801DB/DBL/DBM (ICH4/ICH4-L/ICH4-M) USB UHCI Controller #3 (rev 02) (prog-if 00 [UHCI])
+	Subsystem: ASUSTeK Computer Inc. P4B533
+	Flags: bus master, medium devsel, latency 0, IRQ 18
+	I/O ports at d000 [size=32]
+	Kernel driver in use: uhci_hcd
+	Kernel modules: uhci-hcd
+
+00:1d.7 USB Controller: Intel Corporation 82801DB/DBM (ICH4/ICH4-M) USB2 EHCI Controller (rev 02) (prog-if 20 [EHCI])
+	Subsystem: ASUSTeK Computer Inc. P4B533
+	Flags: bus master, medium devsel, latency 0, IRQ 23
+	Memory at d5800000 (32-bit, non-prefetchable) [size=1K]
+	Capabilities: [50] Power Management version 2
+	Capabilities: [58] Debug port: BAR=1 offset=0080
+	Kernel driver in use: ehci_hcd
+	Kernel modules: ehci-hcd
+
+00:1e.0 PCI bridge: Intel Corporation 82801 PCI Bridge (rev 82) (prog-if 00 [Normal decode])
+	Flags: bus master, fast devsel, latency 0
+	Bus: primary=00, secondary=02, subordinate=02, sec-latency=32
+	I/O behind bridge: 0000b000-0000bfff
+	Memory behind bridge: d3000000-d57fffff
+	Prefetchable memory behind bridge: d7f00000-e7efffff
+
+00:1f.0 ISA bridge: Intel Corporation 82801DB/DBL (ICH4/ICH4-L) LPC Interface Bridge (rev 02)
+	Flags: bus master, medium devsel, latency 0
+	Kernel modules: intel-rng, iTCO_wdt
+
+00:1f.1 IDE interface: Intel Corporation 82801DB (ICH4) IDE Controller (rev 02) (prog-if 8a [Master SecP PriP])
+	Subsystem: ASUSTeK Computer Inc. P4B533
+	Flags: bus master, medium devsel, latency 0, IRQ 18
+	I/O ports at 01f0 [size=8]
+	I/O ports at 03f4 [size=1]
+	I/O ports at 0170 [size=8]
+	I/O ports at 0374 [size=1]
+	I/O ports at f000 [size=16]
+	Memory at 88000000 (32-bit, non-prefetchable) [size=1K]
+	Kernel driver in use: PIIX_IDE
+	Kernel modules: ata_piix
+
+00:1f.3 SMBus: Intel Corporation 82801DB/DBL/DBM (ICH4/ICH4-L/ICH4-M) SMBus Controller (rev 02)
+	Subsystem: ASUSTeK Computer Inc. Device 8089
+	Flags: medium devsel, IRQ 17
+	I/O ports at e800 [size=32]
+	Kernel driver in use: i801_smbus
+	Kernel modules: i2c-i801
+
+00:1f.5 Multimedia audio controller: Intel Corporation 82801DB/DBL/DBM (ICH4/ICH4-L/ICH4-M) AC'97 Audio Controller (rev 02)
+	Subsystem: ASUSTeK Computer Inc. P4B533
+	Flags: bus master, medium devsel, latency 0, IRQ 17
+	I/O ports at a800 [size=256]
+	I/O ports at a400 [size=64]
+	Memory at d2800000 (32-bit, non-prefetchable) [size=512]
+	Memory at d2000000 (32-bit, non-prefetchable) [size=256]
+	Capabilities: [50] Power Management version 2
+	Kernel driver in use: Intel ICH
+	Kernel modules: snd-intel8x0
+
+01:00.0 VGA compatible controller: nVidia Corporation NV18 [GeForce4 MX 440 AGP 8x] (rev a4) (prog-if 00 [VGA controller])
+	Flags: bus master, 66MHz, medium devsel, latency 248, IRQ 16
+	Memory at d6000000 (32-bit, non-prefetchable) [size=16M]
+	Memory at e8000000 (32-bit, prefetchable) [size=128M]
+	[virtual] Expansion ROM at e7fe0000 [disabled] [size=128K]
+	Capabilities: [60] Power Management version 2
+	Capabilities: [44] AGP version 3.0
+	Kernel driver in use: nvidia
+	Kernel modules: nvidia
+
+02:03.0 FireWire (IEEE 1394): VIA Technologies, Inc. VT6306 Fire II IEEE 1394 OHCI Link Layer Controller (rev 80) (prog-if 10 [OHCI])
+	Subsystem: ASUSTeK Computer Inc. A8V/A8N/P4P800 series motherboard
+	Flags: bus master, stepping, medium devsel, latency 32, IRQ 22
+	Memory at d5000000 (32-bit, non-prefetchable) [size=2K]
+	I/O ports at b800 [size=128]
+	Capabilities: [50] Power Management version 2
+	Kernel driver in use: ohci1394
+	Kernel modules: ohci1394
+
+02:05.0 Ethernet controller: Broadcom Corporation NetXtreme BCM5702X Gigabit Ethernet (rev 02)
+	Subsystem: ASUSTeK Computer Inc. Device 80a9
+	Flags: bus master, 66MHz, medium devsel, latency 64, IRQ 20
+	Memory at d4800000 (64-bit, non-prefetchable) [size=64K]
+	[virtual] Expansion ROM at e7ef0000 [disabled] [size=64K]
+	Capabilities: [40] PCI-X non-bridge device
+	Capabilities: [48] Power Management version 2
+	Capabilities: [50] Vital Product Data
+	Capabilities: [58] MSI: Enable- Count=1/8 Maskable- 64bit+
+	Kernel driver in use: tg3
+	Kernel modules: tg3
+
+02:0d.0 VGA compatible controller: nVidia Corporation NV11 [GeForce2 MX/MX 400] (rev b2) (prog-if 00 [VGA controller])
+	Flags: bus master, 66MHz, medium devsel, latency 248, IRQ 21
+	Memory at d3000000 (32-bit, non-prefetchable) [size=16M]
+	Memory at d8000000 (32-bit, prefetchable) [size=128M]
+	[virtual] Expansion ROM at d7ff0000 [disabled] [size=64K]
+	Capabilities: [60] Power Management version 2
+	Kernel driver in use: nvidia
+	Kernel modules: nvidia
+

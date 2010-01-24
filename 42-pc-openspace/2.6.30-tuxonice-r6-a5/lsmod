@@ -1,0 +1,56 @@
+Module                  Size  Used by
+aes_i586                7868  0 
+aes_generic            26780  1 aes_i586
+xts                     2684  0 
+gf128mul                6940  1 xts
+dm_crypt               11488  0 
+vmnet                  33172  13 
+vmblock                10200  1 
+vmci                   43292  0 
+vmmon                  60336  0 
+max6650                 8404  0 
+asb100                 14836  0 
+hwmon_vid               2556  1 asb100
+hwmon                   1936  2 max6650,asb100
+snd_seq                40272  0 
+snd_seq_device          5768  1 snd_seq
+snd_pcm_oss            34848  0 
+snd_mixer_oss          13596  1 snd_pcm_oss
+sg                     17992  0 
+ntfs                   92224  1 
+dm_mod                 44292  1 dm_crypt
+p4_clockmod             3556  0 
+speedstep_lib           3228  1 p4_clockmod
+usb_storage            47336  0 
+cdc_wdm                 7964  0 
+cdc_acm                13472  0 
+usbhid                 23584  0 
+nvidia               4699604  48 
+ohci1394               28268  0 
+snd_intel8x0           28216  1 
+i2c_i801                8172  0 
+snd_ac97_codec         95516  1 snd_intel8x0
+ac97_bus                1308  1 snd_ac97_codec
+ehci_hcd               31368  0 
+tg3                   102496  0 
+snd_pcm                61156  3 snd_pcm_oss,snd_intel8x0,snd_ac97_codec
+iTCO_wdt               10172  0 
+ieee1394               71676  1 ohci1394
+libphy                 16892  1 tg3
+pcspkr                  1948  0 
+snd_timer              17024  2 snd_seq,snd_pcm
+uhci_hcd               20200  0 
+agpgart                27308  1 nvidia
+i2c_core               19084  4 max6650,asb100,nvidia,i2c_i801
+snd                    45604  10 snd_seq,snd_seq_device,snd_pcm_oss,snd_mixer_oss,snd_intel8x0,snd_ac97_codec,snd_pcm,snd_timer
+soundcore               5280  1 snd
+iTCO_vendor_support     2752  1 iTCO_wdt
+usbcore               122928  7 usb_storage,cdc_wdm,cdc_acm,usbhid,ehci_hcd,uhci_hcd
+snd_page_alloc          7588  2 snd_intel8x0,snd_pcm
+rng_core                3584  0 
+rtc_cmos                9100  0 
+rtc_core               13364  1 rtc_cmos
+rtc_lib                 2300  1 rtc_core
+processor              28968  0 
+thermal                12632  0 
+button                  5004  0 
