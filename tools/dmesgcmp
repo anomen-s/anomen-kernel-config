@@ -3,18 +3,17 @@
 if test -z "$1" -o -z "$2" 
 then
  echo "Compare two dmesg outputs."
- echo "Usage: dmesgcmp dmesg1 dmesg2"
+ echo "Usage: $0 dmesg1 dmesg2"
  exit 1
 fi
 
 TMP1=$(mktemp)
 TMP2=$(mktemp)
 
-sed  -e 's/^\[[^]]*\][ \t]*//'  < $1 >$TMP1
-sed  -e 's/^\[[^]]*\][ \t]*//'  < $2 >$TMP2
+cat "$1" | sed  -e 's/^\[[^]]*\][ \t]*//' > $TMP1
+cat "$1" | sed  -e 's/^\[[^]]*\][ \t]*//' > $TMP2
 
 diff -wu $TMP1 $TMP2
 
 rm -f $TMP1 $TMP2
-
 

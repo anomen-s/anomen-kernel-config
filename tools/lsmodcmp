@@ -1,0 +1,20 @@
+#!/bin/sh
+
+if test -z "$1" -o -z "$2" 
+then
+ echo "Compare two lsmod outputs."
+ echo "Usage: $0 lsmod1 lsmod2"
+ exit 1
+fi
+
+TMP1=$(mktemp)
+TMP2=$(mktemp)
+
+cat $1 | cut -f 1 -d ' ' | sort > $TMP1
+cat $2 | cut -f 1 -d ' ' | sort > $TMP2
+
+diff -wu $TMP1 $TMP2
+
+rm -f $TMP1 $TMP2
+
+
