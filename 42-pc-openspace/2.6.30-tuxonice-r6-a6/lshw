@@ -1,0 +1,352 @@
+42-pc-openspace
+    description: Tower Computer
+    product: System Name
+    vendor: System Manufacturer
+    version: System Version
+    serial: EVAL
+    width: 32 bits
+    capabilities: smbios-2.3 dmi-2.3
+    configuration: boot=normal chassis=tower
+  *-core
+       description: Motherboard
+       product: P4PE
+       vendor: ASUSTeK Computer INC.
+       physical id: 0
+       version: REV 1.xx
+       serial: xxxxxxxxxxx
+     *-firmware
+          description: BIOS
+          vendor: Award Software, Inc.
+          physical id: 0
+          version: ASUS P4PE ACPI BIOS Revision 1002 (10/28/2002)
+          size: 64KiB
+          capacity: 448KiB
+          capabilities: pci pnp apm upgrade shadowing escd cdboot bootselect socketedrom edd int13floppy360 int13floppy1200 int13floppy720 int13floppy2880 int5printscreen int9keyboard int14serial int17printer int10video acpi usb agp
+     *-cpu
+          description: CPU
+          product: Intel(R) Celeron(R) CPU 2.40GHz
+          vendor: Intel Corp.
+          physical id: 4
+          bus info: cpu@0
+          version: 15.2.9
+          slot: PGA 478
+          size: 2400MHz
+          capacity: 3200MHz
+          width: 32 bits
+          clock: 100MHz
+          capabilities: fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe pebs bts cid xtpr cpufreq
+          configuration: id=0
+        *-cache:0
+             description: L1 cache
+             physical id: 9
+             slot: L1 Cache
+             size: 8KiB
+             capacity: 32KiB
+             capabilities: pipeline-burst synchronous internal write-back data
+        *-cache:1
+             description: L2 cache
+             physical id: a
+             slot: L2 Cache
+             size: 128KiB
+             capacity: 1MiB
+             capabilities: pipeline-burst synchronous internal write-back data
+     *-memory
+          description: System Memory
+          physical id: 2e
+          slot: System board or motherboard
+          size: 2GiB
+          capacity: 2GiB
+        *-bank:0
+             description: DIMM DRAM Synchronous
+             physical id: 0
+             slot: DIMM 1
+             size: 1GiB
+             width: 64 bits
+        *-bank:1
+             description: DIMM DRAM Synchronous
+             physical id: 1
+             slot: DIMM 2
+             size: 1GiB
+             width: 64 bits
+        *-bank:2
+             description: DIMM DRAM Synchronous [empty]
+             physical id: 2
+             slot: DIMM 3
+     *-pci
+          description: Host bridge
+          product: 82845G/GL[Brookdale-G]/GE/PE DRAM Controller/Host-Hub Interface
+          vendor: Intel Corporation
+          physical id: 100
+          bus info: pci@0000:00:00.0
+          version: 02
+          width: 32 bits
+          clock: 33MHz
+        *-pci:0
+             description: PCI bridge
+             product: 82845G/GL[Brookdale-G]/GE/PE Host-to-AGP Bridge
+             vendor: Intel Corporation
+             physical id: 1
+             bus info: pci@0000:00:01.0
+             version: 02
+             width: 32 bits
+             clock: 66MHz
+             capabilities: pci normal_decode bus_master
+           *-display
+                description: VGA compatible controller
+                product: NV18 [GeForce4 MX 440 AGP 8x]
+                vendor: nVidia Corporation
+                physical id: 0
+                bus info: pci@0000:01:00.0
+                version: a4
+                width: 32 bits
+                clock: 66MHz
+                capabilities: pm agp agp-3.0 vga_controller bus_master cap_list
+                configuration: driver=nvidia latency=248 maxlatency=1 mingnt=5 module=nvidia
+        *-usb:0
+             description: USB Controller
+             product: 82801DB/DBL/DBM (ICH4/ICH4-L/ICH4-M) USB UHCI Controller #1
+             vendor: Intel Corporation
+             physical id: 1d
+             bus info: pci@0000:00:1d.0
+             version: 02
+             width: 32 bits
+             clock: 33MHz
+             capabilities: uhci bus_master
+             configuration: driver=uhci_hcd latency=0 module=uhci_hcd
+           *-usbhost
+                product: UHCI Host Controller
+                vendor: Linux 2.6.30-tuxonice-r6-a6 uhci_hcd
+                physical id: 1
+                bus info: usb@2
+                logical name: usb2
+                version: 2.06
+                capabilities: usb-1.10
+                configuration: driver=hub slots=2 speed=12.0MB/s
+        *-usb:1
+             description: USB Controller
+             product: 82801DB/DBL/DBM (ICH4/ICH4-L/ICH4-M) USB UHCI Controller #2
+             vendor: Intel Corporation
+             physical id: 1d.1
+             bus info: pci@0000:00:1d.1
+             version: 02
+             width: 32 bits
+             clock: 33MHz
+             capabilities: uhci bus_master
+             configuration: driver=uhci_hcd latency=0 module=uhci_hcd
+           *-usbhost
+                product: UHCI Host Controller
+                vendor: Linux 2.6.30-tuxonice-r6-a6 uhci_hcd
+                physical id: 1
+                bus info: usb@3
+                logical name: usb3
+                version: 2.06
+                capabilities: usb-1.10
+                configuration: driver=hub slots=2 speed=12.0MB/s
+              *-usb
+                   description: Mouse
+                   vendor: Holtek Semiconductor, Inc.
+                   physical id: 1
+                   bus info: usb@3:1
+                   version: 9.10
+                   capabilities: usb-1.10
+                   configuration: driver=usbhid maxpower=100mA speed=1.5MB/s
+        *-usb:2
+             description: USB Controller
+             product: 82801DB/DBL/DBM (ICH4/ICH4-L/ICH4-M) USB UHCI Controller #3
+             vendor: Intel Corporation
+             physical id: 1d.2
+             bus info: pci@0000:00:1d.2
+             version: 02
+             width: 32 bits
+             clock: 33MHz
+             capabilities: uhci bus_master
+             configuration: driver=uhci_hcd latency=0 module=uhci_hcd
+           *-usbhost
+                product: UHCI Host Controller
+                vendor: Linux 2.6.30-tuxonice-r6-a6 uhci_hcd
+                physical id: 1
+                bus info: usb@4
+                logical name: usb4
+                version: 2.06
+                capabilities: usb-1.10
+                configuration: driver=hub slots=2 speed=12.0MB/s
+        *-usb:3
+             description: USB Controller
+             product: 82801DB/DBM (ICH4/ICH4-M) USB2 EHCI Controller
+             vendor: Intel Corporation
+             physical id: 1d.7
+             bus info: pci@0000:00:1d.7
+             version: 02
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pm debug ehci bus_master cap_list
+             configuration: driver=ehci_hcd latency=0 module=ehci_hcd
+           *-usbhost
+                product: EHCI Host Controller
+                vendor: Linux 2.6.30-tuxonice-r6-a6 ehci_hcd
+                physical id: 1
+                bus info: usb@1
+                logical name: usb1
+                version: 2.06
+                capabilities: usb-2.00
+                configuration: driver=hub slots=6 speed=480.0MB/s
+        *-pci:1
+             description: PCI bridge
+             product: 82801 PCI Bridge
+             vendor: Intel Corporation
+             physical id: 1e
+             bus info: pci@0000:00:1e.0
+             version: 82
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci normal_decode bus_master
+           *-firewire
+                description: FireWire (IEEE 1394)
+                product: VT6306 Fire II IEEE 1394 OHCI Link Layer Controller
+                vendor: VIA Technologies, Inc.
+                physical id: 3
+                bus info: pci@0000:02:03.0
+                version: 80
+                width: 32 bits
+                clock: 33MHz
+                capabilities: pm ohci bus_master cap_list
+                configuration: driver=ohci1394 latency=32 maxlatency=32 module=ohci1394
+           *-network
+                description: Ethernet interface
+                product: NetXtreme BCM5702X Gigabit Ethernet
+                vendor: Broadcom Corporation
+                physical id: 5
+                bus info: pci@0000:02:05.0
+                logical name: eth0
+                version: 02
+                serial: 00:0c:6e:1a:a6:c9
+                size: 1GB/s
+                capacity: 1GB/s
+                width: 64 bits
+                clock: 66MHz
+                capabilities: pcix pm vpd msi bus_master cap_list ethernet physical tp 10bt 10bt-fd 100bt 100bt-fd 1000bt 1000bt-fd autonegotiation
+                configuration: autonegotiation=on broadcast=yes driver=tg3 driverversion=3.98 duplex=full firmware=5702-v2.24a ip=10.0.0.108 latency=64 link=yes mingnt=64 module=tg3 multicast=yes port=twisted pair speed=1GB/s
+           *-display
+                description: VGA compatible controller
+                product: NV11 [GeForce2 MX/MX 400]
+                vendor: nVidia Corporation
+                physical id: d
+                bus info: pci@0000:02:0d.0
+                version: b2
+                width: 32 bits
+                clock: 66MHz
+                capabilities: pm vga_controller bus_master cap_list
+                configuration: driver=nvidia latency=248 maxlatency=1 mingnt=5 module=nvidia
+        *-isa
+             description: ISA bridge
+             product: 82801DB/DBL (ICH4/ICH4-L) LPC Interface Bridge
+             vendor: Intel Corporation
+             physical id: 1f
+             bus info: pci@0000:00:1f.0
+             version: 02
+             width: 32 bits
+             clock: 33MHz
+             capabilities: isa bus_master
+             configuration: latency=0
+        *-ide
+             description: IDE interface
+             product: 82801DB (ICH4) IDE Controller
+             vendor: Intel Corporation
+             physical id: 1f.1
+             bus info: pci@0000:00:1f.1
+             version: 02
+             width: 32 bits
+             clock: 33MHz
+             capabilities: ide bus_master
+             configuration: driver=PIIX_IDE latency=0
+           *-ide:0
+                description: IDE Channel 0
+                physical id: 0
+                bus info: ide@0
+                logical name: ide0
+                clock: 33MHz
+              *-disk
+                   description: ATA Disk
+                   product: ST380011A
+                   vendor: Seagate
+                   physical id: 0
+                   bus info: ide@0.0
+                   logical name: /dev/hda
+                   version: 3.06
+                   serial: 3JV4N03T
+                   size: 74GiB (80GB)
+                   capacity: 74GiB (80GB)
+                   capabilities: ata dma lba iordy smart security pm partitioned partitioned:dos
+                   configuration: mode=udma5 signature=77c377c3 smart=on
+                 *-volume:0
+                      description: Windows NTFS volume
+                      physical id: 1
+                      bus info: ide@0.0,1
+                      logical name: /dev/hda1
+                      logical name: /mnt/windows
+                      version: 3.1
+                      serial: da72e13d-3c7f-9a41-8ddd-a80dec1088ef
+                      size: 36GiB
+                      capacity: 36GiB
+                      capabilities: primary bootable ntfs initialized
+                      configuration: clustersize=4096 created=2006-11-20 13:29:46 filesystem=ntfs label=WINDOWS mount.fstype=ntfs mount.options=ro,nosuid,nodev,noexec,relatime,uid=0,gid=0,umask=00,nls=utf8,errors=continue,mft_zone_multiplier=1 state=mounted
+                 *-volume:1
+                      description: Linux swap volume
+                      physical id: 2
+                      bus info: ide@0.0,2
+                      logical name: /dev/hda2
+                      version: 1
+                      serial: d3483944-1ea8-42de-bb53-aa19d7faec27
+                      size: 3082MiB
+                      capacity: 3082MiB
+                      capabilities: primary nofs swap initialized
+                      configuration: filesystem=swap pagesize=4096
+                 *-volume:2
+                      description: EXT3 volume
+                      vendor: Linux
+                      physical id: 3
+                      bus info: ide@0.0,3
+                      logical name: /dev/hda3
+                      logical name: /
+                      version: 1.0
+                      serial: a4de5f2c-2852-4683-b453-eb060cb69252
+                      size: 34GiB
+                      capacity: 34GiB
+                      capabilities: primary journaled extended_attributes large_files huge_files recover ext3 ext2 initialized
+                      configuration: created=2009-11-16 20:22:36 filesystem=ext3 label=PC42ROOT modified=2010-01-26 18:28:46 mount.fstype=ext3 mount.options=rw,relatime,errors=continue,data=writeback mounted=2010-01-26 18:28:46 state=mounted
+           *-ide:1
+                description: IDE Channel 1
+                physical id: 1
+                bus info: ide@1
+                logical name: ide1
+                clock: 33MHz
+              *-cdrom
+                   description: DVD reader
+                   product: SAMSUNG DVD-ROM SD-616Q
+                   physical id: 0
+                   bus info: ide@1.0
+                   logical name: /dev/hdc
+                   version: F403
+                   capabilities: packet atapi cdrom removable nonmagnetic dma lba iordy audio dvd
+                   configuration: mode=udma2 status=nodisc
+        *-serial
+             description: SMBus
+             product: 82801DB/DBL/DBM (ICH4/ICH4-L/ICH4-M) SMBus Controller
+             vendor: Intel Corporation
+             physical id: 1f.3
+             bus info: pci@0000:00:1f.3
+             version: 02
+             width: 32 bits
+             clock: 33MHz
+             configuration: driver=i801_smbus latency=0 module=i2c_i801
+        *-multimedia
+             description: Multimedia audio controller
+             product: 82801DB/DBL/DBM (ICH4/ICH4-L/ICH4-M) AC'97 Audio Controller
+             vendor: Intel Corporation
+             physical id: 1f.5
+             bus info: pci@0000:00:1f.5
+             version: 02
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pm bus_master cap_list
+             configuration: driver=Intel ICH latency=0 module=snd_intel8x0
