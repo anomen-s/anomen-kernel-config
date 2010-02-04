@@ -1,0 +1,52 @@
+Module                  Size  Used by
+aes_i586                7868  2 
+aes_generic            26780  1 aes_i586
+xts                     2684  1 
+gf128mul                6940  1 xts
+dm_crypt               11488  1 
+sg                     19560  0 
+cdc_wdm                 9052  0 
+usb_storage            32320  0 
+cdc_acm                15552  0 
+vmnet                  35316  13 
+vmblock                10520  1 
+vmci                   43420  0 
+vmmon                  61264  0 
+max6650                 8404  0 
+asb100                 14836  0 
+hwmon_vid               2652  1 asb100
+hwmon                   2096  2 max6650,asb100
+snd_seq                44624  0 
+snd_seq_device          5768  1 snd_seq
+snd_pcm_oss            35232  0 
+snd_mixer_oss          13596  1 snd_pcm_oss
+ntfs                   94208  1 
+dm_mod                 45988  3 dm_crypt
+p4_clockmod             3748  0 
+speedstep_lib           3548  1 p4_clockmod
+snd_intel8x0           28824  1 
+snd_ac97_codec         95836  1 snd_intel8x0
+ac97_bus                1308  1 snd_ac97_codec
+nvidia               4698868  28 
+ohci1394               29548  0 
+snd_pcm                65252  3 snd_pcm_oss,snd_intel8x0,snd_ac97_codec
+ieee1394               74652  1 ohci1394
+snd_timer              19040  2 snd_seq,snd_pcm
+iTCO_wdt               10396  0 
+snd                    47300  10 snd_seq,snd_seq_device,snd_pcm_oss,snd_mixer_oss,snd_intel8x0,snd_ac97_codec,snd_pcm,snd_timer
+iTCO_vendor_support     2752  1 iTCO_wdt
+tg3                   104224  0 
+pcspkr                  2140  0 
+soundcore               5792  1 snd
+rng_core                3616  0 
+libphy                 16892  1 tg3
+snd_page_alloc          7620  2 snd_intel8x0,snd_pcm
+i2c_i801                8236  0 
+rtc_cmos               10444  0 
+i2c_core               19244  4 max6650,asb100,nvidia,i2c_i801
+rtc_core               13972  1 rtc_cmos
+rtc_lib                 2300  1 rtc_core
+processor              29384  0 
+thermal                12632  0 
+button                  5004  0 
+usbhid                 25536  0 
