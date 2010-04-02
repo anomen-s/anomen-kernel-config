@@ -1,0 +1,43 @@
+Module                  Size  Used by
+it87                   19532  0 
+i2c_dev                 5988  0 
+snd_seq                47248  0 
+snd_seq_device          5992  1 snd_seq
+snd_pcm_oss            37600  0 
+snd_mixer_oss          14428  1 snd_pcm_oss
+powernow_k8            13856  1 
+nvidia               8871684  28 
+usbhid                 26144  0 
+forcedeth              53800  0 
+max6650                 8628  0 
+asb100                 15220  0 
+hwmon_vid               2716  2 it87,asb100
+i2c_i801                8364  0 
+i2c_core               20368  5 i2c_dev,nvidia,max6650,asb100,i2c_i801
+dm_mod                 48900  0 
+snd_hda_codec_analog    56764  1 
+snd_hda_intel          23624  2 
+snd_hda_codec          55452  2 snd_hda_codec_analog,snd_hda_intel
+snd_pcm                67648  3 snd_pcm_oss,snd_hda_intel,snd_hda_codec
+snd_timer              19172  2 snd_seq,snd_pcm
+snd                    51364  13 snd_seq,snd_seq_device,snd_pcm_oss,snd_mixer_oss,snd_hda_codec_analog,snd_hda_intel,snd_hda_codec,snd_pcm,snd_timer
+sg                     19180  0 
+ohci1394               29676  0 
+soundcore               6080  1 snd
+snd_page_alloc          7844  2 snd_hda_intel,snd_pcm
+ieee1394               77092  1 ohci1394
+rtc_cmos               10156  0 
+ata_generic             4480  0 
+pata_acpi               3804  0 
+ahci                   32776  0 
+pata_jmicron            2844  0 
+sata_nv                22436  0 
+rtc_core               14712  1 rtc_cmos
+rtc_lib                 2364  1 rtc_core
+pcspkr                  2172  0 
+fan                     4000  0 
+asus_atk0110            7612  0 
+button                  5036  0 
+processor              34192  1 powernow_k8
+thermal                12632  0 
+hwmon                   2104  4 it87,max6650,asb100,asus_atk0110
