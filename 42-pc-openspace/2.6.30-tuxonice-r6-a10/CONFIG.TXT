@@ -54,7 +54,13 @@ CONFIG_CRYPTO_TWOFISH_586=m
 =====================
 * HW change - Athlon64, nForce chipset
 
+2.6.30-tuxonice-r6-a10
+======================
++ CONFIG_SENSORS_K8TEMP
+- EISA
++ nForce
+- Intel CPU
++ AMD CPU
+
 TODO:
 =====
-+ CONFIG_SENSORS_K8TEMP
-
