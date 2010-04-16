@@ -64,3 +64,4 @@ CONFIG_CRYPTO_TWOFISH_586=m
 
 TODO:
 =====
++ AMD cpufreq
