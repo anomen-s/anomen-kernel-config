@@ -68,6 +68,10 @@ CONFIG_CRYPTO_TWOFISH_586=m
 + LZF
 - unused IDE
 
+
+2.6.30-tuxonice-r11-a11
+=======================
++ IPSec: XFRM_USER, CONFIG_CRYPTO_*
+
 TODO:
 =====
-+ XFRM_USER, CONFIG_CRYPTO_*
