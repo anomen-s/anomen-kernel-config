@@ -1,0 +1,78 @@
+2.6.30-gentoo-r4-a1
+===================
+
+2.6.30-tuxonice-r6-a2
+=====================
++ CONFIG_HWMON
++ iTCO_wdt - Watchdog
++ Firewire 1394
++ intel RNG
+
+2.6.30-tuxonice-r6-a3
+=====================
++ ALSA sound
++ dmesg timestamps
++ LZO
++ sensors: asb100, max6650, smartbatt; ITE IT8708F Super IO
++ USB_STORAGE
+- CONFIG_NF_CT_ACCT
+
+2.6.30-tuxonice-r6-a4
+=====================
+
+2.6.30-tuxonice-r6-a5
+=====================
++ x86 PAT
+- USB_STORAGE debug
+CONFIG_CRYPTO_GF128MUL=m
+CONFIG_CRYPTO_LRW=m
+CONFIG_CRYPTO_XTS=m
+CONFIG_CRYPTO_WP512=m
+CONFIG_CRYPTO_TWOFISH_586=m
+- compat VDSO
+- EFI
+
+2.6.30-tuxonice-r6-a6
+=====================
+- WIRELESS
+- unused HW (PATA, ETH)
+- AGP, FB
+* USB in kernel
+
+2.6.30-tuxonice-r6-a7
+=====================
++ preemptive kernel
++ PARAVIRT, VCI
+
+2.6.30-tuxonice-r6-a8
+=====================
++ USB storage devices, SCSI CDROM
++ V4L2, USB cams
+- RAMDISK
+
+2.6.30-tuxonice-r6-a9
+=====================
+* HW change - Athlon64, nForce chipset
+
+2.6.30-tuxonice-r6-a10
+======================
++ CONFIG_SENSORS_K8TEMP
+- EISA
++ nForce
+- Intel CPU
++ AMD CPU
+
+2.6.30-tuxonice-r11-a11
+=======================
+* AMD cpufreq
++ LZF
+- unused IDE
+
+2.6.32-tuxonice-r7-a1
+=======================
++ XFRM_USER, CONFIG_CRYPTO_*
++ PPP
++ USM network adapters
+
+TODO:
+=====
