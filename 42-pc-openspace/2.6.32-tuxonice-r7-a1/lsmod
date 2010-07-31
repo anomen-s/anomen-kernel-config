@@ -1,0 +1,47 @@
+Module                  Size  Used by
+vmnet                  32534  13 
+vmblock                 9263  1 
+vmci                   44428  0 
+vmmon                  63149  0 
+hwmon_vid               1980  0 
+max6650                 5859  0 
+snd_seq                39204  0 
+snd_seq_device          4073  1 snd_seq
+snd_pcm_oss            31997  0 
+snd_mixer_oss          12234  1 snd_pcm_oss
+dm_mod                 49622  0 
+cpufreq_stats           2268  0 
+powernow_k8            10690  1 
+sg                     14760  0 
+nvidia               9829664  38 
+forcedeth              47125  0 
+i2c_nforce2             4568  0 
+ata_generic             2187  0 
+snd_hda_codec_analog    49497  1 
+ohci1394               24956  0 
+rtc_cmos                7504  0 
+pata_acpi               2216  0 
+ieee1394               61050  1 ohci1394
+i2c_core               14329  3 max6650,nvidia,i2c_nforce2
+sata_nv                17723  1 
+rtc_core               10481  1 rtc_cmos
+parport_pc             14885  0 
+ahci                   29558  0 
+snd_hda_intel          16976  2 
+k8temp                  2443  0 
+snd_hda_codec          45295  2 snd_hda_codec_analog,snd_hda_intel
+rtc_lib                 1498  1 rtc_core
+snd_pcm                55415  3 snd_pcm_oss,snd_hda_intel,snd_hda_codec
+pcspkr                  1331  0 
+asus_atk0110            7966  0 
+parport                14622  1 parport_pc
+hwmon                   1029  3 max6650,k8temp,asus_atk0110
+processor              26542  1 powernow_k8
+fan                     2582  0 
+snd_timer              14853  2 snd_seq,snd_pcm
+thermal                 9246  0 
+snd                    38270  13 snd_seq,snd_seq_device,snd_pcm_oss,snd_mixer_oss,snd_hda_codec_analog,snd_hda_intel,snd_hda_codec,snd_pcm,snd_timer
+soundcore               4495  1 snd
+snd_page_alloc          5473  2 snd_hda_intel,snd_pcm
+button                  3590  0 
+usbhid                 22533  0 
