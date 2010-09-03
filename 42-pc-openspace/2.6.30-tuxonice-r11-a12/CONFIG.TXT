@@ -72,6 +72,9 @@ CONFIG_CRYPTO_TWOFISH_586=m
 2.6.30-tuxonice-r11-a11
 =======================
 + IPSec: XFRM_USER, CONFIG_CRYPTO_*
++ BINFMT_MISC 
+- ETH 10G 
 
 TODO:
 =====
+
