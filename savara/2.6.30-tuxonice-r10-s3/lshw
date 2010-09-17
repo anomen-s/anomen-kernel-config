@@ -27,13 +27,13 @@ savara
           description: CPU
           product: AMD Athlon(tm) 64 X2 Dual Core Processor 3800+
           vendor: Advanced Micro Devices [AMD]
-          physical id: 4
+          physical id: 3
           bus info: cpu@0
           version: AMD Athlon(tm) 64 X2 Dual Core Processor 3800+
           serial: To Be Filled By O.E.M.
           slot: CPU 1
-          size: 2GHz
-          capacity: 2GHz
+          size: 1800MHz
+          capacity: 1800MHz
           width: 64 bits
           clock: 200MHz
           capabilities: fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt rdtscp x86-64 3dnowext 3dnow rep_good extd_apicid pni cx16 lahf_lm cmp_legacy svm extapic cr8_legacy cpufreq
@@ -51,18 +51,13 @@ savara
              size: 1MiB
              capacity: 1MiB
              capabilities: pipeline-burst internal varies unified
-        *-cache:2 DISABLED
-             description: L3 cache
-             physical id: 7
-             slot: L3-Cache
-             capabilities: internal
      *-memory:0
           description: System Memory
           physical id: 2b
           slot: System board or motherboard
           size: 6GiB
         *-bank:0
-             description: DIMM Synchronous
+             description: DIMM DDR2 Synchronous
              product: PartNum0
              vendor: Manufacturer0
              physical id: 0
@@ -71,7 +66,7 @@ savara
              size: 1GiB
              width: 64 bits
         *-bank:1
-             description: DIMM Synchronous
+             description: DIMM DDR2 Synchronous
              product: PartNum1
              vendor: Manufacturer1
              physical id: 1
@@ -80,7 +75,7 @@ savara
              size: 2GiB
              width: 64 bits
         *-bank:2
-             description: DIMM Synchronous
+             description: DIMM DDR2 Synchronous
              product: PartNum2
              vendor: Manufacturer2
              physical id: 2
@@ -89,7 +84,7 @@ savara
              size: 1GiB
              width: 64 bits
         *-bank:3
-             description: DIMM Synchronous
+             description: DIMM DDR2 Synchronous
              product: PartNum3
              vendor: Manufacturer3
              physical id: 3
@@ -101,7 +96,7 @@ savara
           description: RAM memory
           product: MCP55 Memory Controller
           vendor: nVidia Corporation
-          physical id: 3
+          physical id: 4
           bus info: pci@0000:00:00.0
           version: a1
           width: 32 bits
@@ -119,6 +114,7 @@ savara
           clock: 66MHz
           capabilities: isa bus_master
           configuration: latency=0
+          resources: ioport:2f00(size=128)
      *-serial
           description: SMBus
           product: MCP55 SMBus
@@ -129,7 +125,8 @@ savara
           width: 32 bits
           clock: 66MHz
           capabilities: pm cap_list
-          configuration: driver=nForce2_smbus latency=0 module=i2c_nforce2
+          configuration: driver=nForce2_smbus latency=0
+          resources: irq:11 ioport:2900(size=64) ioport:2d00(size=64) ioport:2e00(size=64)
      *-usb:0
           description: USB Controller
           product: MCP55 USB Controller
@@ -141,6 +138,7 @@ savara
           clock: 66MHz
           capabilities: pm ohci bus_master cap_list
           configuration: driver=ohci_hcd latency=0 maxlatency=1 mingnt=3
+          resources: irq:22 memory:fbffb000-fbffbfff
         *-usbhost
              product: OHCI Host Controller
              vendor: Linux 2.6.30-tuxonice-r10-s3 ohci_hcd
@@ -160,7 +158,8 @@ savara
           width: 32 bits
           clock: 66MHz
           capabilities: debug pm ehci bus_master cap_list
-          configuration: driver=ehci_hcd latency=0 maxlatency=1 mingnt=3 module=ehci_hcd
+          configuration: driver=ehci_hcd latency=0 maxlatency=1 mingnt=3
+          resources: irq:23 memory:fbffac00-fbffacff
         *-usbhost
              product: EHCI Host Controller
              vendor: Linux 2.6.30-tuxonice-r10-s3 ehci_hcd
@@ -170,7 +169,19 @@ savara
              version: 2.06
              capabilities: usb-2.00
              configuration: driver=hub slots=10 speed=480.0MB/s
-     *-ide:0
+     *-ide:0 UNCLAIMED
+          description: IDE interface
+          product: MCP55 IDE
+          vendor: nVidia Corporation
+          physical id: 7
+          bus info: pci@0000:00:04.0
+          version: a1
+          width: 32 bits
+          clock: 66MHz
+          capabilities: ide pm bus_master cap_list
+          configuration: latency=0 maxlatency=1 mingnt=3
+          resources: ioport:1f0(size=8) ioport:3f6 ioport:170(size=8) ioport:376 ioport:ffa0(size=16)
+     *-ide:1
           description: IDE interface
           product: MCP55 SATA Controller
           vendor: nVidia Corporation
@@ -181,7 +192,8 @@ savara
           width: 32 bits
           clock: 66MHz
           capabilities: ide pm bus_master cap_list emulated
-          configuration: driver=sata_nv latency=0 maxlatency=1 mingnt=3 module=sata_nv
+          configuration: driver=sata_nv latency=0 maxlatency=1 mingnt=3
+          resources: irq:23 ioport:d480(size=8) ioport:d400(size=4) ioport:d080(size=8) ioport:d000(size=4) ioport:cc00(size=16) memory:fbff9000-fbff9fff
         *-disk
              description: ATA Disk
              product: WDC WD5000AAKS-0
@@ -195,7 +207,7 @@ savara
              capabilities: partitioned partitioned:dos
              configuration: ansiversion=5 signature=befb2392
            *-volume:0
-                description: EXT3 volume
+                description: Linux filesystem partition
                 vendor: Linux
                 physical id: 1
                 bus info: scsi@0:0.0.0,1
@@ -205,8 +217,8 @@ savara
                 serial: e71e03c2-ebc7-4961-94b3-0313697dbb8a
                 size: 400MiB
                 capacity: 400MiB
-                capabilities: primary bootable journaled extended_attributes large_files huge_files recover ext3 ext2 initialized
-                configuration: created=2008-05-28 10:23:05 filesystem=ext3 label=WD500_BOOT modified=2010-01-24 15:16:47 mount.fstype=ext2 mount.options=rw,relatime,errors=continue mounted=2010-01-23 19:12:11 state=mounted
+                capabilities: primary bootable extended_attributes ext2 initialized
+                configuration: filesystem=ext2 label=WD500_BOOT modified=2010-08-26 17:31:51 mount.fstype=ext2 mount.options=ro,relatime,errors=continue mounted=2010-08-17 00:07:22 state=mounted
            *-volume:1
                 description: EXT3 volume
                 vendor: Linux
@@ -218,8 +230,8 @@ savara
                 serial: 7a115017-0d69-4d68-8e87-d2ad3a80b1e8
                 size: 37GiB
                 capacity: 37GiB
-                capabilities: primary journaled extended_attributes large_files huge_files recover ext3 ext2 initialized
-                configuration: created=2008-05-28 10:20:07 filesystem=ext3 label=WD500_ROOT modified=2010-01-24 15:33:36 mount.fstype=ext3 mount.options=rw,relatime,errors=continue,data=writeback mounted=2010-01-24 15:33:36 state=mounted
+                capabilities: primary journaled extended_attributes large_files recover ext3 ext2 initialized
+                configuration: created=2008-05-28 10:20:07 filesystem=ext3 label=WD500_ROOT modified=2010-09-17 19:04:02 mount.fstype=ext3 mount.options=rw,relatime,errors=continue,data=writeback mounted=2010-09-17 19:04:02 state=mounted
            *-volume:2
                 description: Linux swap volume
                 physical id: 3
@@ -242,9 +254,9 @@ savara
                 serial: 24cdc151-5719-4c4a-9e99-edfbece2c02b
                 size: 422GiB
                 capacity: 422GiB
-                capabilities: primary journaled extended_attributes large_files huge_files recover ext3 ext2 initialized
-                configuration: created=2008-05-22 18:14:03 filesystem=ext3 label=WD500_SHARE modified=2010-01-24 15:33:38 mount.fstype=ext3 mount.options=rw,relatime,data=writeback mounted=2010-01-24 15:33:38 state=mounted
-     *-ide:1
+                capabilities: primary journaled extended_attributes large_files recover ext3 ext2 initialized
+                configuration: created=2008-05-22 18:14:03 filesystem=ext3 label=WD500_SHARE modified=2010-09-17 19:04:03 mount.fstype=ext3 mount.options=rw,relatime,data=writeback mounted=2010-09-17 19:04:03 state=mounted
+     *-ide:2
           description: IDE interface
           product: MCP55 SATA Controller
           vendor: nVidia Corporation
@@ -254,8 +266,9 @@ savara
           width: 32 bits
           clock: 66MHz
           capabilities: ide pm bus_master cap_list
-          configuration: driver=sata_nv latency=0 maxlatency=1 mingnt=3 module=sata_nv
-     *-ide:2
+          configuration: driver=sata_nv latency=0 maxlatency=1 mingnt=3
+          resources: irq:22 ioport:c880(size=8) ioport:c800(size=4) ioport:c480(size=8) ioport:c400(size=4) ioport:c080(size=16) memory:fbff8000-fbff8fff
+     *-ide:3
           description: IDE interface
           product: MCP55 SATA Controller
           vendor: nVidia Corporation
@@ -266,7 +279,8 @@ savara
           width: 32 bits
           clock: 66MHz
           capabilities: ide pm bus_master cap_list emulated
-          configuration: driver=sata_nv latency=0 maxlatency=1 mingnt=3 module=sata_nv
+          configuration: driver=sata_nv latency=0 maxlatency=1 mingnt=3
+          resources: irq:21 ioport:c000(size=8) ioport:bc00(size=4) ioport:b880(size=8) ioport:b800(size=4) ioport:b480(size=16) memory:fbff7000-fbff7fff
         *-cdrom
              description: DVD-RAM writer
              product: DVDRW LH-20A1L
@@ -302,7 +316,8 @@ savara
           width: 32 bits
           clock: 66MHz
           capabilities: pm msi ht bus_master cap_list
-          configuration: driver=HDA Intel latency=0 maxlatency=5 mingnt=2 module=snd_hda_intel
+          configuration: driver=HDA Intel latency=0 maxlatency=5 mingnt=2
+          resources: irq:21 memory:fbff0000-fbff3fff
      *-bridge
           description: Ethernet interface
           product: MCP55 Ethernet
@@ -318,6 +333,7 @@ savara
           clock: 66MHz
           capabilities: bridge pm msix msi ht bus_master cap_list ethernet physical mii 10bt 10bt-fd 100bt 100bt-fd 1000bt-fd autonegotiation
           configuration: autonegotiation=on broadcast=yes driver=forcedeth driverversion=0.64 duplex=full ip=172.24.24.40 latency=0 link=yes maxlatency=20 mingnt=1 multicast=yes port=MII speed=100MB/s
+          resources: irq:30 memory:fbff6000-fbff6fff ioport:b400(size=8) memory:fbffa800-fbffa8ff memory:fbffa400-fbffa40f
      *-pci:1
           description: PCI bridge
           product: MCP55 PCI Express bridge
@@ -329,6 +345,7 @@ savara
           clock: 33MHz
           capabilities: pci pm msi ht pciexpress normal_decode bus_master cap_list
           configuration: driver=pcieport-driver
+          resources: irq:24
      *-pci:2
           description: PCI bridge
           product: MCP55 PCI Express bridge
@@ -340,6 +357,7 @@ savara
           clock: 33MHz
           capabilities: pci pm msi ht pciexpress normal_decode bus_master cap_list
           configuration: driver=pcieport-driver
+          resources: irq:25
      *-pci:3
           description: PCI bridge
           product: MCP55 PCI Express bridge
@@ -351,6 +369,7 @@ savara
           clock: 33MHz
           capabilities: pci pm msi ht pciexpress normal_decode bus_master cap_list
           configuration: driver=pcieport-driver
+          resources: irq:26
      *-pci:4
           description: PCI bridge
           product: MCP55 PCI Express bridge
@@ -362,6 +381,7 @@ savara
           clock: 33MHz
           capabilities: pci pm msi ht pciexpress normal_decode bus_master cap_list
           configuration: driver=pcieport-driver
+          resources: irq:27
      *-pci:5
           description: PCI bridge
           product: MCP55 PCI Express bridge
@@ -373,6 +393,7 @@ savara
           clock: 33MHz
           capabilities: pci pm msi ht pciexpress normal_decode bus_master cap_list
           configuration: driver=pcieport-driver
+          resources: irq:28
      *-pci:6
           description: PCI bridge
           product: MCP55 PCI Express bridge
@@ -384,6 +405,7 @@ savara
           clock: 33MHz
           capabilities: pci pm msi ht pciexpress normal_decode bus_master cap_list
           configuration: driver=pcieport-driver
+          resources: irq:29 ioport:e000(size=4096) memory:fc000000-febfffff ioport:c0000000(size=268435456)
         *-display
              description: VGA compatible controller
              product: G73 [GeForce 7600 GS]
@@ -393,8 +415,9 @@ savara
              version: a1
              width: 64 bits
              clock: 33MHz
-             capabilities: pm msi pciexpress vga_controller bus_master cap_list
-             configuration: driver=nvidia latency=0 module=nvidia
+             capabilities: pm msi pciexpress vga_controller bus_master cap_list rom
+             configuration: driver=nvidia latency=0
+             resources: irq:19 memory:fd000000-fdffffff memory:c0000000-cfffffff(prefetchable) memory:fc000000-fcffffff ioport:ec00(size=128) memory:febe0000-febfffff(prefetchable)
      *-pci:7
           description: Host bridge
           product: K8 [Athlon64/Opteron] HyperTransport Technology Configuration
@@ -431,4 +454,5 @@ savara
           version: 00
           width: 32 bits
           clock: 33MHz
-          configuration: driver=k8temp module=k8temp
+          configuration: driver=k8temp
+          resources: irq:0
