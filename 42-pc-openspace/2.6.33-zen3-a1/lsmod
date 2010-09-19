@@ -1,0 +1,46 @@
+Module                  Size  Used by
+vmnet                  32662  13 
+vmblock                 9263  1 
+vmci                   44524  0 
+vmmon                  63309  0 
+max6650                 5203  0 
+snd_seq                39115  0 
+snd_seq_device          4073  1 snd_seq
+snd_pcm_oss            32189  0 
+snd_mixer_oss          12203  1 snd_pcm_oss
+dm_mod                 51003  0 
+cpufreq_stats           2268  0 
+powernow_k8            10470  1 
+sg                     14728  0 
+snd_hda_codec_analog    48985  1 
+nvidia               9829120  24 
+ata_generic             2219  0 
+snd_hda_intel          17388  0 
+snd_hda_codec          47406  2 snd_hda_codec_analog,snd_hda_intel
+ohci1394               24956  0 
+pata_acpi               2216  0 
+sata_nv                17723  1 
+forcedeth              46997  0 
+snd_pcm                55681  3 snd_pcm_oss,snd_hda_intel,snd_hda_codec
+rtc_cmos                7582  0 
+rtc_core               10513  1 rtc_cmos
+ieee1394               60954  1 ohci1394
+parport_pc             14885  0 
+rtc_lib                 1498  1 rtc_core
+ahci                   30101  0 
+snd_timer              14666  2 snd_seq,snd_pcm
+snd                    37859  9 snd_seq,snd_seq_device,snd_pcm_oss,snd_mixer_oss,snd_hda_codec_analog,snd_hda_intel,snd_hda_codec,snd_pcm,snd_timer
+i2c_nforce2             4568  0 
+pcspkr                  1299  0 
+i2c_core               13986  3 max6650,nvidia,i2c_nforce2
+asus_atk0110            8126  0 
+parport                14206  1 parport_pc
+processor              25400  1 powernow_k8
+fan                     2518  0 
+thermal                 9374  0 
+soundcore               4495  1 snd
+snd_page_alloc          5505  2 snd_hda_intel,snd_pcm
+button                  3590  0 
+k8temp                  2443  0 
+hwmon                   1029  3 max6650,asus_atk0110,k8temp
+usbhid                 22533  0 
