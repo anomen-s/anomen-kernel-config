@@ -1,0 +1,15 @@
+2.6.38-gentoo-r6-z2
+===================
+
+2.6.38-gentoo-r6-z3
+===================
+- CONFIG_HIGH_RES_TIMERS
+* CONFIG_NR_CPUS=4
+- CONFIG_PARAVIRT_GUESt
++ CONFIG_SCHED_SMT
+
+TODO
+====
++ PAE
++ HIGHMEM
+- ACPI_PROCFS_POWER
