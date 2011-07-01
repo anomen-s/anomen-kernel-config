@@ -8,8 +8,8 @@
 2.6.38-gentoo-r6-z6
 ===================
 
-TODO
-====
+2.6.38-gentoo-r6-z7
+===================
 + PAE
 + HIGHMEM
 - ACPI_PROCFS_POWER
@@ -18,3 +18,6 @@ TODO
 + CONFIG_NET
 + CONFIG_NET_SCHED
 
+
+TODO
+====
