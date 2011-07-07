@@ -1,0 +1,31 @@
+Module                  Size  Used by
+snd_seq                36363  0 
+snd_seq_device          3933  1 snd_seq
+snd_pcm_oss            30429  0 
+snd_mixer_oss          11423  1 snd_pcm_oss
+vboxvideo               1018  1 
+vboxsf                 29631  4 
+snd_intel8x0           21071  0 
+snd_ac97_codec         82271  1 snd_intel8x0
+rtc_cmos                7326  0 
+pcspkr                  1287  0 
+sr_mod                 11342  0 
+cdrom                  28134  1 sr_mod
+vboxguest             123709  4 vboxsf
+sg                     14245  0 
+ac97_bus                 722  1 snd_ac97_codec
+i2c_piix4               6932  0 
+snd_pcm                52951  3 snd_pcm_oss,snd_intel8x0,snd_ac97_codec
+ac                      1644  0 
+e1000                  84403  0 
+parport_pc             14725  0 
+processor              20640  0 
+battery                 4417  0 
+rtc_core               11097  1 rtc_cmos
+parport                12734  1 parport_pc
+rtc_lib                 1646  1 rtc_core
+snd_timer              13906  2 snd_seq,snd_pcm
+snd                    36193  8 snd_seq,snd_seq_device,snd_pcm_oss,snd_mixer_oss,snd_intel8x0,snd_ac97_codec,snd_pcm,snd_timer
+soundcore               4143  1 snd
+snd_page_alloc          5237  2 snd_intel8x0,snd_pcm
+button                  3674  0 
