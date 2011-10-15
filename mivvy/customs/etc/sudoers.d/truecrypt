@@ -1,0 +1,5 @@
+
+# Users in the truecrypt group are allowed to run truecrypt as root.
+%truecrypt ALL=(root) NOPASSWD:/usr/bin/truecrypt
+
+

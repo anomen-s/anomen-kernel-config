@@ -1,0 +1,20 @@
+#!/bin/sh
+
+TC="$HOME/System/tc.tc"
+MOUNTDIR="/mnt/tc"
+
+
+if [ -z "$(ls "$MOUNTDIR")" ]
+then
+ test -n "$DISPLAY" && setxkbmap -model pc104 -layout cz -variant prog
+
+ truecrypt --protect-hidden=no "$TC" "$MOUNTDIR"
+ 
+ ssh-add $MOUNTDIR/ssh/*
+else
+ truecrypt -t -d "$TC"
+ echo unmounted
+fi
+
+
+
