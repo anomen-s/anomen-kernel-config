@@ -1,5 +1,6 @@
 
 # 2010-11-16 @ anomen @ https://bugs.launchpad.net/ubuntu/+source/linux/+bug/672591
+# 2011-11-05 @ anomen @ added r8169, TODO: test if neccessary
 
-# SUSPEND_MODULES="r8187se"
+SUSPEND_MODULES="r8187se r8169"
 
