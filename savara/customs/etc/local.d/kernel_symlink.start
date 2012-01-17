@@ -1,0 +1,20 @@
+#!/bin/bash
+# /etc/conf.d/local.start
+
+# fix /usr/src/linux symlink
+
+KLINK=`ls -l /usr/src/linux | sed -ne 's/.*->[ \t]*//p'`
+KCURR=linux-`uname -r | sed -ne 's/-.[0-9a-z]*$//p' `
+if [ "$KLINK" "!=" "$KCURR" ]
+then
+ echo -n "Incorrect /usr/src/linux link. "
+ if [ -d "/usr/src/$KCURR" ]
+ then
+  echo Fixing...
+  ln -vsfn "$KCURR" /usr/src/linux
+ else
+  echo "ERROR: Can't fix!"
+ fi
+fi
+
+
