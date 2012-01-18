@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<layman>
+
+ <overlay name="watzke"  status="unofficial"  contact="overlay@watzke.cz"
+    src="git://repo.or.cz/overlay-watzke-cz.git" type = "git">
+  <link>http://watzke.cz</link>
+  <description>david watzke's gentoo overlay</description>
+ </overlay>
+
+ <overlay name="java-experimental"
+    src="http://overlays.gentoo.org/svn/proj/java/java-experimental"
+    contact="java@gentoo.org" status="official" type="svn">
+  <link>http://overlays.gentoo.org/proj/java</link>
+  <description>java-experimental gentoo overlay</description>
+ </overlay>
+
+</layman>

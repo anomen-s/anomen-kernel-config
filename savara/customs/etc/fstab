@@ -1,0 +1,32 @@
+
+## ROOT
+/dev/sda2	/	ext3	defaults,relatime	0 1
+#LABEL=WD250_ROOT	/mnt/sata/root		ext3	defaults,noatime,noauto	0 1
+
+## HOME 
+#LABEL=WD250_HOME	/mnt/sata/home		ext3	defaults,noatime,noauto	0 1
+/dev/sda4	/home		ext3	defaults,relatime	0 1
+
+##BOOT
+LABEL=WD500_BOOT /boot	 		ext2	defaults,relatime,ro		 0 1
+
+# KO 
+#/dev/hda4	 /mnt/pata/backup	ext3	defaults		 0 1
+#/dev/hda1	 /mnt/pata/windows	ntfs	defaults,nls=utf8,ro,umask=0277	 0 1
+#/dev/hda3	 /mnt/pata/fat32	vfat	defaults,utf8,iocharset=iso8859-2,dmask=0000,fmask=0111	0 1
+
+/dev/sda3	swap        		swap       pri=2       0       0
+#/dev/sdb2	swap        		swap       pri=1       0       0
+
+#/dev/sda1	 /mnt/sata/ntfs	ntfs	defaults,nls=utf8,ro,umask=0222	 0 1
+#/dev/sdb1	/mnt/sata/ntfs	ntfs-3g noauto,user,silent	0 0
+#/dev/sda2	/mnt/sata/fat32	vfat	defaults,noauto,utf8,iocharset=iso8859-2,dmask=0000,fmask=0111	0 1
+
+####/dev/sdb4	/share		ext3	defaults,noatime		0 1
+none        	/proc		proc    	defaults          0 0
+none        	/dev/shm	tmpfs   	defaults          0 0
+
+#/dev/hdb	/mnt/cdrom	auto		noauto,rw,user                 0 0
+
+
+

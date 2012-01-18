@@ -1,0 +1,12 @@
+
+# anomen : unmount VBox shared fiolders
+
+umount -l /mnt/drive_c
+umount -l /mnt/tc
+
+umount -l /mnt/datastore
+umount -l /mnt/datashare
+
+
+umount -l /mnt/temp
+
