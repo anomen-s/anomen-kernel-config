@@ -1,0 +1,16 @@
+
+# anomen : update windows hosts file
+
+
+HOSTFILE=/mnt/drive_c/WINDOWS/system32/drivers/etc/hosts
+
+test -f "$HOSTFILE" || exit 1
+
+cp "$HOSTFILE" "${HOSTFILE}.bak" || exit 2
+
+for DEST in 10/8 172.24/16 ; do
+ IP=`/sbin/ip addr show to $DEST | sed -n -e 's@.*inet\s*\([0-9.]*\)/.*@\1@p'`
+ test -n "$IP" && break
+done
+
+sed -i -e "s/.*ZAX-ADDRESS-LINE.*/$IP zax zax.gemalto.com # ZAX-ADDRESS-LINE/"  "$HOSTFILE"
