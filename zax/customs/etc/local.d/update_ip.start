@@ -13,4 +13,4 @@ for DEST in 10/8 172.24/16 ; do
  test -n "$IP" && break
 done
 
-sed -i -e "s/.*ZAX-ADDRESS-LINE.*/$IP zax zax.gemalto.com # ZAX-ADDRESS-LINE/"  "$HOSTFILE"
+sed -i -e "s/.*ZAX-ADDRESS-LINE.*/$IP zax zax.gemalto.com zax.cz www.zax.cz # ZAX-ADDRESS-LINE/"  "$HOSTFILE"
