@@ -1,0 +1,15 @@
+
+# Games
+games-engines/scummvm fluidsynth 
+games-rpg/nwn-data hou sou -nowin
+games-rpg/nwn hou sou
+games-rpg/nwn-cep hou sou
+
+games-fps/duke3d demo
+
+games-fps/quake3-data cdinstall
+games-fps/quake3 dedicated
+
+
+# gnutls: http://bugs.gentoo.org/show_bug.cgi?id=243072
+app-emulation/wine -gnutls -win64

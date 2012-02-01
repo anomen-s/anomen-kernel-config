@@ -1,0 +1,3 @@
+sys-block/parted device-mapper
+dev-libs/apr-util -sqlite
+dev-db/sqlite secure-delete

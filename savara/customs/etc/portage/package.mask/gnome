@@ -1,0 +1,10 @@
+
+#gnome sux
+gnome-base/libgnome
+gnome-base/libbonoboui
+gnome-base/gnome-vfs
+#gnome-base/gconf
+#gnome-base/orbit
+gnome-base/libbonobo
+#gnome-base/gnome-common
+

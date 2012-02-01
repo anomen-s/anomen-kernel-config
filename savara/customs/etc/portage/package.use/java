@@ -1,0 +1,30 @@
+
+##depends on FF2
+dev-java/swt -firefox xulrunner
+
+########################################
+# java docs, sources
+#dev-java/sun-jdk doc
+#dev-java/commons-lang doc source
+#dev-java/commons-logging doc source
+#dev-java/commons-collections doc source
+#dev-java/commons-configuration doc source
+
+# oo
+app-office/openoffice odk -java
+
+
+dev-java/commons-modeler commons-digester
+
+
+www-servers/tomcat admin
+
+# depends on unstable jgdoc
+net-dns/libidn -java
+
+
+#for pdftk
+sys-devel/gcc gcj -libffi
+
+dev-java/commons-collections test-framework
+dev-java/swing-layout source
