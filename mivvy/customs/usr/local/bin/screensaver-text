@@ -1,0 +1,25 @@
+#!/bin/sh
+
+H=`hostname`
+L=`whoami`
+echo "$L@$H"
+
+uname -s -r
+
+echo ""
+
+date '+%Y-%m-%d %H:%M:%S'
+
+DIR=/sys/devices/LNXSYSTM:*/device:*/PNP*/device:*/PNP*/PNP*/power_supply/BAT1
+
+CN=`cat $DIR/charge_now`
+CF=`cat $DIR/charge_full`
+CC=`echo 100 '*' $CN / $CF | bc`
+
+echo -n "$CC%, "
+
+cat $DIR/status
+
+echo ""
+echo ""
+echo ""
