@@ -6,7 +6,7 @@ echo "$L@$H"
 
 uname -s -r
 
-for A in wlan0 eth0
+for A in wlan0 eth0 usb0
 do
  IP=`ifconfig $A 2> /dev/null | sed -n -e 's/.*inet adr:\(\S*\).*/\1/p'`
  test -n "$IP" && echo "$A: $IP"
