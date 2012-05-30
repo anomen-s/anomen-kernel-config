@@ -6,6 +6,7 @@ swi-prolog
 odt2txt
 antiword
 php5
+php5-gd
 curl
 slimrat-nox
 fatrat
@@ -18,3 +19,16 @@ mkvtoolnix
 rar
 elinks
 hexedit
+pdfcrack
+md5deep
+scalpel
+gocr
+unrtf
+wv
+libxml2-utils
+xsltproc
+finch
+bc
+octave
+unicode
+sslh
