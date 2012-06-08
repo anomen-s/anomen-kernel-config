@@ -32,3 +32,5 @@ bc
 octave
 unicode
 sslh
+colordiff
+libjson-perl
