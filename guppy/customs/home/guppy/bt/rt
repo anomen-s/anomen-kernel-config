@@ -1,0 +1,5 @@
+#! /bin/sh
+
+cd $HOME/bt
+exec screen -S rt rtorrent
+
