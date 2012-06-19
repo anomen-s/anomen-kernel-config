@@ -32,7 +32,6 @@
 - crypto HW
 + cifs stats
 
-
 2.6.24-gentoo-r4-s17
 ====================
 . no changes
@@ -147,3 +146,8 @@
 
 3.0.17-tuxonice-r1-s1
 ======================
+
+TODO
+====
+- MOUSE_PS2_ALPS
+- MOUSE_PS2_LOGIPS2PP
