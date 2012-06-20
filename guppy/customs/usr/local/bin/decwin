@@ -1,0 +1,15 @@
+#! /bin/sh
+
+TMPDIR="${TMPDIR:-/tmp}"
+
+for A do
+
+ TEMP=`mktemp $TMPDIR/decwin-tmp.XXXXXX`
+
+ iconv -f windows-1250 "$A" > $TEMP
+
+ mv -f "$A" `mktemp $TMPDIR/decwin-hist.XXXXXX`
+
+ mv $TEMP "$A"
+
+done
