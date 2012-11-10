@@ -1,0 +1,4 @@
+
+%wheel ALL=(ALL) NOPASSWD: /sbin/halt
+%wheel ALL=(ALL) NOPASSWD: /sbin/poweroff
+

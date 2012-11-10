@@ -43,3 +43,7 @@ nethogs
 netcat6
 poppler-utils
 zip
+libnet-smtp-server-perl
+dnsutils
+apt-file
+mercurial
