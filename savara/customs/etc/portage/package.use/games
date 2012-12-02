@@ -13,3 +13,6 @@ games-fps/quake3 dedicated
 
 # gnutls: http://bugs.gentoo.org/show_bug.cgi?id=243072
 app-emulation/wine -gnutls -win64
+
+media-libs/sdl-mixer timidity
+media-libs/sdl-mixer midi

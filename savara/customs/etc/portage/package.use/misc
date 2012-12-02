@@ -1,6 +1,4 @@
 
-dev-scheme/guile deprecated discouraged threads
-
 net-fs/samba winbind
 
 
@@ -116,3 +114,19 @@ sys-fs/cryptsetup dynamic
 dev-db/sqlite unlock-notify
 media-libs/lcms python
 sci-geosciences/gpsd python
+dev-libs/boost python
+
+sys-apps/pciutils -zlib
+sys-fs/udev hwdb
+app-office/libreoffice pdfimport
+dev-libs/libgcrypt static-libs
+sys-apps/util-linux static-libs
+dev-libs/libgpg-error static-libs
+dev-libs/popt static-libs
+sys-fs/ntfs3g ntfsprogs
+sys-libs/zlib minizip
+
+# not working? test libusb support
+net-print/cups -usb
+
+net-libs/gnutls pkcs11

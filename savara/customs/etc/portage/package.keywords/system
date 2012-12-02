@@ -4,10 +4,8 @@ sys-libs/libfaketime
 
 net-fs/smbnetfs
 
-<=sys-kernel/linux-docs-2.6.36
-
-~sys-kernel/tuxonice-sources-2.6.38-r2
 x11-misc/vdpauinfo
 app-cdr/qpxtool
 app-cdr/iat
 app-crypt/truecrypt
+net-wireless/ar9271-firmware

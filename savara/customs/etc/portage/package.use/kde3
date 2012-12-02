@@ -1,0 +1,5 @@
+app-cdr/k3b -ffmpeg
+kde-base/kdelibs -avahi
+
+net-dns/avahi mdnsresponder-compat
+kde-base/kdelibs -cups

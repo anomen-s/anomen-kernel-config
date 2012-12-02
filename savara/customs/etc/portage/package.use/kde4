@@ -1,0 +1,5 @@
+#dev-python/PyQt4 webkit
+sys-auth/pambase consolekit
+media-video/vlc -kde
+net-libs/libproxy -kde
+sys-auth/polkit -kde
