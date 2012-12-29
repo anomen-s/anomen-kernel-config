@@ -1,14 +1,15 @@
 #!/bin/sh
 
-TC="/media/TAKEMS_16GB/store/aswiki.tc" 
+DEVICE="/media/ANDROID32GB"
+TC="${DEVICE}/store/aswiki.tc"
 MOUNTDIR="$HOME/System/aswikitc"
 
 if [ -z "$(ls "$MOUNTDIR")" ]
 then
- truecrypt --protect-hidden=no "$TC" "$MOUNTDIR"
+ exec truecrypt -k "" --protect-hidden=no "$TC" "$MOUNTDIR"
 else
  truecrypt -t -d "$TC" && echo  TC unmounted
- umount /media/TAKEMS_16GB && echo TAKEMS_16GB unmounted
+ umount "${DEVICE}" && echo "${DEVICE}" unmounted
 fi
 
 
