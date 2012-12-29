@@ -1,0 +1,15 @@
+#! /bin/sh
+
+for A do
+
+ AB=`basename "$A"`
+ TEMP=`mktemp -t "${AB}.XXXXXX"`
+ BAK=`mktemp -t "${AB}.XXXXXX"`
+
+ iconv -f windows-1250 "$A" > "$TEMP"
+
+ mv -f "$A" "$BAK"
+
+ mv "$TEMP" "$A"
+
+done
