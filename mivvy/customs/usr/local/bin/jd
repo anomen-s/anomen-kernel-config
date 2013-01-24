@@ -1,4 +1,4 @@
 #!/bin/sh
 
 cd $HOME/JDownloader
-exec screen java -jar JDownloader.jar
+exec screen -S jd java -jar JDownloader.jar

@@ -1,4 +1,4 @@
 
-%admin ALL=(root) NOPASSWD:/etc/init.d/openvpn, /usr/sbin/openvpn
 %admin ALL=(root) NOPASSWD:/usr/sbin/nethogs
+%admin ALL=(root) NOPASSWD:/usr/sbin/iotop
 
