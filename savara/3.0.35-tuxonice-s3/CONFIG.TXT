@@ -153,11 +153,15 @@
 - MOUSE_PS2_ALPS
 - MOUSE_PS2_LOGIPS2PP
 
-TODO
-====
+3.0.35-s3
+=========
 + CONFIG_USB_SUSPEND (udisks)
 + CONFIG_TASKSTATS, CONFIG_TASK_DELAY_ACCT, CONFIG_TASK_IO_ACCOUNTING (iotop)
 + CONFIG_TMPFS_POSIX_ACL (sys-auth/consolekit)
 + CONFIG_AUDITSYSCALL (sys-auth/consolekit)
 + CONFIG_BLK_DEV_BSG (sys-fs/udev)
-+ CONFIG_DEVTMPFS (udev)
++ CONFIG_DEVTMPFS (sys-fs/udev)
+
+
+TODO
+====
