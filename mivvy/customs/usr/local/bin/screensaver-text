@@ -17,7 +17,7 @@ echo ""
 
 date '+%Y-%m-%d %H:%M:%S'
 
-DIR=/sys/devices/LNXSYSTM:*/device:*/PNP*/device:*/PNP*/PNP*/power_supply/BAT1
+DIR=/sys/devices/LNXSYSTM:*/*/PNP*/device:*/PNP*/PNP*/power_supply/BAT1
 
 CN=`cat $DIR/charge_now`
 CF=`cat $DIR/charge_full`
