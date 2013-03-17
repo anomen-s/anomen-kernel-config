@@ -1,0 +1,3 @@
+#!/bin/sh
+echo 1100 | sudo tee /sys/devices/pci*/*/*/net/wlan0/mtu
+ 

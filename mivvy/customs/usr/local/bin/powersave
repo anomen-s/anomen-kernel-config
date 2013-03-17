@@ -1,0 +1,4 @@
+#!/bin/sh
+
+sudo cpufreq-set -r -g powersave
+
