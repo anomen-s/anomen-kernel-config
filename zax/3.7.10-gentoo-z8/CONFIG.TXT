@@ -1,0 +1,30 @@
+2.6.38-gentoo-r6-z3
+===================
+- CONFIG_HIGH_RES_TIMERS
+* CONFIG_NR_CPUS=4
+- CONFIG_PARAVIRT_GUESt
++ CONFIG_SCHED_SMT
+
+2.6.38-gentoo-r6-z6
+===================
+
+2.6.38-gentoo-r6-z7
+===================
++ PAE
++ HIGHMEM
+- ACPI_PROCFS_POWER
++ CONFIG_PID_NS
++ CONFIG_NET_NS
++ CONFIG_NET
++ CONFIG_NET_SCHED
+
+3.7.10-gentoo-z8
+================
++ CONFIG_DEVTMPFS (sys-fs/udev)
++ CONFIG_TASKSTATS, CONFIG_TASK_DELAY_ACCT, CONFIG_TASK_IO_ACCOUNTING (iotop)
++ CONFIG_AUDITSYSCALL (sys-auth/consolekit)
++ CONFIG_BLK_DEV_BSG
+
+TODO
+====
++ CONFIG_TMPFS_POSIX_ACL (sys-auth/consolekit)
