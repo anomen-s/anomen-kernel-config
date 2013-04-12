@@ -7,14 +7,12 @@ IF=eth0
 
 test -f "$HOSTFILE" || exit 1
 
-cp "$HOSTFILE" "${HOSTFILE}.bak" || exit 2
+cp -f "$HOSTFILE" /tmp/hosts.bak || exit 2
+cp -f "$HOSTFILE" /tmp/hosts.tmp || exit 3
 
 IP=`/sbin/ip addr show $IF | sed -n -e 's@.*inet\s*\([0-9.]*\)/.*@\1@p'`
 
+sed -i -e "s/.*ZAX-ADDRESS-LINE.*/$IP zax zax.gemalto.com zax.cz www.zax.cz # ZAX-ADDRESS-LINE/"  /tmp/hosts.tmp
 
-#for DEST in 10/8 172.24/16 ; do
-# IP=`/sbin/ip addr show to $DEST | sed -n -e 's@.*inet\s*\([0-9.]*\)/.*@\1@p'`
-# test -n "$IP" && break
-#done
+cp -f /tmp/hosts.tmp "$HOSTFILE"
 
-sed -i -e "s/.*ZAX-ADDRESS-LINE.*/$IP zax zax.gemalto.com zax.cz www.zax.cz # ZAX-ADDRESS-LINE/"  "$HOSTFILE"

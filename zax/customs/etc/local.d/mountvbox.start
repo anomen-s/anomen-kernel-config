@@ -1,7 +1,8 @@
 
-# anomen : mount VBox shared folders
+# anomen : mount VBox shared fiolders
 
 mount -t vboxsf -o fmode=666 C_DRIVE /mnt/drive_c
+mount -t vboxsf -o fmode=666 D_DRIVE /mnt/drive_d
 mount -t vboxsf -o fmode=666 TC /mnt/tc
 
 mount -t vboxsf -o fmode=666 DATASHARE /mnt/datashare
