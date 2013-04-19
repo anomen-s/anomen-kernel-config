@@ -28,3 +28,4 @@
 TODO
 ====
 + CONFIG_TMPFS_POSIX_ACL (sys-auth/consolekit)
++ CONFIG_USB_SUSPEND (sys-fs/udisks)

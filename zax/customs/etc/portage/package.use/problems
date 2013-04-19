@@ -1,0 +1,15 @@
+dev-lang/lua deprecated
+media-libs/libvpx -ssse3
+sys-power/upower deprecated
+# bug? - compiel failed
+#media-video/mediainfo -libmms
+#media-libs/libmediainfo -libmms
+
+net-misc/curl -ares
+#media-libs/libwmf -expat
+
+#bug:267749
+#dev-libs/openssl -kerberos
+
+#no gdm
+x11-misc/xscreensaver -new-login

@@ -1,0 +1,4 @@
+# disable GTK1
+
+media-libs/imlib -gtk
+net-misc/putty -gtk
