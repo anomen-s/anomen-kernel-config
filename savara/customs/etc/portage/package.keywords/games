@@ -7,5 +7,12 @@ games-fps/sauerbraten
 
 games-arcade/opentyrian
 
+# steam
+games-util/steam-client-meta
+games-util/steam-meta
+games-util/steam-base
+games-util/steam-games-meta
+
 # wine
 app-emulation/playonlinux
+=app-emulation/wine-1.5.26

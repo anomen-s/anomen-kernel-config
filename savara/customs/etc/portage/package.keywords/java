@@ -34,3 +34,6 @@ dev-java/jna
 dev-java/netbeans-nb
 dev-java/smack
 dev-java/netbeans-platform
+=dev-java/ant-eclipse-ecj-4.2.1
+=dev-java/eclipse-ecj-4.2.1
+dev-util/idea-community

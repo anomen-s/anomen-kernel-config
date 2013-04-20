@@ -1,0 +1,7 @@
+#!/bin/bash -x
+
+for CD in /dev/sr? 
+do
+ /sbin/hdparm -E "${1:-4}" "$CD"
+done
+

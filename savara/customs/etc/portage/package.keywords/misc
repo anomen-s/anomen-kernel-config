@@ -32,3 +32,5 @@ dev-perl/App-CLI
 sys-fs/ext3grep
 app-forensics/scalpel
 net-fs/davfs2
+sys-fs/fusepak
+

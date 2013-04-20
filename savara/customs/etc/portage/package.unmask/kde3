@@ -1,2 +1,3 @@
 kde-base/kdelibs:3.5
-x11-libs/qt-meta:3
+# move x11-libs/qt-meta dev-qt/qt-meta
+dev-qt/qt-meta:3

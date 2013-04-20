@@ -1,0 +1,11 @@
+#! /bin/sh
+
+DIR=$1`date '+%Y-%m-%d'`
+
+if [ -e "$DIR" ] ; then
+ echo "Already exists ($DIR)"
+ exit 1
+else
+ mkdir "$DIR"
+fi
+

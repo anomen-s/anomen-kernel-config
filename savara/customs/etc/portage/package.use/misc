@@ -44,9 +44,6 @@ x11-themes/redhat-artwork cursors icons
 # required for lazarus
 dev-lang/fpc source
 
-#no gdm
-x11-misc/xscreensaver -new-login
-
 media-gfx/showimg -kipi -mysql debug
 
 dev-vcs/subversion webdav-neon webdav-serf -dso  -berkdb perl
@@ -79,7 +76,6 @@ app-office/winstrom server
 app-misc/gpsdrive garmin
 mail-client/thunderbird -crypt
 dev-vcs/subversion -kde
-app-office/openoffice -kde
 app-cdr/k3b -musepack
 www-client/firefox mozdevelop
 media-gfx/graphicsmagick -imagemagick
@@ -130,3 +126,7 @@ sys-libs/zlib minizip
 net-print/cups -usb
 
 net-libs/gnutls pkcs11
+net-misc/curl -adns
+#bu
+sys-power/upower deprecated
+net-analyzer/nmap -lua

@@ -1,0 +1,26 @@
+#! /bin/sh
+
+#if ! grep -q /dev/sda3 /proc/swaps  ; then sudo swapon /dev/sda3 ; fi
+
+# free 500MB
+#ZEROFILE=/dev/shm/zerofile.tmp
+#dd if=/dev/zero of=$ZEROFILE bs=1048576 count=512
+#rm $ZEROFILE
+
+#sudo sh -c "dmesg -c > /var/log/dmesg.hib.log"
+
+#sync
+
+truecrypt -t -d
+
+if truecrypt -t -l
+then
+ echo failed to unmount TC volumes
+ exit
+fi
+
+sudo /usr/sbin/hibernate #--force 
+
+
+sleep 5
+sudo /etc/init.d/net.wlan0 restart
