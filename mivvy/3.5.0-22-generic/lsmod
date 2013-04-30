@@ -1,0 +1,92 @@
+Module                  Size  Used by
+usblp                  17752  0 
+r8187se               160854  0 
+eeprom_93cx6           13169  1 r8187se
+r8169                  55977  0 
+uvcvideo               71278  0 
+videobuf2_core         32071  1 uvcvideo
+videodev               95842  2 uvcvideo,videobuf2_core
+videobuf2_vmalloc      12757  1 uvcvideo
+videobuf2_memops       13213  1 videobuf2_vmalloc
+nls_iso8859_1          12618  0 
+cdc_acm                22339  0 
+btrfs                 735359  0 
+libcrc32c              12544  1 btrfs
+ufs                    73638  0 
+qnx4                   13102  0 
+hfsplus                83192  0 
+hfs                    49291  0 
+minix                  31288  0 
+ntfs                   99830  0 
+msdos                  17133  0 
+jfs                   173906  0 
+xfs                   744278  0 
+reiserfs              229048  0 
+ext2                   67205  1 
+arc4                   12474  0 
+snd_hrtimer            12649  1 
+deflate                12546  0 
+zlib_deflate           26446  2 btrfs,deflate
+ctr                    12870  0 
+twofish_generic        16580  0 
+twofish_i586           12788  0 
+twofish_common         20986  2 twofish_generic,twofish_i586
+camellia_generic       29213  0 
+serpent_sse2_i586      33696  0 
+cryptd                 15615  1 serpent_sse2_i586
+lrw                    13058  1 serpent_sse2_i586
+serpent_generic        29647  1 serpent_sse2_i586
+xts                    12750  3 serpent_sse2_i586
+gf128mul               14504  2 lrw,xts
+blowfish_generic       12475  0 
+blowfish_common        16668  1 blowfish_generic
+cast5                  24977  0 
+des_generic            21192  0 
+xcbc                   12712  0 
+rmd160                 16665  0 
+sha512_generic         16781  0 
+crypto_null            12783  0 
+af_key                 31259  0 
+xfrm_algo              14952  1 af_key
+rfcomm                 37277  4 
+bnep                   17708  2 
+bluetooth             183270  10 rfcomm,bnep
+parport_pc             31969  0 
+ppdev                  12818  0 
+binfmt_misc            17261  1 
+dm_crypt               22403  1 
+snd_hda_codec_realtek    63496  1 
+snd_hda_intel          32516  5 
+snd_hda_codec         111548  2 snd_hda_codec_realtek,snd_hda_intel
+snd_hwdep              13273  1 snd_hda_codec
+snd_pcm                80235  2 snd_hda_intel,snd_hda_codec
+snd_seq_midi           13133  0 
+snd_rawmidi            25383  1 snd_seq_midi
+snd_seq_midi_event     14476  1 snd_seq_midi
+snd_seq                51281  3 snd_seq_midi,snd_seq_midi_event
+gpio_ich               13160  0 
+snd_timer              24412  3 snd_hrtimer,snd_pcm,snd_seq
+snd_seq_device         14138  3 snd_seq_midi,snd_rawmidi,snd_seq
+snd                    62146  20 snd_hda_codec_realtek,snd_hda_intel,snd_hda_codec,snd_hwdep,snd_pcm,snd_rawmidi,snd_seq,snd_timer,snd_seq_device
+microcode              18210  0 
+psmouse                84878  0 
+soundcore              14600  1 snd
+lpc_ich                16926  0 
+snd_page_alloc         14037  2 snd_hda_intel,snd_pcm
+serio_raw              13032  0 
+mac_hid                13038  0 
+sbs                    13336  0 
+sbshc                  13515  1 sbs
+max6650                13893  0 
+coretemp               13169  0 
+lp                     13300  0 
+parport                40754  3 parport_pc,ppdev,lp
+i915                  457247  3 
+drm_kms_helper         47304  1 i915
+drm                   238811  4 i915,drm_kms_helper
+i2c_algo_bit           13198  1 i915
+wmi                    18591  0 
+video                  18848  1 i915
+ums_realtek            17670  0 
+uas                    17557  0 
+usb_storage            39351  1 ums_realtek

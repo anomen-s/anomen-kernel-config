@@ -1,0 +1,156 @@
+00:00.0 Host bridge: Intel Corporation Mobile 945GSE Express Memory Controller Hub (rev 03)
+	Subsystem: Micro-Star International Co., Ltd. Device 0110
+	Flags: bus master, fast devsel, latency 0
+	Capabilities: [e0] Vendor Specific Information: Len=09 <?>
+	Kernel driver in use: agpgart-intel
+
+00:02.0 VGA compatible controller: Intel Corporation Mobile 945GSE Express Integrated Graphics Controller (rev 03) (prog-if 00 [VGA controller])
+	Subsystem: Micro-Star International Co., Ltd. Device 0110
+	Flags: bus master, fast devsel, latency 0, IRQ 16
+	Memory at dfe80000 (32-bit, non-prefetchable) [size=512K]
+	I/O ports at d0f0 [size=8]
+	Memory at c0000000 (32-bit, prefetchable) [size=256M]
+	Memory at dff00000 (32-bit, non-prefetchable) [size=256K]
+	Expansion ROM at <unassigned> [disabled]
+	Capabilities: [90] MSI: Enable- Count=1/1 Maskable- 64bit-
+	Capabilities: [d0] Power Management version 2
+	Kernel driver in use: i915
+	Kernel modules: intelfb, i915
+
+00:02.1 Display controller: Intel Corporation Mobile 945GM/GMS/GME, 943/940GML Express Integrated Graphics Controller (rev 03)
+	Subsystem: Micro-Star International Co., Ltd. Device 0110
+	Flags: bus master, fast devsel, latency 0
+	Memory at dfe00000 (32-bit, non-prefetchable) [size=512K]
+	Capabilities: [d0] Power Management version 2
+
+00:1b.0 Audio device: Intel Corporation NM10/ICH7 Family High Definition Audio Controller (rev 02)
+	Subsystem: Micro-Star International Co., Ltd. Device 0110
+	Flags: bus master, fast devsel, latency 0, IRQ 42
+	Memory at ffe00000 (64-bit, non-prefetchable) [size=16K]
+	Capabilities: [50] Power Management version 2
+	Capabilities: [60] MSI: Enable+ Count=1/1 Maskable- 64bit+
+	Capabilities: [70] Express Root Complex Integrated Endpoint, MSI 00
+	Capabilities: [100] Virtual Channel
+	Capabilities: [130] Root Complex Link
+	Kernel driver in use: snd_hda_intel
+	Kernel modules: snd-hda-intel
+
+00:1c.0 PCI bridge: Intel Corporation NM10/ICH7 Family PCI Express Port 1 (rev 02) (prog-if 00 [Normal decode])
+	Flags: bus master, fast devsel, latency 0
+	Bus: primary=00, secondary=01, subordinate=01, sec-latency=0
+	I/O behind bridge: 0000c000-0000cfff
+	Memory behind bridge: dfd00000-dfdfffff
+	Prefetchable memory behind bridge: 00000000ffd00000-00000000ffdfffff
+	Capabilities: [40] Express Root Port (Slot-), MSI 00
+	Capabilities: [80] MSI: Enable+ Count=1/1 Maskable- 64bit-
+	Capabilities: [90] Subsystem: Gammagraphx, Inc. (or missing ID) Device 0000
+	Capabilities: [a0] Power Management version 2
+	Capabilities: [100] Virtual Channel
+	Capabilities: [180] Root Complex Link
+	Kernel driver in use: pcieport
+	Kernel modules: shpchp
+
+00:1c.1 PCI bridge: Intel Corporation NM10/ICH7 Family PCI Express Port 2 (rev 02) (prog-if 00 [Normal decode])
+	Flags: bus master, fast devsel, latency 0
+	Bus: primary=00, secondary=02, subordinate=02, sec-latency=0
+	I/O behind bridge: 0000b000-0000bfff
+	Memory behind bridge: dfc00000-dfcfffff
+	Prefetchable memory behind bridge: 0000000080000000-00000000801fffff
+	Capabilities: [40] Express Root Port (Slot-), MSI 00
+	Capabilities: [80] MSI: Enable+ Count=1/1 Maskable- 64bit-
+	Capabilities: [90] Subsystem: Gammagraphx, Inc. (or missing ID) Device 0000
+	Capabilities: [a0] Power Management version 2
+	Capabilities: [100] Virtual Channel
+	Capabilities: [180] Root Complex Link
+	Kernel driver in use: pcieport
+	Kernel modules: shpchp
+
+00:1d.0 USB controller: Intel Corporation NM10/ICH7 Family USB UHCI Controller #1 (rev 02) (prog-if 00 [UHCI])
+	Subsystem: Micro-Star International Co., Ltd. Device 0110
+	Flags: bus master, medium devsel, latency 0, IRQ 23
+	I/O ports at d080 [size=32]
+	Kernel driver in use: uhci_hcd
+
+00:1d.1 USB controller: Intel Corporation NM10/ICH7 Family USB UHCI Controller #2 (rev 02) (prog-if 00 [UHCI])
+	Subsystem: Micro-Star International Co., Ltd. Device 0110
+	Flags: bus master, medium devsel, latency 0, IRQ 19
+	I/O ports at d060 [size=32]
+	Kernel driver in use: uhci_hcd
+
+00:1d.2 USB controller: Intel Corporation NM10/ICH7 Family USB UHCI Controller #3 (rev 02) (prog-if 00 [UHCI])
+	Subsystem: Micro-Star International Co., Ltd. Device 0110
+	Flags: bus master, medium devsel, latency 0, IRQ 18
+	I/O ports at d040 [size=32]
+	Kernel driver in use: uhci_hcd
+
+00:1d.3 USB controller: Intel Corporation NM10/ICH7 Family USB UHCI Controller #4 (rev 02) (prog-if 00 [UHCI])
+	Subsystem: Micro-Star International Co., Ltd. Device 0110
+	Flags: bus master, medium devsel, latency 0, IRQ 16
+	I/O ports at d020 [size=32]
+	Kernel driver in use: uhci_hcd
+
+00:1d.7 USB controller: Intel Corporation NM10/ICH7 Family USB2 EHCI Controller (rev 02) (prog-if 20 [EHCI])
+	Subsystem: Micro-Star International Co., Ltd. Device 0110
+	Flags: bus master, medium devsel, latency 0, IRQ 23
+	Memory at dff40000 (32-bit, non-prefetchable) [size=1K]
+	Capabilities: [50] Power Management version 2
+	Capabilities: [58] Debug port: BAR=1 offset=00a0
+	Kernel driver in use: ehci_hcd
+
+00:1e.0 PCI bridge: Intel Corporation 82801 Mobile PCI Bridge (rev e2) (prog-if 01 [Subtractive decode])
+	Flags: bus master, fast devsel, latency 0
+	Bus: primary=00, secondary=03, subordinate=03, sec-latency=32
+	Capabilities: [50] Subsystem: Intel Corporation 82801 Mobile PCI Bridge
+
+00:1f.0 ISA bridge: Intel Corporation 82801GBM (ICH7-M) LPC Interface Bridge (rev 02)
+	Subsystem: Micro-Star International Co., Ltd. Device 0110
+	Flags: bus master, medium devsel, latency 0
+	Capabilities: [e0] Vendor Specific Information: Len=0c <?>
+	Kernel driver in use: lpc_ich
+	Kernel modules: leds-ss4200, lpc_ich, intel-rng
+
+00:1f.2 IDE interface: Intel Corporation 82801GBM/GHM (ICH7-M Family) SATA Controller [IDE mode] (rev 02) (prog-if 80 [Master])
+	Subsystem: Micro-Star International Co., Ltd. Device 0110
+	Flags: bus master, 66MHz, medium devsel, latency 0, IRQ 19
+	I/O ports at 01f0 [size=8]
+	I/O ports at 03f4 [size=1]
+	I/O ports at 0170 [size=8]
+	I/O ports at 0374 [size=1]
+	I/O ports at d0a0 [size=16]
+	Capabilities: [70] Power Management version 2
+	Kernel driver in use: ata_piix
+
+01:00.0 Ethernet controller: Realtek Semiconductor Co., Ltd. RTL8101E/RTL8102E PCI Express Fast Ethernet controller (rev 02)
+	Subsystem: Micro-Star International Co., Ltd. Device 0110
+	Physical Slot: 0
+	Flags: bus master, fast devsel, latency 0, IRQ 43
+	I/O ports at c000 [size=256]
+	Memory at ffd10000 (64-bit, prefetchable) [size=4K]
+	Memory at ffd00000 (64-bit, prefetchable) [size=64K]
+	Expansion ROM at dfd00000 [disabled] [size=64K]
+	Capabilities: [40] Power Management version 3
+	Capabilities: [50] MSI: Enable+ Count=1/1 Maskable- 64bit+
+	Capabilities: [70] Express Endpoint, MSI 01
+	Capabilities: [ac] MSI-X: Enable- Count=2 Masked-
+	Capabilities: [cc] Vital Product Data
+	Capabilities: [100] Advanced Error Reporting
+	Capabilities: [140] Virtual Channel
+	Capabilities: [160] Device Serial Number 00-00-00-00-ff-ff-00-00
+	Kernel driver in use: r8169
+	Kernel modules: r8169
+
+02:00.0 Network controller: Realtek Semiconductor Co., Ltd. RTL8187SE Wireless LAN Controller (rev 22)
+	Subsystem: Micro-Star International Co., Ltd. MN54G2 / MS-6894 Wireless Mini PCIe Card
+	Physical Slot: 0-1
+	Flags: bus master, fast devsel, latency 0, IRQ 17
+	I/O ports at b000 [size=256]
+	Memory at dfc00000 (32-bit, non-prefetchable) [size=16K]
+	Capabilities: [40] Power Management version 3
+	Capabilities: [50] MSI: Enable- Count=1/1 Maskable- 64bit+
+	Capabilities: [70] Express Legacy Endpoint, MSI 00
+	Capabilities: [100] Advanced Error Reporting
+	Capabilities: [140] Virtual Channel
+	Capabilities: [160] Device Serial Number 00-00-ee-a3-77-85-21-00
+	Kernel driver in use: r8180
+	Kernel modules: r8187se
+
