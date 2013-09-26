@@ -29,3 +29,4 @@ TODO
 ====
 + CONFIG_TMPFS_POSIX_ACL (sys-auth/consolekit)
 + CONFIG_USB_SUSPEND (sys-fs/udisks)
++ CONFIG_VIRTIO_[NET,..] (virtualbox)
