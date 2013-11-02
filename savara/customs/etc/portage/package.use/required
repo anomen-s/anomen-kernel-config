@@ -1,0 +1,3 @@
+net-analyzer/wireshark -qt4
+sys-libs/talloc python
+net-fs/cifs-utils ads

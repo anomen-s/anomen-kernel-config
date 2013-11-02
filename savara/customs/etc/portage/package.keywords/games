@@ -16,3 +16,4 @@ games-util/steam-games-meta
 # wine
 app-emulation/playonlinux
 =app-emulation/wine-1.5.26
+media-libs/libsdl:2

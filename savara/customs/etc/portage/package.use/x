@@ -1,0 +1,3 @@
+# new login
+x11-misc/xscreensaver new-login gdm  suid
+ xfce-extra/xfswitch-plugin gdm

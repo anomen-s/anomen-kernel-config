@@ -23,3 +23,5 @@ dev-java/jsr223
 tahomabd.ttf
 tahoma.ttf
 
+dev-java/oracle-jdk-bin
+dev-java/oracle-jre-bin

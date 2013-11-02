@@ -3,3 +3,4 @@ net-im/skype
 
 net-libs/libbt
 mail-mta/spamsink
+=net-misc/dropbox-2.2.8

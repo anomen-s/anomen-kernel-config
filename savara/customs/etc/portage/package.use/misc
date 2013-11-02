@@ -19,9 +19,6 @@ media-video/mplayer xanim -dvdnav  -gtk
 # broken
 media-video/mpeg4ip -player
 
-# temporary
-#media-plugins/alsa-plugins -ffmpeg
-########################################
 
 dev-libs/boost icu
 dev-vcs/cvs server
@@ -69,19 +66,13 @@ dev-vcs/git -gtk tk
 sci-visualization/gnuplot wxwidgets
 dev-libs/apr-util -berkdb
 
-app-office/winstrom server
-
 
 #dev-db/mysql embedded
 app-misc/gpsdrive garmin
-mail-client/thunderbird -crypt
 dev-vcs/subversion -kde
 app-cdr/k3b -musepack
 www-client/firefox mozdevelop
 media-gfx/graphicsmagick -imagemagick
-
-#bug? https://bugzilla.redhat.com/show_bug.cgi?id=168076
-#app-misc/mc -gpm
 
 dev-lang/python -berkdb
 sys-fs/udev extras
@@ -95,11 +86,11 @@ app-text/texlive extra
 dev-lang/php -sqlite
 dev-db/libdbi-drivers -sqlite
 # bug? - compile failed
-media-video/gpac -javascript
+#media-video/gpac -javascript
 
 # bug? - compile failed
-media-video/mediainfo -libmms
-media-libs/libmediainfo -libmms
+#media-video/mediainfo -libmms
+#media-libs/libmediainfo -libmms
 
 net-misc/curl -ares
 x11-libs/qscintilla python
@@ -112,15 +103,12 @@ media-libs/lcms python
 sci-geosciences/gpsd python
 dev-libs/boost python
 
-sys-apps/pciutils -zlib
 sys-fs/udev hwdb
 app-office/libreoffice pdfimport
 dev-libs/libgcrypt static-libs
 sys-apps/util-linux static-libs
 dev-libs/libgpg-error static-libs
-dev-libs/popt static-libs
 sys-fs/ntfs3g ntfsprogs
-sys-libs/zlib minizip
 
 # not working? test libusb support
 net-print/cups -usb
@@ -130,3 +118,4 @@ net-misc/curl -adns
 #bu
 sys-power/upower deprecated
 net-analyzer/nmap -lua
+media-libs/mesa gles2
