@@ -1,0 +1,5 @@
+# anomen: recreate log structure on tmpfs
+
+mkdir -p /var/log/squid3
+touch /var/log/squid3/cache.log /var/log/squid3/access.log
+chown -R proxy /var/log/squid3

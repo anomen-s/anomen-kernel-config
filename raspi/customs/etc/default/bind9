@@ -1,0 +1,10 @@
+# anomen: recreate log structure on tmpfs
+
+mkdir -p /var/log/named
+chown -R bind /var/log/named
+
+# run resolvconf?
+RESOLVCONF=no
+
+# startup options for the server
+OPTIONS="-u bind"

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+for A in `ls /dev/disk/by-label `
+do
+ test "x$A" = "xboot" && continue
+ echo Mounting: $A
+ pumount  /dev/disk/by-label/$A
+ pmount --noatime  /dev/disk/by-label/$A  $A
+done
+

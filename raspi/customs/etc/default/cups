@@ -1,0 +1,7 @@
+# anomen: recreate log structure on tmpfs
+mkdir -p /var/log/cups
+
+# Cups configure options
+
+# LOAD_LP_MODULE: enable/disable to load "lp" parallel printer driver module
+LOAD_LP_MODULE=yes

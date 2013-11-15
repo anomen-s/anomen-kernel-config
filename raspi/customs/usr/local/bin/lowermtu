@@ -1,0 +1,11 @@
+#!/bin/sh
+
+
+S=${1:-1300}
+
+for A in /sys/devices/platform/bcm2708_usb/usb*/*-*/*-*.*/*-*.*:*.*/net/*/mtu
+do
+ echo "$A"
+ echo $S | sudo tee "$A"
+done
+
