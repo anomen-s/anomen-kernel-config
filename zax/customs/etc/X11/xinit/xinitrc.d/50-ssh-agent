@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# add ssh-agent if found
+
+# anomen: add ssh-agent-shared support
+
+sshagent="`which ssh-agent`"
+sshagentshared="`which ssh-agent-shared`"
+if [ -n "$sshagentshared" ] && [ -x "$sshagentshared" ] ; then
+	command="$sshagentshared -- $command"
+elif [ -n "$sshagent" ] && [ -x "$sshagent" ] && [ -z "$SSH_AUTH_SOCK" ]; then
+	command="$sshagent -- $command"
+elif [ -z "$sshagent" ] ; then
+	echo "$0: ssh-agent not found!"
+fi

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+unset http_proxy
+export http_proxy
+
+unset https_proxy
+export https_proxy
+
+exec "$@"
+

@@ -1,5 +1,5 @@
 
-# anomen : unmount VBox shared fiolders
+# anomen : unmount VBox shared folders
 
 umount -l /mnt/drive_c
 umount -l /mnt/drive_d

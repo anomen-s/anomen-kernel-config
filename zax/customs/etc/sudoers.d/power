@@ -2,3 +2,7 @@
 %wheel ALL=(ALL) NOPASSWD: /sbin/halt
 %wheel ALL=(ALL) NOPASSWD: /sbin/poweroff
 
+
+%wheel ALL=(ALL) NOPASSWD: /etc/init.d/net.eth0
+%wheel ALL=(ALL) NOPASSWD: /etc/init.d/sshd
+

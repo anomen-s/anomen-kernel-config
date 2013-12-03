@@ -1,0 +1,13 @@
+#!/bin/sh
+
+if  ip  addr | grep -q " 10.50."
+then
+ P="http://localhost:3129"
+ echo export http_proxy=$P
+ echo export https_proxy=$P
+else
+ echo unset http_proxy
+ echo unset https_proxy
+ export http_proxy
+ export https_proxy
+fi

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+if  ip  addr | grep -q " 10.50."
+then
+ exec /usr/bin/corkscrew "$@"
+elif  ip  addr | grep -q " 172.17.2."
+ exec nc raspi 22
+else
+ exec nc $3 $4
+fi
