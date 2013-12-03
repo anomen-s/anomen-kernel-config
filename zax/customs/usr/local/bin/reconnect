@@ -1,0 +1,9 @@
+#!/bin/sh
+
+for SVC in net.eth0 apache2 cntlm sshd
+do
+  sudo /etc/init.d/$SVC restart
+done
+
+
+/etc/local.d/update_ip.start

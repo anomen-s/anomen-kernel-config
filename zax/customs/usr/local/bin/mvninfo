@@ -1,0 +1,4 @@
+#!/bin/sh
+mvn dependency:tree -o -Doutput=target/dependency.txt
+mvn help:effective-pom -o -Doutput=target/eff.pom.xml
+
