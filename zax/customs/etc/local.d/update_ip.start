@@ -3,16 +3,20 @@
 
 
 HOSTFILE=/mnt/drive_c/WINDOWS/system32/drivers/etc/hosts
-IF=eth0
+IF="eth0 eth1"
 
 test -f "$HOSTFILE" || exit 1
 
 cp -f "$HOSTFILE" /tmp/hosts.bak || exit 2
 cp -f "$HOSTFILE" /tmp/hosts.tmp || exit 3
 
-IP=`/sbin/ip addr show $IF | sed -n -e 's@.*inet\s*\([0-9.]*\)/.*@\1@p'`
+IP=`for A in $IF ; do ip addr show $A ; done | sed -n -e 's@.*inet\s*\([0-9.]*\)/.*@\1@p'`
+
+# echo IP $IP
 
 sed -i -e "s/.*ZAX-ADDRESS-LINE.*/$IP zax zax.gemalto.com zax.cz www.zax.cz # ZAX-ADDRESS-LINE/"  /tmp/hosts.tmp
 
 cp -f /tmp/hosts.tmp "$HOSTFILE"
+
+rm -f /tmp/hosts.tmp
 
