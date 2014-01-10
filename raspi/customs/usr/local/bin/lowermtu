@@ -1,11 +1,12 @@
 #!/bin/sh
 
 
-S=${1:-1300}
+S=${1:-1400}
 
-for A in /sys/devices/platform/bcm2708_usb/usb*/*-*/*-*.*/*-*.*:*.*/net/*/mtu
+for A in  `find /sys/devices/platform/bcm2708_usb -name mtu` 
 do
- echo "$A"
+ echo -n  "$A = " 
+ cat "$A"
  echo $S | sudo tee "$A"
 done
 
