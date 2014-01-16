@@ -3,11 +3,21 @@
 if  ip  addr | grep -q " 10.50."
 then
  P="http://localhost:3129"
+ echo export LOCATION=work
  echo export http_proxy=$P
  echo export https_proxy=$P
-else
+elif  ip  addr | grep -q " 172.17.2."
+then
+ echo export LOCATION=home
  echo unset http_proxy
  echo unset https_proxy
- export http_proxy
- export https_proxy
+ echo export http_proxy
+ echo export https_proxy
+
+else
+ echo export LOCATION=other
+ echo unset http_proxy
+ echo unset https_proxy
+#echo export http_proxy
+# echo export https_proxy
 fi
