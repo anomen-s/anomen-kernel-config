@@ -9,3 +9,6 @@
 %wheel ALL=(ALL) NOPASSWD: /etc/init.d/apache2
 %wheel ALL=(ALL) NOPASSWD: /etc/init.d/cntlm
 
+%wheel ALL=(ALL) NOPASSWD: /etc/local.d/update_ip.start
+
+%wheel ALL=(ALL) NOPASSWD: /usr/sbin/nethogs
