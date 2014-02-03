@@ -1,0 +1,5 @@
+# rules here are only for sake of successful emerge.
+# can be remnoved when not necessary
+
+
+=media-video/mpeg-tools-1.5b-r5

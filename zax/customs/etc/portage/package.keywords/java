@@ -3,23 +3,12 @@ dev-java/maven-bin
 
 dev-java/findbugs
 java-virtuals/servlet-api
-#dev-java/tomcat-servlet-api
-#www-servers/tomcat
-
 dev-java/portecle
-
-dev-java/glassfish:2.1
-dev-java/glassfish:2.1.1
 dev-java/dbvis
 dev-java/squirrel-sql
-net-nds/Apache-DS
 net-nds/ApacheDirectoryStudio
-~app-admin/eselect-ecj-0.5
-dev-util/netbeans:6.9
-~www-servers/jboss-bin-4.0.5
-dev-java/ant-eclipse-ecj:3.6
-dev-java/eclipse-ecj:3.6
-dev-util/netbeans:6.5
 ~dev-java/flyingsaucer-7
-~dev-java/svgsalamander-0.0
 dev-java/commons-dbcp
+dev-util/idea-community
+dev-util/soapui
+<=dev-vcs/mercurial-3.0
