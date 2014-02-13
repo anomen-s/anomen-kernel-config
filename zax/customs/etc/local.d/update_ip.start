@@ -4,19 +4,19 @@
 
 HOSTFILE=/mnt/drive_c/WINDOWS/system32/drivers/etc/hosts
 IF="eth0 eth1"
+T=`mktemp`
 
 test -f "$HOSTFILE" || exit 1
 
-cp -f "$HOSTFILE" /tmp/hosts.bak || exit 2
-cp -f "$HOSTFILE" /tmp/hosts.tmp || exit 3
+#cp -f "$HOSTFILE" /tmp/hosts.bak || exit 2
 
-IP=`for A in $IF ; do ip addr show $A ; done | sed -n -e 's@.*inet\s*\([0-9.]*\)/.*@\1@p'`
+IP=`for A in $IF ; do ip addr show $A ; done | sed -n -e 's@.*inet\s*\([0-9.]*\)/.*@\1@p' | grep -v -E "^169.254."`
 
-# echo IP $IP
+echo Updating windows hosts with $IP
 
-sed -i -e "s/.*ZAX-ADDRESS-LINE.*/$IP zax zax.gemalto.com zax.cz www.zax.cz # ZAX-ADDRESS-LINE/"  /tmp/hosts.tmp
+sed  -e "s/.*ZAX-ADDRESS-LINE.*/$IP zax zax.gemalto.com zax.cz www.zax.cz # ZAX-ADDRESS-LINE/" "$HOSTFILE" >  "$T"
 
-cp -f /tmp/hosts.tmp "$HOSTFILE"
+cp -f "$T" "$HOSTFILE"
 
-rm -f /tmp/hosts.tmp
+rm -f "$T"
 

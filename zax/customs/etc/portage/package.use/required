@@ -13,3 +13,8 @@ net-misc/curl -ares
 
 #no gdm
 x11-misc/xscreensaver -new-login
+net-misc/curl -adns
+net-analyzer/wireshark -qt4
+
+dev-java/dbvis -mssql
+

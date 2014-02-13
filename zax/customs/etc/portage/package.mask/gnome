@@ -8,3 +8,5 @@ gnome-base/gnome-vfs
 gnome-base/libbonobo
 #gnome-base/gnome-common
 
+>=gnome-base/gdm-3.0.0
+
