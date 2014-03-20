@@ -1,2 +1,17 @@
-unrar - built from sources
-truecrypt - built from sources
+unrar
+=====
+- built from sources
+- into /usr/local/bin
+truecrypt
+=========
+- built from sources
+- into /usr/local/bin
+
+Embedded JavaSE
+===============
+- download from Oracle.com: ARMv6/7 Linux - Headful EABI, VFP, HardFP ABI, Little Endian
+- into /opt/ejre1.7*
+
+FreeRapidDownloader
+===================
+- into /opt/FreeRapid-*
