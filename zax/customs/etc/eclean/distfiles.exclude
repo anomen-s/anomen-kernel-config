@@ -1,0 +1,24 @@
+# /etc/eclean/distfiles.exclude
+# In this file you can list some categories or cat/pkg-name for which you want
+# to protect distfiles from "ecleaning". You can also name some specific files.
+# See `man eclean` for syntax details.
+metadata.dtd
+
+# Some packages, not to be removed if ecleaning  without --fetch-restricted
+
+app-crypt/truecrypt
+
+app-emulation/vmware-workstation
+app-emulation/vmware-player
+app-emulation/vmware-modules
+
+dev-java/sun-jdk
+dev-java/sun-jmx
+dev-java/sun-jimi
+dev-java/sun-jms
+dev-java/sun-jce-bin
+dev-java/sun-jre-bin
+dev-java/sun-jdk
+dev-java/jsr223
+dev-java/oracle-jdk-bin
+dev-java/oracle-jre-bin
