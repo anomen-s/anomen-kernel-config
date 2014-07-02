@@ -5,7 +5,7 @@ VBFSOPTIONS=fmode=666,iocharset=utf8,convertcp=utf8
 
 mount -t vboxsf -o $VBFSOPTIONS C_DRIVE /mnt/drive_c
 mount -t vboxsf -o $VBFSOPTIONS D_DRIVE /mnt/drive_d
-mount -t vboxsf -o $VBFSOPTIONS TC /mnt/tc
+#mount -t vboxsf -o $VBFSOPTIONS TC /mnt/tc
 
 mount -t vboxsf -o $VBFSOPTIONS DATASHARE /mnt/datashare
 mount -t vboxsf -o $VBFSOPTIONS DATASTORE /mnt/datastore
