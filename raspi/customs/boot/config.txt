@@ -3,7 +3,7 @@
 
 # uncomment this if your display has a black border of unused pixels visible
 # and your display can output without overscan
-disable_overscan=1
+#disable_overscan=1
 
 # uncomment the following to adjust overscan. Use positive numbers if console
 # goes off screen, and negative if there is too much border
@@ -39,5 +39,6 @@ disable_overscan=1
 #arm_freq=800
 
 # for more options see http://elinux.org/RPi_config.txt
-gpu_mem=32
+gpu_mem=16
 start_x=0
+
