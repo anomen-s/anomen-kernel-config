@@ -15,7 +15,9 @@ do
   sudo /etc/init.d/$SVC start
 done
 
-alias unssh >/dev/null && unssh
+pkill -9 sshfs
+test -x $HOME/sshfs/umount.sh && $HOME/sshfs/umount.sh
+rm -f $HOME/.ssh/mastersock*
 
 sudo /etc/local.d/update_ip.start
 sudo /etc/local.d/restart_proxy.start
