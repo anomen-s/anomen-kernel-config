@@ -1,0 +1,25 @@
+raspi
+    description: Computer
+    width: 32 bits
+  *-core
+       description: Motherboard
+       physical id: 0
+     *-memory
+          description: System memory
+          physical id: 0
+          size: 484MiB
+     *-cpu
+          physical id: 1
+          bus info: cpu@0
+          size: 700MHz
+          capacity: 700MHz
+          capabilities: cpufreq
+  *-network
+       description: Ethernet interface
+       physical id: 1
+       logical name: eth0
+       serial: b8:27:eb:90:3b:b4
+       size: 100Mbit/s
+       capacity: 100Mbit/s
+       capabilities: ethernet physical tp mii 10bt 10bt-fd 100bt 100bt-fd autonegotiation
+       configuration: autonegotiation=on broadcast=yes driver=smsc95xx driverversion=22-Aug-2005 duplex=full firmware=smsc95xx USB 2.0 Ethernet ip=172.17.2.49 link=yes multicast=yes port=MII speed=100Mbit/s
