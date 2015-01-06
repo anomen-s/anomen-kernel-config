@@ -1,10 +1,18 @@
 Module                  Size  Used by
+evdev                  10681  2 
+gspca_ov519            36187  0 
+gspca_main             23879  1 gspca_ov519
+videodev              121196  2 gspca_main,gspca_ov519
+media                  14559  1 videodev
 fuse                   78104  3 
 cpufreq_stats           3765  0 
-rfcomm                 34405  0 
 bnep                   11058  2 
-bluetooth             230520  10 bnep,rfcomm
+bluetooth             230520  7 bnep
 rfkill                 19784  2 bluetooth
+w1_therm                2866  0 
+w1_gpio                 2751  0 
+wire                   25349  2 w1_gpio,w1_therm
+cn                      4780  1 wire
 usblp                  11312  0 
 snd_bcm2835            19496  1 
 dm_crypt               15042  0 

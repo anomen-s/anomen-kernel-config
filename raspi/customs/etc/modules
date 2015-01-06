@@ -13,4 +13,11 @@ snd-bcm2835
 # printers
 usblp
 
+# 1wire thermometer 
+w1-gpio
+w1-therm
+
+
+# webcam
+#gspca_ov519
 

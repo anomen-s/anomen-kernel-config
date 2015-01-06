@@ -1,1 +1,3 @@
 CONF_SWAPSIZE=500
+CONF_SWAPFILE=/mnt/var/swap
+
