@@ -1,2 +1,7 @@
 #!/bin/sh
+echo Internal:
 /opt/vc/bin/vcgencmd measure_temp
+
+echo External:
+sed -ne  "s/.*t=\(\w\w\)\(.*\)/temp=\1.\2'C/p" /sys/bus/w1/devices/*/w1_slave
+

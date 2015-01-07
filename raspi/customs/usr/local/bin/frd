@@ -8,5 +8,5 @@ echo embedded java $JAVA_HOME
 export JAVA_HOME
 export PATH="$JAVA_HOME/bin:$PATH"
 
-exec screen -S frd `ls -d /opt/FreeRapid-*/frd.sh | tail -n 1`
+exec screen -S frd sh `ls -d /opt/FreeRapid-*/frd.sh | tail -n 1`
 
