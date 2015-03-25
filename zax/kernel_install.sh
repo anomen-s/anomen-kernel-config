@@ -42,6 +42,7 @@ make firmware_install || exit 11
 cp -v ./arch/x86/boot/bzImage "/boot/kernel-$KERVER" || exit 1
 cp -v ./System.map "/boot/System.map-$KERVER" || exit 2
 cp -v ./.config "/boot/Config-$KERVER" || exit 3
+cp -v ./Module.symvers "/boot/Module.symvers-$KERVER" || exit 3
 
 
 echo "" >> /boot/grub/grub.conf
