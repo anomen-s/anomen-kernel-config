@@ -1,3 +1,9 @@
+2.6.32-gentoo-r24-z1
+====================
+
+2.6.38-gentoo-r6-z2
+===================
+
 2.6.38-gentoo-r6-z3
 ===================
 - CONFIG_HIGH_RES_TIMERS
@@ -32,5 +38,26 @@
 + CONFIG_USB_SUSPEND (sys-fs/udisks)
 - unused network drivers
 
+3.10.7-gentoo-z10
+=================
+
+3.10.7-gentoo-r1-z11
+====================
++ CONFIG_VIRTIO_[NET,..] (virtualbox)
+
+3.16.5-gentoo-z12
+====================
+# unused #
++ GPSCA_OV519
++ EXT4_FS
+
+3.18.7-gentoo-r-z12
+====================
++ CONFIG_FHANDLE (sys-fs/udev)
++ CONFIG_KEYS, CONFIG_ENCRYPTED_KEYS, CONFIG_ECRYPT_FS_MESSAGING, CONFIG_ECRYPT_FS (eCryptfs)
++ USB_SERIAL_PL2303
++ HZ_1000
+
 TODO
 ====
++ DELL_RBU (smbios)
