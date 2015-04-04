@@ -18,7 +18,7 @@
 #framebuffer_height=720
 
 # uncomment if hdmi display is not detected and composite is being output
-#hdmi_force_hotplug=1
+hdmi_force_hotplug=1
 
 # uncomment to force a specific HDMI mode (this will force VGA)
 #hdmi_group=1
@@ -36,9 +36,43 @@
 #sdtv_mode=2
 
 #uncomment to overclock the arm. 700 MHz is the default.
-#arm_freq=800
+arm_freq=900
+# anomen: test 950, 1000?
+over_voltage=1
 
 # for more options see http://elinux.org/RPi_config.txt
 gpu_mem=16
 start_x=0
+arm_freq_min=500
+
+#default sdram_freq=400
+sdram_freq=500
+# default core_freq=250
+core_freq=350
+
+# should be same as core_freq? 
+gpu_freq=350
+
+# test next:
+#core_freq=400
+#gpu_freq=300
+
+#800 
+hdmi_group=2 
+hdmi_mode=9 
+
+# uncomment to disable device_tree
+#device_tree=
+
+dtoverlay=w1-gpio
+dtoverlay=eeprom
+
+# dtoverlay=pps-gpio,gpiopin=18
+# dtoverlay=rtc-i2c,ds3231
+
+dtparam=i2c_arm=on
+#dtparam=i2c_vc=on
+#dtparam=spi=on
+#dtparam=i2s=on
+#dtparam=act_led_trigger=heartbeat
 
