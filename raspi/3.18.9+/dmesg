@@ -1,0 +1,217 @@
+[    0.003879] Initializing cgroup subsys memory
+[    0.003990] Initializing cgroup subsys devices
+[    0.004064] Initializing cgroup subsys freezer
+[    0.004134] Initializing cgroup subsys net_cls
+[    0.004198] Initializing cgroup subsys blkio
+[    0.004348] CPU: Testing write buffer coherency: ok
+[    0.004483] ftrace: allocating 19206 entries in 57 pages
+[    0.135183] Setting up static identity map for 0x5523d8 - 0x552410
+[    0.138534] devtmpfs: initialized
+[    0.160108] VFP support v0.3: implementor 41 architecture 1 part 20 variant b rev 5
+[    0.163697] pinctrl core: initialized pinctrl subsystem
+[    0.167475] NET: Registered protocol family 16
+[    0.174193] DMA: preallocated 4096 KiB pool for atomic coherent allocations
+[    0.176224] bcm2708.uart_clock = 3000000
+[    0.180159] No ATAGs?
+[    0.180232] hw-breakpoint: found 6 breakpoint and 1 watchpoint registers.
+[    0.180311] hw-breakpoint: maximum watchpoint size is 4 bytes.
+[    0.180391] mailbox: Broadcom VideoCore Mailbox driver
+[    0.180584] bcm2708_vcio: mailbox at f200b880
+[    0.181116] bcm_power: Broadcom power driver
+[    0.181184] bcm_power_open() -> 0
+[    0.181222] bcm_power_request(0, 8)
+[    0.681955] bcm_mailbox_read -> 00000080, 0
+[    0.682014] bcm_power_request -> 0
+[    0.682242] Serial: AMBA PL011 UART driver
+[    0.682528] dev:f1: ttyAMA0 at MMIO 0x20201000 (irq = 83, base_baud = 0) is a PL011 rev3
+[    1.066086] console [ttyAMA0] enabled
+[    1.150082] SCSI subsystem initialized
+[    1.154309] usbcore: registered new interface driver usbfs
+[    1.160162] usbcore: registered new interface driver hub
+[    1.165703] usbcore: registered new device driver usb
+[    1.173445] Switched to clocksource stc
+[    1.214884] FS-Cache: Loaded
+[    1.218242] CacheFiles: Loaded
+[    1.241303] NET: Registered protocol family 2
+[    1.247601] TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+[    1.255099] TCP bind hash table entries: 4096 (order: 2, 16384 bytes)
+[    1.261707] TCP: Hash tables configured (established 4096 bind 4096)
+[    1.268246] TCP: reno registered
+[    1.271528] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    1.277483] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    1.284269] NET: Registered protocol family 1
+[    1.289399] RPC: Registered named UNIX socket transport module.
+[    1.295525] RPC: Registered udp transport module.
+[    1.300270] RPC: Registered tcp transport module.
+[    1.305051] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    1.312914] hw perfevents: enabled with armv6_1176 PMU driver, 3 counters available
+[    1.321154] bcm2708_dma: DMA manager at f2007000
+[    1.326222] vc-mem: phys_addr:0x00000000 mem_base=0x1fa00000 mem_size:0x20000000(512 MiB)
+[    1.336422] futex hash table entries: 256 (order: -1, 3072 bytes)
+[    1.342740] audit: initializing netlink subsys (disabled)
+[    1.348355] audit: type=2000 audit(1.090:1): initialized
+[    1.374617] VFS: Disk quotas dquot_6.5.2
+[    1.379083] Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[    1.389471] FS-Cache: Netfs 'nfs' registered for caching
+[    1.397144] NFS: Registering the id_resolver key type
+[    1.402347] Key type id_resolver registered
+[    1.406721] Key type id_legacy registered
+[    1.412492] msgmni has been set to 965
+[    1.419505] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
+[    1.427606] io scheduler noop registered
+[    1.431605] io scheduler deadline registered (default)
+[    1.437518] io scheduler cfq registered
+[    1.444863] BCM2708FB: allocated DMA memory 5ec00000
+[    1.449949] BCM2708FB: allocated DMA channel 0 @ f2007000
+[    1.465262] Console: switching to colour frame buffer device 100x37
+[    1.479459] bcm2708-dmaengine bcm2708-dmaengine: Load BCM2835 DMA engine driver
+[    1.487573] uart-pl011 dev:f1: no DMA platform data
+[    1.496229] kgdb: Registered I/O driver kgdboc.
+[    1.534457] vc-cma: Videocore CMA driver
+[    1.541923] vc-cma: vc_cma_base      = 0x00000000
+[    1.550232] vc-cma: vc_cma_size      = 0x00000000 (0 MiB)
+[    1.559205] vc-cma: vc_cma_initial   = 0x00000000 (0 MiB)
+[    1.585050] brd: module loaded
+[    1.600437] loop: module loaded
+[    1.607723] vchiq: vchiq_init_state: slot_zero = 0xde800000, is_master = 0
+[    1.619169] Loading iSCSI transport class v2.0-870.
+[    1.629332] usbcore: registered new interface driver smsc95xx
+[    1.638836] dwc_otg: version 3.00a 10-AUG-2012 (platform bus)
+[    1.848315] Core Release: 2.80a
+[    1.854983] Setting default values for core params
+[    1.863094] Finished setting default values for core params
+[    2.072534] Using Buffer DMA mode
+[    2.079214] Periodic Transfer Interrupt Enhancement - disabled
+[    2.088395] Multiprocessor Interrupt Enhancement - disabled
+[    2.097298] OTG VER PARAM: 0, OTG VER FLAG: 0
+[    2.104963] Dedicated Tx FIFOs mode
+[    2.112121] WARN::dwc_otg_hcd_init:1047: FIQ DMA bounce buffers: virt = 0xdec14000 dma = 0x5ec14000 len=9024
+[    2.128843] FIQ FSM acceleration enabled for :
+[    2.128843] Non-periodic Split Transactions
+[    2.128843] Periodic Split Transactions
+[    2.128843] High-Speed Isochronous Endpoints
+[    2.158777] dwc_otg: Microframe scheduler enabled
+[    2.158902] WARN::hcd_init_fiq:412: FIQ on core 0 at 0xc03f9fa4
+[    2.168239] WARN::hcd_init_fiq:413: FIQ ASM at 0xc03fa27c length 36
+[    2.177884] WARN::hcd_init_fiq:438: MPHI regs_base at 0xdf806000
+[    2.187367] dwc_otg bcm2708_usb: DWC OTG Controller
+[    2.195751] dwc_otg bcm2708_usb: new USB bus registered, assigned bus number 1
+[    2.206511] dwc_otg bcm2708_usb: irq 32, io mem 0x00000000
+[    2.215425] Init: Port Power? op_state=1
+[    2.222651] Init: Power Port (0)
+[    2.229622] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[    2.239915] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.250654] usb usb1: Product: DWC OTG Controller
+[    2.259003] usb usb1: Manufacturer: Linux 3.18.9+ dwc_otg_hcd
+[    2.268322] usb usb1: SerialNumber: bcm2708_usb
+[    2.277725] hub 1-0:1.0: USB hub found
+[    2.285270] hub 1-0:1.0: 1 port detected
+[    2.293361] dwc_otg: FIQ enabled
+[    2.293389] dwc_otg: NAK holdoff enabled
+[    2.293405] dwc_otg: FIQ split-transaction FSM enabled
+[    2.293645] Module dwc_common_port init
+[    2.294329] usbcore: registered new interface driver usb-storage
+[    2.304528] mousedev: PS/2 mouse device common for all mice
+[    2.314710] bcm2835-cpufreq: min=500000 max=900000
+[    2.323626] sdhci: Secure Digital Host Controller Interface driver
+[    2.333331] sdhci: Copyright(c) Pierre Ossman
+[    2.341552] DMA channels allocated for the MMC driver
+[    2.383756] Load BCM2835 MMC driver
+[    2.394573] sdhci-pltfm: SDHCI platform and OF driver helper
+[    2.412269] ledtrig-cpu: registered to indicate activity on CPUs
+[    2.423367] hidraw: raw HID events driver (C) Jiri Kosina
+[    2.437047] usbcore: registered new interface driver usbhid
+[    2.447264] usbhid: USB HID core driver
+[    2.458527] TCP: cubic registered
+[    2.465325] Initializing XFRM netlink socket
+[    2.473024] NET: Registered protocol family 17
+[    2.481214] Key type dns_resolver registered
+[    2.489086] Indeed it is in host mode hprt0 = 00021501
+[    2.500407] registered taskstats version 1
+[    2.512670] mmc0: host does not support reading read-only switch, assuming write-enable
+[    2.524606] vc-sm: Videocore shared memory driver
+[    2.532733] [vc_sm_connected_init]: start
+[    2.555839] mmc0: new high speed SDHC card at address 59b4
+[    2.573974] vc_vchi_sm_init: failed to open VCHI service (-1)
+[    2.579741] [vc_sm_connected_init]: failed to initialize shared memory service
+[    2.594835] mmcblk0: mmc0:59b4 SD    14.7 GiB 
+[    2.614974]  mmcblk0: p1 p2
+[    2.623613] [vc_sm_connected_init]: end - returning -1
+[    2.663120] EXT4-fs (mmcblk0p2): mounted filesystem without journal. Opts: (null)
+[    2.674606] VFS: Mounted root (ext4 filesystem) readonly on device 179:2.
+[    2.696777] devtmpfs: mounted
+[    2.704933] Freeing unused kernel memory: 340K (c0799000 - c07ee000)
+[    2.763718] usb 1-1: new high-speed USB device number 2 using dwc_otg
+[    2.774666] Indeed it is in host mode hprt0 = 00001101
+[    2.984198] usb 1-1: New USB device found, idVendor=0424, idProduct=9512
+[    2.996455] usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    3.009119] hub 1-1:1.0: USB hub found
+[    3.017083] hub 1-1:1.0: 3 ports detected
+[    3.303889] usb 1-1.1: new high-speed USB device number 3 using dwc_otg
+[    3.424322] usb 1-1.1: New USB device found, idVendor=0424, idProduct=ec00
+[    3.450047] usb 1-1.1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    3.477005] smsc95xx v1.0.4
+[    3.554038] smsc95xx 1-1.1:1.0 eth0: register 'smsc95xx' at usb-bcm2708_usb-1.1, smsc95xx USB 2.0 Ethernet, b8:27:eb:90:3b:b4
+[    3.673808] usb 1-1.2: new high-speed USB device number 4 using dwc_otg
+[    3.784536] usb 1-1.2: New USB device found, idVendor=1a40, idProduct=0101
+[    3.801834] usb 1-1.2: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+[    3.818107] usb 1-1.2: Product: USB 2.0 Hub
+[    3.841527] hub 1-1.2:1.0: USB hub found
+[    3.853877] hub 1-1.2:1.0: 4 ports detected
+[    3.953879] usb 1-1.3: new high-speed USB device number 5 using dwc_otg
+[    4.064583] usb 1-1.3: New USB device found, idVendor=1a40, idProduct=0101
+[    4.093699] usb 1-1.3: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+[    4.113751] usb 1-1.3: Product: USB 2.0 Hub
+[    4.130746] hub 1-1.3:1.0: USB hub found
+[    4.143915] hub 1-1.3:1.0: 4 ports detected
+[    4.253862] usb 1-1.2.4: new high-speed USB device number 6 using dwc_otg
+[    4.556375] usb 1-1.2.4: New USB device found, idVendor=058f, idProduct=6387
+[    4.583078] usb 1-1.2.4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[    4.603683] usb 1-1.2.4: Product: Mem-drive EasyII
+[    4.612336] usb 1-1.2.4: Manufacturer: takeMS
+[    4.633721] usb 1-1.2.4: SerialNumber: 72A8A184
+[    4.653937] usb-storage 1-1.2.4:1.0: USB Mass Storage device detected
+[    4.670152] scsi host0: usb-storage 1-1.2.4:1.0
+[    4.975065] udevd[159]: starting version 175
+[    5.685061] scsi 0:0:0:0: Direct-Access     takeMS   Mem-drive EasyII 8.07 PQ: 0 ANSI: 2
+[    5.736510] sd 0:0:0:0: [sda] 32888832 512-byte logical blocks: (16.8 GB/15.6 GiB)
+[    5.774290] sd 0:0:0:0: [sda] Write Protect is off
+[    5.783199] sd 0:0:0:0: [sda] Mode Sense: 03 00 00 00
+[    5.803614] sd 0:0:0:0: [sda] No Caching mode page found
+[    5.813032] sd 0:0:0:0: [sda] Assuming drive cache: write through
+[    6.285302]  sda: unknown partition table
+[    6.309698] sd 0:0:0:0: [sda] Attached SCSI removable disk
+[    6.727272] sd 0:0:0:0: Attached scsi generic sg0 type 0
+[    7.198919] bcm2708_i2c_init_pinmode(1,2)
+[    7.333681] bcm2708_i2c_init_pinmode(1,3)
+[    7.596513] at24 1-0054: 1024 byte 24c08 EEPROM, writable, 1 bytes/write
+[    7.864814] at24 1-0050: 32768 byte 24c256 EEPROM, writable, 1 bytes/write
+[    8.125772] bcm2708_i2c 20804000.i2c: BSC1 Controller at 0x20804000 (irq 79) (baudrate 400000)
+[    8.661295] random: nonblocking pool is initialized
+[   13.249460] EXT4-fs (mmcblk0p2): re-mounted. Opts: (null)
+[   13.766270] EXT4-fs (mmcblk0p2): re-mounted. Opts: (null)
+[   14.634327] device-mapper: ioctl: 4.28.0-ioctl (2014-09-17) initialised: dm-devel@redhat.com
+[   15.839283] usbcore: registered new interface driver usblp
+[   16.005493] Driver for 1-wire Dallas network protocol.
+[   16.246030] bcm2708_rng_init=df8fe000
+[   17.284464] i2c /dev entries driver
+[   24.578071] EXT4-fs (sda): mounting ext2 file system using the ext4 subsystem
+[   24.600532] EXT4-fs (sda): warning: mounting unchecked fs, running e2fsck is recommended
+[   24.616756] EXT4-fs (sda): mounted filesystem without journal. Opts: (null)
+[   28.424993] smsc95xx 1-1.1:1.0 eth0: hardware isn't capable of remote wakeup
+[   30.033738] smsc95xx 1-1.1:1.0 eth0: link up, 100Mbps, full-duplex, lpa 0x45E1
+[   42.247326] warning: process `colord-sane' used the deprecated sysctl system call with 8.1.2.
+[   43.643972] Adding 511996k swap on /mnt/var/swap.  Priority:-1 extents:19 across:9725860k FS
+[   49.808362] ip_tables: (C) 2000-2006 Netfilter Core Team
+[ 2578.341430] usb 1-1.2.1: new full-speed USB device number 7 using dwc_otg
+[ 2578.467384] usb 1-1.2.1: New USB device found, idVendor=041e, idProduct=4052
+[ 2578.467418] usb 1-1.2.1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[ 2578.467432] usb 1-1.2.1: Product: Creative Live! Cam Vista IM
+[ 2578.467445] usb 1-1.2.1: Manufacturer:                             
+[ 2578.547215] media: Linux media interface: v0.10
+[ 2578.571569] Linux video capture interface: v2.00
+[ 2578.580320] gspca_main: v2.14.0 registered
+[ 2578.587642] gspca_main: ov519-2.14.0 probing 041e:4052
+[ 2581.891654] input: ov519 as /devices/platform/bcm2708_usb/usb1/1-1/1-1.2/1-1.2.1/input/input0
+[ 2581.904955] usbcore: registered new interface driver ov519
+[ 2780.548644] fuse init (API version 7.23)
