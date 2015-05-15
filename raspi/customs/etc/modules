@@ -28,3 +28,5 @@ i2c-dev
 at24
 ds2482
 ds3231
+bmp085-i2c
+
