@@ -112,7 +112,7 @@ def log_line():
        result += ' ' +  f2s(t[1])
 
     bmpdata = get_bmp085_data('/sys/bus/i2c/drivers/bmp085/1-0077')
-    result += ' ' +  f2s(bmpdata[3])
+    result += ' ' +  f2s(bmpdata[2])
     return result
  
 def main():
