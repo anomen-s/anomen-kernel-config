@@ -63,6 +63,7 @@ def cpu_data(cpu):
 
 def w1():
     w1devices = glob.glob('/sys/bus/w1/devices/*/w1_slave')
+    w1devices.sort()
     for w1dev in w1devices:
        t = get_w1_data(w1dev)
        print('temp=%s\'C' % f2s(t[1]))
@@ -107,6 +108,7 @@ def log_line():
     result += ' ' + rdata[0];
 
     w1devices = glob.glob('/sys/bus/w1/devices/*/w1_slave')
+    w1devices.sort()
     for w1dev in w1devices:
        t = get_w1_data(w1dev)
        result += ' ' +  f2s(t[1])
