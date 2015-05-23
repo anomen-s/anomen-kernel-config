@@ -1,2 +1,136 @@
-#!/bin/sh
-/opt/vc/bin/vcgencmd measure_temp
+#!/usr/bin/python
+
+import argparse
+import os
+import sys
+import re
+import getopt
+import glob
+import subprocess
+import datetime
+
+VERSION=0.2
+
+ALTITUDE=0
+
+def parseArguments():
+
+    parser = argparse.ArgumentParser(description='Raspberry Pi sensors reader.')
+    parser.add_argument('-l', '--log', dest='log', help='single line output for log',action='store_true')
+    parser.add_argument('-a', '--altitude', dest='altitude', help='altitude for computing relative pressure', default=300)
+
+    args = parser.parse_args()
+
+    return args;
+
+
+def usage():
+    print "sensors", VERSION, "print Raspberry Pi sensor data"
+    print
+    print "Usage: sensors [-l] [-a alt]"
+    sys.exit(1)
+
+def readfile(filename):
+    f = open(filename)
+    try:
+       data = f.read(1000)
+    finally:
+       f.close()
+    return data
+
+def f2s(data):
+    return '{0:.1f}'.format(data);
+
+def raspi():
+    cpudata = cpu_data(0)
+    rpidata = get_raspi_data()
+    print('temp=%s\'C volt=%sV freq=%sMHz %s' % (rpidata[0], rpidata[1], str(cpudata[1]), cpudata[2]))
+
+def get_raspi_data():
+    vdata = subprocess.check_output(['/opt/vc/bin/vcgencmd','measure_volts'])
+    vm = re.search('volt=(\d+\.\d+()).*', vdata);
+    v = vm.group(1)
+    tdata = subprocess.check_output(['/opt/vc/bin/vcgencmd','measure_temp'])
+    tm = re.search('temp=(\d+\.\d+).*', tdata)
+    t = tm.group(1)
+    return [t, v, tdata, vdata]
+
+def cpu_data(cpu):
+    data = readfile('/sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq')
+    freq = int(data) / 1000
+    gov = readfile('/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor').strip()
+    return ['cpu' + str(cpu), freq, gov, data]
+
+def w1():
+    w1devices = glob.glob('/sys/bus/w1/devices/*/w1_slave')
+    w1devices.sort()
+    for w1dev in w1devices:
+       t = get_w1_data(w1dev)
+       print('temp=%s\'C' % f2s(t[1]))
+
+def get_w1_data(path):
+    data = readfile(path)
+    m = re.search(".*crc=\\w\\w YES\n.*t=(\\d+)", data)
+    if not m:
+       return [path, None, data];
+
+    t = float(m.group(1)) / 1000.0
+    return [path, t, data]
+
+def bmp085():
+    bmpdevices = glob.glob('/sys/bus/i2c/drivers/bmp085/*-*')
+    for bmpdev in bmpdevices:
+      data = get_bmp085_data(bmpdev)
+      print('temp=%s\'C press=%shPa relPress=%shPa' % (f2s(data[1]),f2s(data[2]),f2s(data[3])))
+
+
+def get_bmp085_data(path):
+    global ALTITUDE
+    tdata = readfile(path + "/temp0_input")
+    t = float(tdata) / 10.0
+
+    pdata = readfile(path + "/pressure0_input")
+    p_abs = float(pdata) / 100.0
+    p_rel = (p_abs*9.80665*ALTITUDE) / (287*(273+t+(ALTITUDE/400))) + p_abs
+    p_rel_2 = p_abs  + ALTITUDE / 8.3
+    return [path, t, p_abs, p_rel, p_rel_2, tdata, pdata]
+
+
+def get_date():
+    today = datetime.datetime.now()
+    return today.strftime('%Y-%m-%d %H:%M')
+
+
+def log_line():
+    result = get_date();
+
+    rdata = get_raspi_data()
+    result += ' ' + rdata[0];
+
+    w1devices = glob.glob('/sys/bus/w1/devices/*/w1_slave')
+    w1devices.sort()
+    for w1dev in w1devices:
+       t = get_w1_data(w1dev)
+       result += ' ' +  f2s(t[1])
+
+    bmpdata = get_bmp085_data('/sys/bus/i2c/drivers/bmp085/1-0077')
+    result += ' ' +  f2s(bmpdata[2])
+    return result
+ 
+def main():
+    global ALTITUDE
+
+    args = parseArguments()
+    ALTITUDE = int(args.altitude)
+
+    if (args.log):
+      print log_line()
+      return
+
+    print "Internal: "
+    raspi()
+    bmp085()
+    print "External: "
+    w1()
+
+if  __name__ =='__main__':main()

@@ -13,4 +13,20 @@ snd-bcm2835
 # printers
 usblp
 
+# 1wire thermometer 
+w1-gpio
+w1-therm
+
+# HW RNG
+bcm2708-rng
+
+# webcam
+#gspca_ov519
+
+
+i2c-dev
+at24
+ds2482
+ds3231
+bmp085-i2c
 

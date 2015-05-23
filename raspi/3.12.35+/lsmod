@@ -1,0 +1,35 @@
+Module                  Size  Used by
+evdev                  10681  2 
+gspca_ov519            36187  0 
+gspca_main             23879  1 gspca_ov519
+videodev              121196  2 gspca_main,gspca_ov519
+media                  14559  1 videodev
+fuse                   78104  3 
+cpufreq_stats           3765  0 
+bnep                   11058  2 
+bluetooth             230520  7 bnep
+rfkill                 19784  2 bluetooth
+w1_therm                2866  0 
+w1_gpio                 2751  0 
+wire                   25349  2 w1_gpio,w1_therm
+cn                      4780  1 wire
+usblp                  11312  0 
+snd_bcm2835            19496  1 
+dm_crypt               15042  0 
+dm_mod                 86835  1 dm_crypt
+sg                     19877  0 
+snd_soc_bcm2708_i2s     6210  0 
+regmap_mmio             2818  1 snd_soc_bcm2708_i2s
+snd_soc_core          128465  1 snd_soc_bcm2708_i2s
+snd_compress            8259  1 snd_soc_core
+regmap_i2c              1661  1 snd_soc_core
+snd_pcm_dmaengine       5505  1 snd_soc_core
+regmap_spi              1913  1 snd_soc_core
+snd_pcm                83845  3 snd_bcm2835,snd_soc_core,snd_pcm_dmaengine
+snd_page_alloc          5132  1 snd_pcm
+snd_seq                55484  0 
+snd_seq_device          6469  1 snd_seq
+snd_timer              20998  2 snd_pcm,snd_seq
+leds_gpio               2079  0 
+led_class               4118  1 leds_gpio
+snd                    62252  9 snd_bcm2835,snd_soc_core,snd_timer,snd_pcm,snd_seq,snd_seq_device,snd_compress

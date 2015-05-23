@@ -1,0 +1,12 @@
+#!/bin/sh
+
+L1=/run/shm/sensors.log
+L2=/var/log/sensors.log
+
+mv "$L1" "$L1.prev"
+
+if [ -f "$L1.prev" ]
+then
+sleep 3
+cat "$L1.prev" >> "$L2"
+fi

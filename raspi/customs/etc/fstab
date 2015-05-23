@@ -1,5 +1,7 @@
-proc            /proc           proc    defaults          0       0
-/dev/mmcblk0p1  /boot           vfat    defaults          0       2
-/dev/mmcblk0p2  /               ext4    defaults,noatime  0       1
-tmpfs 		/var/log	tmpfs	nodev,nosuid,size=50M 0 0
-# a swapfile is not a swap partition, so no using swapon|off from here on, use  dphys-swapfile swap[on|off]  for that
+proc            		/proc           proc    defaults          0       0
+/dev/mmcblk0p1  		/boot           vfat    defaults,ro       0       2
+/dev/mmcblk0p2  		/               ext4    defaults,noatime  0       1
+#tmpfs		 		/var/log	tmpfs	nodev,nosuid,size=50M 0 0
+/dev/disk/by-label/TAKEMS_16GB  /mnt/var	ext2	defaults,noatime	0	0
+#/mnt/var/log 			/var/log	none	bind		
+#/mnt/var/tmp 			/var/tmp	none	bind	

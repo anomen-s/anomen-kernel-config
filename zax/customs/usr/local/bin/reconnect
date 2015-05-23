@@ -1,10 +1,25 @@
 #!/bin/sh
 
-for SVC in net.eth0 net.eth1 apache2 cntlm sshd
+sudo /etc/init.d/cntlm stop
+
+
+for SVC in net.eth0 net.eth1
 do
   echo RESTART $SVC ...
   sudo /etc/init.d/$SVC restart
 done
 
+for SVC in apache2 sshd
+do
+  echo START $SVC ...
+  sudo /etc/init.d/$SVC start
+done
+
+pkill -9 sshfs
+test -x $HOME/sshfs/umount.sh && $HOME/sshfs/umount.sh
+rm -f $HOME/.ssh/mastersock*
 
 sudo /etc/local.d/update_ip.start
+sudo /etc/local.d/restart_proxy.start
+
+

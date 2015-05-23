@@ -1,0 +1,39 @@
+Module                  Size  Used by
+cdc_acm                18406  0 
+industrialio           28801  0 
+gpio_mcp23s08          11635  16 
+md5                     2045  0 
+tcp_diag                1336  0 
+inet_diag              11095  1 tcp_diag
+fuse                   92121  1 
+evdev                  11000  1 
+gspca_ov519            37798  0 
+gspca_main             24893  1 gspca_ov519
+videodev              154352  2 gspca_main,gspca_ov519
+media                  16088  1 videodev
+xt_multiport            1853  1 
+iptable_filter          1706  1 
+ip_tables              12393  1 iptable_filter
+x_tables               18646  3 ip_tables,xt_multiport,iptable_filter
+cpufreq_stats           4433  0 
+ds2482                  3875  0 
+i2c_dev                 6709  0 
+bcm2708_rng             1196  0 
+w1_therm                3325  0 
+w1_gpio                 4287  0 
+wire                   31248  3 w1_gpio,w1_therm,ds2482
+cn                      5756  1 wire
+usblp                  12313  0 
+snd_bcm2835            21157  0 
+snd_pcm                90778  1 snd_bcm2835
+snd_seq                61097  0 
+snd_seq_device          7209  1 snd_seq
+snd_timer              23007  2 snd_pcm,snd_seq
+snd                    66285  5 snd_bcm2835,snd_timer,snd_pcm,snd_seq,snd_seq_device
+dm_crypt               19123  0 
+dm_mod                 99169  1 dm_crypt
+at24                    5475  0 
+i2c_bcm2708             6200  0 
+sg                     21819  0 
+uio_pdrv_genirq         3666  0 
+uio                     9897  1 uio_pdrv_genirq

@@ -10,7 +10,7 @@ test -f "$HOSTFILE" || exit 1
 
 #cp -f "$HOSTFILE" /tmp/hosts.bak || exit 2
 
-IP=`for A in $IF ; do ip addr show $A ; done | sed -n -e 's@.*inet\s*\([0-9.]*\)/.*@\1@p' | grep -v -E "^169.254."`
+IP=`for A in $IF ; do ip addr show $A ; done | sed -n -e 's@.*inet\s*\([0-9.]*\)/.*@\1@p' | grep -v -E "^169.254." | head -n 1`
 
 echo Updating windows hosts with $IP
 

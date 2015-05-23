@@ -1,1 +1,3 @@
+pkill sshfs
+sleep 1
 pkill -9 sshfs

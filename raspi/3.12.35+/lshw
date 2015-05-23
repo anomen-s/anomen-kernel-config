@@ -1,0 +1,44 @@
+raspi
+    description: Computer
+    width: 32 bits
+  *-core
+       description: Motherboard
+       physical id: 0
+     *-memory
+          description: System memory
+          physical id: 0
+          size: 484MiB
+     *-cpu
+          physical id: 1
+          bus info: cpu@0
+          size: 700MHz
+          capacity: 700MHz
+          capabilities: cpufreq
+     *-scsi
+          physical id: 2
+          bus info: usb@1:1.3.4
+          logical name: scsi0
+          capabilities: emulated
+        *-disk
+             description: SCSI Disk
+             vendor: Linux
+             physical id: 0.0.0
+             bus info: scsi@0:0.0.0
+             logical name: /dev/sda
+             logical name: /mnt/var
+             logical name: /var/log
+             logical name: /var/tmp
+             version: 1.0
+             serial: c118014f-8917-4927-be69-7cd66a20a264
+             size: 15GiB
+             capabilities: extended_attributes large_files ext2 initialized
+             configuration: filesystem=ext2 label=TAKEMS_16GB lastmountpoint=/var/log modified=2014-12-28 00:22:26 mount.fstype=ext2 mount.options=rw,noatime mounted=2014-12-28 00:22:26 sectorsize=512 state=mounted
+  *-network
+       description: Ethernet interface
+       physical id: 1
+       logical name: eth0
+       serial: b8:27:eb:90:3b:b4
+       size: 100Mbit/s
+       capacity: 100Mbit/s
+       capabilities: ethernet physical tp mii 10bt 10bt-fd 100bt 100bt-fd autonegotiation
+       configuration: autonegotiation=on broadcast=yes driver=smsc95xx driverversion=22-Aug-2005 duplex=full firmware=smsc95xx USB 2.0 Ethernet ip=172.17.2.49 link=yes multicast=yes port=MII speed=100Mbit/s

@@ -1,0 +1,64 @@
+#!/bin/sh
+
+ADDR="mcp23017:100:0x26"
+
+PIN_DISCO=110
+PIN_WHITE=109
+PIN_NOFF=108
+
+switch_on () { 
+	echo Switch on $1
+	gpio -x "$ADDR" mode $1 out
+	gpio -x "$ADDR" write $1 1
+}
+
+switch_off () {
+	echo Switch off $1
+	gpio -x "$ADDR" mode $1 out
+	gpio -x "$ADDR" write $1 0
+}
+
+
+for A
+do
+ echo $A
+ case $A in
+   disco) 
+	switch_on $PIN_DISCO
+	;;
+   nodisco) 
+	switch_off $PIN_DISCO
+	;;
+    white) 
+	switch_on $PIN_WHITE
+	switch_on $PIN_NOFF
+	;;
+    nowhite) 
+	switch_off $PIN_WHITE
+	switch_on $PIN_NOFF
+	;;
+    whiteoff) 
+	switch_off $PIN_WHITE
+	switch_off $PIN_NOFF
+	;;
+    none) 
+	switch_off $PIN_DISCO
+	switch_off $PIN_WHITE
+	switch_on $PIN_NOFF
+	;;
+
+     all) 
+	switch_on $PIN_DISCO
+	switch_on $PIN_WHITE
+	switch_on $PIN_NOFF
+	;;
+    disable) 
+	switch_off $PIN_DISCO
+	switch_off $PIN_WHITE
+	switch_off $PIN_NOFF
+	;;
+   *) 
+	echo '???'
+	;;
+ esac
+done

@@ -1,0 +1,42 @@
+Module                  Size  Used by
+gpio_mcp23s08          11635  0 
+xt_multiport            1857  1 
+iptable_filter          1721  1 
+ip_tables              12337  1 iptable_filter
+x_tables               18626  3 ip_tables,xt_multiport,iptable_filter
+cpufreq_stats           4409  0 
+ds2482                  3895  0 
+at24                    5486  0 
+i2c_dev                 6282  0 
+bcm2708_rng             1196  0 
+w1_therm                3325  0 
+w1_gpio                 4267  0 
+wire                   31044  3 w1_gpio,w1_therm,ds2482
+cn                      5752  1 wire
+usblp                  12170  0 
+snd_bcm2835            21016  0 
+dm_crypt               19114  0 
+dm_mod                 98941  1 dm_crypt
+evdev                  10835  1 
+sg                     21562  0 
+snd_soc_wm8804          8217  0 
+snd_soc_pcm512x_i2c     2134  0 
+snd_soc_pcm512x         8468  1 snd_soc_pcm512x_i2c
+snd_soc_tas5713         5866  0 
+regmap_spi              2307  1 snd_soc_wm8804
+regmap_i2c              2913  3 snd_soc_wm8804,snd_soc_pcm512x_i2c,snd_soc_tas5713
+gspca_ov519            37471  0 
+gspca_main             24850  1 gspca_ov519
+videodev              154023  2 gspca_main,gspca_ov519
+media                  16032  1 videodev
+snd_soc_bcm2708_i2s     7352  0 
+regmap_mmio             3548  1 snd_soc_bcm2708_i2s
+snd_soc_core          173952  4 snd_soc_pcm512x,snd_soc_wm8804,snd_soc_tas5713,snd_soc_bcm2708_i2s
+snd_compress            8671  1 snd_soc_core
+snd_pcm_dmaengine       5830  1 snd_soc_core
+snd_pcm                90492  4 snd_bcm2835,snd_soc_wm8804,snd_soc_core,snd_pcm_dmaengine
+snd_seq                60813  0 
+snd_seq_device          7194  1 snd_seq
+snd_timer              22598  2 snd_pcm,snd_seq
+snd                    66102  7 snd_bcm2835,snd_soc_core,snd_timer,snd_pcm,snd_seq,snd_seq_device,snd_compress
+i2c_bcm2708             6120  0 

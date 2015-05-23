@@ -13,6 +13,7 @@ HostKey /etc/ssh/ssh_host_dsa_key
 HostKey /etc/ssh/ssh_host_ecdsa_key
 #Privilege Separation is turned on for security
 UsePrivilegeSeparation yes
+UseDNS no
 
 # Lifetime and size of ephemeral version 1 server key
 KeyRegenerationInterval 3600
@@ -66,6 +67,7 @@ PrintMotd no
 PrintLastLog yes
 TCPKeepAlive yes
 #UseLogin no
+GatewayPorts=yes
 
 #MaxStartups 10:30:60
 #Banner /etc/issue.net
@@ -85,3 +87,4 @@ Subsystem sftp /usr/lib/openssh/sftp-server
 # PAM authentication, then enable this but set PasswordAuthentication
 # and ChallengeResponseAuthentication to 'no'.
 UsePAM yes
+

@@ -1,8 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 
 T=`date '+%R'`
 D=`date '+%F'`
 T=`date '+%F %R'`
 F="/tmp/alive-$USER-$D"
 
-echo "$USER\t$DT$T" >> $F
+echo -e "$USER\t$DT$T" >> $F
