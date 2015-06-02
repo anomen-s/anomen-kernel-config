@@ -1,0 +1,34 @@
+/dts-v1/;
+/plugin/;
+
+/ {
+    compatible = "brcm,bcm2708";
+
+    fragment@0 {
+        __overlay__ {
+            dht11: dht11 {
+    		compatible = "dht11";
+    		gpios = <&gpio0 29 0>;
+	    };
+    	};
+    };
+
+
+	fragment@1 {
+		target = <&gpio>;
+		__overlay__ {
+			dht11_pin: dht11_pin {
+				brcm,pins = <29>;
+				brcm,function = <0>; // in (initially)
+				brcm,pull = <0>; // off
+			};
+		};
+	};
+
+	__overrides__ {
+			gpiopin = <&dht11>,"gpios:29",
+				<&dht11_pin>,"brcm,pins:0";
+	};
+
+};
+
