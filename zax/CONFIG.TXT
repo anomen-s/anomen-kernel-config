@@ -62,3 +62,4 @@ TODO
 ====
 + DELL_RBU (smbios)
 + CONFIG_CIFS_UPCALL (cifs)
++ CONFIG_USER_NS (chromium)
