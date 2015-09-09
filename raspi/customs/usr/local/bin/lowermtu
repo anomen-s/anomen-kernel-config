@@ -1,9 +1,11 @@
 #!/bin/sh
 
+#DEVPATH=/sys/devices/platform/bcm2708_usb
+DEVPATH=/sys/devices/platform/soc/20980000.usb
 
 S=${1:-1400}
 
-for A in  `find /sys/devices/platform/bcm2708_usb -name mtu` 
+for A in  `find $DEVPATH -name mtu` 
 do
  echo -n  "$A = " 
  cat "$A"
