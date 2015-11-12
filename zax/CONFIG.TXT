@@ -58,8 +58,14 @@
 + USB_SERIAL_PL2303
 + HZ_1000
 
-TODO
-====
-+ DELL_RBU (smbios)
+4.0.5-gentoo-r-z13
+====================
 + CONFIG_CIFS_UPCALL (cifs)
 + CONFIG_USER_NS (chromium)
++ DELL_RBU (smbios)
+
+TODO
+====
++ KVM (virtualbox)
+- CONFIG_UEVENT_HELPER (obsolete)
+
