@@ -46,13 +46,13 @@
 + CONFIG_VIRTIO_[NET,..] (virtualbox)
 
 3.16.5-gentoo-z12
-====================
+=================
 # unused #
 + GPSCA_OV519
 + EXT4_FS
 
 3.18.7-gentoo-r-z12
-====================
+===================
 + CONFIG_FHANDLE (sys-fs/udev)
 + CONFIG_KEYS, CONFIG_ENCRYPTED_KEYS, CONFIG_ECRYPT_FS_MESSAGING, CONFIG_ECRYPT_FS (eCryptfs)
 + USB_SERIAL_PL2303
@@ -64,8 +64,11 @@
 + CONFIG_USER_NS (chromium)
 + DELL_RBU (smbios)
 
-TODO
-====
+4.0.9-gentoo-r-z14
+==================
 + KVM (virtualbox)
 - CONFIG_UEVENT_HELPER (obsolete)
+
+TODO
+====
 

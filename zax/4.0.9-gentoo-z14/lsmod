@@ -1,0 +1,34 @@
+Module                  Size  Used by
+cfg80211              172083  0 
+xts                     2339  1 
+gf128mul                5406  1 xts
+dm_crypt               14939  1 
+dm_mod                 69320  3 dm_crypt
+msr                     1965  0 
+vboxsf                 31666  4 
+virtio_net             17114  0 
+snd_intel8x0           23497  2 
+snd_ac97_codec         85593  1 snd_intel8x0
+ac97_bus                 810  1 snd_ac97_codec
+snd_pcm                63885  2 snd_ac97_codec,snd_intel8x0
+snd_timer              14849  1 snd_pcm
+virtio_pci             11255  0 
+snd                    42657  8 snd_ac97_codec,snd_intel8x0,snd_timer,snd_pcm
+soundcore               4067  1 snd
+sr_mod                 11716  0 
+cdrom                  21619  1 sr_mod
+pcspkr                  1391  0 
+virtio_ring             5688  2 virtio_net,virtio_pci
+microcode               6592  0 
+virtio                  4342  2 virtio_net,virtio_pci
+i2c_piix4               7737  0 
+pata_acpi               2239  0 
+vboxguest             155923  8 vboxsf
+parport_pc             13876  0 
+parport                14280  1 parport_pc
+vboxvideo               1106  2 
+button                  3561  0 
+acpi_cpufreq            6058  0 
+battery                 7024  0 
+processor              20361  1 acpi_cpufreq
+ac                      2707  0 
