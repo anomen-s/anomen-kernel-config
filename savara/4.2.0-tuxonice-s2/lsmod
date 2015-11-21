@@ -1,0 +1,54 @@
+Module                  Size  Used by
+sha256_generic         24576  1
+hmac                   16384  1
+drbg                   24576  1
+ansi_cprng             16384  0
+ctr                    16384  1
+ccm                    20480  1
+arc4                   16384  2
+ath9k_htc              57344  0
+ath9k                  94208  0
+ath9k_common           28672  2 ath9k,ath9k_htc
+ath9k_hw              409600  3 ath9k_common,ath9k,ath9k_htc
+ath                    28672  4 ath9k_common,ath9k,ath9k_htc,ath9k_hw
+firmware_class         16384  2 ath9k,ath9k_htc
+mac80211              344064  2 ath9k,ath9k_htc
+cfg80211              233472  5 ath,ath9k_common,ath9k,mac80211,ath9k_htc
+w83627ehf              40960  0
+hwmon_vid              16384  1 w83627ehf
+fuse                   86016  3
+binfmt_misc            16384  1
+dm_mod                 90112  0
+msr                    16384  0
+cpufreq_stats          16384  0
+cpufreq_conservative    16384  0
+cpufreq_powersave      16384  0
+nvidia              10510336  29
+ppdev                  20480  0
+usb_storage            53248  0
+usbhid                 32768  0
+powernow_k8            20480  0
+snd_hda_codec_realtek    61440  1
+snd_hda_codec_generic    61440  1 snd_hda_codec_realtek
+kvm_amd                57344  0
+kvm                   307200  1 kvm_amd
+snd_hda_intel          24576  5
+snd_hda_codec          77824  3 snd_hda_codec_realtek,snd_hda_codec_generic,snd_hda_intel
+snd_hda_core           40960  4 snd_hda_codec_realtek,snd_hda_codec_generic,snd_hda_codec,snd_hda_intel
+snd_mpu401_uart        16384  0
+snd_pcm                77824  3 snd_hda_codec,snd_hda_intel,snd_hda_core
+snd_rawmidi            24576  1 snd_mpu401_uart
+snd_seq_device         16384  1 snd_rawmidi
+drm                   266240  3 nvidia
+snd_timer              28672  1 snd_pcm
+snd                    61440  18 snd_timer,snd_pcm,snd_rawmidi,snd_hda_codec_generic,snd_hda_codec,snd_hda_intel,snd_mpu401_uart,snd_seq_device
+sr_mod                 24576  0
+edac_core              45056  0
+pcspkr                 16384  0
+cdrom                  32768  1 sr_mod
+i2c_nforce2            16384  0
+k8temp                 16384  0
+parport_pc             36864  0
+parport                40960  2 ppdev,parport_pc
+button                 16384  0
+acpi_cpufreq           16384  0

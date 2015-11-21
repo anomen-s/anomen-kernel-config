@@ -1,0 +1,6 @@
+/:  Bus 02.Port 1: Dev 1, Class=root_hub, Driver=ohci-pci/10p, 12M
+/:  Bus 01.Port 1: Dev 1, Class=root_hub, Driver=ehci-pci/10p, 480M
+    |__ Port 2: Dev 2, If 0, Class=Vendor Specific Class, Driver=ath9k_htc, 480M
+    |__ Port 5: Dev 3, If 0, Class=Mass Storage, Driver=usb-storage, 480M
+    |__ Port 5: Dev 3, If 1, Class=Human Interface Device, Driver=usbhid, 480M
+    |__ Port 6: Dev 4, If 0, Class=Hub, Driver=hub/4p, 480M
