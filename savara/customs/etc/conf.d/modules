@@ -23,7 +23,7 @@
 # for a list of modules and their options.
 
 #cpu freq
-modules="powernow-k8 cpufreq_powersave cpufreq_conservative cpufreq_stats"
+modules="powernow-k8 cpufreq_powersave cpufreq_conservative cpufreq_stats msr ath9k_htc"
 
 #modules_2_6="${modules_2_6}  vboxdrv vboxnetflt vboxnetadp" 
 
