@@ -1,0 +1,7 @@
+# UNCONFIGURED FSTAB FOR BASE SYSTEM
+
+# 512 MB swapfile
+#/swapfile1 swap swap defaults 0 0
+
+/dev/mmcblk0p1     /mnt/p1    vfat  ro   0 0
+ 
