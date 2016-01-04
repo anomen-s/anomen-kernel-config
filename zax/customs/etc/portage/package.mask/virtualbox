@@ -1,0 +1,5 @@
+# mouse is not respondin in top-left 800x600 region of screen
+# might be caused by these, to be confirmed
+
+>=app-emulation/virtualbox-guest-additions-5.0.0
+>=x11-drivers/xf86-video-virtualbox-5.0.0

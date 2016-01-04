@@ -1,0 +1,11 @@
+app-editors/atom
+dev-util/atom-shell
+=sys-devel/llvm-3.4.2
+=sys-devel/llvm-3.5.0
+=sys-devel/clang-3.4.2*
+=sys-devel/clang-3.5.0*
+app-text/unicode
+
+dev-util/lida
+app-text/diffpdf
+dev-vcs/git-crypt

@@ -10,5 +10,8 @@ net-nds/ApacheDirectoryStudio
 ~dev-java/flyingsaucer-7
 dev-java/commons-dbcp
 dev-util/idea-community
+dev-util/idea-ultimate
 dev-util/soapui
-<=dev-vcs/mercurial-3.0
+dev-java/jdbc-mssqlserver
+dev-java/keystore-explorer
+dev-util/idea-ultimate-14*

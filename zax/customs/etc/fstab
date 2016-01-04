@@ -24,8 +24,9 @@ shm			/dev/shm	tmpfs		nodev,nosuid,noexec	0 0
 
 /dev/sda1		/		ext3		noatime		0 1
 /dev/sda2		none		swap		sw		0 0
+#/dev/sdc		/share		ext4		noatime		0 1
 /dev/cdrom		/mnt/cdrom	auto		noauto,user	0 0
 
-/dev/mapper/home	/home		ext3		rw,noatime	0 0
+/dev/mapper/home	/home		ext4		rw,noatime	0 0
 
 

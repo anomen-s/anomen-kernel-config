@@ -1,4 +1,6 @@
 
+dev-java/oracle-jdk-bin doc
+
 ##depends on FF2
 dev-java/swt -firefox xulrunner
 
@@ -29,3 +31,4 @@ sys-devel/gcc gcj -libffi
 dev-java/commons-collections test-framework
 dev-java/sun-jdk source
 dev-java/sun-jdk doc
+dev-java/oracle-jdk-bin source

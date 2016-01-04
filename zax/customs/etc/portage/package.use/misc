@@ -101,3 +101,5 @@ media-video/gpac -javascript
 
 dev-db/sqlite unlock-notify
 sys-libs/zlib minizip
+sys-devel/llvm clang
+dev-python/irc examples

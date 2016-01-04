@@ -1,20 +1,22 @@
-dev-lang/lua deprecated
-media-libs/libvpx -ssse3
-sys-power/upower deprecated
-# bug? - compiel failed
-#media-video/mediainfo -libmms
-#media-libs/libmediainfo -libmms
+# rules here are only for sake of successful emerge.
+# can be removed when not necessary
 
-net-misc/curl -ares
-#media-libs/libwmf -expat
-
-#bug:267749
-#dev-libs/openssl -kerberos
-
-#no gdm
-x11-misc/xscreensaver -new-login
+dev-libs/openssl -tls-heartbeat
 net-misc/curl -adns
 net-analyzer/wireshark -qt4
+sys-fs/cryptsetup -gcrypt -kernel
+dev-libs/elfutils static-libs
+#app-crypt/mit-krb5 -pkinit
+dev-lang/lua deprecated
+net-misc/openssh -X509
+app-crypt/qca gpg
+media-gfx/dcraw -lcms
+media-video/xine-ui -readline
+media-libs/libvpx postproc
+dev-libs/libgit2-glib ssh
+dev-libs/libgit2 ssh
+app-crypt/pinentry gnome-keyring
+dev-java/icedtea-web -icedtea7
 
-dev-java/dbvis -mssql
+www-client/firefox system-cairo system-jpeg system-icu system-sqlite system-libvpx system-libs.
 

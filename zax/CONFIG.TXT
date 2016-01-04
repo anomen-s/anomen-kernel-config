@@ -71,4 +71,5 @@
 
 TODO
 ====
-
+* CONFIG_IKCONFIG=m
++ CONFIG_IPV6
