@@ -1,0 +1,13 @@
+4.4.0-rc8-b1
+============
++ ov519
++ dht11
++ bmp085
++ mcp23S08
++ DS2482
+
+TODO
+====
+CONFIG_USB_SUSPEND ?
+AP6120 ?
+W1_SUNXI ?
