@@ -2,12 +2,33 @@
 
 sudo /etc/init.d/cntlm stop
 
+IF0="stop"
+IF1="stop"
+IF2="stop"
 
-for SVC in net.eth0 net.eth1
-do
-  echo RESTART $SVC ...
-  sudo /etc/init.d/$SVC restart
-done
+if [ "x$1" = "xv" ]
+then
+ IF2="restart"
+elif [ "x$1" = "xw" ]
+then
+ IF0="restart"
+ # umount SHARED DISC
+elif [ "x$1" = "xo" -o "x$1" = "xh" ]
+then
+ IF1="restart"
+else
+ echo invalid argument "[${1}]"
+ exit 1
+fi
+
+echo net.eth0 $IF0...
+sudo /etc/init.d/net.eth0 $IF0
+
+echo net.eth1 $IF1 ...
+sudo /etc/init.d/net.eth1 $IF1
+
+echo net.eth2 $IF2 ...
+sudo /etc/init.d/net.eth2 $IF2
 
 for SVC in apache2 sshd
 do
