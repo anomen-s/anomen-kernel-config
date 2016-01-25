@@ -69,7 +69,10 @@
 + KVM (virtualbox)
 - CONFIG_UEVENT_HELPER (obsolete)
 
-TODO
-====
+4.1.12-gentoo-r-z15
+===================
 * CONFIG_IKCONFIG=m
 + CONFIG_IPV6
+
+TODO
+====
