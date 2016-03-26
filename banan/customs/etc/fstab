@@ -1,7 +1,8 @@
 # UNCONFIGURED FSTAB FOR BASE SYSTEM
 
-# 512 MB swapfile
-/swapfile1 swap swap defaults 0 0
+/dev/mmcblk0p3 swap swap defaults 0 0
+/dev/disk/by-uuid/cd4a05ec-df8e-4683-a449-49a837f722c3	/mnt/fujitsu	ext4	nosuid,noatime,nodev	0	0
 
 #/dev/mmcblk0p1     /mnt/p1    vfat  ro   0 0
  
+

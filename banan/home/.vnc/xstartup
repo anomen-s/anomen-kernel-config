@@ -1,0 +1,25 @@
+#!/bin/sh
+
+#echo start1 $HOME > /tmp/log2
+[ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
+#echo 2s  >> /tmp/log2
+xsetroot -solid grey
+#echo 3s  >> /tmp/log2
+#[ -x /etc/vnc/xstartup ] && exec /etc/vnc/xstartup
+
+#echo 4s  >> /tmp/log2
+#env >> /tmp/log2
+
+x-terminal-emulator -geometry 80x24+10+10 -ls -title "$VNCDESKTOP Desktop" &
+#x-window-manager &
+# Fix to make GNOME work
+#export XKL_XMODMAP_DISABLE=1
+#/etc/X11/Xsession
+
+#echo 5s  >> /tmp/log2
+#xfce4-session &
+
+#echo 6s  >> /tmp/log2
+exec /bin/sh /etc/xdg/xfce4/xinitrc
+#startxfce4 > /tmp/logx &
+

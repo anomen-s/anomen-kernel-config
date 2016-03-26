@@ -1,0 +1,13 @@
+# cat /etc/xinetd.d/http-switch
+service http-switch
+{
+ disable = no
+ type = UNLISTED
+ socket_type = stream
+ protocol = tcp
+ wait = no
+ redirect = localhost 5900
+ bind = 172.17.2.44
+ port = 5900
+ user = nobody
+}

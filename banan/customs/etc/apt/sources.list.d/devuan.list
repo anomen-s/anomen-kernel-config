@@ -1,0 +1,4 @@
+# http://without-systemd.org/wiki/index.php/How_to_install_systemd-independent_udisks2_and_policykit_before_removing_systemd_from_a_Debian_jessie/sid_installation
+
+deb http://packages.devuan.org/devuan/ jessie main
+#deb http://packages.psycast.de/devuan/ sid main

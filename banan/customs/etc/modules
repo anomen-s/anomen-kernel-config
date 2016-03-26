@@ -7,4 +7,5 @@
 #8021q
 
 ap6210
-ath9k_htc
+#ath9k_htc
+brcmfmac

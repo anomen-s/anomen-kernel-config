@@ -1,0 +1,51 @@
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+
+# anomen: faster switch cpu to high performance
+#/bin/date >> /tmp/rc.local.log
+#echo 'rc.local' >> /tmp/rc.local.log
+#/bin/lsmod >> /tmp/rc.local.log
+#echo 60 > /sys/devices/system/cpu/cpufreq/ondemand/up_threshold
+#echo ondemand > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+
+
+#echo mmc0 > /sys/devices/platform/leds/leds/bananapi:green:usr/trigger
+echo mmc0 > /sys/class/leds/bananapro:green:usr/trigger
+
+echo ds1307 0x68 > /sys/bus/i2c/devices/i2c-1/new_device
+#echo ds3231 0x68 > /sys/bus/i2c/devices/i2c-1/new_device
+echo ds2482 0x18 > /sys/bus/i2c/devices/i2c-1/new_device
+echo bmp085 0x77  > /sys/bus/i2c/devices/i2c-1/new_device 
+
+echo  1 > /sys/devices/system/cpu/cpufreq/ondemand/io_is_busy
+echo 10 > /sys/devices/system/cpu/cpufreq/ondemand/sampling_down_factor
+echo 25 > /sys/devices/system/cpu/cpufreq/ondemand/up_threshold
+
+SATA_INT=$(awk -F":" '/sata/ {print $1}' </proc/interrupts  | tr -d ' ')
+echo 2 > /proc/irq/${SATA_INT}/smp_affinity
+
+/sbin/hdparm -B 1  /dev/sda
+
+/sbin/ifdown eth0
+/sbin/ifconfig eth0 mtu 1450
+/sbin/ifup eth0
+
+/usr/local/sbin/axp209 sbatchgcur 600
+
+# Print the IP address
+_IP=$(hostname -I) || true
+if [ "$_IP" ]; then
+  printf "My IP address is %s\n" "$_IP"
+fi
+
+exit 0
