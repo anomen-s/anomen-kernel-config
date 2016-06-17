@@ -51,28 +51,55 @@
 + GPSCA_OV519
 + EXT4_FS
 
-3.18.7-gentoo-r-z12
-===================
+3.18.7-gentoo-z12
+=================
 + CONFIG_FHANDLE (sys-fs/udev)
 + CONFIG_KEYS, CONFIG_ENCRYPTED_KEYS, CONFIG_ECRYPT_FS_MESSAGING, CONFIG_ECRYPT_FS (eCryptfs)
 + USB_SERIAL_PL2303
 + HZ_1000
 
-4.0.5-gentoo-r-z13
-====================
+4.0.5-gentoo-z13
+================
 + CONFIG_CIFS_UPCALL (cifs)
 + CONFIG_USER_NS (chromium)
 + DELL_RBU (smbios)
 
-4.0.9-gentoo-r-z14
-==================
+4.0.9-gentoo-z14
+================
 + KVM (virtualbox)
 - CONFIG_UEVENT_HELPER (obsolete)
 
-4.1.12-gentoo-r-z15
-===================
+4.1.12-gentoo-z15 [STABLE]
+=================
 * CONFIG_IKCONFIG=m
 + CONFIG_IPV6
 
+4.5.1-gentoo-z16 [UNUSED]
+================
+*** vboxvideo doesn't work ***
++ CONFIG_HIGHMEM64G
+
+4.5.1-gentoo-z17 [UNUSED]
+================
+*** VBOXVIDEO CRASHES ***
++ CONFIG_FRM_TTM
+
+4.5.1-gentoo-z18 [UNUSED]
+================
+* removed unused DRM modules
+
+4.4.6-gentoo-z16 [UNUSED]
+================
++ CONFIG_FRM_TTM (vboxvideo)
+
+4.4.6-gentoo-z17 ["ALMOST" STABLE]
+===================
+*** VBOXVIDEO CRASHES ***
++ CONFIG_HIGHMEM64G
++ CONFIG_TCP_CONG_ADVANCED
++ CONFIG_DRM_VMWGFX, CONFIG_DRM_VIRTIO_GPU, CONFIG_DRM_VGEM
+
+
 TODO
 ====
+- CONFIG_FW_LOADER_USER_HELPER
