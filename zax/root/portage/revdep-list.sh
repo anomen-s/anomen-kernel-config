@@ -1,0 +1,1 @@
+/usr/sbin/revdep-list.sh

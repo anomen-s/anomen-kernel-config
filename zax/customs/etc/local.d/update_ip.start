@@ -3,7 +3,7 @@
 
 
 HOSTFILE=/mnt/drive_c/WINDOWS/system32/drivers/etc/hosts
-IF="eth0 eth1"
+IF="eth0 eth1 eth2"
 T=`mktemp`
 
 test -f "$HOSTFILE" || exit 1

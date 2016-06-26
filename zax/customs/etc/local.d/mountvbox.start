@@ -7,7 +7,9 @@ mount -t vboxsf -o $VBFSOPTIONS C_DRIVE /mnt/drive_c
 mount -t vboxsf -o $VBFSOPTIONS D_DRIVE /mnt/drive_d
 #mount -t vboxsf -o $VBFSOPTIONS TC /mnt/tc
 
-mount -t vboxsf -o $VBFSOPTIONS DATASHARE /mnt/datashare
-mount -t vboxsf -o $VBFSOPTIONS DATASTORE /mnt/datastore
+#mount -t vboxsf -o $VBFSOPTIONS DATASHARE /mnt/datashare
+#mount -t vboxsf -o $VBFSOPTIONS DATASTORE /mnt/datastore
 
-mount -t vboxsf -o $VBFSOPTIONS TEMP /mnt/temp
+#mount -t vboxsf -o $VBFSOPTIONS TEMP /mnt/temp
+#mount -t vboxsf -o $VBFSOPTIONS DATA /mnt/data
+

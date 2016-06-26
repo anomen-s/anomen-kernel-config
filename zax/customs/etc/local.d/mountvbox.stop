@@ -5,9 +5,10 @@ umount -l /mnt/drive_c
 umount -l /mnt/drive_d
 #umount -l /mnt/tc
 
-umount -l /mnt/datastore
-umount -l /mnt/datashare
+#umount -l /mnt/datastore
+#umount -l /mnt/datashare
 
 
-umount -l /mnt/temp
+#umount -l /mnt/temp
+#umount -l /mnt/data
 

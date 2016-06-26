@@ -11,6 +11,8 @@ app-crypt/truecrypt
 app-emulation/vmware-workstation
 app-emulation/vmware-player
 app-emulation/vmware-modules
+app-emulation/virtualbox-guest-additions
+x11-drivers/xf86-video-virtualbox
 
 dev-java/sun-jdk
 dev-java/sun-jmx
@@ -22,3 +24,8 @@ dev-java/sun-jdk
 dev-java/jsr223
 dev-java/oracle-jdk-bin
 dev-java/oracle-jre-bin
+dev-java/java-sdk-docs
+dev-java/sun-javamail
+
+net-misc/freerapid-downloader
+

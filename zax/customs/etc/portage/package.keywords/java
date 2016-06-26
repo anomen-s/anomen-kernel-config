@@ -15,3 +15,4 @@ dev-util/soapui
 dev-java/jdbc-mssqlserver
 dev-java/keystore-explorer
 dev-util/idea-ultimate-14*
+dev-java/jtds

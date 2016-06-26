@@ -9,3 +9,9 @@ app-text/unicode
 dev-util/lida
 app-text/diffpdf
 dev-vcs/git-crypt
+media-gfx/zbar
+app-text/docx2txt
+net-fs/smbnetfs
+dev-util/asn1c
+app-crypt/hashcat-bin
+app-crypt/steghide

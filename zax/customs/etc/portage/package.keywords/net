@@ -6,3 +6,9 @@ dev-perl/SMTP-Server
 net-misc/freerapid-downloader
 www-client/opera
 
+net-analyzer/netdiscover
+www-client/opera-beta
+
+
+app-crypt/samdump2
+=net-analyzer/nethogs-0.8.1

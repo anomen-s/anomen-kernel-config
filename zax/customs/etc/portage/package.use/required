@@ -20,3 +20,9 @@ dev-java/icedtea-web -icedtea7
 
 www-client/firefox system-cairo system-jpeg system-icu system-sqlite system-libvpx system-libs.
 
+net-fs/samba client
+dev-java/dbvis -jtds
+media-gfx/zbar imagemagick
+#dev-java/oracle-jdk-bin -nsplugin
+#dev-java/oracle-jre-bin -nsplugin
+dev-java/icedtea-web -nsplugin
