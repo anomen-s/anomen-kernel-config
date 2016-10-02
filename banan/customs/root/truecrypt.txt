@@ -1,0 +1,6 @@
+
+
+truecrypt-7.0a.tar.gz
+
+make NOGUI=1 
+

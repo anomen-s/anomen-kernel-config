@@ -1,0 +1,11 @@
+#!/bin/sh
+
+
+
+LABEL=WD_ELEMENTS
+DEV="/dev/disk/by-label/$LABEL"
+
+pmount -u 022 -w -A -t ntfs-3g -c utf8 "$DEV" "$LABEL" || exit 1
+
+
+#sudo hdparm -B 1  "$DEV" || exit 2

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+sudo ifdown eth0
+
+sudo ifconfig eth0 mtu 1450
+
+sudo ifup eth0
+

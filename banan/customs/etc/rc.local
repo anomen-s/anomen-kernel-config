@@ -21,6 +21,7 @@
 
 #echo mmc0 > /sys/devices/platform/leds/leds/bananapi:green:usr/trigger
 echo mmc0 > /sys/class/leds/bananapro:green:usr/trigger
+echo heartbeat > /sys/class/leds/bananapro:green:usr/trigger
 
 echo ds1307 0x68 > /sys/bus/i2c/devices/i2c-1/new_device
 #echo ds3231 0x68 > /sys/bus/i2c/devices/i2c-1/new_device
@@ -34,13 +35,14 @@ echo 25 > /sys/devices/system/cpu/cpufreq/ondemand/up_threshold
 SATA_INT=$(awk -F":" '/sata/ {print $1}' </proc/interrupts  | tr -d ' ')
 echo 2 > /proc/irq/${SATA_INT}/smp_affinity
 
-/sbin/hdparm -B 1  /dev/sda
+/sbin/hdparm -B 128  /dev/sda
 
 /sbin/ifdown eth0
 /sbin/ifconfig eth0 mtu 1450
 /sbin/ifup eth0
 
 /usr/local/sbin/axp209 sbatchgcur 600
+/usr/local/sbin/axp209 sbatchgvolt 4100
 
 # Print the IP address
 _IP=$(hostname -I) || true

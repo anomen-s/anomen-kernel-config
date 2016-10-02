@@ -1,0 +1,11 @@
+#!/bin/sh
+DISPLAY=${DISPLAY:-:0.0}
+export DISPLAY
+echo $DISPLAY
+JAVA_HOME=`ls -d /opt/ejdk1.* | tail -n 1`
+echo embedded java $JAVA_HOME
+
+export JAVA_HOME
+export PATH="$JAVA_HOME/bin:$PATH"
+#sleep 5
+exec screen -S frd sh `ls -d /opt/FreeRapid-*/frd.sh | tail -n 1`
