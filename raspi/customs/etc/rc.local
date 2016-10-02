@@ -19,8 +19,9 @@ echo 60 > /sys/devices/system/cpu/cpufreq/ondemand/up_threshold
 echo ondemand > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 
 # anomen: add 1wire controller, patch module to support DT?
-#echo ds2482 0x18 >   /sys/devices/soc/20804000.i2c/i2c-1/new_device
+echo ds2482 0x18 >  /sys/devices/platform/soc/20804000.i2c/i2c-1/new_device
 #echo bmp180 0x77 >   /sys/devices/soc/20804000.i2c/i2c-1/new_device
+echo ds3231 0x68 >   /sys/devices/soc/20804000.i2c/i2c-1/new_device
 
 
 # Print the IP address
