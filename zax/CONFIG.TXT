@@ -99,7 +99,15 @@
 + CONFIG_TCP_CONG_ADVANCED
 + CONFIG_DRM_VMWGFX, CONFIG_DRM_VIRTIO_GPU, CONFIG_DRM_VGEM
 
+4.4.39-gentoo-z19
+=================
+* (not used)
+
+4.9.34-gentoo-z20
+=================
++ CONFIG_RTC_CLASS
 
 TODO
 ====
-- CONFIG_FW_LOADER_USER_HELPER
+- CONFIG_FW_LOADER_USER_HELPER (not possible?)
+* CONFIG_RTC_CLASS=m

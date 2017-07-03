@@ -1,0 +1,36 @@
+Module                  Size  Used by
+ipv6                  279962  39
+vboxsf                 30454  4
+cfg80211              186947  0
+xts                     2407  2
+gf128mul                5538  1 xts
+dm_crypt               15101  1
+dm_mod                 77107  3 dm_crypt
+snd_pcm_oss            33084  0
+snd_mixer_oss          11713  1 snd_pcm_oss
+msr                     1944  0
+virtio_net             17917  0
+i2c_piix4               9072  0
+virtio_pci             12347  0
+pcspkr                  1523  0
+sr_mod                 11908  0
+cdrom                  21876  1 sr_mod
+snd_intel8x0           23821  2
+snd_ac97_codec         85940  1 snd_intel8x0
+ac97_bus                1134  1 snd_ac97_codec
+snd_pcm                65362  3 snd_pcm_oss,snd_ac97_codec,snd_intel8x0
+parport_pc             14196  0
+vboxvideo              29836  3
+virtio_ring             8821  2 virtio_net,virtio_pci
+snd_timer              15793  1 snd_pcm
+parport                17221  1 parport_pc
+virtio                  4425  2 virtio_net,virtio_pci
+button                  5312  0
+snd                    44782  10 snd_pcm_oss,snd_mixer_oss,snd_ac97_codec,snd_timer,snd_intel8x0,snd_pcm
+pata_acpi               2435  0
+soundcore               4259  1 snd
+ttm                    61782  1 vboxvideo
+vboxguest             174268  6 vboxsf,vboxvideo
+processor              25133  0
+battery                 6834  0
+ac                      3159  0

@@ -18,5 +18,10 @@ sed  -e "s/.*ZAX-ADDRESS-LINE.*/$IP zax zax.gemalto.com zax.cz www.zax.cz # ZAX-
 
 cp -f "$T" "$HOSTFILE"
 
-rm -f "$T"
-
+if [ -s "$HOSTFILE" ]
+then
+ rm -f "$T"
+else
+ echo "BROKEN $HOSTFILE !!!"
+ echo "Backup = $T"
+fi

@@ -1,0 +1,9 @@
+#!/bin/sh
+
+sed -i -e 's@.*TINYPROXY-A.*@<active>true</active><!--TINYPROXY-A -->@' settings.xml
+
+sed -i -e 's@.*CNTLM-A.*@<active>false</active><!--CNTLM-A -->@' settings.xml
+
+
+
+/usr/sbin/tinyproxy -c tinyproxy.conf
