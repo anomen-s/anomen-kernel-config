@@ -153,8 +153,8 @@
 - MOUSE_PS2_ALPS
 - MOUSE_PS2_LOGIPS2PP
 
-3.0.35-s3
-=========
+3.0.35-tuxonice-s3
+==================
 + CONFIG_USB_SUSPEND (udisks)
 + CONFIG_TASKSTATS, CONFIG_TASK_DELAY_ACCT, CONFIG_TASK_IO_ACCOUNTING (iotop)
 + CONFIG_TMPFS_POSIX_ACL (sys-auth/consolekit)
@@ -162,18 +162,27 @@
 + CONFIG_BLK_DEV_BSG (sys-fs/udev)
 + CONFIG_DEVTMPFS (sys-fs/udev)
 
-4.2.0-s1
-========
+4.2.0-tuxonice-s1
+=================
 + CONFIG_EXT4_FS
 + CONFIG_FHANDLE (sys-fs/udev)
 + USB_SERIAL_PL2303
 + CONFIG_USER_NS
 + GSPCA_OV519
 
-4.2.0-s2
-========
+4.2.0-tuxonice-s2
+=================
 + ATH9K_HTC
+
+4.9.34-gentoo-s6
+================
++ Intel Core2 CPU
++ I915
 
 TODO
 ====
-? CONFIG_TOI_DEFAULT_EXTRA_PAGES_ALLOWANCE=2000
++ CONFIG_TOI_DEFAULT_EXTRA_PAGES_ALLOWANCE=2000 (tuxonice)
+? CONFIG_SND_HDA_PREALLOC_SIZE=2048 (pulseaudio)
+* CONFIG_PM_STD_PARTITION=sdb3
++ Device Drivers -> USB support -> USB Serial Converter support -> USB FTDI Single Port Serial Driver (arduino)
++ IPV6

@@ -1,0 +1,203 @@
+00:00.0 Host bridge: Intel Corporation Device 591f (rev 05)
+	Subsystem: Gigabyte Technology Co., Ltd Device 5000
+	Flags: bus master, fast devsel, latency 0
+	Capabilities: [e0] Vendor Specific Information: Len=10 <?>
+
+00:02.0 VGA compatible controller: Intel Corporation Device 5912 (rev 04) (prog-if 00 [VGA controller])
+	Subsystem: Gigabyte Technology Co., Ltd Device d000
+	Flags: bus master, fast devsel, latency 0, IRQ 129
+	Memory at f6000000 (64-bit, non-prefetchable) [size=16M]
+	Memory at e0000000 (64-bit, prefetchable) [size=256M]
+	I/O ports at f000 [size=64]
+	[virtual] Expansion ROM at 000c0000 [disabled] [size=128K]
+	Capabilities: [40] Vendor Specific Information: Len=0c <?>
+	Capabilities: [70] Express Root Complex Integrated Endpoint, MSI 00
+	Capabilities: [ac] MSI: Enable+ Count=1/1 Maskable- 64bit-
+	Capabilities: [d0] Power Management version 2
+	Capabilities: [100] Process Address Space ID (PASID)
+	Capabilities: [200] Address Translation Service (ATS)
+	Capabilities: [300] Page Request Interface (PRI)
+	Kernel driver in use: i915
+	Kernel modules: i915
+
+00:08.0 System peripheral: Intel Corporation Sky Lake Gaussian Mixture Model
+	Subsystem: Gigabyte Technology Co., Ltd Sky Lake Gaussian Mixture Model
+	Flags: bus master, fast devsel, latency 0, IRQ 11
+	Memory at f714e000 (64-bit, non-prefetchable) [size=4K]
+	Capabilities: [90] MSI: Enable- Count=1/1 Maskable- 64bit-
+	Capabilities: [dc] Power Management version 2
+	Capabilities: [f0] PCI Advanced Features
+
+00:14.0 USB controller: Intel Corporation Device a2af (prog-if 30 [XHCI])
+	Subsystem: Gigabyte Technology Co., Ltd Device 5007
+	Flags: bus master, medium devsel, latency 0, IRQ 121
+	Memory at f7130000 (64-bit, non-prefetchable) [size=64K]
+	Capabilities: [70] Power Management version 2
+	Capabilities: [80] MSI: Enable+ Count=1/8 Maskable- 64bit+
+	Kernel driver in use: xhci_hcd
+
+00:16.0 Communication controller: Intel Corporation Device a2ba
+	Subsystem: Gigabyte Technology Co., Ltd Device 1c3a
+	Flags: bus master, fast devsel, latency 0, IRQ 127
+	Memory at f714d000 (64-bit, non-prefetchable) [size=4K]
+	Capabilities: [50] Power Management version 3
+	Capabilities: [8c] MSI: Enable+ Count=1/1 Maskable- 64bit+
+	Kernel driver in use: mei_me
+	Kernel modules: mei_me
+
+00:17.0 SATA controller: Intel Corporation Device a282 (prog-if 01 [AHCI 1.0])
+	Subsystem: Gigabyte Technology Co., Ltd Device b005
+	Flags: bus master, 66MHz, medium devsel, latency 0, IRQ 120
+	Memory at f7148000 (32-bit, non-prefetchable) [size=8K]
+	Memory at f714c000 (32-bit, non-prefetchable) [size=256]
+	I/O ports at f090 [size=8]
+	I/O ports at f080 [size=4]
+	I/O ports at f060 [size=32]
+	Memory at f714b000 (32-bit, non-prefetchable) [size=2K]
+	Capabilities: [80] MSI: Enable+ Count=1/1 Maskable- 64bit-
+	Capabilities: [70] Power Management version 3
+	Capabilities: [a8] SATA HBA v1.0
+	Kernel driver in use: ahci
+
+00:1b.0 PCI bridge: Intel Corporation Device a2eb (rev f0) (prog-if 00 [Normal decode])
+	Flags: bus master, fast devsel, latency 0, IRQ 16
+	Bus: primary=00, secondary=01, subordinate=01, sec-latency=0
+	Capabilities: [40] Express Root Port (Slot+), MSI 00
+	Capabilities: [80] MSI: Enable- Count=1/1 Maskable- 64bit-
+	Capabilities: [90] Subsystem: Gigabyte Technology Co., Ltd Device 5001
+	Capabilities: [a0] Power Management version 3
+	Capabilities: [100] Advanced Error Reporting
+	Capabilities: [140] Access Control Services
+	Capabilities: [220] #19
+	Kernel driver in use: pcieport
+
+00:1c.0 PCI bridge: Intel Corporation Device a294 (rev f0) (prog-if 00 [Normal decode])
+	Flags: bus master, fast devsel, latency 0, IRQ 16
+	Bus: primary=00, secondary=02, subordinate=02, sec-latency=0
+	Memory behind bridge: f7000000-f70fffff
+	Capabilities: [40] Express Root Port (Slot+), MSI 00
+	Capabilities: [80] MSI: Enable- Count=1/1 Maskable- 64bit-
+	Capabilities: [90] Subsystem: Gigabyte Technology Co., Ltd Device 5001
+	Capabilities: [a0] Power Management version 3
+	Capabilities: [100] Advanced Error Reporting
+	Capabilities: [140] Access Control Services
+	Capabilities: [220] #19
+	Kernel driver in use: pcieport
+
+00:1c.6 PCI bridge: Intel Corporation Device a296 (rev f0) (prog-if 00 [Normal decode])
+	Flags: bus master, fast devsel, latency 0, IRQ 18
+	Bus: primary=00, secondary=03, subordinate=03, sec-latency=0
+	Capabilities: [40] Express Root Port (Slot+), MSI 00
+	Capabilities: [80] MSI: Enable- Count=1/1 Maskable- 64bit-
+	Capabilities: [90] Subsystem: Gigabyte Technology Co., Ltd Device 5001
+	Capabilities: [a0] Power Management version 3
+	Capabilities: [100] Advanced Error Reporting
+	Capabilities: [140] Access Control Services
+	Capabilities: [220] #19
+	Kernel driver in use: pcieport
+
+00:1c.7 PCI bridge: Intel Corporation Device a297 (rev f0) (prog-if 00 [Normal decode])
+	Flags: bus master, fast devsel, latency 0
+	Bus: primary=00, secondary=04, subordinate=05, sec-latency=32
+	Capabilities: [40] Express Root Port (Slot+), MSI 00
+	Capabilities: [80] MSI: Enable- Count=1/1 Maskable- 64bit-
+	Capabilities: [90] Subsystem: Gigabyte Technology Co., Ltd Device 5001
+	Capabilities: [a0] Power Management version 3
+	Capabilities: [100] Advanced Error Reporting
+	Capabilities: [140] Access Control Services
+	Capabilities: [220] #19
+	Kernel driver in use: pcieport
+
+00:1d.0 PCI bridge: Intel Corporation Device a298 (rev f0) (prog-if 00 [Normal decode])
+	Flags: bus master, fast devsel, latency 0, IRQ 16
+	Bus: primary=00, secondary=06, subordinate=06, sec-latency=0
+	Capabilities: [40] Express Root Port (Slot+), MSI 00
+	Capabilities: [80] MSI: Enable- Count=1/1 Maskable- 64bit-
+	Capabilities: [90] Subsystem: Gigabyte Technology Co., Ltd Device 5001
+	Capabilities: [a0] Power Management version 3
+	Capabilities: [100] Advanced Error Reporting
+	Capabilities: [140] Access Control Services
+	Capabilities: [220] #19
+	Kernel driver in use: pcieport
+
+00:1d.2 PCI bridge: Intel Corporation Device a29a (rev f0) (prog-if 00 [Normal decode])
+	Flags: bus master, fast devsel, latency 0, IRQ 18
+	Bus: primary=00, secondary=07, subordinate=07, sec-latency=0
+	Capabilities: [40] Express Root Port (Slot+), MSI 00
+	Capabilities: [80] MSI: Enable- Count=1/1 Maskable- 64bit-
+	Capabilities: [90] Subsystem: Gigabyte Technology Co., Ltd Device 5001
+	Capabilities: [a0] Power Management version 3
+	Capabilities: [100] Advanced Error Reporting
+	Capabilities: [140] Access Control Services
+	Capabilities: [220] #19
+	Kernel driver in use: pcieport
+
+00:1d.3 PCI bridge: Intel Corporation Device a29b (rev f0) (prog-if 00 [Normal decode])
+	Flags: bus master, fast devsel, latency 0, IRQ 19
+	Bus: primary=00, secondary=08, subordinate=08, sec-latency=0
+	Capabilities: [40] Express Root Port (Slot+), MSI 00
+	Capabilities: [80] MSI: Enable- Count=1/1 Maskable- 64bit-
+	Capabilities: [90] Subsystem: Gigabyte Technology Co., Ltd Device 5001
+	Capabilities: [a0] Power Management version 3
+	Capabilities: [100] Advanced Error Reporting
+	Capabilities: [140] Access Control Services
+	Capabilities: [220] #19
+	Kernel driver in use: pcieport
+
+00:1f.0 ISA bridge: Intel Corporation Device a2c8
+	Subsystem: Gigabyte Technology Co., Ltd Device 5001
+	Flags: bus master, medium devsel, latency 0
+
+00:1f.2 Memory controller: Intel Corporation Device a2a1
+	Subsystem: Gigabyte Technology Co., Ltd Device 5001
+	Flags: bus master, fast devsel, latency 0
+	Memory at f7144000 (32-bit, non-prefetchable) [size=16K]
+
+00:1f.3 Audio device: Intel Corporation Device a2f0
+	Subsystem: Gigabyte Technology Co., Ltd Device a182
+	Flags: bus master, fast devsel, latency 32, IRQ 130
+	Memory at f7140000 (64-bit, non-prefetchable) [size=16K]
+	Memory at f7120000 (64-bit, non-prefetchable) [size=64K]
+	Capabilities: [50] Power Management version 3
+	Capabilities: [60] MSI: Enable+ Count=1/1 Maskable- 64bit+
+	Kernel driver in use: snd_hda_intel
+	Kernel modules: snd_hda_intel
+
+00:1f.4 SMBus: Intel Corporation Device a2a3
+	Subsystem: Gigabyte Technology Co., Ltd Device 5001
+	Flags: medium devsel, IRQ 16
+	Memory at f714a000 (64-bit, non-prefetchable) [size=256]
+	I/O ports at f040 [size=32]
+	Kernel driver in use: i801_smbus
+	Kernel modules: i2c_i801
+
+00:1f.6 Ethernet controller: Intel Corporation Ethernet Connection (2) I219-V
+	Subsystem: Gigabyte Technology Co., Ltd Ethernet Connection (2) I219-V
+	Flags: bus master, fast devsel, latency 0, IRQ 128
+	Memory at f7100000 (32-bit, non-prefetchable) [size=128K]
+	Capabilities: [c8] Power Management version 3
+	Capabilities: [d0] MSI: Enable+ Count=1/1 Maskable- 64bit+
+	Capabilities: [e0] PCI Advanced Features
+	Kernel driver in use: e1000e
+	Kernel modules: e1000e
+
+02:00.0 USB controller: ASMedia Technology Inc. Device 2142 (prog-if 30 [XHCI])
+	Subsystem: Gigabyte Technology Co., Ltd Device 5007
+	Flags: bus master, fast devsel, latency 0, IRQ 16
+	Memory at f7000000 (64-bit, non-prefetchable) [size=32K]
+	Capabilities: [50] MSI: Enable- Count=1/8 Maskable- 64bit+
+	Capabilities: [68] MSI-X: Enable+ Count=8 Masked-
+	Capabilities: [78] Power Management version 3
+	Capabilities: [80] Express Legacy Endpoint, MSI 00
+	Capabilities: [100] Advanced Error Reporting
+	Capabilities: [200] #19
+	Capabilities: [300] Latency Tolerance Reporting
+	Capabilities: [400] L1 PM Substates
+	Kernel driver in use: xhci_hcd
+
+04:00.0 PCI bridge: Integrated Technology Express, Inc. Device 8892 (rev 71) (prog-if 01 [Subtractive decode])
+	Flags: bus master, fast devsel, latency 0, IRQ 11
+	Bus: primary=04, secondary=05, subordinate=05, sec-latency=32
+	Capabilities: [90] Power Management version 2
+	Capabilities: [a0] Subsystem: Device 0000:0000
+

@@ -5,7 +5,7 @@
 # $Id$ 
 
 # System settings:
-ROOT=/dev/sda2
+ROOT=/dev/sda3
 
 echo make prepare
 make prepare || exit 5
@@ -37,8 +37,11 @@ echo make firmware_install...
 make firmware_install || exit 11
 
 
-echo mount /boot with rw
-mount /boot -o remount,rw
+echo Confirm install ...
+read
+
+#echo mount /boot with rw
+#mount /boot -o remount,rw
 
 cp -v ./arch/x86/boot/bzImage "/boot/kernel-$KERVER" || exit 1
 cp -v ./System.map "/boot/System.map-$KERVER" || exit 2
@@ -49,7 +52,7 @@ echo "" >> /boot/grub/grub.conf
 echo "# ? & ?" >> /boot/grub/grub.conf
 echo "title=Linux $KERVER" >> /boot/grub/grub.conf
 echo "kernel" "/boot/kernel-$KERVER" "root=$ROOT" "ro" >> /boot/grub/grub.conf
-echo "title=Linux $KERVER noresume" >> /boot/grub/grub.conf
+echo "title=Linux $KERVER failsafe" >> /boot/grub/grub.conf
 echo "kernel" "/boot/kernel-$KERVER" "root=$ROOT" "ro" "noresume" "nox" >> /boot/grub/grub.conf 
 
 echo "* INFO *"
