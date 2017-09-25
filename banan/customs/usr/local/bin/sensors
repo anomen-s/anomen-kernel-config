@@ -1,0 +1,204 @@
+#!/usr/bin/python
+
+import argparse
+import os
+import sys
+import re
+import getopt
+import glob
+import subprocess
+import datetime
+
+VERSION=0.3
+
+ALTITUDE=0
+PID_FILE='/run/shm/sensors.pid'
+W1_DEVICES={}
+
+def parseArguments():
+
+    parser = argparse.ArgumentParser(description='Raspberry Pi sensors reader.',
+        usage='%%(prog)s %s [options]' % VERSION)
+    parser.add_argument('-l', '--log', dest='log', action='store_true',
+        help='single line output for log')
+    parser.add_argument('-a', '--altitude', dest='altitude', default=300,
+        help='altitude for computing relative pressure, default value is 300m')
+    parser.add_argument('-p', '--pidfile', nargs='?', dest='pidfile', const=PID_FILE,
+        help='Run only if pid-file is not present, by default it is %s.' % PID_FILE)
+    parser.add_argument('-e', dest='external', action='store_true',
+        help='Print only external sensors.')
+    parser.add_argument('-i', dest='internal', action='store_true',
+        help='Print only internal sensors.')
+
+
+    args = parser.parse_args()
+
+    return args;
+
+
+def usage():
+    parser.print_help()
+    sys.exit(1)
+
+def readfile(filename):
+    f = None
+    try:
+       f = open(filename)
+       data = f.read(1000)
+    except IOError:
+       data = '' 
+    finally:
+       if f:
+         f.close()
+    return data
+
+def check_pid_file(pidfile):
+    return None
+
+def create_pid_file(pidfile):
+    f = None
+    try:
+        fd = os.open(pidfile, os.O_WRONLY | os.O_CREAT | os.O_EXCL)
+        f = os.fdopen(fd, "w") 
+        f.write(str(os.getpid()))
+    except OSError:
+        return pidfile
+    finally:
+        if (f):
+            f.close()
+    return None
+
+def delete_pid_file(pidfile):
+    os.remove(pidfile)
+
+def f2s(data):
+    return '{0:.1f}'.format(data);
+
+def soc():
+    cpudata = cpu_data(0)
+    socdata = get_bpi_data() # get_raspi_data()
+    print('temp=%s\'C volt=%sV freq=%sMHz %s' % (socdata[0], socdata[1], str(cpudata[1]), cpudata[2]))
+
+def get_bpi_data():
+    data = readfile('/sys/class/hwmon/hwmon0/temp1_input')
+    return [int(data or 0)/1000, 0]
+
+def get_raspi_data():
+    vdata = subprocess.check_output(['/opt/vc/bin/vcgencmd','measure_volts'])
+    vm = re.search('volt=(\d+\.\d+()).*', vdata);
+    v = vm.group(1)
+    tdata = subprocess.check_output(['/opt/vc/bin/vcgencmd','measure_temp'])
+    tm = re.search('temp=(\d+\.\d+).*', tdata)
+    t = tm.group(1)
+    return [t, v, tdata, vdata]
+
+def cpu_data(cpu):
+    data = readfile('/sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq')
+    freq = int(data or 0) / 1000
+    gov = readfile('/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor').strip()
+    return ['cpu' + str(cpu), freq, gov, data]
+
+def w1():
+    w1devices = glob.glob('/sys/bus/w1/devices/*/w1_slave')
+    w1devices.sort()
+    for w1dev in w1devices:
+       t = get_w1_data(w1dev)
+       tag=t[0]
+       if re.search('0609bf05',t[0]):
+         tag='heating'
+       if re.search('060a1d3b',t[0]):
+         tag='room'
+       print('temp[%s]=%s\'C' % (tag, f2s(t[1])))
+
+def get_w1_data(path):
+    data = readfile(path)
+    m = re.search(".*crc=\\w\\w YES\n.*t=(\\d+)", data)
+    if not m:
+       return [path, None, data];
+
+    t = float(m.group(1) or 0) / 1000.0
+    return [path, t, data]
+
+def bmp085():
+    bmpdevices = glob.glob('/sys/bus/i2c/drivers/bmp085/*-*')
+    for bmpdev in bmpdevices:
+      data = get_bmp085_data(bmpdev)
+      print('temp=%s\'C press=%shPa relPress=%shPa' % (f2s(data[1]),f2s(data[2]),f2s(data[3])))
+
+
+def get_bmp085_data(path):
+    global ALTITUDE
+    tdata = readfile(path + "/temp0_input")
+    t = float(tdata or 0) / 10.0
+
+    pdata = readfile(path + "/pressure0_input")
+    p_abs = float(pdata or 0) / 100.0
+    p_rel = (p_abs*9.80665*ALTITUDE) / (287*(273+t+(ALTITUDE/400))) + p_abs
+    p_rel_2 = p_abs  + ALTITUDE / 8.3
+    return [path, t, p_abs, p_rel, p_rel_2, tdata, pdata]
+
+
+def get_date():
+    today = datetime.datetime.now()
+    return today.strftime('%Y-%m-%d %H:%M')
+
+
+def log_line(internal, external):
+    result = get_date();
+
+    if (internal):
+        rdata = get_raspi_data()
+        result += ' ' + rdata[0];
+    else:
+        result += ' *'
+
+
+    if (external):
+        w1devices = glob.glob('/sys/bus/w1/devices/*/w1_slave')
+        w1devices.sort()
+        for w1dev in w1devices:
+            t = get_w1_data(w1dev)
+            result += ' ' +  f2s(t[1])
+    else:
+            result += ' * *'
+
+    if (internal):
+        bmpdata = get_bmp085_data('/sys/bus/i2c/drivers/bmp085/1-0077')
+        result += ' ' +  f2s(bmpdata[2])
+    else:
+            result += ' *'
+    return result
+ 
+def main():
+    global ALTITUDE
+
+    args = parseArguments()
+
+    if (args.pidfile):
+        exist_pid = create_pid_file(args.pidfile)
+        if (exist_pid):
+            print "Cannot create pid file %s" % exist_pid
+            sys.exit(1)
+
+    try:
+        ALTITUDE = int(args.altitude)
+
+        if (args.log):
+            print log_line(
+                not args.external or args.internal,
+                not args.internal or args.external)
+            return
+
+        if (not args.external or args.internal):
+            print "Internal: "
+            soc()
+            bmp085()
+        if (not args.internal or args.external):
+            print "External: "
+            w1()
+    finally:
+        if (args.pidfile):
+            delete_pid_file(args.pidfile)
+
+
+if  __name__ =='__main__':main()

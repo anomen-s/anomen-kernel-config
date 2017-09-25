@@ -8,14 +8,14 @@ PIN_NOFF=108
 
 switch_on () { 
 	echo Switch on $1
-	gpio -x "$ADDR" mode $1 out
-	gpio -x "$ADDR" write $1 1
+	/usr/local/bin/gpio -x "$ADDR" mode $1 out
+	/usr/local/bin/gpio -x "$ADDR" write $1 1
 }
 
 switch_off () {
 	echo Switch off $1
-	gpio -x "$ADDR" mode $1 out
-	gpio -x "$ADDR" write $1 0
+	/usr/local/bin/gpio -x "$ADDR" mode $1 out
+	/usr/local/bin/gpio -x "$ADDR" write $1 0
 }
 
 

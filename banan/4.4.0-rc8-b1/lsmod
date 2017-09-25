@@ -1,0 +1,29 @@
+Module                  Size  Used by
+algif_skcipher          7190  0 
+af_alg                  4666  1 algif_skcipher
+w1_therm                3328  0 
+ds2482                  3196  0 
+bmp085_i2c              1186  0 
+rtc_ds1307              8177  0 
+wire                   17342  2 w1_therm,ds2482
+bnep                    9892  2 
+bluetooth             299379  5 bnep
+dm_multipath           14326  0 
+lp                      7109  0 
+dm_crypt               16905  0 
+gspca_ov519            34642  0 
+gspca_main             21454  1 gspca_ov519
+uas                    11823  0 
+dm_mod                 84129  3 dm_multipath,dm_crypt
+realtek                 2455  0 
+brcmfmac              164583  0 
+brcmutil                4957  1 brcmfmac
+dwmac_sunxi             2239  0 
+sun4i_ts                3798  0 
+phy_sun4i_usb           7410  8 
+nvmem_sunxi_sid         2359  0 
+evdev                  11204  0 
+sg                     23371  0 
+nvmem_core              7651  1 nvmem_sunxi_sid
+sun4i_ss               14978  0 
+extcon                  9092  1 phy_sun4i_usb
