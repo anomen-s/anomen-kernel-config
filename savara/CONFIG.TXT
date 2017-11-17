@@ -176,13 +176,13 @@
 
 4.9.34-gentoo-s6
 ================
+* CONFIG_SND_HDA_PREALLOC_SIZE=2048 (pulseaudio)
 + Intel Core2 CPU
 + I915
 
 TODO
 ====
 + CONFIG_TOI_DEFAULT_EXTRA_PAGES_ALLOWANCE=2000 (tuxonice)
-? CONFIG_SND_HDA_PREALLOC_SIZE=2048 (pulseaudio)
 * CONFIG_PM_STD_PARTITION=sdb3
 + Device Drivers -> USB support -> USB Serial Converter support -> USB FTDI Single Port Serial Driver (arduino)
 + IPV6
