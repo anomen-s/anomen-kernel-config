@@ -1,6 +1,25 @@
 
-# anomen : update windows hosts file
+# anomen : update local hosts file
 
+
+HOSTFILE=/etc/hosts
+IP=`nslookup -debug -type=A  prglap9gh8262 | sed -n -e '/internet address =/s/.*=\s*\([.0-9]*\).*/\1/p'`
+sed -e "/WIN-HOST/s/[.0-9]*/$IP/" -i $HOSTFILE
+
+for I in 0 1 2 3
+do
+LOCAL_IP=`ip -4 -o addr show  eth$I  | sed -e 's!/.*!!' -e 's!^.* inet !!'`
+if [ -z "$LOCAL_IP" ]
+then
+ sed -e "/LOCAL-IP/s/^/#/" -i $HOSTFILE
+else
+ echo /etc/hosts: zax=${LOCAL_IP}
+ sed -e "/LOCAL-IP/s/^#*[.0-9]*/${LOCAL_IP}/" -i $HOSTFILE
+ break
+fi
+done
+
+# anomen : update windows hosts file
 
 HOSTFILE=/mnt/drive_c/WINDOWS/system32/drivers/etc/hosts
 IF="eth0 eth1 eth2"

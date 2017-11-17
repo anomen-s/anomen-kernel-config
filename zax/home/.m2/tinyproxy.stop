@@ -2,9 +2,12 @@
 
 pkill -x tinyproxy
 
+echo Stopped tinyproxy
+
 sed -i -e 's@.*TINYPROXY-A.*@<active>false</active><!--TINYPROXY-A -->@' settings.xml
 sed -i -e 's@.*CNTLM-A.*@<active>true</active><!--CNTLM-A -->@' settings.xml
 
+echo Maven configuration updated
 sleep 1
 
 pkill -9 -x tinyproxy

@@ -4,6 +4,8 @@ sed -i -e 's@.*TINYPROXY-A.*@<active>true</active><!--TINYPROXY-A -->@' settings
 
 sed -i -e 's@.*CNTLM-A.*@<active>false</active><!--CNTLM-A -->@' settings.xml
 
-
+echo Maven Config updated
 
 /usr/sbin/tinyproxy -c tinyproxy.conf
+
+echo Tinyproxy started
