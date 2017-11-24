@@ -180,9 +180,22 @@
 + Intel Core2 CPU
 + I915
 
+4.9.34-gentoo-s7
+================
++ HIBERNATION
++ USB_UAS
++ CONFIG_PM_STD_PARTITION
+* CONFIG_X86_ACPI_CPUFREQ=m (sys-power/phc-intel)
+
+4.9.34-gentoo-s8
+================
+* docker support
+
+
 TODO
 ====
 + CONFIG_TOI_DEFAULT_EXTRA_PAGES_ALLOWANCE=2000 (tuxonice)
 * CONFIG_PM_STD_PARTITION=sdb3
+* CONFIG_NF_CT_NETLINK (net-libs/libnfnetlink)
+* CONFIG_NETFILTER_NETLINK_QUEUE (net-libs/libnetfilter_queue)
 + Device Drivers -> USB support -> USB Serial Converter support -> USB FTDI Single Port Serial Driver (arduino)
-+ IPV6

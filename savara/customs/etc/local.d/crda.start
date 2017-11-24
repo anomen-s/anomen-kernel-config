@@ -1,0 +1,4 @@
+# /etc/conf.d/local.start
+
+# temporary fix, how to do this correctly?
+/usr/sbin/iw reg set CZ
