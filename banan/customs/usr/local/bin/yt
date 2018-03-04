@@ -1,0 +1,6 @@
+#!/bin/sh
+
+cd /mnt/fujitsu/downloads/yt_new
+
+exec screen -S yt youtube-dl "$@"
+

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+/usr/bin/leafpad /mnt/fujitsu/downloads/list.txt

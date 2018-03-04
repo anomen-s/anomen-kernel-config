@@ -17,9 +17,29 @@
 + CONFIG_MAGIC_SYSRQ
 + CONFIG_LIRC_STAGING
 
+4.14.18-sunxi
+=============
+* Armbian kernel
++ DS2482
++ mcp23S08
+
+
 TODO
 ====
 CONFIG_USB_SUSPEND ?
 AP6120 ?
 W1_SUNXI ?
 sun4
++ CONFIG_MAGIC_SYSRQ
+
+BUILD Bananian
+==============
+make LOADADDR=0x40008000 all uImage dtbs
+make modules_install firmware_install
+cp arch/arm/boot/uImage /boot/....
+
+BUILD Armbian modules
+=====================
+make LOCALVERSION= prepare modules_prepare
+make LOCALVERSION= drivers/w1/masters/ds2482.ko
+make LOCALVERSION= drivers/pinctrl/pinctrl-mcp23s08.ko

@@ -1,0 +1,142 @@
+smartctl 6.6 2016-05-31 r4324 [armv7l-linux-4.14.18-sunxi] (local build)
+Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Model Family:     Fujitsu MHV
+Device Model:     FUJITSU MHV2080BH
+Serial Number:    NW78T6129T9N
+Firmware Version: 00000025
+User Capacity:    80 026 361 856 bytes [80,0 GB]
+Sector Size:      512 bytes logical/physical
+Device is:        In smartctl database [for details use: -P show]
+ATA Version is:   ATA/ATAPI-7 T13/1532D revision 4a
+Local Time is:    Sun Mar  4 22:33:23 2018 CET
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+General SMART Values:
+Offline data collection status:  (0x00)	Offline data collection activity
+					was never started.
+					Auto Offline Data Collection: Disabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		(  471) seconds.
+Offline data collection
+capabilities: 			 (0x7b) SMART execute Offline immediate.
+					Auto Offline data collection on/off support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					Conveyance Self-test supported.
+					Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					General Purpose Logging supported.
+Short self-test routine 
+recommended polling time: 	 (   2) minutes.
+Extended self-test routine
+recommended polling time: 	 (  55) minutes.
+Conveyance self-test routine
+recommended polling time: 	 (   2) minutes.
+SCT capabilities: 	       (0x003d)	SCT Status supported.
+					SCT Error Recovery Control supported.
+					SCT Feature Control supported.
+					SCT Data Table supported.
+
+SMART Attributes Data Structure revision number: 16
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAG     VALUE WORST THRESH TYPE      UPDATED  WHEN_FAILED RAW_VALUE
+  1 Raw_Read_Error_Rate     0x000f   100   100   046    Pre-fail  Always       -       217638
+  2 Throughput_Performance  0x0005   100   100   030    Pre-fail  Offline      -       24379392
+  3 Spin_Up_Time            0x0003   100   100   025    Pre-fail  Always       -       1
+  4 Start_Stop_Count        0x0032   098   098   000    Old_age   Always       -       6118
+  5 Reallocated_Sector_Ct   0x0033   100   100   024    Pre-fail  Always       -       0 (2000 0)
+  7 Seek_Error_Rate         0x000f   100   100   047    Pre-fail  Always       -       1031
+  8 Seek_Time_Performance   0x0005   100   100   019    Pre-fail  Offline      -       0
+  9 Power_On_Seconds        0x0032   046   046   000    Old_age   Always       -       27276h+12m+33s
+ 10 Spin_Retry_Count        0x0013   100   100   020    Pre-fail  Always       -       0
+ 12 Power_Cycle_Count       0x0032   100   100   000    Old_age   Always       -       2240
+192 Power-Off_Retract_Count 0x0032   100   100   000    Old_age   Always       -       34
+193 Load_Cycle_Count        0x0032   083   083   000    Old_age   Always       -       353606
+194 Temperature_Celsius     0x0022   100   100   000    Old_age   Always       -       39 (Min/Max 17/60)
+195 Hardware_ECC_Recovered  0x001a   100   100   000    Old_age   Always       -       308
+196 Reallocated_Event_Count 0x0032   100   100   000    Old_age   Always       -       0 (0 7002)
+197 Current_Pending_Sector  0x0012   100   100   000    Old_age   Always       -       0
+198 Offline_Uncorrectable   0x0010   100   100   000    Old_age   Offline      -       0
+199 UDMA_CRC_Error_Count    0x003e   200   200   000    Old_age   Always       -       0
+200 Multi_Zone_Error_Rate   0x000f   100   100   060    Pre-fail  Always       -       18857
+203 Run_Out_Cancel          0x0002   100   100   000    Old_age   Always       -       2628539776036
+240 Head_Flying_Hours       0x003e   200   200   000    Old_age   Always       -       0
+
+SMART Error Log Version: 1
+ATA Error Count: 2
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 2 occurred at disk power-on lifetime: 27248 hours (1135 days + 8 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 41 a3 8a 71 99 40  Error: ICRC, ABRT at LBA = 0x0099718a = 10056074
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  61 48 70 37 b0 99 40 00  29d+03:43:54.406  WRITE FPDMA QUEUED
+  60 00 68 bf 13 0b 40 00  29d+03:43:54.323  READ FPDMA QUEUED
+  61 08 f0 af 01 00 40 00  29d+03:43:54.301  WRITE FPDMA QUEUED
+  61 98 60 e7 05 9a 40 00  29d+03:43:54.301  WRITE FPDMA QUEUED
+  61 a8 58 3f 00 9a 40 00  29d+03:43:54.301  WRITE FPDMA QUEUED
+
+Error 1 occurred at disk power-on lifetime: 26032 hours (1084 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 41 53 52 46 91 40  Error: ICRC, ABRT at LBA = 0x00914652 = 9520722
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  61 18 d8 97 0a 04 40 00  14d+20:36:28.877  WRITE FPDMA QUEUED
+  61 98 d0 27 62 8a 40 00  14d+20:36:28.877  WRITE FPDMA QUEUED
+  61 00 c8 bf 35 90 40 00  14d+20:36:28.819  WRITE FPDMA QUEUED
+  61 00 c0 bf 2d 90 40 00  14d+20:36:28.819  WRITE FPDMA QUEUED
+  61 00 b8 bf 25 90 40 00  14d+20:36:28.819  WRITE FPDMA QUEUED
+
+SMART Self-test log structure revision number 1
+No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+
+SMART Selective self-test log data structure revision number 1
+ SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
+    1        0        0  Not_testing
+    2        0        0  Not_testing
+    3        0        0  Not_testing
+    4        0        0  Not_testing
+    5        0        0  Not_testing
+Selective self-test flags (0x0):
+  After scanning selected spans, do NOT read-scan remainder of disk.
+If Selective self-test is pending on power-up, resume after 0 minute delay.
+

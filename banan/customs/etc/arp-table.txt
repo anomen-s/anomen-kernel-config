@@ -1,0 +1,23 @@
+AC:72:89:1D:E8:2C B-pc
+BC:E6:3F:37:FA:C2 Samsung Galaxy A5
+b8:27:eb:90:3b:b4 RaspberryPi
+E4:B0:21:D2:1D:30 Samsung Galaxy Y
+00:0C:29:38:82:D8 vvidle
+00:1A:73:BF:20:D1 tucnak
+00:13:CE:F1:E2:2D Asus
+00:21:85:4d:f7:7a mivvy eth
+00:21:85:77:a3:ee mivvy
+02:18:09:82:04:c0 banan
+08:00:00:61:73:00 Zax eth
+08:00:00:61:73:01 Zax wifi
+18:3D:A2:68:07:94 Gto PC (previous)
+20:47:47:E1:8F:8B Gto PC
+20:59:a0:a6:54:23 tablet MyAudio7
+3C:A9:F4:B9:14:68 Gto PC wlan
+38:72:c0:d4:96:14 comtrend vr-3026e
+60:50:40:30:20:10 savara eth
+90:f6:52:07:93:56 savara
+98:3b:16:c7:f6:be Banan wlan
+84:63:d6:e3:66:2c Lumia phone
+20:7c:8f:ab:4b:80 tablet Asus
+64:db:43:44:35:fa Lenovo phone

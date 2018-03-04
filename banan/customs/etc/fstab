@@ -1,8 +1,7 @@
-# UNCONFIGURED FSTAB FOR BASE SYSTEM
+UUID=2a2109c3-9e02-4a24-bdd1-98e33fdedde4 / ext4 defaults,noatime,nodiratime,commit=600,errors=remount-ro 0 1
 
-/dev/mmcblk0p3 swap swap defaults 0 0
-/dev/disk/by-uuid/cd4a05ec-df8e-4683-a449-49a837f722c3	/mnt/fujitsu	ext4	nosuid,noatime,nodev	0	0
+#/dev/mmcblk0p3 swap swap defaults 0 0
+/dev/disk/by-uuid/cd4a05ec-df8e-4683-a449-49a837f722c3  /mnt/fujitsu    ext4    nosuid,noatime,nodev    0       0
 
-#/dev/mmcblk0p1     /mnt/p1    vfat  ro   0 0
- 
-
+tmpfs /tmp tmpfs defaults,nosuid 0 0
+/var/swap none swap sw 0 0

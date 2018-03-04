@@ -26,3 +26,7 @@ root	ALL=(ALL:ALL) ALL
 
 #includedir /etc/sudoers.d
 # pi ALL=(ALL) NOPASSWD: ALL
+
+www-data ALL = NOPASSWD: /usr/sbin/service minidlna force-reload
+www-data ALL = NOPASSWD: /usr/bin/arp-scan
+
