@@ -1,14 +1,13 @@
-net-libs/libbt
 mail-mta/spamsink
 net-proxy/cntlm
 media-video/get_flash_videos
 dev-perl/SMTP-Server
 net-misc/freerapid-downloader
-www-client/opera
 
 net-analyzer/netdiscover
-www-client/opera-beta
 
 
 app-crypt/samdump2
-=net-analyzer/nethogs-0.8.1
+net-analyzer/ssh-audit
+www-client/chromium
+net-analyzer/arp-scan

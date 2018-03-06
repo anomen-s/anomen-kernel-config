@@ -1,0 +1,2 @@
+app-emulation/wine-any d3d9 s3tc staging vaapi
+app-emulation/wine-any -mono

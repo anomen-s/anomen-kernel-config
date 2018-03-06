@@ -1,9 +1,5 @@
 app-editors/atom
 dev-util/atom-shell
-=sys-devel/llvm-3.4.2
-=sys-devel/llvm-3.5.0
-=sys-devel/clang-3.4.2*
-=sys-devel/clang-3.5.0*
 app-text/unicode
 
 dev-util/lida
@@ -15,3 +11,9 @@ net-fs/smbnetfs
 dev-util/asn1c
 app-crypt/hashcat-bin
 app-crypt/steghide
+app-arch/upx-bin
+dev-util/codelite
+dev-python/pyexcelerator
+dev-util/memfetch
+
+xfce-extra/xfce4-alsa-plugin

@@ -4,6 +4,7 @@
 
 HOSTFILE=/etc/hosts
 IP=`nslookup -debug -type=A  prglap9gh8262 | sed -n -e '/internet address =/s/.*=\s*\([.0-9]*\).*/\1/p'`
+echo /etc/hosts: host=${IP}
 sed -e "/WIN-HOST/s/[.0-9]*/$IP/" -i $HOSTFILE
 
 for I in 0 1 2 3

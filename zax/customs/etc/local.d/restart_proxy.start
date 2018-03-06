@@ -1,0 +1,18 @@
+
+# anomen : update windows hosts file
+
+/etc/init.d/cntlm stop || /etc/init.d/cntlm zap
+
+`/usr/local/bin/proxy-setup`
+echo location: $LOCATION
+
+if [ xwork = "x$LOCATION" ]
+then
+ sed -i -e '/SKIP-PROXY/s/^/#/'    -e '/GEM-PROXY/s/^#*//' /etc/cntlm.conf
+else 
+ sed -i -e '/SKIP-PROXY/s/^#*//'    -e '/GEM-PROXY/s/^/#/' /etc/cntlm.conf
+fi
+
+/etc/init.d/cntlm start
+
+

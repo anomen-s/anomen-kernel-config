@@ -21,8 +21,26 @@ dev-java/icedtea-web -icedtea7
 www-client/firefox system-cairo system-jpeg system-icu system-sqlite system-libvpx system-libs.
 
 net-fs/samba client
-dev-java/dbvis -jtds
+dev-db/dbvis -jtds
 media-gfx/zbar imagemagick
 #dev-java/oracle-jdk-bin -nsplugin
 #dev-java/oracle-jre-bin -nsplugin
 dev-java/icedtea-web -nsplugin
+dev-libs/libpcre pcre16
+media-gfx/graphicsmagick imagemagick
+media-gfx/imagemagick cxx
+dev-python/PyQt4 compat webkit
+dev-qt/qtsingleapplication qt5
+dev-qt/qtlockedfile qt5
+app-text/poppler qt5
+dev-python/PyQt5 webkit
+dev-python/qtwebkit printsupport
+dev-qt/qtwebkit printsupport
+net-misc/iputils -arping
+app-crypt/pinentry -qt4
+sys-devel/qconf -qt4
+dev-libs/xmlsec nss
+dev-libs/xmlsec gcrypt
+media-libs/vigra openexr
+sci-libs/hdf5 -threads
+dev-python/qscintilla-python qt5

@@ -3,3 +3,4 @@ dev-libs/apr-util -sqlite
 dev-db/sqlite secure-delete
 media-libs/mesa g3dvl
 net-print/cups -usb
+sys-firmware/intel-microcode monolithic
