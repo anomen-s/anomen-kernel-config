@@ -2,5 +2,8 @@
 
 cd /mnt/fujitsu/downloads/yt_new
 
-exec screen -S yt youtube-dl "$@"
+echo youtube-dl "$@"
+
+echo "$@" >> history.txt
+exec screen -d -m -S yt youtube-dl "$@"
 

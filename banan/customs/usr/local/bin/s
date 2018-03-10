@@ -120,7 +120,7 @@ def get_w1_data(path):
     return [path, t, data]
 
 def bmp085():
-    bmpdevices = glob.glob('/sys/bus/i2c/drivers/bmp085/*-*')
+    bmpdevices = glob.glob('/sys/bus/i2c/drivers/bmp280/*-*/iio:device*')
     for bmpdev in bmpdevices:
       data = get_bmp085_data(bmpdev)
       print('temp=%s\'C press=%shPa relPress=%shPa' % (f2s(data[1]),f2s(data[2]),f2s(data[3])))
@@ -128,11 +128,11 @@ def bmp085():
 
 def get_bmp085_data(path):
     global ALTITUDE
-    tdata = readfile(path + "/temp0_input")
-    t = float(tdata or 0) / 10.0
+    tdata = readfile(path + "/in_temp_input")
+    t = float(tdata or 0) / 1000.0
 
-    pdata = readfile(path + "/pressure0_input")
-    p_abs = float(pdata or 0) / 100.0
+    pdata = readfile(path + "/in_pressure_input")
+    p_abs = float(pdata or 0) * 10.0
     p_rel = (p_abs*9.80665*ALTITUDE) / (287*(273+t+(ALTITUDE/400))) + p_abs
     p_rel_2 = p_abs  + ALTITUDE / 8.3
     return [path, t, p_abs, p_rel, p_rel_2, tdata, pdata]
