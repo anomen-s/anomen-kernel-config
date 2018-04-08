@@ -107,11 +107,22 @@
 =================
 + CONFIG_RTC_CLASS
 
-TODO
-====
-- CONFIG_FW_LOADER_USER_HELPER (not possible?)
-* CONFIG_RTC_CLASS=m
+4.9.76-gentoo-r1-z21
+====================
++ CONFIG_X86_64
+- CONFIG_FW_LOADER_USER_HELPER
 m CONFIG_CRYPTO_USER_API_SKCIPHER (cryptsetup)
 m CONFIG_CRYPTO_USER_API_RNG
 m CONFIG_CRYPTO_USER_API_HASH
 m CONFIG_CRYPTO_USER_API_AEAD
+
+4.9.76-gentoo-r1-z22
+====================
++ docker support
+
+TODO
+====
++ CONFIG_NETFILTER_XT_MATCH_IPVS (docker)
++ CONFIG_EXT3_FS_XATTR (docker)
++ CONFIG_AUFS_FS (docker)
++ CONFIG_BTRFS_FS_POSIX_ACL (docker)

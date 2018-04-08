@@ -34,7 +34,7 @@ IP=`for A in $IF ; do ip addr show $A ; done | sed -n -e 's@.*inet\s*\([0-9.]*\)
 
 echo Updating windows hosts with $IP
 
-sed  -e "s/.*ZAX-ADDRESS-LINE.*/$IP zax zax.gemalto.com zax.cz www.zax.cz # ZAX-ADDRESS-LINE/" "$HOSTFILE" >  "$T"
+sed  -e "s/.*ZAX-ADDRESS-LINE.*/$IP zax zax.xxx.com zax.cz www.zax.cz # ZAX-ADDRESS-LINE/" "$HOSTFILE" >  "$T"
 
 cp -f "$T" "$HOSTFILE"
 

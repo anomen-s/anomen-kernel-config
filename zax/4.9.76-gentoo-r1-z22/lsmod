@@ -1,0 +1,39 @@
+Module                  Size  Used by
+bluetooth             296722  0
+ipv6                  312995  50
+vboxsf                 30950  4
+cfg80211              206106  0
+dm_crypt               18028  1
+xts                     3015  2
+gf128mul                5900  1 xts
+algif_skcipher          9223  0
+af_alg                  5529  1 algif_skcipher
+dm_mod                 85245  3 dm_crypt
+snd_pcm_oss            36207  0
+snd_mixer_oss          13472  1 snd_pcm_oss
+vboxvideo              34376  3
+msr                     2476  0
+virtio_net             20612  0
+snd_intel8x0           26994  0
+snd_ac97_codec        105260  1 snd_intel8x0
+pcspkr                  2035  0
+virtio_pci             13943  0
+virtio_ring             9739  2 virtio_net,virtio_pci
+parport_pc             16901  0
+vboxguest             199397  6 vboxsf,vboxvideo
+parport                20861  1 parport_pc
+sr_mod                 13143  0
+ac97_bus                1502  1 snd_ac97_codec
+snd_pcm                76223  3 snd_pcm_oss,snd_ac97_codec,snd_intel8x0
+snd_timer              19384  1 snd_pcm
+snd                    56098  6 snd_pcm_oss,snd_mixer_oss,snd_ac97_codec,snd_timer,snd_intel8x0,snd_pcm
+soundcore               5219  1 snd
+virtio                  5273  2 virtio_net,virtio_pci
+button                  6453  0
+cdrom                  24963  1 sr_mod
+ttm                    70041  1 vboxvideo
+i2c_piix4               9920  0
+pata_acpi               3427  0
+battery                 8474  0
+processor              27239  0
+ac                      3699  0
