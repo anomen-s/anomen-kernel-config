@@ -1,1 +1,1 @@
-MAVEN_OPTS="-Xms128m -Xmx1024m -XX:PermSize=128m"
+MAVEN_OPTS=" -Xms128m -Xmx1024m -XX:PermSize=128m -Dmaven.wagon.http.ssl.insecure=true  -Dmaven.wagon.http.ssl.allowall=true "
