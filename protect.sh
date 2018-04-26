@@ -35,11 +35,11 @@ fileenc() {
   then
       # check if plaintext file was changed
       FT="${FP}-${RANDOM}"
-      gpg --quiet --batch --passphrase-file "$PW_FILE" --armor --output "$FT" --decrypt "$F" || exit 6
+      gpg --quiet --batch --passphrase-file "$PW_FILE" --armor --output "$FT" --decrypt "$F" || echo Canot decrypt "$F". Deleting.
       if cmp --quiet "$FP" "$FT"
       then
         echo File not changed, deleting: "$FP"
-        rm --force "$FT"
+        rm --force "$FT" > /dev/null
         rm --force "$FP"
         exit 0
       else
@@ -82,6 +82,9 @@ case "$1" in
  ;;
  *)
     echo Invalid command
+    echo "Usage: "
+    echo "	$0 encrypt	find all encrypted files (*.gpg) for which exists plaintext file and replace them with encrypted plaintexts "
+    echo "	$0 decrypt	decrypt all encrypted files (*.gpg)"
     exit 1
 esac
 
