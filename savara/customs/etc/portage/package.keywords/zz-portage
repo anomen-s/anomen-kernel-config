@@ -1,0 +1,91 @@
+# required by app-emulation/vmware-workstation-11.1.2.2780323-r4::gentoo[-bundled-libs]
+# required by @selected
+# required by @world (argument)
+=dev-libs/libgcrypt-1.5.6-r101 ~amd64
+# required by media-libs/avidemux-plugins-2.6.20::gentoo
+=media-video/avidemux-2.6.20 ~amd64
+=media-libs/avidemux-plugins-2.6.20 ~amd64
+=media-libs/avidemux-core-2.6.20-r1 ~amd64
+=app-emulation/vmware-tools-9.9.4.3206955 ~amd64
+=dev-util/patchelf-0.9 ~amd64
+=net-fs/samba-4.6.5 ~amd64
+=net-fs/samba-4.6.4 ~amd64
+=dev-lang/nasm-2.13.01 ~amd64
+# required by phc-intel (argument)
+=sys-power/phc-intel-0.3.2.12.21 ~amd64
+# required by dev-java/xml-xmlbeans-2.6.0::gentoo
+# required by dev-java/xml-xmlbeans (argument)
+=dev-java/piccolo-1.04 ~amd64
+# required by dev-java/jtds (argument)
+=dev-java/jtds-1.3.1 ~amd64
+# required by sys-kernel/tuxonice-sources (argument)
+=sys-kernel/tuxonice-sources-4.5.4 ~amd64
+# required by dev-java/xml-xmlbeans (argument)
+=dev-java/xml-xmlbeans-2.6.0 ~amd64
+# required by mkvalidator (argument)
+=media-video/mkvalidator-0.5.1 ~amd64
+# required by libva-utils (argument)
+=media-video/libva-utils-1.8.3 ~amd64
+# required by media-video/vlc-2.2.6::gentoo[vaapi]
+# required by @selected
+# required by @world (argument)
+=x11-libs/libva-1.8.3 ~amd64
+# required by xlsx2csv (argument)
+=app-text/xlsx2csv-0.7.2 ~amd64
+# required by docx2txt (argument)
+=app-text/docx2txt-1.4 ~amd64
+# required by it87 (argument)
+=sys-apps/it87-9999 **
+# required by net-analyzer/suricata-3.2.1::gentoo
+# required by suricata (argument)
+=net-libs/libhtp-0.5.22 ~amd64
+# required by suricata (argument)
+=net-analyzer/suricata-3.2.1 ~amd64
+# required by gitkraken-bin (argument)
+=dev-vcs/gitkraken-bin-2.7.0 ~amd64
+# required by dev-ruby/listen-3.1.5-r1::gentoo[ruby_targets_ruby22]
+# required by app-emulation/vagrant-2.0.0::gentoo[ruby_targets_ruby22]
+# required by vagrant (argument)
+=dev-ruby/rb-inotify-0.9.10 ~amd64
+# required by app-emulation/vagrant-2.0.0::gentoo[ruby_targets_ruby22]
+# required by vagrant (argument)
+=dev-ruby/hashicorp-checkpoint-0.1.4-r1 ~amd64
+# required by media-libs/libgphoto2-2.5.12::gentoo
+# required by gnome-base/gvfs-1.30.4::gentoo[gphoto2]
+# required by app-editors/gedit-3.22.0::gentoo
+# required by @selected
+# required by @world (argument)
+=dev-libs/libxml2-2.9.6 ~amd64
+# required by app-emulation/vagrant-2.0.0::gentoo[ruby_targets_ruby22]
+# required by vagrant (argument)
+=dev-ruby/i18n-0.7.0-r2 ~amd64
+# required by dev-ruby/listen-3.1.5-r1::gentoo[ruby_targets_ruby22]
+# required by app-emulation/vagrant-2.0.0::gentoo[ruby_targets_ruby22]
+# required by vagrant (argument)
+=dev-ruby/ruby_dep-1.5.0 ~amd64
+# required by app-emulation/vagrant-2.0.0::gentoo[ruby_targets_ruby22]
+# required by vagrant (argument)
+=dev-ruby/nokogiri-1.8.1 ~amd64
+# required by app-emulation/vagrant-2.0.0::gentoo[ruby_targets_ruby22]
+# required by vagrant (argument)
+=dev-ruby/net-ssh-4.2.0 ~amd64
+# required by app-emulation/vagrant-2.0.0::gentoo[ruby_targets_ruby22]
+# required by vagrant (argument)
+=dev-ruby/listen-3.1.5-r1 ~amd64
+# required by app-emulation/vagrant-2.0.0::gentoo[ruby_targets_ruby22]
+# required by vagrant (argument)
+=dev-ruby/net-scp-1.2.1 ~amd64
+# required by gnome-extra/yelp-xsl-3.20.1::gentoo
+# required by app-text/yelp-tools-3.18.0::gentoo
+# required by gnome-extra/zenity-3.22.0::gentoo
+# required by @selected
+# required by @world (argument)
+=dev-libs/libxslt-1.1.30-r1 ~amd64
+# required by app-emulation/vagrant-2.0.0::gentoo[ruby_targets_ruby22]
+# required by vagrant (argument)
+=dev-ruby/rake-12.1.0 ~amd64
+# required by media-libs/avidemux-plugins-2.6.20::gentoo[aac]
+# required by media-video/avidemux-2.6.20::gentoo
+# required by @selected
+# required by @world (argument)
+=media-libs/faac-1.29.9.2 ~amd64

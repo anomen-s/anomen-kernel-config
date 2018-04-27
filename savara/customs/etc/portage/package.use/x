@@ -1,3 +1,65 @@
 # new login
-x11-misc/xscreensaver new-login gdm  suid
- xfce-extra/xfswitch-plugin gdm
+x11-misc/xscreensaver  suid
+# required by media-video/vlc-2.2.6::gentoo[samba]
+# required by @selected
+# required by @world (argument)
+net-fs/samba client
+# required by sci-geosciences/gpsbabel-1.5.4-r1::gentoo[gui]
+# required by @selected
+# required by @world (argument)
+>=dev-qt/qtwebengine-5.6.2 widgets
+# required by dev-qt/qtwebengine-5.6.2::gentoo
+# required by sci-geosciences/gpsbabel-1.5.4-r1::gentoo[gui]
+# required by @selected
+# required by @world (argument)
+>=media-libs/libvpx-1.5.0 svc
+# required by sys-libs/ldb-1.1.29-r1::gentoo
+# required by net-fs/samba-4.5.10::gentoo
+# required by media-video/mplayer-1.2.1::gentoo[samba]
+# required by media-video/smplayer-16.11.0::gentoo
+# required by x11-themes/smplayer-themes-15.12.0::gentoo
+# required by @selected
+# required by @world (argument)
+>=sys-libs/tdb-1.3.13 python
+# required by dev-qt/qtwebengine-5.6.2::gentoo
+# required by sci-geosciences/gpsbabel-1.5.4-r1::gentoo[gui]
+# required by @selected
+# required by @world (argument)
+>=dev-qt/qtwebchannel-5.6.2 qml
+# required by sys-libs/ldb-1.1.29-r1::gentoo
+# required by net-fs/samba-4.5.10::gentoo
+# required by media-video/mplayer-1.2.1::gentoo[samba]
+# required by media-video/smplayer-16.11.0::gentoo
+# required by x11-themes/smplayer-themes-15.12.0::gentoo
+# required by @selected
+# required by @world (argument)
+>=sys-libs/tevent-0.9.31-r1 python
+# required by xfce-extra/xfce4-sensors-plugin-1.2.6::gentoo[video_cards_nvidia]
+# required by @selected
+# required by @world (argument)
+>=x11-drivers/nvidia-drivers-340.102 static-libs
+# required by dev-lang/php-7.0.19::gentoo[apache2]
+# required by @selected
+# required by @world (argument)
+>=www-servers/apache-2.4.25 apache2_modules_unixd
+# required by media-gfx/inkscape-0.91-r3::gentoo[latex]
+# required by @selected
+# required by @world (argument)
+>=media-gfx/pstoedit-3.70-r1 plotutils
+# required by net-fs/samba-4.2.14::gentoo
+# required by media-video/vlc-2.2.6::gentoo[samba]
+# required by @selected
+# required by @world (argument)
+>=sys-libs/ntdb-1.0-r1 python
+# required by app-emulation/q4wine-1.3.4::gentoo
+# required by app-emulation/q4wine (argument)
+>=dev-qt/qtsingleapplication-2.6.1_p20150629 qt5
+# required by dev-qt/qtsingleapplication-2.6.1_p20150629::gentoo
+# required by media-video/smplayer-16.11.0::gentoo[-qt5]
+# required by x11-themes/smplayer-themes-15.12.0::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-qt/qtlockedfile-2.4.1_p20150629 qt5
+# required by media-sound/pulseaudio-10.0::gentoo[alsa-plugin,alsa]
+# required by pulseaudio (argument)
+>=media-plugins/alsa-plugins-1.1.1-r1 pulseaudio

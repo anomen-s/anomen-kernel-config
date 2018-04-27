@@ -3,23 +3,25 @@ dev-java/maven-bin
 
 dev-java/tomcat-servlet-api
 www-servers/tomcat
-
+=virtual/jdk-1.8.0
+=virtual/jre-1.8.0
 dev-java/portecle
 
 dev-java/glassfish:2.1
 dev-java/glassfish:2.1.1
-dev-java/dbvis
-dev-java/squirrel-sql
+# move dev-java/dbvis dev-db/dbvis
+dev-db/dbvis
+# move dev-java/squirrel-sql dev-db/squirrel-sql
+dev-db/squirrel-sql
 net-nds/ApacheDirectoryStudio
 ~app-admin/eselect-ecj-0.5
 dev-util/netbeans:6.9
 ~www-servers/jboss-bin-4.0.5
 dev-java/ant-eclipse-ecj:3.6
-dev-java/eclipse-ecj:3.6
+dev-java/eclipse-ecj:4.5
 ~dev-java/flyingsaucer-7
-~dev-java/svgsalamander-0.0
 ~dev-java/eclipse-ecj-3.7.1
-~dev-java/ant-eclipse-ecj-3.7.1
+~dev-java/ant-eclipse-ecj-4.5.1
 dev-java/netbeans-enterprise
 dev-java/netbeans-apisupport
 dev-java/netbeans-ide
@@ -37,3 +39,5 @@ dev-java/netbeans-platform
 =dev-java/ant-eclipse-ecj-4.2.1
 =dev-java/eclipse-ecj-4.2.1
 dev-util/idea-community
+dev-java/jdbc-mssqlserver
+=dev-util/idea-ultimate-14*

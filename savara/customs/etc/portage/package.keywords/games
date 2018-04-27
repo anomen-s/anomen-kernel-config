@@ -10,10 +10,15 @@ games-arcade/opentyrian
 # steam
 games-util/steam-client-meta
 games-util/steam-meta
-games-util/steam-base
+# move games-util/steam-base games-util/steam-launcher
+games-util/steam-launcher
 games-util/steam-games-meta
 
 # wine
 app-emulation/playonlinux
 =app-emulation/wine-1.5.26
 media-libs/libsdl:2
+=app-emulation/wine-1.7.4
+=app-emulation/wine-1.7.41
+media-fonts/steamfonts
+app-emulation/wine

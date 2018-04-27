@@ -34,3 +34,10 @@ app-forensics/scalpel
 net-fs/davfs2
 sys-fs/fusepak
 
+dev-util/android-sdk-update-manager
+dev-python/pyexcelerator
+app-crypt/pdfcrack
+app-editors/sublime-text
+net-misc/gerbera
+media-libs/libdmtx
+dev-ruby/hashicorp-checkpoint

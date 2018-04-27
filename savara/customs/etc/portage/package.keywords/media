@@ -1,9 +1,8 @@
 
-### Multimedia ###
-media-libs/win32codecs
-media-video/mplayer-bin
 
 media-gfx/libdmtx
 
-media-video/subtitleeditor
+~media-video/subtitleeditor-0.41.1-r1
 
+
+app-cdr/dvd95

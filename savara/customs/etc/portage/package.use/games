@@ -11,10 +11,11 @@ games-fps/quake3-data cdinstall
 games-fps/quake3 dedicated
 
 
-# gnutls: http://bugs.gentoo.org/show_bug.cgi?id=243072
-app-emulation/wine -gnutls -win64
+app-emulation/wine   osmesa
 
 media-libs/sdl-mixer timidity
 media-libs/sdl-mixer midi
 
-app-emulation/wine abi_x86_32 -abi_x86_64
+games-util/steam-client-meta steamfonts
+media-libs/mesa osmesa
+virtual/wine d3d9 staging

@@ -8,4 +8,8 @@ x11-misc/vdpauinfo
 app-cdr/qpxtool
 app-cdr/iat
 app-crypt/truecrypt
-net-wireless/ar9271-firmware
+app-cdr/binflash
+sys-kernel/linux-docs
+
+=sys-kernel/tuxonice-sources-4.4.0
+app-emulation/vagrant

@@ -119,3 +119,5 @@ net-misc/curl -adns
 sys-power/upower deprecated
 net-analyzer/nmap -lua
 media-libs/mesa gles2
+sys-fs/cryptsetup -gcrypt
+www-client/firefox hwaccel gtk2
