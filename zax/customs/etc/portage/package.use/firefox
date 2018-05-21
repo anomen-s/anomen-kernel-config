@@ -1,0 +1,3 @@
+# pgo build fails
+www-client/firefox hwaccel -pgo gtk2
+x11-base/xorg-server xvfb

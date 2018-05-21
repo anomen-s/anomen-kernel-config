@@ -71,7 +71,7 @@ dmcrypt_retries=5
 #source='/dev/hda2'
 
 target=home
-source='/dev/sdb'
+source='/dev/sdc'
 
 ## /home with passphrase
 #target=crypt-home

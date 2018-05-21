@@ -1,2 +1,3 @@
-app-emulation/wine-any d3d9 s3tc staging vaapi
-app-emulation/wine-any -mono
+app-emulation/wine staging
+app-emulation/wine-any staging netapi osmesa prelink
+media-libs/mesa osmesa

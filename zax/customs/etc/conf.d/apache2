@@ -48,7 +48,7 @@ APACHE2_OPTS="-D DEFAULT_VHOST -D INFO -D SSL -D SSL_DEFAULT_VHOST -D LANGUAGE -
 #TIMEOUT=10
 
 # ServerRoot setting
-#SERVERROOT=/usr/lib/apache2
+#SERVERROOT=/usr/lib64/apache2
 
 # Configuration file location
 # - If this does NOT start with a '/', then it is treated relative to

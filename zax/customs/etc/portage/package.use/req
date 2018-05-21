@@ -1,0 +1,19 @@
+dev-libs/elfutils        static-libs
+dev-libs/xmlsec          nss
+sys-libs/zlib            minizip
+media-plugins/audacious-plugins    qt5 -gtk -gtk5 -libnotify
+media-sound/audacious    -gtk
+dev-lang/python          sqlite
+dev-python/PyQt5         webkit
+app-crypt/pinentry       gnome-keyring
+media-libs/gd            fontconfig
+sys-devel/gcc            gcj
+dev-qt/qtwebkit          printsupport
+net-misc/openssh        -ldap
+net-misc/curl -threads
+
+sys-fs/cryptsetup       -gcrypt
+
+media-libs/sdl-mixer     midi mod
+media-libs/sdl2-mixer midi mod
+dev-libs/xmlsec gcrypt
