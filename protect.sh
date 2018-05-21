@@ -19,7 +19,7 @@ then
 fi
 
 decrypt() {
- echo Decryting
+ echo Decrypting
  find . -type f -name '*.gpg' -exec "$EXEC" filedec '{}' ';'
 }
 
@@ -62,9 +62,19 @@ fileenc() {
 filedec() {
   F="$1"
   FO="${F%.gpg}"
-  echo Decrypt file: "$F"
-  rm --verbose --force "$FO"
-  gpg --quiet --batch --passphrase-file "$PW_FILE" --armor --output "$FO" --decrypt "$F" || exit 5
+  FT="${FO}-${RANDOM}"
+  gpg --quiet --batch --passphrase-file "$PW_FILE" --armor --output "$FT" --decrypt "$F" || exit 5
+  if [ ! -e "$FO" ]
+  then
+    echo Decrypt file: "$F"
+    mv "$FT" "$FO"
+  elif cmp --quiet "$FT" "$FO"
+  then
+    echo File not changed: "$FO"
+  else
+    echo Not overwriting changed file: "$FO"
+  fi
+  rm --force "$FT" > /dev/null
 }
 
 case "$1" in
