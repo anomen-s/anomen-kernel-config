@@ -35,7 +35,7 @@ fileenc() {
   then
       # check if plaintext file was changed
       FT="${FP}-${RANDOM}"
-      gpg --quiet --batch --passphrase-file "$PW_FILE" --armor --output "$FT" --decrypt "$F" || echo Canot decrypt "$F". Deleting.
+      gpg --quiet --batch --passphrase-file "$PW_FILE" --output "$FT" --decrypt "$F" || echo Canot decrypt "$F". Deleting.
       if cmp --quiet "$FP" "$FT"
       then
         echo File not changed, deleting: "$FP"
@@ -43,7 +43,7 @@ fileenc() {
         rm --force "$FP"
         exit 0
       else
-        rm "$FT"
+        rm --force "$FT"
       fi
   fi
 
@@ -63,7 +63,7 @@ filedec() {
   F="$1"
   FO="${F%.gpg}"
   FT="${FO}-${RANDOM}"
-  gpg --quiet --batch --passphrase-file "$PW_FILE" --armor --output "$FT" --decrypt "$F" || exit 5
+  gpg --quiet --batch --passphrase-file "$PW_FILE" --output "$FT" --decrypt "$F" || exit 5
   if [ ! -e "$FO" ]
   then
     echo Decrypt file: "$F"
