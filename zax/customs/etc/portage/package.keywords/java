@@ -1,24 +1,4 @@
-### JAVA ###
-dev-java/maven-bin
-
-dev-java/findbugs
-java-virtuals/servlet-api
-dev-java/portecle
-dev-db/dbvis
-# move dev-java/squirrel-sql dev-db/squirrel-sql
-dev-db/squirrel-sql
-net-nds/ApacheDirectoryStudio
-~dev-java/flyingsaucer-7
-dev-java/commons-dbcp
-=dev-util/idea-ultimate-14*
-dev-util/soapui
-dev-java/jdbc-mssqlserver
-dev-java/keystore-explorer
-dev-util/idea-ultimate-14*
-dev-java/jtds
-dev-util/dex2jar
-dev-util/dex2jar-bin
-
-dev-java/jd-gui
+dev-util/idea-ultimate
 dev-util/idea-community
-
+dev-java/keystore-explorer
+dev-util/soapui

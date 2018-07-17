@@ -8,3 +8,5 @@ sys-firmware/intel-microcode monolithic
 x11-plugins/pidgin-sipe voice
 dev-libs/openssl sctp rfc3779 sslv2
 
+app-office/libreoffice gtk2
+media-libs/mesa gles1 gles2 opencl openmax xa vdpau 
