@@ -1,11 +1,11 @@
 #!/bin/sh
-echo -n Password: 
+echo -n Password:
 read -s PP
-N=`expr substr  $PP   10 1`
+N=`expr substr  "$PP"   10 1`
 echo ""
 P=`exec mvn --encrypt-password   "$PP" `
 echo $P $N
-sed -i -e "s!.*@REPLACEPASS@.*!$P  $N @REPLACEPASS@!"  settings.xml && echo settings.xml updated
+sed -i -e "s/.*@REPLACEPASS@.*/$P  $N @REPLACEPASS@/"  settings.xml && echo settings.xml updated
 # 'NEW_PASSWORD'
 
 W=`whoami`

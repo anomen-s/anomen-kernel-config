@@ -16,7 +16,7 @@ fi
 
  DEP_TASK=org.apache.maven.plugins:maven-dependency-plugin:2.8:tree
 
- cmvn -f $F clean install $DEP_TASK -DskipTests=true -Dcobertura.skip=true -Dpmd.skip=true -DoutputFile=target/dependency.txt "$@"
+ cmvn -f $F clean install $DEP_TASK -DgenerateReports=false -DskipTests=true -Dcobertura.skip=true -Dpmd.skip=true -DoutputFile=target/dependency.txt -Djacoco.skip=true  "$@"
 #read
 
 # mvn -f parent-project/pom.xml install 
