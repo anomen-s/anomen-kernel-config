@@ -1,0 +1,22 @@
+#!/bin/sh
+#
+# Hook script to verify if there is no plaintext file to be committed.
+
+TF=$(mktemp)
+TF2=$(mktemp)
+trap "rm -f $TF $TF2" 0 1 2 3 15
+checkstdin() {
+    cat > $TF
+    sed -e 's/$/.gpg/' $TF > $TF2
+    cat $TF2 >> $TF
+    sort -f $TF | uniq -di > $TF2
+    test -s $TF2 || return 0   # if $TF is empty, we are good
+    echo "Commiting plaintext file with gpg file!" 1>&2
+    cat $TF2 1>&2
+    return 1
+}
+
+git ls-files | checkstdin || {
+    echo "ERROR - plaintext file found, stopping commit" 1>&2
+    exit 1
+}
