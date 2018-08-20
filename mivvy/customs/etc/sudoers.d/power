@@ -1,10 +1,12 @@
 
-%admin ALL=(root) NOPASSWD:/usr/bin/tee /sys/power/state
+%systemd-network ALL=(root) NOPASSWD:/usr/bin/tee /sys/power/state
 
-%admin ALL=(root) NOPASSWD:/usr/bin/cpufreq-set
+%systemd-network ALL=(root) NOPASSWD:/usr/bin/cpufreq-set
 
-%admin ALL=(root) NOPASSWD:/usr/lib/xfce4/session/xfsm-shutdown-helper
+%systemd-network ALL=(root) NOPASSWD:/usr/lib/xfce4/session/xfsm-shutdown-helper
 
-%admin ALL=(root) NOPASSWD:/sbin/poweroff
+%systemd-network ALL=(root) NOPASSWD:/sbin/poweroff
 
-%admin ALL=(root) NOPASSWD:/sbin/halt
+%systemd-network ALL=(root) NOPASSWD:/sbin/halt
+
+

@@ -8,11 +8,12 @@ if [ -z "$(ls "$MOUNTDIR")" ]
 then
  test -n "$DISPLAY" && setxkbmap -model pc104 -layout cz -variant prog
 
- truecrypt --protect-hidden=no "$TC" "$MOUNTDIR"
+ sudo cryptsetup tcryptOpen "$TC" tc || exit 100
+ sudo mount /dev/mapper/tc "$MOUNTDIR" || exit 101
  
  ssh-add $MOUNTDIR/ssh/*
 else
- truecrypt -t -d "$TC"
+ sudo umount "$MOUNTDIR" && sudo cryptsetup close tc
  echo unmounted
 fi
 

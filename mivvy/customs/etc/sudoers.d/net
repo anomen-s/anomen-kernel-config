@@ -1,4 +1,5 @@
-
-%admin ALL=(root) NOPASSWD:/usr/sbin/nethogs
-%admin ALL=(root) NOPASSWD:/usr/sbin/iotop
+%systemd-network ALL=(root) NOPASSWD:/usr/sbin/service network-manager
+%systemd-network ALL=(root) NOPASSWD:/usr/sbin/nethogs
+%systemd-network ALL=(root) NOPASSWD:/usr/sbin/iotop
+%systemd-network ALL=(root) NOPASSWD:/sbin/iwlist
 

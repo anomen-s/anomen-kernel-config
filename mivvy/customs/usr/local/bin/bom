@@ -1,0 +1,9 @@
+#!/bin/sh
+
+for A 
+do
+TMP=`mktemp`
+/bin/echo -n -e '\xEF\xBB\xBF' > $TMP
+cat $A >> $TMP
+cp -v -f $TMP $A
+done
