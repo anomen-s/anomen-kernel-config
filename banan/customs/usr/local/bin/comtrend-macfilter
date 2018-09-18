@@ -8,7 +8,7 @@ test -n "$HOST" || M=conf
 test -n "$PASSWORD" || M=conf
 
 
-case "$M"C in
+case "$M" in
    deny)	URL="wlmacflt.cmd?action=save&wlFltMacMode=deny&sessionKey="
 		;;
    disabled)	URL="wlmacflt.cmd?action=save&wlFltMacMode=disabled&sessionKey="
