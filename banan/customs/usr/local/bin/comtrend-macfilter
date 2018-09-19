@@ -11,14 +11,15 @@ test -n "$PASSWORD" || M=conf
 case "$M" in
    deny)	URL="wlmacflt.cmd?action=save&wlFltMacMode=deny&sessionKey="
 		;;
-   disabled)	URL="wlmacflt.cmd?action=save&wlFltMacMode=disabled&sessionKey="
+   disable|disabled)
+		URL="wlmacflt.cmd?action=save&wlFltMacMode=disabled&sessionKey="
 		;;
    add)		URL="wlmacflt.cmd?action=add&wlFltMacAddr=${2}&wlSyncNvram=1&sessionKey="
 		;;
    conf)	echo "Missing or invalid /etc/comtrend.conf"
 		exit 3
 		;;
-   ?)    	printf "Usage: %s: deny|disabled|add\n" $0
+   *)		printf "Usage: %s: deny|disabled|add\n" $0
 		exit 2
 		;;
 esac
