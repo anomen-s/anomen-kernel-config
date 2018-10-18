@@ -120,9 +120,13 @@ m CONFIG_CRYPTO_USER_API_AEAD
 ====================
 + docker support
 
+4.14.65-gentoo-z23
+====================
++ CONFIG_NETFILTER_XT_MATCH_IPVS (docker)
++ CONFIG_BTRFS_FS_POSIX_ACL (docker)
++ CONFIG_PPP_ASYNC (ppp)
++ SND_HDA_* (alsa)
+
 TODO
 ====
-+ CONFIG_NETFILTER_XT_MATCH_IPVS (docker)
-+ CONFIG_EXT3_FS_XATTR (docker)
-+ CONFIG_AUFS_FS (docker)
-+ CONFIG_BTRFS_FS_POSIX_ACL (docker)
+
