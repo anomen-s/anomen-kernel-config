@@ -12,6 +12,7 @@ app-admin/sudo
 app-admin/syslog-ng
 app-admin/sysstat
 app-admin/tmpwatch
+app-antivirus/clamav
 app-arch/alien
 app-arch/cabextract
 app-arch/cfv
@@ -67,7 +68,9 @@ app-editors/sublime-text
 app-editors/vim
 app-emulation/docker
 app-emulation/virtualbox-guest-additions
+app-emulation/wine-any
 app-emulation/wine-cellar
+app-emulation/winetricks
 app-eselect/eselect-vi
 app-i18n/enca
 app-i18n/unicode-data
@@ -81,7 +84,6 @@ app-misc/rlwrap
 app-misc/screen
 app-misc/symlinks
 app-mobilephone/obexftp
-app-mobilephone/wammu
 app-office/abiword
 app-office/dia
 app-office/gnumeric
@@ -143,6 +145,7 @@ dev-db/dbvis
 dev-db/freetds
 dev-db/hsqldb
 dev-db/mysql
+dev-db/sqldeveloper
 dev-db/squirrel-sql
 dev-db/unixODBC
 dev-java/ant
@@ -150,6 +153,7 @@ dev-java/bsh
 dev-java/jad-bin
 dev-java/jardiff
 dev-java/java-sdk-docs
+dev-java/jd-gui
 dev-java/jdbc-mysql
 dev-java/jdbc-postgresql
 dev-java/keystore-explorer
@@ -174,6 +178,7 @@ dev-libs/expat
 dev-libs/libxslt
 dev-python/bitarray
 dev-python/gmpy
+dev-python/httpbin
 dev-python/irc
 dev-python/pip
 dev-python/pycrypto
@@ -396,6 +401,7 @@ net-nds/ApacheDirectoryStudio
 net-nds/jxplorer
 net-nds/ldapvi
 net-nds/openldap
+net-news/liferea
 net-news/quiterss
 net-p2p/ctorrent
 net-p2p/rtorrent
@@ -461,6 +467,7 @@ sys-fs/ntfs3g
 sys-fs/sysfsutils
 sys-fs/udftools
 sys-kernel/gentoo-sources
+sys-kernel/linux-firmware
 sys-libs/cracklib
 sys-libs/glibc
 sys-libs/gpm
@@ -487,9 +494,11 @@ www-client/firefox
 www-client/links
 www-client/lynx
 www-client/opera
+www-client/w3m
 www-misc/htdig
 www-plugins/adobe-flash
 www-servers/apache
+www-servers/gunicorn
 www-servers/lighttpd
 www-servers/tomcat
 www-servers/tomcat:7
