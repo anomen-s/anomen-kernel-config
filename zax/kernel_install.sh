@@ -46,7 +46,9 @@ sudo cp -v ./.config "/boot/Config-$KERVER" || exit 3
 sudo cp -v ./Module.symvers "/boot/Module.symvers-$KERVER" || exit 3
 
 
-echo "GRUB2 not updated"
+sudo cp /boot/grub/grub.cfg /tmp/
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+echo "GRUB2 updated"
 echo ""
 echo Finished.
 
