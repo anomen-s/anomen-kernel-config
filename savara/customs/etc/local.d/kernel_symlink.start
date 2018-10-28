@@ -5,7 +5,7 @@
 
 KLINK=`ls -l /usr/src/linux | sed -ne 's/.*->[ \t]*//p'`
 KCURR=linux-`uname -r | sed -ne 's/-.[0-9a-z]*$//p' `
-if [ "$KLINK" "!=" "$KCURR" ]
+if [ "x$KLINK" "!=" "x$KCURR" ]
 then
  echo -n "Incorrect /usr/src/linux link. "
  if [ -d "/usr/src/$KCURR" ]
