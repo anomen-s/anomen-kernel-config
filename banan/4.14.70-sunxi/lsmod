@@ -1,0 +1,40 @@
+Module                  Size  Used by
+w1_therm               16384  0
+ds2482                 16384  0
+bmp280_i2c             16384  0
+rtc_ds1307             24576  0
+bmp280                 20480  1 bmp280_i2c
+wire                   20480  2 ds2482,w1_therm
+lz4hc                  16384  2
+lz4hc_compress         24576  1 lz4hc
+zram                   24576  3
+sun4i_gpadc_iio        16384  0
+input_leds             16384  0
+evdev                  20480  1
+gspca_ov519            40960  0
+gspca_main             24576  1 gspca_ov519
+sun4i_codec            32768  3
+sun4i_ts               16384  0
+snd_soc_core          118784  1 sun4i_codec
+ir_lirc_codec          16384  0
+snd_pcm_dmaengine      16384  1 snd_soc_core
+lirc_dev               16384  1 ir_lirc_codec
+snd_pcm                65536  2 snd_pcm_dmaengine,snd_soc_core
+nvmem_sunxi_sid        16384  0
+snd_timer              24576  1 snd_pcm
+sun4i_gpadc            16384  0
+snd                    45056  3 snd_timer,snd_soc_core,snd_pcm
+soundcore              16384  1 snd
+sunxi_cir              16384  0
+sun4i_ss               24576  0
+uio_pdrv_genirq        16384  0
+uio                    16384  1 uio_pdrv_genirq
+bonding                94208  0
+brcmfmac              159744  0
+brcmutil               16384  1 brcmfmac
+cfg80211              376832  1 brcmfmac
+rfkill                 20480  3 cfg80211
+ip_tables              20480  0
+x_tables               20480  1 ip_tables
+pwrseq_simple          16384  1
+realtek                16384  1
