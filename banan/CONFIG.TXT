@@ -20,9 +20,14 @@
 4.14.18-sunxi
 =============
 * Armbian kernel
-+ DS2482
-+ mcp23S08
++ CONFIG_W1_MASTER_DS2482
++ CONFIG_PINCTRL_MCP23S08
 
+4.14.70-sunxi
+=============
+* Armbian kernel
++ CONFIG_PINCTRL_MCP23S08
++ CONFIG_W1_MASTER_DS2482
 
 TODO
 ====
@@ -32,14 +37,12 @@ W1_SUNXI ?
 sun4
 + CONFIG_MAGIC_SYSRQ
 
-BUILD Bananian
-==============
-make LOADADDR=0x40008000 all uImage dtbs
-make modules_install firmware_install
-cp arch/arm/boot/uImage /boot/....
-
 BUILD Armbian modules
 =====================
-make LOCALVERSION= prepare modules_prepare
-make LOCALVERSION= drivers/w1/masters/ds2482.ko
-make LOCALVERSION= drivers/pinctrl/pinctrl-mcp23s08.ko
+V=4.14.70-sunxi
+
+make LOCALVERSION=-sunxi clean prepare modules_prepare drivers/w1/masters/ds2482.ko drivers/pinctrl/pinctrl-mcp23s08.ko
+
+mkdir -p "/lib/modules/${V}/misc/"
+find . -name "*.ko" -exec cp -v "{}" "/lib/modules/${V}/misc/" ";"
+depmod -a "${V}"
