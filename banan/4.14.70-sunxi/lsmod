@@ -1,4 +1,80 @@
 Module                  Size  Used by
+sctp_diag              16384  0
+sctp                  200704  5 sctp_diag
+dccp_diag              16384  0
+dccp                   73728  1 dccp_diag
+tcp_diag               16384  0
+udp_diag               16384  0
+inet_diag              20480  4 dccp_diag,tcp_diag,sctp_diag,udp_diag
+unix_diag              16384  0
+af_packet_diag         16384  0
+netlink_diag           16384  0
+nfnetlink_queue        20480  0
+nfnetlink_log          20480  0
+nfnetlink              16384  2 nfnetlink_log,nfnetlink_queue
+bluetooth             262144  0
+842                    16384  0
+842_decompress         16384  1 842
+842_compress           16384  1 842
+xcbc                   16384  0
+wp512                  36864  0
+vmac                   16384  0
+twofish_generic        20480  0
+twofish_common         24576  1 twofish_generic
+tgr192                 24576  0
+tea                    16384  0
+sha512_generic         20480  0
+sha3_generic           16384  0
+serpent_generic        28672  0
+seed                   24576  0
+salsa20_generic        16384  0
+rsa_generic            20480  0
+asn1_decoder           16384  1 rsa_generic
+rmd320                 20480  0
+rmd256                 16384  0
+rmd160                 20480  0
+rmd128                 16384  0
+poly1305_generic       16384  0
+pcrypt                 16384  0
+pcbc                   16384  0
+michael_mic            16384  0
+mcryptd                16384  0
+lz4                    16384  0
+lz4_compress           53248  1 lz4
+lrw                    16384  0
+khazad                 32768  0
+keywrap                16384  0
+chacha20poly1305       16384  0
+ghash_generic          16384  0
+gcm                    20480  0
+fcrypt                 20480  0
+echainiv               16384  0
+ecdh_generic           24576  1 bluetooth
+dh_generic             16384  0
+mpi                    20480  2 dh_generic,rsa_generic
+crypto_user            16384  0
+cmac                   16384  0
+ccm                    20480  0
+cast6_generic          24576  0
+cast5_generic          24576  0
+cast_common            16384  2 cast6_generic,cast5_generic
+camellia_generic       28672  0
+blowfish_generic       16384  0
+blowfish_common        20480  1 blowfish_generic
+anubis                 20480  0
+algif_rng              16384  0
+algif_hash             16384  0
+algif_aead             16384  0
+dm_crypt               32768  2
+aes_arm_bs             20480  4
+crypto_simd            16384  1 aes_arm_bs
+cryptd                 20480  3 crypto_simd
+algif_skcipher         16384  0
+af_alg                 20480  4 algif_hash,algif_aead,algif_skcipher,algif_rng
+dm_mod                 90112  5 dm_crypt
+dax                    20480  1 dm_mod
+fuse                   73728  3
+uas                    20480  0
 w1_therm               16384  0
 ds2482                 16384  0
 bmp280_i2c             16384  0
@@ -33,7 +109,7 @@ bonding                94208  0
 brcmfmac              159744  0
 brcmutil               16384  1 brcmfmac
 cfg80211              376832  1 brcmfmac
-rfkill                 20480  3 cfg80211
+rfkill                 20480  4 bluetooth,cfg80211
 ip_tables              20480  0
 x_tables               20480  1 ip_tables
 pwrseq_simple          16384  1

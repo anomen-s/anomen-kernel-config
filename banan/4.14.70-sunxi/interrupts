@@ -1,0 +1,38 @@
+           CPU0       CPU1       
+ 18:          0          0     GICv2  29 Level     arch_timer
+ 19:  194844004  129914553     GICv2  30 Level     arch_timer
+ 22:          0          0     GICv2  54 Level     /soc@01c00000/timer@01c20c00
+ 23:          0          0     GICv2 113 Level     sun5i_timer0
+ 24:          0          0     GICv2 152 Level     arm-pmu
+ 25:          0          0     GICv2 153 Level     arm-pmu
+ 26:        702          0     GICv2  59 Level     1c02000.dma-controller
+ 27:          0          0     GICv2  42 Level     sun4i-spi
+ 28:  284242077          0     GICv2  64 Level     sunxi-mmc
+ 29:    5483217          0     GICv2  67 Level     sunxi-mmc
+ 30:    2505580          0     GICv2  71 Level     ehci_hcd:usb1
+ 31:          0          0     GICv2  96 Level     ohci_hcd:usb3
+ 33:        208    1355122     GICv2  88 Level     ahci-sunxi[1c18000.sata]
+ 34:     384325          0     GICv2  72 Level     ehci_hcd:usb2
+ 35:          0          0     GICv2  97 Level     ohci_hcd:usb4
+ 38:          0          0     GICv2  56 Level     1c20d00.rtc
+ 42:       2634          0     GICv2  37 Level     sunxi-ir
+ 44:    3160896          0     GICv2  61 Level     sun4i_gpadc_irq_chip
+ 45:        544          0     GICv2  33 Level     ttyS0
+ 48:        686          0     GICv2  39 Level     mv64xxx_i2c
+ 49:  600489389          0     GICv2  41 Level     mv64xxx_i2c
+ 50:          8   80872749     GICv2 117 Level     eth0
+ 64:          0          0  sunxi_pio_edge  10 Edge      1c0f000.mmc cd
+ 69:     825853          0  sunxi_pio_level  15 Level     brcmf_oob_intr
+ 86:          0          0  sunxi-nmi   0 Level     axp20x_irq_chip
+120:          0          0  axp20x_irq_chip  33 Edge      axp20x-pek-dbr
+121:          0          0  axp20x_irq_chip  34 Edge      axp20x-pek-dbf
+126:          0    3160767  sun4i_gpadc_irq_chip   1 Edge      temp_data
+127:          0          0  sun4i_gpadc_irq_chip   0 Edge      fifo_data
+IPI0:          0          0  CPU wakeup interrupts
+IPI1:          0          0  Timer broadcast interrupts
+IPI2:  103814602  224112155  Rescheduling interrupts
+IPI3:       2078       3079  Function call interrupts
+IPI4:          0          0  CPU stop interrupts
+IPI5:     616356     303090  IRQ work interrupts
+IPI6:          0          0  completion interrupts
+Err:          0
