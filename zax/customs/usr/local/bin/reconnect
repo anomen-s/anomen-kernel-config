@@ -47,4 +47,7 @@ rm -f $HOME/.ssh/mastersock*
 sudo /etc/local.d/update_ip.start
 sudo /etc/local.d/restart_proxy.start
 
-
+if [ "x$1" = "xo" -o "x$1" = "xh" ]
+then
+ sudo sed -i -e '/nameserver/s/172.17.2.138/8.8.8.8/' /etc/resolv.conf
+fi

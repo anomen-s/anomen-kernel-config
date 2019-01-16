@@ -137,3 +137,4 @@ m CRYPTO_CRC32C_INTEL, CRYPTO_CRC32_PCLMUL, CONFIG_CRYPTO_SHA1_SSSE3, CRYPTO_SHA
 TODO
 ====
 * CONFIG_SND_HDA_PREALLOC_SIZE=2048 (pulseaudio)
+* zswap.enabled=1 zswap.compressor=lz4 zswap.max_pool_percent=25 zswap.zpool=z3fold
