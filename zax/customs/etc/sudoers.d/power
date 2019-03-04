@@ -5,6 +5,7 @@
 
 %wheel ALL=(ALL) NOPASSWD: /etc/init.d/net.eth0
 %wheel ALL=(ALL) NOPASSWD: /etc/init.d/net.eth1
+%wheel ALL=(ALL) NOPASSWD: /etc/init.d/net.eth2
 %wheel ALL=(ALL) NOPASSWD: /etc/init.d/sshd
 %wheel ALL=(ALL) NOPASSWD: /etc/init.d/apache2
 %wheel ALL=(ALL) NOPASSWD: /etc/init.d/cntlm
@@ -13,3 +14,5 @@
 %wheel ALL=(ALL) NOPASSWD: /etc/local.d/restart_proxy.start 
 
 %wheel ALL=(ALL) NOPASSWD: /usr/sbin/nethogs
+%wheel ALL=(ALL) NOPASSWD: /usr/sbin/iotop
+

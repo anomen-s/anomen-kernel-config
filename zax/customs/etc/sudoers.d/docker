@@ -1,0 +1,5 @@
+
+%users ALL = NOPASSWD: /etc/init.d/docker
+
+
+

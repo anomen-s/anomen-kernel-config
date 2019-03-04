@@ -1,3 +1,5 @@
-
+# no longer needed ?
 %users ALL = NOPASSWD: /usr/bin/tee  /proc/sys/vm/drop_caches
+
+
 
