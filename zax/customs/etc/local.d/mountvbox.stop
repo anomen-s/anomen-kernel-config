@@ -2,7 +2,7 @@
 # anomen : unmount VBox shared folders
 
 umount -l /mnt/drive_c
-umount -l /mnt/drive_d
+#umount -l /mnt/drive_d
 #umount -l /mnt/tc
 
 #umount -l /mnt/datastore
