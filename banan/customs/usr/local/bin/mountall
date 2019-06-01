@@ -11,8 +11,15 @@
 
 LABEL=WD_E_2000GB
 DEV="/dev/disk/by-label/$LABEL"
-pmount -u 022 -w -A -t ntfs-3g -c utf8 "$DEV" "$LABEL" || echo failed
+#pmount -u 022 -w -A -t ntfs-3g -c utf8 "$DEV" "$LABEL" || echo failed
 
+R=rw
+if [ "x$1" = "xr" ]
+then
+	 R=ro
+fi
+
+sudo mount -o noatime,$R -t ntfs-3g "$DEV" /mnt/WD_ELEMENTS
 
 sudo cryptsetup luksOpen /dev/disk/by-partuuid/dbd2dbef-4de4-470f-8722-843a1005a0b0 oe || exit 4
 
