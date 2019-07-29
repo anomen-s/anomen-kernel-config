@@ -17,7 +17,7 @@ config_eth0="dhcp"
 #dhcpcd_eth0="-r 10.0.0.38"
 
 # inform dhcp server
-dhcpcd_eth0="-s 10.0.0.40/24"
+#dhcpcd_eth0="-s 10.0.0.40/24"
 
 
 #config_eth0=( "192.168.0.2/24" )
@@ -36,3 +36,20 @@ link_ppp0="/dev/ttyACM1"
 username_ppp0=""
 phone_number_ppp0="*98#"
 
+
+# Prefer wpa_supplicant over wireless-tools
+modules="wpa_supplicant"
+
+# It's important that we tell wpa_supplicant which driver we should
+# be using as it's not very good at guessing yet
+#wpa_supplicant_wlan0="-Dath9k_htc"
+
+#dhcpcd_wlan0="-s 10.0.0.40/24"
+
+# force google dns
+#dns_servers_wlan0="8.8.8.8 8.8.4.4"
+
+# The network scripts are now part of net-misc/netifrc
+# In order to avoid sys-apps/openrc-0.12.4 from removing this file, this comment was
+# added; you can safely remove this comment.  Please see
+# /usr/share/doc/netifrc*/README* for more information.
