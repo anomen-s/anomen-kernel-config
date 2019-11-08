@@ -1,0 +1,6 @@
+#!/bin/sh
+
+for PREFIX in DSC
+do
+ find . -iname "${PREFIX}*.jpg" -exec exiv2 -v -t -F -r '%Y%m%d_%H%M%S' rename "{}" ';'
+done
