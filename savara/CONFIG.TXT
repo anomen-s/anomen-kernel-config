@@ -191,11 +191,15 @@
 ================
 * docker support
 
+4.19.72-gentoo-s9
+=================
++ CONFIG_IWLMVM
++ CONFIG_SENSORS_IT87
++ CONFIG_NF_CT_NETLINK (net-libs/libnfnetlink)
++ CONFIG_NETFILTER_NETLINK_QUEUE (net-libs/libnetfilter_queue)
 
 TODO
 ====
-+ CONFIG_TOI_DEFAULT_EXTRA_PAGES_ALLOWANCE=2000 (tuxonice)
-* CONFIG_PM_STD_PARTITION=sdb3
-* CONFIG_NF_CT_NETLINK (net-libs/libnfnetlink)
-* CONFIG_NETFILTER_NETLINK_QUEUE (net-libs/libnetfilter_queue)
-+ Device Drivers -> USB support -> USB Serial Converter support -> USB FTDI Single Port Serial Driver (arduino)
++ CONFIG_BT_RFCOMM
++ CONFIG_BT_BNEP
++ CONFIG_BT_HIDP

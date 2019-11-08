@@ -2,8 +2,6 @@
 
 # kernell install script
 
-# $Id$ 
-
 # System settings:
 ROOT=/dev/sda3
 
@@ -32,9 +30,6 @@ su portage -c "make all" || exit 8
 
 echo make modules_install...
 make modules_install || exit 10
-
-echo make firmware_install...
-make firmware_install || exit 11
 
 
 echo Confirm install ...

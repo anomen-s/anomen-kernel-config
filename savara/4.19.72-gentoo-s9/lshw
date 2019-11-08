@@ -1,0 +1,587 @@
+savara
+    description: Desktop Computer
+    product: B250-HD3P (Default string)
+    vendor: Gigabyte Technology Co., Ltd.
+    version: Default string
+    serial: Default string
+    width: 4294967295 bits
+    capabilities: smbios-3.0 dmi-3.0 smp vsyscall32
+    configuration: boot=normal chassis=desktop family=Default string sku=Default string uuid=1C021B03-0D04-9505-0E06-320700080009
+  *-core
+       description: Motherboard
+       product: B250-HD3P-CF
+       vendor: Gigabyte Technology Co., Ltd.
+       physical id: 0
+       version: x.x
+       serial: Default string
+       slot: Default string
+     *-firmware
+          description: BIOS
+          vendor: American Megatrends Inc.
+          physical id: 0
+          version: F8
+          date: 07/06/2017
+          size: 64KiB
+          capacity: 8128KiB
+          capabilities: pci upgrade shadowing cdboot bootselect socketedrom edd int13floppy1200 int13floppy720 int13floppy2880 int5printscreen int14serial int17printer acpi usb biosbootspecification uefi
+     *-memory
+          description: System Memory
+          physical id: 3d
+          slot: System board or motherboard
+          size: 16GiB
+        *-bank:0
+             description: [empty]
+             physical id: 0
+             slot: ChannelA-DIMM0
+        *-bank:1
+             description: DIMM DDR4 Synchronous 2400 MHz (0,4 ns)
+             product: CMK16GX4M2A2400C14
+             vendor: AMI
+             physical id: 1
+             serial: 00000000
+             slot: ChannelA-DIMM1
+             size: 8GiB
+             width: 64 bits
+             clock: 2400MHz (0.4ns)
+        *-bank:2
+             description: [empty]
+             physical id: 2
+             slot: ChannelB-DIMM0
+        *-bank:3
+             description: DIMM DDR4 Synchronous 2400 MHz (0,4 ns)
+             product: CMK16GX4M2A2400C14
+             vendor: AMI
+             physical id: 3
+             serial: 00000000
+             slot: ChannelB-DIMM1
+             size: 8GiB
+             width: 64 bits
+             clock: 2400MHz (0.4ns)
+     *-cache:0
+          description: L1 cache
+          physical id: 43
+          slot: L1 Cache
+          size: 256KiB
+          capacity: 256KiB
+          capabilities: synchronous internal write-back unified
+          configuration: level=1
+     *-cache:1
+          description: L2 cache
+          physical id: 44
+          slot: L2 Cache
+          size: 1MiB
+          capacity: 1MiB
+          capabilities: synchronous internal write-back unified
+          configuration: level=2
+     *-cache:2
+          description: L3 cache
+          physical id: 45
+          slot: L3 Cache
+          size: 6MiB
+          capacity: 6MiB
+          capabilities: synchronous internal write-back unified
+          configuration: level=3
+     *-cpu
+          description: CPU
+          product: Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz
+          vendor: Intel Corp.
+          physical id: 46
+          bus info: cpu@0
+          version: Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz
+          serial: To Be Filled By O.E.M.
+          slot: U3E1
+          size: 2039MHz
+          capacity: 4005MHz
+          width: 64 bits
+          clock: 100MHz
+          capabilities: x86-64 fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp cpufreq
+          configuration: cores=4 enabledcores=4 threads=4
+     *-pci
+          description: Host bridge
+          product: Xeon E3-1200 v6/7th Gen Core Processor Host Bridge/DRAM Registers
+          vendor: Intel Corporation
+          physical id: 100
+          bus info: pci@0000:00:00.0
+          version: 05
+          width: 32 bits
+          clock: 33MHz
+          configuration: driver=skl_uncore
+          resources: irq:0
+        *-pci:0
+             description: PCI bridge
+             product: Xeon E3-1200 v5/E3-1500 v5/6th Gen Core Processor PCIe Controller (x16)
+             vendor: Intel Corporation
+             physical id: 1
+             bus info: pci@0000:00:01.0
+             version: 05
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci pm msi pciexpress normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             resources: irq:16 ioport:e000(size=4096) memory:f6000000-f70fffff ioport:e0000000(size=301989888)
+           *-display
+                description: VGA compatible controller
+                product: GP108 [GeForce GT 1030]
+                vendor: NVIDIA Corporation
+                physical id: 0
+                bus info: pci@0000:01:00.0
+                version: a1
+                width: 64 bits
+                clock: 33MHz
+                capabilities: pm msi pciexpress vga_controller bus_master cap_list rom
+                configuration: driver=nvidia latency=0
+                resources: irq:137 memory:f6000000-f6ffffff memory:e0000000-efffffff memory:f0000000-f1ffffff ioport:e000(size=128) memory:c0000-dffff
+           *-multimedia
+                description: Audio device
+                product: GP108 High Definition Audio Controller
+                vendor: NVIDIA Corporation
+                physical id: 0.1
+                bus info: pci@0000:01:00.1
+                version: a1
+                width: 32 bits
+                clock: 33MHz
+                capabilities: pm msi pciexpress bus_master cap_list
+                configuration: driver=snd_hda_intel latency=0
+                resources: irq:17 memory:f7080000-f7083fff
+        *-generic UNCLAIMED
+             description: System peripheral
+             product: Xeon E3-1200 v5/v6 / E3-1500 v5 / 6th/7th Gen Core Processor Gaussian Mixture Model
+             vendor: Intel Corporation
+             physical id: 8
+             bus info: pci@0000:00:08.0
+             version: 00
+             width: 64 bits
+             clock: 33MHz
+             capabilities: msi pm bus_master cap_list
+             configuration: latency=0
+             resources: memory:f734e000-f734efff
+        *-pci:1
+             description: PCI bridge
+             product: 200 Series PCH PCI Express Root Port #21
+             vendor: Intel Corporation
+             physical id: 1b
+             bus info: pci@0000:00:1b.0
+             version: f0
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci pciexpress msi pm normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             resources: irq:16
+        *-pci:2
+             description: PCI bridge
+             product: 200 Series PCH PCI Express Root Port #5
+             vendor: Intel Corporation
+             physical id: 1c
+             bus info: pci@0000:00:1c.0
+             version: f0
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci pciexpress msi pm normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             resources: irq:16 memory:f7200000-f72fffff
+           *-usb
+                description: USB controller
+                product: ASM2142 USB 3.1 Host Controller
+                vendor: ASMedia Technology Inc.
+                physical id: 0
+                bus info: pci@0000:03:00.0
+                version: 00
+                width: 64 bits
+                clock: 33MHz
+                capabilities: msi msix pm pciexpress xhci bus_master cap_list
+                configuration: driver=xhci_hcd latency=0
+                resources: irq:16 memory:f7200000-f7207fff
+              *-usbhost:0
+                   product: xHCI Host Controller
+                   vendor: Linux 4.19.72-gentoo-s9 xhci-hcd
+                   physical id: 0
+                   bus info: usb@3
+                   logical name: usb3
+                   version: 4.19
+                   capabilities: usb-2.00
+                   configuration: driver=hub slots=2 speed=480Mbit/s
+              *-usbhost:1
+                   product: xHCI Host Controller
+                   vendor: Linux 4.19.72-gentoo-s9 xhci-hcd
+                   physical id: 1
+                   bus info: usb@4
+                   logical name: usb4
+                   version: 4.19
+                   capabilities: usb-3.00
+                   configuration: driver=hub slots=2 speed=5000Mbit/s
+        *-pci:3
+             description: PCI bridge
+             product: 200 Series PCH PCI Express Root Port #7
+             vendor: Intel Corporation
+             physical id: 1c.6
+             bus info: pci@0000:00:1c.6
+             version: f0
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci pciexpress msi pm normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             resources: irq:18
+        *-pci:4
+             description: PCI bridge
+             product: 200 Series PCH PCI Express Root Port #8
+             vendor: Intel Corporation
+             physical id: 1c.7
+             bus info: pci@0000:00:1c.7
+             version: f0
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci pciexpress msi pm normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             resources: irq:0
+           *-pci
+                description: PCI bridge
+                product: IT8892E PCIe to PCI Bridge
+                vendor: Integrated Technology Express, Inc.
+                physical id: 0
+                bus info: pci@0000:05:00.0
+                version: 71
+                width: 32 bits
+                clock: 33MHz
+                capabilities: pci pm subtractive_decode bus_master cap_list
+        *-pci:5
+             description: PCI bridge
+             product: 200 Series PCH PCI Express Root Port #9
+             vendor: Intel Corporation
+             physical id: 1d
+             bus info: pci@0000:00:1d.0
+             version: f0
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci pciexpress msi pm normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             resources: irq:16 memory:f7100000-f71fffff
+           *-network
+                description: Wireless interface
+                product: Wireless-AC 9260
+                vendor: Intel Corporation
+                physical id: 0
+                bus info: pci@0000:07:00.0
+                logical name: wlan0
+                version: 29
+                serial: 5c:87:9c:15:df:15
+                width: 64 bits
+                clock: 33MHz
+                capabilities: pm msi pciexpress msix bus_master cap_list ethernet physical wireless
+                configuration: broadcast=yes driver=iwlwifi driverversion=4.19.72-gentoo-s9 firmware=38.755cfdd8.0 ip=172.17.2.155 latency=0 link=yes multicast=yes wireless=IEEE 802.11
+                resources: irq:16 memory:f7100000-f7103fff
+        *-isa
+             description: ISA bridge
+             product: 200 Series PCH LPC Controller (B250)
+             vendor: Intel Corporation
+             physical id: 1f
+             bus info: pci@0000:00:1f.0
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: isa bus_master
+             configuration: latency=0
+        *-memory UNCLAIMED
+             description: Memory controller
+             product: 200 Series/Z370 Chipset Family Power Management Controller
+             vendor: Intel Corporation
+             physical id: 1f.2
+             bus info: pci@0000:00:1f.2
+             version: 00
+             width: 32 bits
+             clock: 33MHz (30.3ns)
+             capabilities: bus_master
+             configuration: latency=0
+             resources: memory:f7344000-f7347fff
+        *-multimedia
+             description: Audio device
+             product: 200 Series PCH HD Audio
+             vendor: Intel Corporation
+             physical id: 1f.3
+             bus info: pci@0000:00:1f.3
+             version: 00
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm msi bus_master cap_list
+             configuration: driver=snd_hda_intel latency=32
+             resources: irq:130 memory:f7340000-f7343fff memory:f7320000-f732ffff
+        *-serial
+             description: SMBus
+             product: 200 Series/Z370 Chipset Family SMBus Controller
+             vendor: Intel Corporation
+             physical id: 1f.4
+             bus info: pci@0000:00:1f.4
+             version: 00
+             width: 64 bits
+             clock: 33MHz
+             configuration: driver=i801_smbus latency=0
+             resources: irq:16 memory:f734a000-f734a0ff ioport:f000(size=32)
+        *-network DISABLED
+             description: Ethernet interface
+             product: Ethernet Connection (2) I219-V
+             vendor: Intel Corporation
+             physical id: 1f.6
+             bus info: pci@0000:00:1f.6
+             logical name: eth0
+             version: 00
+             serial: 1c:1b:0d:95:0e:32
+             capacity: 1Gbit/s
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pm msi bus_master cap_list ethernet physical tp 10bt 10bt-fd 100bt 100bt-fd 1000bt-fd autonegotiation
+             configuration: autonegotiation=on broadcast=yes driver=e1000e driverversion=3.2.6-k firmware=0.2-4 latency=0 link=no multicast=yes port=twisted pair
+             resources: irq:129 memory:f7300000-f731ffff
+        *-usb
+             description: USB controller
+             product: 200 Series/Z370 Chipset Family USB 3.0 xHCI Controller
+             vendor: Intel Corporation
+             physical id: 14
+             bus info: pci@0000:00:14.0
+             version: 00
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm msi xhci bus_master cap_list
+             configuration: driver=xhci_hcd latency=0
+             resources: irq:122 memory:f7330000-f733ffff
+           *-usbhost:0
+                product: xHCI Host Controller
+                vendor: Linux 4.19.72-gentoo-s9 xhci-hcd
+                physical id: 0
+                bus info: usb@1
+                logical name: usb1
+                version: 4.19
+                capabilities: usb-2.00
+                configuration: driver=hub slots=12 speed=480Mbit/s
+              *-usb:0
+                   description: Mouse
+                   product: USB Optical Mouse
+                   vendor: Sunplus Innovation Technology Inc.
+                   physical id: 7
+                   bus info: usb@1:7
+                   version: 0.90
+                   capabilities: usb-2.00
+                   configuration: driver=usbhid maxpower=98mA speed=1Mbit/s
+              *-usb:1
+                   description: USB hub
+                   product: USB 2.0 Hub [MTT]
+                   vendor: Terminus Technology Inc.
+                   physical id: a
+                   bus info: usb@1:a
+                   version: 1.00
+                   capabilities: usb-2.00
+                   configuration: driver=hub maxpower=100mA slots=7 speed=480Mbit/s
+                 *-usb:0
+                      description: Mass storage device
+                      product: USB Storage
+                      vendor: Genesys Logic, Inc.
+                      physical id: 2
+                      bus info: usb@1:a.2
+                      version: 9.03
+                      serial: 000000000903
+                      capabilities: usb-2.00 scsi
+                      configuration: driver=usb-storage maxpower=500mA speed=480Mbit/s
+                 *-usb:1
+                      description: Keyboard
+                      product: USB Keyboard
+                      physical id: 7
+                      bus info: usb@1:a.7
+                      version: 3.10
+                      capabilities: usb-1.10
+                      configuration: driver=usbhid maxpower=100mA speed=1Mbit/s
+              *-usb:2
+                   description: Bluetooth wireless interface
+                   vendor: Intel Corp.
+                   physical id: c
+                   bus info: usb@1:c
+                   version: 0.02
+                   capabilities: bluetooth usb-2.00
+                   configuration: driver=btusb maxpower=100mA speed=12Mbit/s
+           *-usbhost:1
+                product: xHCI Host Controller
+                vendor: Linux 4.19.72-gentoo-s9 xhci-hcd
+                physical id: 1
+                bus info: usb@2
+                logical name: usb2
+                version: 4.19
+                capabilities: usb-3.00
+                configuration: driver=hub slots=6 speed=5000Mbit/s
+        *-communication
+             description: Communication controller
+             product: 200 Series PCH CSME HECI #1
+             vendor: Intel Corporation
+             physical id: 16
+             bus info: pci@0000:00:16.0
+             version: 00
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm msi bus_master cap_list
+             configuration: driver=mei_me latency=0
+             resources: irq:128 memory:f734d000-f734dfff
+        *-storage
+             description: SATA controller
+             product: 200 Series PCH SATA controller [AHCI mode]
+             vendor: Intel Corporation
+             physical id: 17
+             bus info: pci@0000:00:17.0
+             version: 00
+             width: 32 bits
+             clock: 66MHz
+             capabilities: storage msi pm ahci_1.0 bus_master cap_list
+             configuration: driver=ahci latency=0
+             resources: irq:121 memory:f7348000-f7349fff memory:f734c000-f734c0ff ioport:f050(size=8) ioport:f040(size=4) ioport:f020(size=32) memory:f734b000-f734b7ff
+     *-scsi:0
+          physical id: 1
+          logical name: scsi0
+          capabilities: emulated
+        *-disk
+             description: ATA Disk
+             product: OCZ-AGILITY3
+             physical id: 0.0.0
+             bus info: scsi@0:0.0.0
+             logical name: /dev/sda
+             version: 2.22
+             serial: OCZ-H2OB7ZZS62SRP42I
+             size: 111GiB (120GB)
+             capabilities: partitioned partitioned:dos
+             configuration: ansiversion=5 logicalsectorsize=512 sectorsize=512 signature=9d22eaef
+           *-volume:0
+                description: Windows NTFS volume
+                physical id: 1
+                bus info: scsi@0:0.0.0,1
+                logical name: /dev/sda1
+                version: 3.1
+                serial: 108f-df35
+                size: 98MiB
+                capacity: 100MiB
+                capabilities: primary bootable ntfs initialized
+                configuration: clustersize=4096 created=2015-12-15 06:50:54 filesystem=ntfs label=Rezervováno systémem state=clean
+           *-volume:1
+                description: Windows NTFS volume
+                physical id: 2
+                bus info: scsi@0:0.0.0,2
+                logical name: /dev/sda2
+                version: 3.1
+                serial: f444b8a8-ad36-014f-a7ab-c2dfe6e52b95
+                size: 65GiB
+                capacity: 71GiB
+                capabilities: primary ntfs initialized
+                configuration: clustersize=4096 created=2015-12-15 06:51:05 filesystem=ntfs label=Win7Pro modified_by_chkdsk=true mounted_on_nt4=true resize_log_file=true state=dirty upgrade_on_mount=true
+           *-volume:2
+                description: EXT4 volume
+                vendor: Linux
+                physical id: 3
+                bus info: scsi@0:0.0.0,3
+                logical name: /dev/sda3
+                logical name: /
+                version: 1.0
+                serial: f3c99980-752a-423a-9b77-c75a46f0bd1f
+                size: 40GiB
+                capacity: 40GiB
+                capabilities: primary journaled extended_attributes large_files huge_files dir_nlink recover extents ext4 ext2 initialized
+                configuration: created=2016-01-15 18:00:56 filesystem=ext4 label=SYSTEM lastmountpoint=/ modified=2019-11-04 11:54:22 mount.fstype=ext4 mount.options=rw,relatime mounted=2019-11-08 18:54:05 state=mounted
+     *-scsi:1
+          physical id: 2
+          logical name: scsi1
+          capabilities: emulated
+        *-disk
+             description: ATA Disk
+             product: WDC WD5000AAKS-0
+             vendor: Western Digital
+             physical id: 0.0.0
+             bus info: scsi@1:0.0.0
+             logical name: /dev/sdb
+             version: 3B01
+             serial: WD-WMASY0241392
+             size: 465GiB (500GB)
+             capabilities: partitioned partitioned:dos
+             configuration: ansiversion=5 logicalsectorsize=512 sectorsize=512 signature=befb2392
+           *-volume:0
+                description: Linux filesystem partition
+                vendor: Linux
+                physical id: 1
+                bus info: scsi@1:0.0.0,1
+                logical name: /dev/sdb1
+                version: 1.0
+                serial: e71e03c2-ebc7-4961-94b3-0313697dbb8a
+                size: 400MiB
+                capacity: 400MiB
+                capabilities: primary bootable extended_attributes ext2 initialized
+                configuration: filesystem=ext2 label=WD500_BOOT modified=2017-07-08 17:15:34 mounted=2016-01-15 19:59:23 state=clean
+           *-volume:1
+                description: EXT3 volume
+                vendor: Linux
+                physical id: 2
+                bus info: scsi@1:0.0.0,2
+                logical name: /dev/sdb2
+                version: 1.0
+                serial: 7a115017-0d69-4d68-8e87-d2ad3a80b1e8
+                size: 37GiB
+                capacity: 37GiB
+                capabilities: primary journaled extended_attributes large_files ext3 ext2 initialized
+                configuration: created=2008-05-28 10:20:07 filesystem=ext3 label=WD500_ROOT lastmountpoint=/mnt/b2 modified=2018-04-27 19:39:10 mounted=2018-03-26 23:27:26 state=clean
+           *-volume:2
+                description: Linux swap volume
+                physical id: 3
+                bus info: scsi@1:0.0.0,3
+                logical name: /dev/sdb3
+                version: 1
+                serial: 8c6fe8c4-5b55-447a-9ec4-927cc455623a
+                size: 5726MiB
+                capacity: 5726MiB
+                capabilities: primary nofs swap initialized
+                configuration: filesystem=swap pagesize=4096
+           *-volume:3
+                description: EXT3 volume
+                vendor: Linux
+                physical id: 4
+                bus info: scsi@1:0.0.0,4
+                logical name: /dev/sdb4
+                logical name: /home
+                version: 1.0
+                serial: 24cdc151-5719-4c4a-9e99-edfbece2c02b
+                size: 422GiB
+                capacity: 422GiB
+                capabilities: primary journaled extended_attributes large_files recover ext3 ext2 initialized
+                configuration: created=2008-05-22 18:14:03 filesystem=ext3 label=WD500_SHARE lastmountpoint=/home modified=2019-11-08 18:54:05 mount.fstype=ext3 mount.options=rw,relatime mounted=2019-11-08 18:54:05 state=mounted
+     *-scsi:2
+          physical id: 3
+          logical name: scsi2
+          capabilities: emulated
+        *-cdrom
+             description: DVD-RAM writer
+             product: DVDRW LH-20A1L
+             vendor: LITE-ON
+             physical id: 0.0.0
+             bus info: scsi@2:0.0.0
+             logical name: /dev/cdrom
+             logical name: /dev/sr0
+             version: BL05
+             capabilities: removable audio cd-r cd-rw dvd dvd-r dvd-ram
+             configuration: ansiversion=5 status=nodisc
+     *-scsi:3
+          physical id: 4
+          bus info: usb@1:10.2
+          logical name: scsi6
+          capabilities: emulated scsi-host
+          configuration: driver=usb-storage
+        *-disk
+             description: SCSI Disk
+             product: STORAGE DEVICE
+             vendor: Generic
+             physical id: 0.0.0
+             bus info: scsi@6:0.0.0
+             logical name: /dev/sdc
+             version: 0903
+             serial: 000000000503
+             capabilities: removable
+             configuration: ansiversion=6 logicalsectorsize=512 sectorsize=512
+           *-medium
+                physical id: 0
+                logical name: /dev/sdc
+  *-power UNCLAIMED
+       description: To Be Filled By O.E.M.
+       product: To Be Filled By O.E.M.
+       vendor: To Be Filled By O.E.M.
+       physical id: 1
+       version: To Be Filled By O.E.M.
+       serial: To Be Filled By O.E.M.
+       capacity: 32768mWh
