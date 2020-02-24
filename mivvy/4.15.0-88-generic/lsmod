@@ -1,0 +1,83 @@
+Module                  Size  Used by
+uvcvideo               81920  0
+videobuf2_vmalloc      16384  1 uvcvideo
+videobuf2_memops       16384  1 videobuf2_vmalloc
+videobuf2_v4l2         20480  1 uvcvideo
+videobuf2_core         40960  2 uvcvideo,videobuf2_v4l2
+videodev              155648  3 uvcvideo,videobuf2_core,videobuf2_v4l2
+media                  32768  2 uvcvideo,videodev
+dm_crypt               32768  1
+crypto_simd            16384  0
+cryptd                 24576  1 crypto_simd
+aes_i586               20480  2
+algif_skcipher         16384  0
+af_alg                 20480  1 algif_skcipher
+rfcomm                 61440  16
+appletalk              28672  0
+ipx                    28672  0
+p8023                  16384  1 ipx
+p8022                  16384  1 ipx
+psnap                  16384  2 appletalk,ipx
+llc                    16384  2 p8022,psnap
+bnep                   20480  2
+binfmt_misc            20480  1
+btusb                  40960  0
+btrtl                  16384  1 btusb
+btbcm                  16384  1 btusb
+btintel                16384  1 btusb
+bluetooth             466944  41 btrtl,btintel,bnep,btbcm,rfcomm,btusb
+ecdh_generic           28672  1 bluetooth
+gpio_ich               16384  0
+snd_hda_codec_realtek    98304  1
+snd_hda_codec_generic    69632  1 snd_hda_codec_realtek
+snd_hda_intel          36864  3
+snd_hda_codec         114688  3 snd_hda_intel,snd_hda_codec_generic,snd_hda_codec_realtek
+snd_hda_core           69632  4 snd_hda_intel,snd_hda_codec,snd_hda_codec_generic,snd_hda_codec_realtek
+coretemp               16384  0
+arc4                   16384  2
+snd_hwdep              16384  1 snd_hda_codec
+rtl818x_pci            49152  0
+snd_pcm                86016  3 snd_hda_intel,snd_hda_codec,snd_hda_core
+mac80211              679936  1 rtl818x_pci
+snd_seq_midi           16384  0
+snd_seq_midi_event     16384  1 snd_seq_midi
+msi_wmi                16384  0
+snd_rawmidi            28672  1 snd_seq_midi
+sparse_keymap          16384  1 msi_wmi
+input_leds             16384  0
+snd_seq                57344  2 snd_seq_midi_event,snd_seq_midi
+serio_raw              16384  0
+snd_seq_device         16384  3 snd_seq,snd_rawmidi,snd_seq_midi
+snd_timer              28672  2 snd_seq,snd_pcm
+cfg80211              536576  2 rtl818x_pci,mac80211
+lpc_ich                24576  0
+eeprom_93cx6           16384  1 rtl818x_pci
+snd                    69632  16 snd_hda_intel,snd_hwdep,snd_seq,snd_hda_codec,snd_timer,snd_rawmidi,snd_hda_codec_generic,snd_seq_device,snd_hda_codec_realtek,snd_pcm
+shpchp                 32768  0
+soundcore              16384  1 snd
+mac_hid                16384  0
+sch_fq_codel           20480  6
+parport_pc             32768  0
+ppdev                  20480  0
+lp                     20480  0
+parport                45056  3 lp,parport_pc,ppdev
+ip_tables              20480  0
+x_tables               28672  1 ip_tables
+autofs4                40960  2
+i915                 1290240  2
+i2c_algo_bit           16384  1 i915
+drm_kms_helper        151552  1 i915
+syscopyarea            16384  1 drm_kms_helper
+sysfillrect            16384  1 drm_kms_helper
+psmouse               131072  0
+sysimgblt              16384  1 drm_kms_helper
+fb_sys_fops            16384  1 drm_kms_helper
+r8169                  81920  0
+pata_acpi              16384  0
+drm                   344064  4 i915,drm_kms_helper
+ums_realtek            20480  0
+mii                    16384  1 r8169
+uas                    20480  0
+wmi                    20480  1 msi_wmi
+usb_storage            57344  2 uas,ums_realtek
+video                  40960  2 msi_wmi,i915
