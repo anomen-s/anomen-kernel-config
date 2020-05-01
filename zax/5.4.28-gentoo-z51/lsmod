@@ -1,0 +1,60 @@
+Module                  Size  Used by
+xt_conntrack           16384  2
+xt_MASQUERADE          16384  2
+xfrm_user              36864  1
+xfrm_algo              16384  1 xfrm_user
+xt_addrtype            16384  2
+iptable_filter         16384  1
+iptable_nat            16384  1
+nf_nat                 36864  2 iptable_nat,xt_MASQUERADE
+ip_tables              24576  2 iptable_filter,iptable_nat
+x_tables               32768  5 xt_conntrack,iptable_filter,xt_addrtype,ip_tables,xt_MASQUERADE
+br_netfilter           24576  0
+bridge                143360  1 br_netfilter
+stp                    16384  1 bridge
+llc                    16384  2 bridge,stp
+dm_thin_pool           81920  1
+dm_persistent_data     73728  1 dm_thin_pool
+dm_bufio               28672  1 dm_persistent_data
+dm_bio_prison          16384  1 dm_thin_pool
+libcrc32c              16384  1 dm_persistent_data
+vboxsf                 45056  2
+ipv6                  430080  46 bridge,br_netfilter
+sha256_ssse3           32768  0
+sha256_generic         16384  1 sha256_ssse3
+libsha256              20480  1 sha256_generic
+cfg80211              331776  0
+dm_crypt               40960  1
+pktcdvd                32768  1
+crc32_pclmul           16384  0
+crc32c_intel           24576  2
+snd_hda_codec_idt      53248  1
+snd_hda_codec_generic    77824  1 snd_hda_codec_idt
+aesni_intel           368640  2
+glue_helper            16384  1 aesni_intel
+crypto_simd            16384  1 aesni_intel
+dm_mod                126976  7 dm_crypt,dm_thin_pool,dm_bufio
+snd_hda_intel          32768  3
+cryptd                 20480  2 crypto_simd
+snd_intel_nhlt         16384  1 snd_hda_intel
+dax                    28672  1 dm_mod
+snd_hda_codec         114688  3 snd_hda_codec_generic,snd_hda_intel,snd_hda_codec_idt
+snd_hda_core           57344  4 snd_hda_codec_generic,snd_hda_intel,snd_hda_codec,snd_hda_codec_idt
+pcspkr                 16384  0
+snd_pcm                98304  3 snd_hda_intel,snd_hda_codec,snd_hda_core
+snd_timer              32768  1 snd_pcm
+virtio_net             45056  0
+net_failover           16384  1 virtio_net
+vmwgfx                327680  3
+sr_mod                 28672  1
+failover               16384  1 net_failover
+snd                    81920  12 snd_hda_codec_generic,snd_hda_intel,snd_hda_codec,snd_timer,snd_pcm,snd_hda_codec_idt
+cdrom                  36864  2 pktcdvd,sr_mod
+battery                20480  0
+ttm                    94208  1 vmwgfx
+soundcore              16384  1 snd
+button                 16384  0
+i2c_piix4              24576  0
+ac                     16384  0
+vboxguest             249856  5 vboxsf
+pata_acpi              16384  0

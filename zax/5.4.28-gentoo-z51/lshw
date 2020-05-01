@@ -1,0 +1,232 @@
+zax
+    description: Computer
+    product: VirtualBox
+    vendor: innotek GmbH
+    version: 1.2
+    serial: 0
+    width: 4294967295 bits
+    capabilities: smbios-2.5 dmi-2.5 smp vsyscall32
+    configuration: family=Virtual Machine uuid=C1615066-115E-4A82-876D-6E5BA70C4E8E
+  *-core
+       description: Motherboard
+       product: VirtualBox
+       vendor: Oracle Corporation
+       physical id: 0
+       version: 1.2
+       serial: 0
+     *-firmware
+          description: BIOS
+          vendor: innotek GmbH
+          physical id: 0
+          version: VirtualBox
+          date: 12/01/2006
+          size: 128KiB
+          capabilities: isa pci cdboot bootselect int9keyboard int10video acpi
+     *-memory
+          description: System memory
+          physical id: 1
+          size: 10GiB
+     *-cpu
+          product: Intel(R) Core(TM) i5-6440HQ CPU @ 2.60GHz
+          vendor: Intel Corp.
+          physical id: 2
+          bus info: cpu@0
+          width: 64 bits
+          capabilities: fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx rdtscp x86-64 constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single pti fsgsbase avx2 invpcid rdseed clflushopt md_clear flush_l1d
+     *-network
+          description: Ethernet controller
+          product: Virtio network device
+          vendor: Red Hat, Inc.
+          physical id: a
+          bus info: pci@0000:00:0a.0
+          version: 00
+          width: 32 bits
+          clock: 33MHz
+          capabilities: bus_master cap_list
+          configuration: driver=virtio-pci latency=64
+          resources: irq:18 ioport:d0a0(size=32)
+        *-virtio3
+             description: Ethernet interface
+             physical id: 0
+             bus info: virtio@3
+             logical name: eth3
+             serial: 08:00:27:7c:d3:69
+             capabilities: ethernet physical
+             configuration: autonegotiation=off broadcast=yes driver=virtio_net driverversion=1.0.0 ip=192.168.99.102 link=yes multicast=yes
+     *-storage
+          description: SATA controller
+          product: 82801HM/HEM (ICH8M/ICH8M-E) SATA Controller [AHCI mode]
+          vendor: Intel Corporation
+          physical id: d
+          bus info: pci@0000:00:0d.0
+          version: 02
+          width: 32 bits
+          clock: 33MHz
+          capabilities: storage pm ahci_1.0 bus_master cap_list
+          configuration: driver=ahci latency=64
+          resources: irq:21 ioport:d0c0(size=8) ioport:d0c8(size=4) ioport:d0d0(size=8) ioport:d0d8(size=4) ioport:d0e0(size=16) memory:f280a000-f280bfff
+     *-pci
+          description: Host bridge
+          product: 440FX - 82441FX PMC [Natoma]
+          vendor: Intel Corporation
+          physical id: 100
+          bus info: pci@0000:00:00.0
+          version: 02
+          width: 32 bits
+          clock: 33MHz
+        *-isa
+             description: ISA bridge
+             product: 82371SB PIIX3 ISA [Natoma/Triton II]
+             vendor: Intel Corporation
+             physical id: 1
+             bus info: pci@0000:00:01.0
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: isa bus_master
+             configuration: latency=0
+        *-ide
+             description: IDE interface
+             product: 82371AB/EB/MB PIIX4 IDE
+             vendor: Intel Corporation
+             physical id: 1.1
+             bus info: pci@0000:00:01.1
+             version: 01
+             width: 32 bits
+             clock: 33MHz
+             capabilities: ide isa_compatibility_mode_controller__supports_both_channels_switched_to_pci_native_mode__supports_bus_mastering bus_master
+             configuration: driver=ata_piix latency=64
+             resources: irq:0 ioport:1f0(size=8) ioport:3f6 ioport:170(size=8) ioport:376 ioport:d000(size=16)
+        *-display
+             description: VGA compatible controller
+             product: SVGA II Adapter
+             vendor: VMware
+             physical id: 2
+             bus info: pci@0000:00:02.0
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: vga_controller bus_master rom
+             configuration: driver=vmwgfx latency=64
+             resources: irq:18 ioport:d010(size=16) memory:f0000000-f1ffffff memory:f2000000-f21fffff memory:c0000-dffff
+        *-network:0
+             description: Ethernet controller
+             product: Virtio network device
+             vendor: Red Hat, Inc.
+             physical id: 3
+             bus info: pci@0000:00:03.0
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: bus_master cap_list
+             configuration: driver=virtio-pci latency=64
+             resources: irq:19 ioport:d020(size=32)
+           *-virtio0 DISABLED
+                description: Ethernet interface
+                physical id: 0
+                bus info: virtio@0
+                logical name: eth0
+                serial: 08:00:27:89:70:c8
+                capabilities: ethernet physical
+                configuration: autonegotiation=off broadcast=yes driver=virtio_net driverversion=1.0.0 link=no multicast=yes
+        *-generic
+             description: System peripheral
+             product: VirtualBox Guest Service
+             vendor: InnoTek Systemberatung GmbH
+             physical id: 4
+             bus info: pci@0000:00:04.0
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             configuration: driver=vboxguest latency=0
+             resources: irq:20 ioport:d040(size=32) memory:f2400000-f27fffff memory:f2800000-f2803fff
+        *-multimedia
+             description: Audio device
+             product: 82801FB/FBM/FR/FW/FRW (ICH6 Family) High Definition Audio Controller
+             vendor: Intel Corporation
+             physical id: 5
+             bus info: pci@0000:00:05.0
+             version: 01
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pm bus_master cap_list
+             configuration: driver=snd_hda_intel latency=64
+             resources: irq:21 memory:f2804000-f2807fff
+        *-usb
+             description: USB controller
+             product: KeyLargo/Intrepid USB
+             vendor: Apple Inc.
+             physical id: 6
+             bus info: pci@0000:00:06.0
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: ohci bus_master cap_list
+             configuration: driver=ohci-pci latency=64
+             resources: irq:22 memory:f2808000-f2808fff
+        *-bridge
+             description: Bridge
+             product: 82371AB/EB/MB PIIX4 ACPI
+             vendor: Intel Corporation
+             physical id: 7
+             bus info: pci@0000:00:07.0
+             version: 08
+             width: 32 bits
+             clock: 33MHz
+             capabilities: bridge
+             configuration: driver=piix4_smbus latency=0
+             resources: irq:9
+        *-network:1
+             description: Ethernet controller
+             product: Virtio network device
+             vendor: Red Hat, Inc.
+             physical id: 8
+             bus info: pci@0000:00:08.0
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: bus_master cap_list
+             configuration: driver=virtio-pci latency=64
+             resources: irq:16 ioport:d060(size=32)
+           *-virtio1
+                description: Ethernet interface
+                physical id: 0
+                bus info: virtio@1
+                logical name: eth1
+                serial: 08:00:27:8d:2b:7f
+                capabilities: ethernet physical
+                configuration: autonegotiation=off broadcast=yes driver=virtio_net driverversion=1.0.0 ip=172.17.2.152 link=yes multicast=yes
+        *-network:2
+             description: Ethernet controller
+             product: Virtio network device
+             vendor: Red Hat, Inc.
+             physical id: 9
+             bus info: pci@0000:00:09.0
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: bus_master cap_list
+             configuration: driver=virtio-pci latency=64
+             resources: irq:17 ioport:d080(size=32)
+           *-virtio2 DISABLED
+                description: Ethernet interface
+                physical id: 0
+                bus info: virtio@2
+                logical name: eth2
+                serial: 08:00:27:5b:ba:ee
+                capabilities: ethernet physical
+                configuration: autonegotiation=off broadcast=yes driver=virtio_net driverversion=1.0.0 link=no multicast=yes
+  *-network:0
+       description: Ethernet interface
+       physical id: 1
+       logical name: br-01721329c9f7
+       serial: 02:42:66:07:46:db
+       capabilities: ethernet physical
+       configuration: broadcast=yes driver=bridge driverversion=2.3 firmware=N/A ip=172.18.0.1 link=no multicast=yes
+  *-network:1
+       description: Ethernet interface
+       physical id: 2
+       logical name: docker0
+       serial: 02:42:ab:94:6e:8a
+       capabilities: ethernet physical
+       configuration: broadcast=yes driver=bridge driverversion=2.3 firmware=N/A ip=172.17.0.1 link=no multicast=yes

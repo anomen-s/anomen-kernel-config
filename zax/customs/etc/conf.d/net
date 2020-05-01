@@ -13,4 +13,4 @@ config_eth1="dhcp"
 # /usr/share/doc/netifrc*/README* for more information.
 
 config_eth2="dhcp"
-config_eth3="192.168.99.102/24" 
+config_eth3="192.168.120.102/24"

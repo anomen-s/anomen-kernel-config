@@ -133,8 +133,14 @@ m ZSWAP, Z3FOLD, ZRAM, ZRAM_WRITEBACK, ZBUD,CONFIG_CRYPTO_LZ4HC, CONFIG_CRYPTO_L
 m CRYPTO_CRC32C_INTEL, CRYPTO_CRC32_PCLMUL, CONFIG_CRYPTO_SHA1_SSSE3, CRYPTO_SHA256_SSSE3, CRYPTO_SHA512_SSSE3, CONFIG_CRYPTO_AES_NI_INTEL, CONFIG_CRYPTO_DES3_EDE_X86_64
 - CONFIG_CRYPTO_MANAGER_DISABLE_TESTS
 
+5.4.28-gentoo-z51
+=================
++ sctp
+* CONFIG_SND_HDA_PREALLOC_SIZE=2048 (pulseaudio)
+* skip this, ZSWAP crashes kernel: zswap.enabled=1 zswap.compressor=lz4 zswap.max_pool_percent=25 zswap.zpool=z3fold
+
 
 TODO
 ====
-* CONFIG_SND_HDA_PREALLOC_SIZE=2048 (pulseaudio)
-* zswap.enabled=1 zswap.compressor=lz4 zswap.max_pool_percent=25 zswap.zpool=z3fold
+? CONFIG_DRM_VBOXVIDEO
++ CONFIG_USB_VIDEO_CLASS
