@@ -1,0 +1,63 @@
+Module                  Size  Used by
+bnep                   20480  2
+btusb                  36864  0
+btbcm                  16384  1 btusb
+btintel                16384  1 btusb
+btrtl                  16384  1 btusb
+dm_crypt               32768  1
+aes_arm_bs             20480  2
+crypto_simd            16384  1 aes_arm_bs
+cryptd                 20480  2 crypto_simd
+algif_skcipher         16384  0
+af_alg                 20480  1 algif_skcipher
+dm_mod                 90112  3 dm_crypt
+dax                    20480  1 dm_mod
+fuse                   73728  3
+nfnetlink_queue        20480  0
+nfnetlink_log          20480  0
+nfnetlink              16384  2 nfnetlink_log,nfnetlink_queue
+bluetooth             270336  26 btrtl,btintel,bnep,btbcm,btusb
+ecdh_generic           24576  1 bluetooth
+w1_therm               16384  0
+ds2482                 16384  0
+wire                   24576  2 ds2482,w1_therm
+bmp280_i2c             16384  0
+bmp280                 20480  1 bmp280_i2c
+rtc_ds1307             24576  0
+zstd                   16384  2
+zram                   24576  2
+binfmt_misc            16384  1
+sun4i_gpadc_iio        16384  0
+gspca_ov519            36864  0
+gspca_main             24576  1 gspca_ov519
+videobuf2_vmalloc      16384  1 gspca_main
+evdev                  20480  1
+axp20x_adc             16384  0
+industrialio           49152  3 bmp280,sun4i_gpadc_iio,axp20x_adc
+lima                   40960  0
+sun4i_codec            32768  3
+gpu_sched              20480  1 lima
+ttm                    57344  1 lima
+snd_soc_core          114688  1 sun4i_codec
+snd_pcm_dmaengine      16384  1 snd_soc_core
+sun4i_ts               16384  0
+snd_pcm                69632  3 sun4i_codec,snd_pcm_dmaengine,snd_soc_core
+sun4i_gpadc            16384  0
+snd_timer              24576  1 snd_pcm
+snd                    45056  3 snd_timer,snd_soc_core,snd_pcm
+soundcore              16384  1 snd
+sunxi_cir              16384  0
+sun4i_ss               24576  0
+cpufreq_dt             16384  0
+thermal_sys            57344  3 sun4i_ts,cpufreq_dt,sun4i_gpadc_iio
+uio_pdrv_genirq        16384  0
+uio                    16384  1 uio_pdrv_genirq
+bonding                94208  0
+brcmfmac              159744  0
+brcmutil               16384  1 brcmfmac
+cfg80211              393216  1 brcmfmac
+ip_tables              20480  0
+x_tables               20480  1 ip_tables
+pwrseq_simple          16384  1
+uas                    20480  0
+realtek                16384  1

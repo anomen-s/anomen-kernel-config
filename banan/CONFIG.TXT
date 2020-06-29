@@ -29,6 +29,10 @@
 + CONFIG_PINCTRL_MCP23S08
 + CONFIG_W1_MASTER_DS2482
 
+4.19.38-sunxi
+=============
+* Armbian kernel
+
 TODO
 ====
 CONFIG_USB_SUSPEND ?
@@ -39,10 +43,12 @@ sun4
 
 BUILD Armbian modules
 =====================
-V=4.14.70-sunxi
 
+aptitude install bison flex linux-source-`uname -r`
+
+V=`uname -r`
 make LOCALVERSION=-sunxi clean prepare modules_prepare drivers/w1/masters/ds2482.ko drivers/pinctrl/pinctrl-mcp23s08.ko
 
-mkdir -p "/lib/modules/${V}/misc/"
+mkdir -v -p "/lib/modules/${V}/misc/"
 find . -name "*.ko" -exec cp -v "{}" "/lib/modules/${V}/misc/" ";"
 depmod -a "${V}"

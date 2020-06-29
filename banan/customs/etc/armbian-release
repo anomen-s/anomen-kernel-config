@@ -2,7 +2,9 @@
 BOARD=bananapipro
 BOARD_NAME="Banana Pi Pro"
 BOARDFAMILY=sun7i
-VERSION=5.60
+BUILD_REPOSITORY_URL=https://github.com/armbian/build
+BUILD_REPOSITORY_COMMIT=7223cca4
+VERSION=5.90
 LINUXFAMILY=sunxi
 BRANCH=next
 ARCH=arm

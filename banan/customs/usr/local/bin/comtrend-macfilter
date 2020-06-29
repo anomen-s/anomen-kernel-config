@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo no longer used
+exit
+
 . /etc/comtrend.conf
 
 M="$1"
@@ -26,5 +29,9 @@ esac
 
 SK=`curl -u "admin:$PASSWORD" "http://$HOST/wlmacflt.cmd?action=view" | sed -n -e 's/.*sessionKey=\([0-9]*\).*/\1/p' | head -n 1`
 
+echo "sessionKey=$SK"
+
 curl   -o /tmp/comtrend.html -u "admin:${PASSWORD}" "http://${HOST}/${URL}${SK}"
+
+grep 'Invalid Session Key' /tmp/comtrend.html
 
