@@ -1,0 +1,15 @@
+#!/bin/sh
+
+mkdir -p /mnt/work/downloads/yt
+cd /mnt/work/downloads/yt
+
+P=$$
+mkdir "$P"
+cd "$P"
+
+echo youtube-dl "$P" "$@"
+
+echo "$@" >> history.txt
+exec screen -d -m -S "yt-$P" youtube-dl --merge-output-format mkv -v --all-subs "$@" >> output.log
+
+

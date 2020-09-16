@@ -1,0 +1,3 @@
+www-data ALL = NOPASSWD: /usr/sbin/service minidlna force-reload
+www-data ALL = NOPASSWD: /usr/bin/arp-scan
+

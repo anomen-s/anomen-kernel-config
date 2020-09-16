@@ -1,0 +1,18 @@
+#!/bin/sh
+
+if [ ! -e history.txt ]
+then
+  echo history.txt not found
+  exit
+fi
+
+
+URL=`head -n 1 history.txt`
+
+echo youtube-dl "(retry)" "$URL"
+
+echo "retry:" >> history.txt
+echo "$URL" >> history.txt
+exec screen -d -m -S "yt-retry" bash -c "youtube-dl --print-json --print-traffic -v  '$URL' > output.log >> error.log"
+
+

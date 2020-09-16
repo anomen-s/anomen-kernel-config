@@ -1,0 +1,15 @@
+#!/bin/bash
+
+T=${1:-1}
+
+while true
+do
+
+ for C in "|" "/" "-" "\\" "|"
+ do
+   echo -n "$C"
+   sleep "$T"
+   echo -n -e '\b'
+ done
+
+done
