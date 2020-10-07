@@ -20,12 +20,12 @@ fi
 
 decrypt() {
  echo Decrypting
- find . -type f -name '*.gpg' -exec "$EXEC" filedec '{}' ';'
+ find "$1" -type f -name '*.gpg' -exec "$EXEC" filedec '{}' ';'
 }
 
 encrypt() {
  echo Encrypting.
- find . -type f -name '*.gpg' -exec "$EXEC" fileenc '{}' ';'
+ find "$1" -type f -name '*.gpg' -exec "$EXEC" fileenc '{}' ';'
 }
 
 fileenc() {
@@ -79,10 +79,10 @@ filedec() {
 
 case "$1" in
  decrypt|dec)
-    decrypt
+    decrypt "${2:-.}"
  ;;
  encrypt|enc)
-    encrypt
+    encrypt "${2:-.}"
  ;;
  fileenc)
     fileenc "$2"
