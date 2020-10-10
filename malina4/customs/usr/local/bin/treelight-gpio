@@ -1,21 +1,21 @@
 #!/bin/sh
 
-ADDR="mcp23017:100:0x26"
+PIN_DISCO=24
+PIN_WHITE=23
+PIN_NOFF=17
 
-PIN_DISCO=110
-PIN_WHITE=109
-PIN_NOFF=108
+PIN_BLUE=25
 
 switch_on () { 
 	echo Switch on $1
-	/usr/local/bin/gpio -x "$ADDR" mode $1 out
-	/usr/local/bin/gpio -x "$ADDR" write $1 1
+	/usr/local/bin/gpio -g mode $1 out
+	/usr/local/bin/gpio -g write $1 1
 }
 
 switch_off () {
 	echo Switch off $1
-	/usr/local/bin/gpio -x "$ADDR" mode $1 out
-	/usr/local/bin/gpio -x "$ADDR" write $1 0
+	/usr/local/bin/gpio -g mode $1 out
+	/usr/local/bin/gpio -g write $1 0
 }
 
 
@@ -23,6 +23,12 @@ for A
 do
  echo $A
  case $A in
+   blue)
+	switch_on $PIN_BLUE
+	;;
+   noblue)
+	switch_off $PIN_BLUE
+	;;
    disco) 
 	switch_on $PIN_DISCO
 	;;

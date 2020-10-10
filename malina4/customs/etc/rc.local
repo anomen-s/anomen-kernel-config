@@ -14,8 +14,13 @@
 
 # I2C
 #   -> RTC
-echo ds1307 0x68 > /sys/bus/i2c/devices/i2c-1/new_device
-echo ds2482 0x18 > /sys/bus/i2c/devices/i2c-1/new_device
+#echo ds1307 0x68 > /sys/bus/i2c/devices/i2c-1/new_device
+# 1W bridge
+#echo ds2482 0x18 > /sys/bus/i2c/devices/i2c-1/new_device
+# bmp180 (temp/pressure
+#echo bmp180 0x77 > /sys/bus/i2c/devices/i2c-1/new_device
+
+/usr/bin/nice /usr/local/bin/gpio -g blink 25 &
 
 # Print the IP address
 _IP=$(hostname -I) || true
