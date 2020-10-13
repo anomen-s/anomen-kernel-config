@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import argparse
 import os
@@ -9,7 +9,7 @@ import glob
 import subprocess
 import datetime
 
-VERSION=0.3
+VERSION=2020-10-13
 
 ALTITUDE=0
 PID_FILE='/run/shm/sensors.pid'
@@ -81,7 +81,8 @@ def f2s(data):
 def soc():
     cpudata = cpu_data(0)
     socdata = get_bpi_data() # get_raspi_data()
-    print('temp=%s\'C volt=%sV freq=%sMHz %s' % (socdata[0], socdata[1], str(cpudata[1]), cpudata[2]))
+    name = 'soc'.ljust(10)
+    print('%s temp=%s\'C volt=%sV freq=%sMHz %s' % (name, socdata[0], socdata[1], str(cpudata[1]), cpudata[2]))
 
 def get_bpi_data():
     data = readfile('/sys/class/hwmon/hwmon0/temp1_input')
@@ -123,23 +124,35 @@ def get_w1_data(path):
     t = float(m.group(1) or 0) / 1000.0
     return [path, t, data]
 
-def bmp085():
-    bmpdevices = glob.glob('/sys/bus/i2c/drivers/bmp280/*-*/iio:device*')
-    for bmpdev in bmpdevices:
-      data = get_bmp085_data(bmpdev)
-      print('temp=%s\'C press=%shPa relPress=%shPa' % (f2s(data[1]),f2s(data[2]),f2s(data[3])))
+def iio():
+    iiodevices = glob.glob('/sys/bus/iio/devices/*')
+    for iiodev in iiodevices:
+      get_iio_data(iiodev)
 
 
-def get_bmp085_data(path):
+def get_iio_data(path):
     global ALTITUDE
-    tdata = readfile(path + "/in_temp_input")
-    t = float(tdata or 0) / 1000.0
+    name = readfile(path + "/name")
+    if name:
+      print(name.strip().ljust(10), end=' ')
+      tdata = readfile(path + "/in_temp_input")
+    else:
+      print(path, end=' ')
+    if tdata:
+      t = float(tdata or 0) / 1000.0
+      print('temp=%s\'C' % f2s(t), end=' ')
 
     pdata = readfile(path + "/in_pressure_input")
-    p_abs = float(pdata or 0) * 10.0
-    p_rel = (p_abs*9.80665*ALTITUDE) / (287*(273+t+(ALTITUDE/400))) + p_abs
-    p_rel_2 = p_abs  + ALTITUDE / 8.3
-    return [path, t, p_abs, p_rel, p_rel_2, tdata, pdata]
+    if pdata:
+      p_abs = float(pdata or 0) * 10.0
+      p_rel = (p_abs*9.80665*ALTITUDE) / (287*(273+t+(ALTITUDE/400))) + p_abs
+      p_rel_2 = p_abs  + ALTITUDE / 8.3
+      print ('press=%shPa relPress=%shPa' % (f2s(p_abs), f2s(p_rel)), end='')
+    hdata = readfile(path + "/in_humidityrelative_input")
+    if hdata:
+      h = float(hdata or 0) / 1000.0
+      print('humidity=%s\'%%' % f2s(h), end=' ')
+    print('')
 
 
 def get_date():
@@ -181,24 +194,24 @@ def main():
     if (args.pidfile):
         exist_pid = create_pid_file(args.pidfile)
         if (exist_pid):
-            print "Cannot create pid file %s" % exist_pid
+            print("Cannot create pid file %s" % exist_pid)
             sys.exit(1)
 
     try:
         ALTITUDE = int(args.altitude)
 
         if (args.log):
-            print log_line(
+            print(log_line(
                 not args.external or args.internal,
-                not args.internal or args.external)
+                not args.internal or args.external))
             return
 
         if (not args.external or args.internal):
-            print "Internal: "
+            print("Internal: ")
             soc()
-            bmp085()
+            iio()
         if (not args.internal or args.external):
-            print "External: "
+            print("External: ")
             w1()
     finally:
         if (args.pidfile):
