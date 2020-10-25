@@ -198,8 +198,11 @@
 + CONFIG_NF_CT_NETLINK (net-libs/libnfnetlink)
 + CONFIG_NETFILTER_NETLINK_QUEUE (net-libs/libnetfilter_queue)
 
-TODO
-====
+5.4.66-gentoo-s10
+=================
 + CONFIG_BT_RFCOMM
 + CONFIG_BT_BNEP
 + CONFIG_BT_HIDP
+
+TODO
+====

@@ -1,0 +1,90 @@
+Module                  Size  Used by
+sg                     40960  0
+lp                     20480  0
+parport_pc             40960  0
+ppdev                  20480  0
+parport                49152  3 parport_pc,lp,ppdev
+ccm                    20480  6
+fuse                  118784  3
+cmac                   16384  9
+algif_hash             16384  4
+algif_skcipher         16384  4
+af_alg                 24576  18 algif_hash,algif_skcipher
+bnep                   20480  2
+nvidia_drm             49152  2
+dm_mod                126976  0
+binfmt_misc            16384  1
+nvidia_modeset       1138688  3 nvidia_drm
+pktcdvd                36864  1
+intel_rapl_msr         16384  0
+intel_rapl_common      24576  1 intel_rapl_msr
+iosf_mbi               16384  1 intel_rapl_common
+hwmon_vid              16384  0
+x86_pkg_temp_thermal    16384  0
+intel_powerclamp       16384  0
+i2c_dev                16384  0
+coretemp               16384  0
+joydev                 24576  0
+ath9k_htc              81920  0
+nvidia              19279872  81 nvidia_modeset
+ath9k_common           20480  1 ath9k_htc
+ath9k_hw              450560  2 ath9k_htc,ath9k_common
+kvm_intel             208896  0
+iwlmvm                290816  0
+snd_hda_codec_hdmi     57344  1
+ath                    32768  3 ath9k_htc,ath9k_common,ath9k_hw
+kvm                   471040  1 kvm_intel
+mac80211              471040  2 ath9k_htc,iwlmvm
+libarc4                16384  1 mac80211
+irqbypass              16384  1 kvm
+btusb                  49152  0
+iTCO_wdt               16384  0
+btrtl                  16384  1 btusb
+uas                    28672  0
+btbcm                  16384  1 btusb
+btintel                20480  1 btusb
+usb_storage            61440  1 uas
+msr                    16384  0
+usbhid                 36864  0
+snd_hda_codec_realtek   106496  1
+snd_hda_codec_generic    77824  1 snd_hda_codec_realtek
+iwlwifi               245760  1 iwlmvm
+bluetooth             421888  30 btrtl,btintel,btbcm,bnep,btusb
+drm_kms_helper        139264  1 nvidia_drm
+crc32c_intel           24576  1
+cpufreq_conservative    16384  0
+ghash_clmulni_intel    16384  0
+ecdh_generic           16384  2 bluetooth
+ecc                    28672  1 ecdh_generic
+cpufreq_powersave      16384  0
+aesni_intel           368640  17
+snd_hda_intel          32768  4
+snd_intel_nhlt         16384  1 snd_hda_intel
+crypto_simd            16384  1 aesni_intel
+video                  45056  0
+cryptd                 20480  6 crypto_simd,ghash_clmulni_intel
+snd_hda_codec          98304  4 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec_realtek
+glue_helper            16384  1 aesni_intel
+drm                   434176  5 drm_kms_helper,nvidia_drm
+cfg80211              360448  6 ath9k_htc,ath9k_common,iwlmvm,ath,iwlwifi,mac80211
+pcspkr                 16384  0
+vboxnetadp             28672  0
+e1000e                212992  0
+snd_hda_core           61440  5 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,snd_hda_codec_realtek
+snd_pcm                90112  4 snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,snd_hda_core
+vboxnetflt             32768  0
+mei_me                 24576  0
+sr_mod                 28672  1
+snd_timer              32768  1 snd_pcm
+i2c_i801               28672  0
+cdrom                  36864  2 pktcdvd,sr_mod
+drm_panel_orientation_quirks    20480  1 drm
+snd                    81920  14 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,snd_timer,snd_pcm
+agpgart                36864  1 drm
+mei                    77824  1 mei_me
+thermal                20480  0
+fan                    16384  0
+vboxdrv               417792  2 vboxnetadp,vboxnetflt
+backlight              16384  1 video
+wmi                    24576  0
+button                 16384  0
