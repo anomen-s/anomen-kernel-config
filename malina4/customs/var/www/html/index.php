@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<title>Banan</title>
+<title>Malina4</title>
 
 <script>
 function reloadingImage()
@@ -16,11 +16,13 @@ function reloadingImage()
 <body>
 
 <h2><a href="/media/">media</a></h2> (<a href="/rescan.php">rescan</a>)
-
+<h2><a href="/fm">sdílení souborů</a></h2>
 
 <h2><a href="/scan/">scanner</a></h2>
+<h2><a href="/network.php">LAN</a></h2>
 
 <h2><a href="/wiki/">wiki</a></h2>
+<h2><a href="/gpx/">gpx</a></h2>
 
 
 <h2><a href="https://banan:631/">Tiskárny</a></h2>
