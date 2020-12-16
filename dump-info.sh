@@ -36,6 +36,9 @@ done
 run "lspci" "-v" lspci-v
 run "lsusb" "-t" lsusb-t
 run "lsusb" "-v" lsusb-v
+run "lscpu" "" lscpu
 run "uptime" "" uptime
 run "uptime" "-s" uptime-s
+run "cat" "/proc/cpuinfo" cpuinfo
+run "cat" "/proc/mounts" mounts
 
