@@ -3,6 +3,8 @@
 mkdir -p /mnt/work/downloads/yt
 cd /mnt/work/downloads/yt
 
+export OPENSSL_CONF=/etc/ssl/openssl-weak.cnf
+
 P=$$
 mkdir "$P"
 cd "$P"
