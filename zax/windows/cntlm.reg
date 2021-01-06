@@ -1,0 +1,6 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\cntlm\Parameters]
+"AppPath"="C:\\bin\\Cntlm\\cntlm.exe"
+"AppArgs"="-f  -c /cygdrive/c/bin/Cntlm/cntlm.ini"
+"TermSig"=dword:00000009
