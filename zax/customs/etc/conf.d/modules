@@ -26,5 +26,6 @@
 # You should consult your kernel documentation and configuration
 # for a list of modules and their options.
 
-modules="ext4 virtio_net msr snd-pcm-oss snd-mixer-oss"
+modules="ext4 virtio_net" 
+# msr snd-pcm-oss snd-mixer-oss"
 

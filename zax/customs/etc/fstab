@@ -27,7 +27,7 @@
 
 #LABEL=boot		/boot		ext4		noauto,noatime	1 2
 #UUID=58e72203-57d1-4497-81ad-97655bd56494		/		ext4		noatime		0 1
-LABEL=Z64_SWAP		none		swap		sw		0 0
+LABEL=ZAX64_SWAP		none		swap		sw		0 0
 #UUID=9f0c3938-0572-4ab3-9e14-18b2b0e5a7db	/mnt/zax	ext4		noatime	1 2
 #/dev/cdrom		/mnt/cdrom	auto		noauto,ro	0 0
 
