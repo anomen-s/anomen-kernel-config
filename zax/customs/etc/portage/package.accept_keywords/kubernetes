@@ -2,3 +2,7 @@ app-admin/helm
 sys-cluster/kubectl
 sys-cluster/minikube
 dev-go/go-bindata
+sys-cluster/kubelet
+=dev-lang/go-1.11.4 
+sys-cluster/kubeadm
+=dev-lang/go-1.13.5

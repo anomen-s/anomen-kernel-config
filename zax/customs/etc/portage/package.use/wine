@@ -1,3 +1,4 @@
 app-emulation/wine staging
-app-emulation/wine-any staging netapi osmesa prelink
+app-emulation/wine-any staging netapi osmesa prelink -d3d9
 media-libs/mesa osmesa
+app-emulation/wine-any -ffmpeg

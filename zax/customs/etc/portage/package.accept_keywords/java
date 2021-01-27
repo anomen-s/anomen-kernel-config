@@ -2,3 +2,8 @@ dev-util/idea-ultimate
 dev-util/idea-community
 dev-java/keystore-explorer
 dev-util/soapui
+dev-java/maven-bin:3.5
+dev-util/insomnia
+dev-java/openjdk-bin:11
+dev-java/leiningen-bin
+dev-db/dbeaver-bin
