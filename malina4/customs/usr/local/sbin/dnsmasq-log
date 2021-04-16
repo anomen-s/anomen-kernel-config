@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if [ -z "$1" ]
+then
+ echo "$0 [ip_without_prefix]"
+ exit 1
+fi
+
+NET=`ip -j -4 addr show eth0  | jq --raw-output '.[]?.addr_info[]?.local | match("(.*[.])[0-9]+";"g") | .captures[0].string'`
+
+grep "${NET}.${1}" /run/dnsmasq/dnsmasq.log
