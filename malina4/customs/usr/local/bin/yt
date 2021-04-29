@@ -6,6 +6,8 @@ cd /mnt/work/downloads/yt
 export OPENSSL_CONF=/etc/ssl/openssl-weak.cnf
 
 P=$$
+test -z "$2" || P="${P}-${2}"
+
 mkdir "$P"
 cd "$P"
 

@@ -1,0 +1,31 @@
+#!/bin/sh
+
+CONF_DIR=/etc/dnsmasq.d
+
+BL="${CONF_DIR}/src/blacklist-${1}.conf"
+DNS="${CONF_DIR}/src/dns-${2}.conf"
+
+if [ -z "$1" -o -z "$2" ]
+then
+	echo "Usage: $0 [blacklist] [dns]" > /dev/stderr
+	exit 1
+fi
+
+if [ ! -s "$BL" ]
+then
+	echo "File not found: $BL" > /dev/stderr
+	exit 1
+fi
+
+if [ ! -s "$DNS" ]
+then
+        echo "File not found: $DNS" > /dev/stderr
+        exit 1
+fi
+
+
+ln -s -f -n "$BL"  "${CONF_DIR}/blacklist.conf"
+ln -s -f -n "$DNS" "${CONF_DIR}/dns.conf"
+
+/usr/sbin/service dnsmasq restart
+
