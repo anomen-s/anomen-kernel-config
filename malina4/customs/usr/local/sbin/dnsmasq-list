@@ -6,7 +6,7 @@ then
  exit 1
 fi
 
-NET=`ip -j -4 addr show eth0  | jq --raw-output '.[]?.addr_info[]?.local | match("(.*[.])[.][0-9]+";"g") | .captures[0].string'`
+NET=`ip -j -4 addr show eth0  | jq --raw-output '.[]?.addr_info[]?.local | match("(.*[.])[0-9]+";"g") | .captures[0].string'`
 
-grep "${NET}.${1}" /run/dnsmasq/dnsmasq.log | sed -ne 's/.*query\[A*\]\(.*\) from .*/\1/p'  | sort -u
+grep "${NET}${1}" /run/dnsmasq/dnsmasq.log | sed -ne 's/.*query\[A*\]\(.*\) from .*/\1/p'  | sort -u
 
