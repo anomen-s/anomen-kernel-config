@@ -1,0 +1,22 @@
+00:00.0 PCI bridge: Broadcom Limited Device 2711 (rev 10) (prog-if 00 [Normal decode])
+	Flags: bus master, fast devsel, latency 0, IRQ 63
+	Bus: primary=00, secondary=01, subordinate=01, sec-latency=0
+	I/O behind bridge: 00000000-00000fff
+	Memory behind bridge: c0000000-c00fffff
+	Capabilities: [48] Power Management version 3
+	Capabilities: [ac] Express Root Port (Slot-), MSI 00
+	Capabilities: [100] Advanced Error Reporting
+	Capabilities: [180] Vendor Specific Information: ID=0000 Rev=0 Len=028 <?>
+	Capabilities: [240] L1 PM Substates
+	Kernel driver in use: pcieport
+
+01:00.0 USB controller: VIA Technologies, Inc. VL805 USB 3.0 Host Controller (rev 01) (prog-if 30 [XHCI])
+	Subsystem: VIA Technologies, Inc. VL805 USB 3.0 Host Controller
+	Flags: bus master, fast devsel, latency 0, IRQ 64
+	Memory at 600000000 (64-bit, non-prefetchable) [size=4K]
+	Capabilities: [80] Power Management version 3
+	Capabilities: [90] MSI: Enable+ Count=1/4 Maskable- 64bit+
+	Capabilities: [c4] Express Endpoint, MSI 00
+	Capabilities: [100] Advanced Error Reporting
+	Kernel driver in use: xhci_hcd
+
