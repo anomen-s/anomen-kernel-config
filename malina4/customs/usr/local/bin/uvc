@@ -1,0 +1,4 @@
+#/bin/sh
+
+# no sound
+guvcview -a none

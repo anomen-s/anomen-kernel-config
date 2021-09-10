@@ -14,6 +14,8 @@ cd "$P"
 echo youtube-dl "$P" "$@"
 
 echo "$@" >> history.txt
-exec screen -d -m -S "yt-$P" youtube-dl --merge-output-format mkv -v --all-subs "$@" >> output.log
+
+screen -d -m -S "yt-$P"  bash -c "youtube-dl --merge-output-format mkv -v --all-subs '$@' > output.log 2> error.log"
+
 
 

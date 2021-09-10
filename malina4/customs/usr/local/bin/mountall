@@ -11,6 +11,9 @@
 
 LABEL=WD_E_2000GB
 DEV="/dev/disk/by-label/$LABEL"
+
+OE_DEV="/dev/disk/by-uuid/535cacad-3db9-4662-9529-5b4785e196ef"
+
 #pmount -u 022 -w -A -t ntfs-3g -c utf8 "$DEV" "$LABEL" || echo failed
 
 R=rw
@@ -21,8 +24,8 @@ fi
 
 sudo mount -o noatime,$R -t ntfs-3g "$DEV" /mnt/ext
 
-sudo cryptsetup luksOpen /dev/disk/by-partuuid/dbd2dbef-4de4-470f-8722-843a1005a0b0 oe_wd || exit 4
+sudo cryptsetup luksOpen "${OE_DEV}" oe_wd || exit 4
 
-sudo mount /dev/mapper/oe_wd $HOME/oe/local_wd || exit 5
+sudo mount /dev/mapper/oe_wd $HOME/oe/local || exit 5
 
 #sudo hdparm -B 1  "$DEV" || exit 2
