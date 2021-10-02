@@ -1,0 +1,63 @@
+Module                  Size  Used by
+nfnetlink              20480  0
+nls_iso8859_1          16384  1
+snd_intel8x0           45056  2
+vmwgfx                319488  2
+snd_ac97_codec        163840  1 snd_intel8x0
+ac97_bus               16384  1 snd_ac97_codec
+snd_pcm               118784  2 snd_intel8x0,snd_ac97_codec
+ttm                    73728  1 vmwgfx
+drm_kms_helper        245760  1 vmwgfx
+snd_seq_midi           20480  0
+intel_rapl_msr         20480  0
+intel_rapl_common      28672  1 intel_rapl_msr
+snd_seq_midi_event     16384  1 snd_seq_midi
+cec                    53248  1 drm_kms_helper
+snd_rawmidi            36864  1 snd_seq_midi
+snd_seq                73728  2 snd_seq_midi,snd_seq_midi_event
+rc_core                57344  1 cec
+snd_seq_device         16384  3 snd_seq,snd_seq_midi,snd_rawmidi
+fb_sys_fops            16384  1 drm_kms_helper
+syscopyarea            16384  1 drm_kms_helper
+snd_timer              40960  2 snd_seq,snd_pcm
+sysfillrect            16384  1 drm_kms_helper
+sysimgblt              16384  1 drm_kms_helper
+kvm_intel             286720  0
+snd                    94208  11 snd_seq,snd_seq_device,snd_intel8x0,snd_timer,snd_ac97_codec,snd_pcm,snd_rawmidi
+kvm                   835584  1 kvm_intel
+soundcore              16384  1 snd
+crct10dif_pclmul       16384  1
+ghash_clmulni_intel    16384  0
+aesni_intel           372736  0
+joydev                 28672  0
+crypto_simd            16384  1 aesni_intel
+input_leds             16384  0
+cryptd                 24576  2 crypto_simd,ghash_clmulni_intel
+vboxguest              45056  0
+serio_raw              20480  0
+glue_helper            16384  1 aesni_intel
+rapl                   20480  0
+mac_hid                16384  0
+sch_fq_codel           20480  2
+msr                    16384  0
+parport_pc             45056  0
+ppdev                  24576  0
+lp                     20480  0
+parport                65536  3 parport_pc,lp,ppdev
+drm                   552960  5 vmwgfx,drm_kms_helper,ttm
+ip_tables              32768  0
+x_tables               49152  1 ip_tables
+autofs4                45056  2
+hid_generic            16384  0
+usbhid                 61440  0
+hid                   135168  2 usbhid,hid_generic
+virtio_net             57344  0
+ahci                   40960  2
+net_failover           20480  1 virtio_net
+libahci                36864  1 ahci
+video                  53248  0
+crc32_pclmul           16384  0
+i2c_piix4              28672  0
+psmouse               163840  0
+failover               16384  1 net_failover
+pata_acpi              16384  0

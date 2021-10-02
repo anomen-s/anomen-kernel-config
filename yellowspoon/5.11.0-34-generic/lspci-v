@@ -1,0 +1,72 @@
+00:00.0 Host bridge: Intel Corporation 440FX - 82441FX PMC [Natoma] (rev 02)
+	Flags: fast devsel
+
+00:01.0 ISA bridge: Intel Corporation 82371SB PIIX3 ISA [Natoma/Triton II]
+	Flags: bus master, medium devsel, latency 0
+
+00:01.1 IDE interface: Intel Corporation 82371AB/EB/MB PIIX4 IDE (rev 01) (prog-if 8a [ISA Compatibility mode controller, supports both channels switched to PCI native mode, supports bus mastering])
+	Flags: bus master, fast devsel, latency 64
+	Memory at 000001f0 (32-bit, non-prefetchable) [virtual] [size=8]
+	Memory at 000003f0 (type 3, non-prefetchable) [virtual]
+	Memory at 00000170 (32-bit, non-prefetchable) [virtual] [size=8]
+	Memory at 00000370 (type 3, non-prefetchable) [virtual]
+	I/O ports at d000 [virtual] [size=16]
+	Kernel driver in use: ata_piix
+	Kernel modules: pata_acpi
+
+00:02.0 VGA compatible controller: VMware SVGA II Adapter (prog-if 00 [VGA controller])
+	Subsystem: VMware SVGA II Adapter
+	Flags: bus master, fast devsel, latency 64, IRQ 18
+	I/O ports at d010 [size=16]
+	Memory at e0000000 (32-bit, prefetchable) [size=64M]
+	Memory at f0000000 (32-bit, non-prefetchable) [size=2M]
+	Expansion ROM at 000c0000 [virtual] [disabled] [size=128K]
+	Kernel driver in use: vmwgfx
+	Kernel modules: vmwgfx
+
+00:03.0 Ethernet controller: Red Hat, Inc. Virtio network device
+	Subsystem: Red Hat, Inc. Virtio network device
+	Flags: bus master, fast devsel, latency 64, IRQ 19
+	I/O ports at d020 [size=32]
+	Capabilities: [80] Null
+	Kernel driver in use: virtio-pci
+
+00:04.0 System peripheral: InnoTek Systemberatung GmbH VirtualBox Guest Service
+	Flags: fast devsel, IRQ 20
+	I/O ports at d040 [size=32]
+	Memory at f0400000 (32-bit, non-prefetchable) [size=4M]
+	Memory at f0800000 (32-bit, prefetchable) [size=16K]
+	Kernel driver in use: vboxguest
+	Kernel modules: vboxguest
+
+00:05.0 Multimedia audio controller: Intel Corporation 82801AA AC'97 Audio Controller (rev 01)
+	Subsystem: Dell 82801AA AC'97 Audio Controller
+	Flags: bus master, medium devsel, latency 64, IRQ 21
+	I/O ports at d100 [size=256]
+	I/O ports at d200 [size=64]
+	Kernel driver in use: snd_intel8x0
+	Kernel modules: snd_intel8x0
+
+00:06.0 USB controller: Apple Inc. KeyLargo/Intrepid USB (prog-if 10 [OHCI])
+	Flags: bus master, fast devsel, latency 64, IRQ 22
+	Memory at f0804000 (32-bit, non-prefetchable) [size=4K]
+	Kernel driver in use: ohci-pci
+
+00:07.0 Bridge: Intel Corporation 82371AB/EB/MB PIIX4 ACPI (rev 08)
+	Flags: medium devsel, IRQ 9
+	Kernel driver in use: piix4_smbus
+	Kernel modules: i2c_piix4
+
+00:0d.0 SATA controller: Intel Corporation 82801HM/HEM (ICH8M/ICH8M-E) SATA Controller [AHCI mode] (rev 02) (prog-if 01 [AHCI 1.0])
+	Flags: bus master, fast devsel, latency 64, IRQ 21
+	I/O ports at d240 [size=8]
+	I/O ports at d248 [size=4]
+	I/O ports at d250 [size=8]
+	I/O ports at d258 [size=4]
+	I/O ports at d260 [size=16]
+	Memory at f0806000 (32-bit, non-prefetchable) [size=8K]
+	Capabilities: [70] Power Management version 3
+	Capabilities: [a8] SATA HBA v1.0
+	Kernel driver in use: ahci
+	Kernel modules: ahci
+

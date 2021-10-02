@@ -1,0 +1,7 @@
+[pull]
+	rebase = true
+[user]
+	name = anomen
+	email = ludek.h@gmail.com
+[credential]
+	helper = store
