@@ -1,0 +1,11 @@
+#!/bin/sh
+
+for A in `ls /dev/disk/by-label `
+do
+ test "x$A" = "xboot" && continue
+ test "x$A" = "xTAKEMS_16GB" && continue
+
+ echo Unmounting: $A
+ pumount  /dev/disk/by-label/$A
+done
+
