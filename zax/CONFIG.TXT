@@ -139,8 +139,12 @@ m CRYPTO_CRC32C_INTEL, CRYPTO_CRC32_PCLMUL, CONFIG_CRYPTO_SHA1_SSSE3, CRYPTO_SHA
 * CONFIG_SND_HDA_PREALLOC_SIZE=2048 (pulseaudio)
 * skip this, ZSWAP crashes kernel: zswap.enabled=1 zswap.compressor=lz4 zswap.max_pool_percent=25 zswap.zpool=z3fold
 
+5.10.49-gentoo-r1-z52
+=================
+* CONFIG_NR_CPUS=6
+m CONFIG_USB_VIDEO_CLASS
+m CONFIG_DRM_VBOXVIDEO
+
 
 TODO
 ====
-? CONFIG_DRM_VBOXVIDEO
-+ CONFIG_USB_VIDEO_CLASS
