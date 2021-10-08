@@ -1,0 +1,11 @@
+#!/bin/bash
+
+LOGFILE=/run/shm/conntest.log
+D=`date`
+
+if ping -c -q comtrend
+then
+ echo "OK $D"
+else
+ echo "DISCONNECTED $D  !!!!!"
+fi
