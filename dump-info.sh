@@ -1,5 +1,7 @@
 #!/bin/sh
 
+LC_ALL=C
+
 HOST=`uname -n`
 REL=`uname -r`
 
@@ -33,10 +35,11 @@ for CMD in dmesg glxinfo hwinfo lshw lsmod vainfo uptime lscpu
 do
  run "$CMD" "" "$CMD"
 done
+
 run "lspci" "-v" lspci-v
 run "lsusb" "-t" lsusb-t
 run "lsusb" "-v" lsusb-v
 run "uptime" "-s" uptime-s
 run "cat" "/proc/cpuinfo" cpuinfo
 run "cat" "/proc/mounts" mounts
-run "apt" "list" apt-list
+run "dpkg-query" "--list" dpkg-query-list
