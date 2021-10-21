@@ -43,3 +43,4 @@ run "uptime" "-s" uptime-s
 run "cat" "/proc/cpuinfo" cpuinfo
 run "cat" "/proc/mounts" mounts
 run "dpkg-query" "--list" dpkg-query-list
+run "equery" "list \"*\"" equery-list
