@@ -1,0 +1,20 @@
+[core]
+	quotepath = false
+[user]
+        name = anomen
+        email = ludek.h@gmail.com
+[diff]
+        color = auto
+[branch]
+        color = auto
+[color]
+        branch = auto
+        commit = auto
+        diff = auto
+        status = auto
+[push]
+	default = simple
+[pull]
+#	rebase = true
+[credential]
+	helper = store
