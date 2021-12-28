@@ -1,0 +1,4 @@
+#!/bin/sh
+
+exec screen -d -m -S vnch vncviewer localhost::15901
+

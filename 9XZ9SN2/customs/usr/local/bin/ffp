@@ -1,0 +1,138 @@
+#!/bin/sh
+
+# Defaults
+FFP_PREFIX="ffp_"
+DEFAULT_CMD="/usr/bin/firefox"
+MSG=""
+
+showHelp()
+{
+ echo "Usage $0 [options] [profile] [cmd]"
+ echo "	-l		list profiles"
+ echo "	-c [profile]	create profile"
+ echo "	-d [profile]	delete profile"
+ echo "	-C [cmd]	specify allowed command"
+ echo "	-A		allow to execute all commands"
+ echo "	-p [prefix]	user name prefix, (default: ffp_)"
+ echo "	-m [message]	description of profile"
+ echo "	-v		verbose"
+ echo ""
+ echo "	[profile]	profile to be started (created if not exists)"
+ echo "	[cmd]		command to be started (default: firefox)"
+}
+
+listProfiles()
+{
+  compgen -u | sort -u | sed -ne "/^${FFP_PREFIX}/s/^${FFP_PREFIX}//p"
+}
+
+profileExists()
+{
+    PROFILE="$1"
+    id "${FFP_PREFIX}${PROFILE}" > /dev/null
+}
+
+deleteProfile()
+{
+  PROFILE="$1"
+  FFP_USER="${FFP_PREFIX}${PROFILE}"
+  echo -n "Delete user ${FFP_USER} [y/n]? "
+  read X
+  if [ "x$X" = "xy" ]
+  then
+    sudo sed -i /etc/sudoers.d/99-ffp -e "/(${FFP_USER})/d"
+    sudo userdel -rf "${FFP_USER}"
+  else
+    Skipped deleting "${FFP_USER}"
+  fi
+}
+
+createProfile()
+{
+ PROFILE="$1"
+ FFP_USER="${FFP_PREFIX}${PROFILE}"
+ FFP_HOME=`eval "echo ~${FFP_USER}"`
+
+ if [ ! -d "${FFP_HOME}" ]
+ then
+  RPASS=`openssl passwd -1 -salt x  ${RANDOM}_${RANDOM}_${RANDOM}`
+  sudo useradd --no-user-group --password "$RPASS" --create-home "$FFP_USER"
+
+  U=`whoami`
+  sudo touch /etc/sudoers.d/99-ffp
+  sudo chmod 600 /etc/sudoers.d/99-ffp
+  echo "$U ALL=(${FFP_USER}) NOPASSWD: ${CMD:-$DEFAULT_CMD}" | sudo tee -a /etc/sudoers.d/99-ffp
+  FFP_HOME=`eval "echo ~${FFP_USER}"`
+  echo "${CMD:-$DEFAULT_CMD}" | sudo tee  "${FFP_HOME}/ffp.cmd"
+  echo "${MSG}" | sudo tee  "${FFP_HOME}/ffp.txt"
+ fi
+}
+
+startProfile()
+{
+ PROFILE="$1"
+ FFP_USER="${FFP_PREFIX}${PROFILE}"
+ FFP_HOME=`eval "echo ~${FFP_USER}"`  # "
+
+ xhost "+SI:localuser:$FFP_USER" > /dev/null
+
+ test -f "${FFP_HOME}/ffp.cmd" && DEFAULT_CMD=`cat "${FFP_HOME}/ffp.cmd"`
+ echo "Starting: $FFP_USER (${CMD:-$DEFAULT_CMD})"
+ test -f "${FFP_HOME}/ffp.txt" && cat "${FFP_HOME}/ffp.txt"
+ cd "${FFP_HOME}"
+ exec screen -d -m -S "$FFP_USER" sudo -u "$FFP_USER" "${CMD:-$DEFAULT_CMD}"
+}
+
+if [ root = "$(whoami)" ]
+then
+  echo "*****************" >&2
+  echo "Running as root !" >&2
+  echo "*****************" >&2
+fi
+
+while getopts "p:Am:C:lc:d:hv" OPT
+do
+ case "$OPT" in
+   p) FFP_PREFIX="$OPTARG"
+      ;;
+   A) CMD="ALL"
+      ;;
+   m) MSG="$OPTARG"
+      ;;
+   C) CMD=`which "$OPTARG"`
+      ;;
+   l) listProfiles
+      exit $!
+      ;;
+   c) createProfile "$OPTARG"
+      exit $!
+      ;;
+   d) deleteProfile "$OPTARG"
+      exit $!
+      ;;
+   h) showHelp
+      exit 0
+      ;;
+   v) set -x
+      ;;
+   *) showHelp 1>&2
+      exit 1
+      ;;
+ esac
+done
+
+shift "$((OPTIND-1))"
+
+if ! profileExists "$1"
+then
+ echo "Profile $1 doesn't exist". >&2
+ exit 1
+ #createProfile "$1" || exit $!
+fi
+
+if [ -n "$2" ]
+then
+ CMD=`which "$OPTARG"`
+fi
+
+startProfile "$1"
