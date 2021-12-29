@@ -1,0 +1,97 @@
+Module                  Size  Used by
+sg                     36864  0
+lp                     20480  0
+parport_pc             40960  0
+ppdev                  20480  0
+parport                45056  3 parport_pc,lp,ppdev
+twofish_generic        20480  0
+twofish_x86_64         16384  0
+twofish_common         24576  2 twofish_x86_64,twofish_generic
+serpent_sse2_x86_64    53248  0
+serpent_generic        28672  1 serpent_sse2_x86_64
+snd_seq                73728  0
+snd_seq_device         16384  1 snd_seq
+ccm                    20480  6
+fuse                  126976  4
+cmac                   16384  3
+algif_hash             16384  1
+algif_skcipher         16384  1
+af_alg                 24576  6 algif_hash,algif_skcipher
+bnep                   20480  2
+dm_mod                126976  0
+binfmt_misc            16384  1
+nvidia_drm             53248  6
+nvidia_modeset       1146880  11 nvidia_drm
+pktcdvd                36864  0
+nvidia              34623488  469 nvidia_modeset
+intel_rapl_msr         16384  0
+joydev                 24576  0
+intel_rapl_common      24576  1 intel_rapl_msr
+iosf_mbi               16384  1 intel_rapl_common
+btusb                  53248  0
+btrtl                  16384  1 btusb
+btbcm                  16384  1 btusb
+btintel                24576  1 btusb
+x86_pkg_temp_thermal    16384  0
+snd_hda_codec_realtek   126976  1
+intel_powerclamp       16384  0
+hwmon_vid              16384  0
+snd_hda_codec_generic    77824  1 snd_hda_codec_realtek
+bluetooth             491520  30 btrtl,btintel,btbcm,bnep,btusb
+ledtrig_audio          16384  1 snd_hda_codec_generic
+i2c_dev                16384  0
+snd_hda_codec_hdmi     61440  1
+ath9k_htc              86016  0
+coretemp               16384  0
+ath9k_common           20480  1 ath9k_htc
+uas                    28672  0
+iwlmvm                323584  0
+ath9k_hw              450560  2 ath9k_htc,ath9k_common
+drm_kms_helper        180224  1 nvidia_drm
+ecdh_generic           16384  2 bluetooth
+iTCO_wdt               16384  0
+snd_hda_intel          32768  4
+usb_storage            65536  2 uas
+ath                    32768  3 ath9k_htc,ath9k_common,ath9k_hw
+kvm_intel             225280  0
+ecc                    32768  1 ecdh_generic
+snd_intel_dspcfg       16384  1 snd_hda_intel
+iwlwifi               249856  1 iwlmvm
+mac80211              503808  2 ath9k_htc,iwlmvm
+usbhid                 40960  0
+sr_mod                 28672  0
+kvm                   516096  1 kvm_intel
+libarc4                16384  1 mac80211
+snd_hda_codec         102400  4 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec_realtek
+irqbypass              16384  1 kvm
+crc32c_intel           24576  2
+cdrom                  36864  2 pktcdvd,sr_mod
+ghash_clmulni_intel    16384  0
+msr                    16384  0
+snd_hda_core           65536  5 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,snd_hda_codec_realtek
+mei_me                 24576  0
+cpufreq_conservative    16384  0
+aesni_intel           364544  8
+cfg80211              385024  6 ath9k_htc,ath9k_common,iwlmvm,ath,iwlwifi,mac80211
+drm                   466944  10 drm_kms_helper,nvidia,nvidia_drm
+snd_pcm               102400  4 snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,snd_hda_core
+crypto_simd            16384  2 serpent_sse2_x86_64,aesni_intel
+snd_timer              32768  2 snd_seq,snd_pcm
+cpufreq_powersave      16384  0
+cryptd                 20480  3 crypto_simd,ghash_clmulni_intel
+drm_panel_orientation_quirks    20480  1 drm
+e1000e                225280  0
+glue_helper            16384  2 serpent_sse2_x86_64,aesni_intel
+snd                    81920  16 snd_hda_codec_generic,snd_seq,snd_seq_device,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,snd_timer,snd_pcm
+agpgart                36864  1 drm
+mei                    81920  1 mei_me
+i2c_i801               28672  0
+pcspkr                 16384  0
+rfkill                 24576  4 bluetooth,cfg80211
+i2c_smbus              16384  1 i2c_i801
+thermal                20480  0
+fan                    16384  0
+video                  45056  0
+wmi                    24576  0
+backlight              16384  2 video,drm
+button                 16384  0

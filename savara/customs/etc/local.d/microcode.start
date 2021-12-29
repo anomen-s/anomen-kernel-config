@@ -1,0 +1,5 @@
+
+# check if this is needed
+
+echo 1 > /sys/devices/system/cpu/microcode/reload
+

@@ -1,0 +1,20 @@
+#ludek	ALL=(ALL) ALL
+
+#ludek		ALL=(ALL)	NOPASSWD: sudoedit /etc/make.conf
+ludek		ALL = NOPASSWD: /usr/sbin/nethogs
+ludek		ALL=(ALL) 	NOPASSWD: /usr/bin/truecrypt
+ludek		ALL=(%root)	NOPASSWD: /etc/init.d/net.wlan0
+ludek		ALL=(ALL)	NOPASSWD: /etc/init.d/mysql
+ludek           ALL=(ALL)       NOPASSWD: /etc/init.d/winstrom-server
+ludek           ALL=(ALL)       NOPASSWD: /usr/bin/cpufreq-set
+ludek  		ALL=(ALL)	NOPASSWD: /sbin/shutdown
+ludek  		ALL=(ALL)	NOPASSWD: /usr/sbin/lsusb
+ludek  		ALL=(ALL)	NOPASSWD: /usr/sbin/lspci
+ludek  		ALL=(ALL)	NOPASSWD: /usr/sbin/hibernate
+ludek  		ALL=(ALL)	NOPASSWD: /usr/bin/tee /sys/devices/system/cpu/cpu1/online
+
+
+ludek		ALL=(ALL)	NOPASSWD: sudoedit /etc/hosts
+
+
+

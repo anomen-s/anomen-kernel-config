@@ -204,5 +204,14 @@
 + CONFIG_BT_BNEP
 + CONFIG_BT_HIDP
 
+5.10.61-gentoo-s11
+=================
++ CONFIG_X86_MCELOG_LEGACY (mcelog)
++ CONFIG_RFKILL
++ CONFIG_BT_BNEP_MC_FILTER (net-wireless/bluez)
++ CONFIG_BT_BNEP_PROTO_FILTER (net-wireless/bluez)
++ CONFIG_CRYPTO_USER
++ CONFIG_EXFAT_FS
+
 TODO
 ====
