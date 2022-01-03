@@ -1,0 +1,22 @@
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[user]
+	name = anomen
+	email = ludek.h@gmail.com
+[http]
+	proxy = localhost:3127
+	sslVerify = false
+[push]
+	default = matching
+[credential]
+	helper = store
+[core]
+	quotepath = false
+[pull]
+	rebase = 
+[alias]
+	s = status -b .
+	d = diff .
+	cm = commit
