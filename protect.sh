@@ -9,7 +9,7 @@ getpw() {
     echo "Writing $PW_FILE..."
     echo "$PW" > $PW_FILE
     echo "" >> $PW_FILE
-    echo "This is password for sensitive files in repository https://github.com/anomen-s/anomen-kernel-config.git" >> $PW_FILE
+    echo "This is password for sensitive files in repository `git config --local remote.origin.url`" >> $PW_FILE
     PW=x
 }
 
