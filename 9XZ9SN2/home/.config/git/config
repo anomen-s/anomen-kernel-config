@@ -18,3 +18,7 @@
 #	rebase = true
 [credential]
 	helper = store
+[alias]
+	s = status -b .
+	d = diff .
+	cm = commit
