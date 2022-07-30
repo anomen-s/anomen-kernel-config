@@ -1,6 +1,6 @@
 # anomen: recreate log structure on tmpfs
-mkdir -p /var/log/apache2
-chown -R www-data /var/log/apache2
+mkdir -p /run/shm/apache2
+chown -R www-data /run/shm/apache2
 
 ### htcacheclean settings ###
 

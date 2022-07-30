@@ -36,25 +36,28 @@ hdmi_force_hotplug=1
 #sdtv_mode=2
 
 # kernel
+#kernel=kernel-4.1.15-r3+.img
 kernel=kernel.img
 
 #uncomment to overclock the arm. 700 MHz is the default.
-arm_freq=900
-# anomen: test 950, 1000?
-over_voltage=1
+arm_freq=800
+# anomen: 900 test 950, 1000?
+over_voltage=0
+# anomen: 1
 
 # for more options see http://elinux.org/RPi_config.txt
+# increased from 16 to test if gpu crashes will stop
 gpu_mem=16
 start_x=0
-arm_freq_min=500
+#arm_freq_min=500
 
-#default sdram_freq=400
-sdram_freq=500
-# default core_freq=250
-core_freq=350
+#default sdram_freq=400, tired: 500
+sdram_freq=400
+# default core_freq=250, tried 350
+core_freq=250
 
 # should be same as core_freq? 
-gpu_freq=350
+gpu_freq=250
 
 # test next:
 #core_freq=400
@@ -73,12 +76,12 @@ hdmi_mode=9
 #dtdebug=1
 
 #dtoverlay=w1-gpio
-#dtoverlay=eeprom
+#dtoverlay=eepromtest
 #dtoverlay-anomen-raspi,ds2482,eeprom256,bmp180
-dtoverlay=bmp085_i2c-sensor
+#dtoverlay=bmp085_i2c-sensor
 dtoverlay=ds2482
 #dtoverlay=dht11
-dtoverlay=eeprom256
+#dtoverlay=eeprom256
 
 # dtoverlay=pps-gpio,gpiopin=18
 dtoverlay=i2c-rtc,ds3231

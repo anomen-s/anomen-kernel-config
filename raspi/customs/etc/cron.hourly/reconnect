@@ -2,7 +2,7 @@
 
 DATE=`date`
 
-LOG=/var/log/reconnect.log
+LOG=/run/shm/reconnect.log
 
 IF=eth0
 

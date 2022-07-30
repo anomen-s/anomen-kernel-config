@@ -1,5 +1,5 @@
 # anomen: recreate log structure on tmpfs
-mkdir -p /var/log/cups
+mkdir -p /run/shm/cups
 
 # Cups configure options
 

@@ -7,3 +7,7 @@ CONFIG_IIO=m
 CONFIG_DHT11=m
 CONFIG_BMP085_I2C
 
+
+Links
+=====
+https://github.com/raspberrypi/linux
