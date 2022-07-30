@@ -1,11 +1,12 @@
-#!/bin/bash
 # /etc/conf.d/local.start
 
-# fix /usr/src/linux symlink
+# This is a good place to load any misc.
+# programs on startup ( 1>&2 )
+
 
 KLINK=`ls -l /usr/src/linux | sed -ne 's/.*->[ \t]*//p'`
 KCURR=linux-`uname -r | sed -ne 's/-.[0-9a-z]*$//p' `
-if [ "x$KLINK" "!=" "x$KCURR" ]
+if [ "$KLINK" "!=" "$KCURR" ]
 then
  echo -n "Incorrect /usr/src/linux link. "
  if [ -d "/usr/src/$KCURR" ]

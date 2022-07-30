@@ -1,0 +1,4 @@
+#sys-apps/portage python_targets_python3_8
+#app-portage/gemato python_targets_python3_8
+#dev-python/testtools python_targets_python3_8
+#dev-python/subunit python_targets_python3_8

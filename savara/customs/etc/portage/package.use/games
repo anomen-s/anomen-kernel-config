@@ -18,4 +18,5 @@ media-libs/sdl-mixer midi
 
 games-util/steam-client-meta steamfonts
 media-libs/mesa osmesa
-virtual/wine d3d9 staging
+virtual/wine d3d9 -staging
+games-action/supertuxkart recorder

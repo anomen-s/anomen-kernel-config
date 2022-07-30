@@ -28,3 +28,6 @@ sys-devel/gcc gcj -libffi
 
 dev-java/commons-collections test-framework
 dev-java/swing-layout source
+dev-java/oracle-jdk-bin source visualvm commercial
+dev-java/oracle-jdk-bin javafx
+dev-java/gradle-bin source

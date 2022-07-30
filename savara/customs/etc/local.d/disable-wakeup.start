@@ -1,0 +1,7 @@
+
+# disable USB and LAN wakup
+echo XHC | sudo tee /proc/acpi/wakeup
+echo GLAN | sudo tee /proc/acpi/wakeup
+
+
+

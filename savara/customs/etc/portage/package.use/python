@@ -1,0 +1,14 @@
+#x11-terms/guake		PYTHON_SINGLE_TARGET: python3_7
+#dev-python/pycairo	PYTHON_SINGLE_TARGET: python3_7
+#dev-python/setuptools	PYTHON_TARGETS: python3_7
+#dev-python/cryptography	PYTHON_TARGETS: python3_7
+#dev-util/lldb		PYTHON_SINGLE_TARGET: python3_7
+
+#dev-python/sphinxcontrib-qthelp -python_targets_python3_9
+#dev-python/pycairo python_targets_python3_7 python_targets_python2_7
+#dev-python/setuptools python_targets_python3_7
+#dev-python/cryptography python_targets_python3_7
+#dev-util/lldb python_targets_python3_7
+#dev-util/lldb python_single_target_python3_7
+#dev-python/sphinxcontrib-qthelp -python_targets_python3_9
+#dev-python/setuptools python_targets_python3_6 python_targets_python3_9

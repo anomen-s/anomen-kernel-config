@@ -1,0 +1,116 @@
+media-libs/libsdl2 haptic
+# required by dev-libs/elfutils-0.177::gentoo
+# required by app-arch/rpm-4.14.2.1-r1::gentoo
+# required by @selected
+# required by @world (argument)
+>=sys-libs/zlib-1.2.11-r2 static-libs
+# required by dev-libs/elfutils-0.177::gentoo[bzip2]
+# required by app-arch/rpm-4.14.2.1-r1::gentoo
+# required by @selected
+# required by @world (argument)
+>=app-arch/bzip2-1.0.6-r11 static-libs
+# required by dev-libs/elfutils-0.177::gentoo[lzma]
+# required by app-arch/rpm-4.14.2.1-r1::gentoo
+# required by @selected
+# required by @world (argument)
+>=app-arch/xz-utils-5.2.4-r2 static-libs
+# required by dev-python/sphinx-2.4.4::gentoo
+# required by sys-kernel/linux-docs-5.4.39::gentoo
+# required by @selected
+# required by @world (argument)
+#>=dev-python/sphinxcontrib-qthelp-1.0.3 -python_targets_python3_9
+# required by dev-python/sphinx-2.4.4::gentoo
+# required by dev-python/sphinxcontrib-applehelp-1.0.2::gentoo
+#>=dev-python/sphinxcontrib-qthelp-1.0.3 -python_targets_python3_9
+# required by dev-python/sphinx-2.4.4::gentoo
+# required by dev-python/sphinxcontrib-applehelp-1.0.2::gentoo
+#>=dev-python/sphinxcontrib-serializinghtml-1.1.4 -python_targets_python3_9
+# required by dev-python/sphinx-2.4.4::gentoo
+# required by dev-python/sphinxcontrib-applehelp-1.0.2::gentoo
+#>=dev-python/sphinxcontrib-htmlhelp-1.0.3 -python_targets_python3_9
+# required by dev-python/sphinx-2.4.4::gentoo
+# required by dev-python/sphinxcontrib-applehelp-1.0.2::gentoo
+#>=dev-python/sphinxcontrib-jsmath-1.0.1-r1 -python_targets_python3_9
+# required by dev-python/sphinx-2.4.4::gentoo
+## required by dev-python/sphinxcontrib-applehelp-1.0.2::gentoo
+#>=dev-python/sphinxcontrib-devhelp-1.0.2 -python_targets_python3_9
+# required by dev-python/sphinx-2.4.4::gentoo
+# required by dev-python/sphinxcontrib-devhelp-1.0.2::gentoo
+#>=dev-python/sphinxcontrib-applehelp-1.0.2 -python_targets_python3_9
+# required by app-emulation/docker-compose-1.27.4::gentoo
+# required by @selected
+# required by @world (argument)
+#>=dev-python/requests-2.25.1-r2 python_targets_python3_8
+# required by dev-python/requests-2.25.1-r2::gentoo
+# required by app-portage/gemato-16.2::gentoo[gpg]
+# required by sys-apps/portage-3.0.20-r6::gentoo[-build,rsync-verify]
+# required by @selected
+# required by @world (argument)
+#>=dev-python/chardet-4.0.0 python_targets_python3_8
+# required by dev-python/requests-2.25.1-r2::gentoo
+# required by app-portage/gemato-16.2::gentoo[gpg]
+# required by sys-apps/portage-3.0.20-r6::gentoo[-build,rsync-verify]
+# required by @selected
+# required by @world (argument)
+#>=dev-python/idna-3.2 python_targets_python3_8
+# required by dev-python/requests-2.25.1-r2::gentoo
+# required by app-portage/gemato-16.2::gentoo[gpg]
+# required by sys-apps/portage-3.0.20-r6::gentoo[-build,rsync-verify]
+# required by @selected
+# required by @world (argument)
+#>=dev-python/urllib3-1.26.5 python_targets_python3_8
+# required by app-emulation/docker-compose-1.27.4::gentoo
+# required by @selected
+# required by @world (argument)
+#>=dev-python/PySocks-1.7.1-r1 python_targets_python3_8
+# required by app-misc/fdupes-2.1.2::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-libs/libpcre2-10.36-r1 pcre32
+# required by media-gfx/fbida-2.14-r2::gentoo[X]
+# required by x11-misc/xscreensaver-6.01-r4::gentoo
+# required by @selected
+# required by @world (argument)
+>=x11-libs/motif-2.3.8-r2 xft
+# required by dev-python/requests-2.26.0::gentoo
+# required by dev-python/docker-py-5.0.0::gentoo
+# required by app-emulation/docker-compose-1.29.2::gentoo[-test]
+# required by @selected
+# required by @world (argument)
+#>=dev-python/charset_normalizer-2.0.4 python_targets_python3_8
+# required by dev-python/charset_normalizer-2.0.4::gentoo
+# required by dev-python/requests-2.26.0::gentoo
+# required by dev-python/docker-py-5.0.0::gentoo
+# required by app-emulation/docker-compose-1.29.2::gentoo[-test]
+# required by @selected
+# required by @world (argument)
+#>=dev-python/setuptools-57.4.0-r2 python_targets_python3_8
+# required by dev-python/setuptools-57.5.0::gentoo
+# required by dev-python/mako-1.1.5::gentoo
+# required by media-libs/mesa-21.2.5::gentoo
+# required by app-emulation/wine-vanilla-6.0.1::gentoo[osmesa]
+# required by @selected
+# required by @world (argument)
+#>=dev-python/setuptools_scm-6.3.2 python_targets_python3_8
+# required by dev-python/setuptools_scm-6.3.2::gentoo
+# required by dev-python/python-dateutil-2.8.2::gentoo
+# required by dev-python/arrow-1.1.1::gentoo
+# required by dev-python/isoduration-20.11.0::gentoo
+# required by dev-python/jsonschema-4.1.2::gentoo
+# required by app-emulation/docker-compose-1.29.2::gentoo[-test]
+# required by @selected
+# required by @world (argument)
+#>=dev-python/packaging-21.0 python_targets_python3_8
+# required by dev-python/setuptools_scm-6.3.2::gentoo
+# required by dev-python/python-dateutil-2.8.2::gentoo
+# required by dev-python/arrow-1.1.1::gentoo
+# required by dev-python/isoduration-20.11.0::gentoo
+# required by dev-python/jsonschema-4.1.2::gentoo
+# required by app-emulation/docker-compose-1.29.2::gentoo[-test]
+# required by @selected
+# required by @world (argument)
+#>=dev-python/tomli-1.2.1 python_targets_python3_8
+# required by dev-libs/elfutils-0.187::gentoo[zstd]
+# required by @selected
+# required by @world (argument)
+>=app-arch/zstd-1.5.2 static-libs

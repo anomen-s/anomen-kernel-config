@@ -1,0 +1,37 @@
+#!/bin/bash
+# /etc/conf.d/local.start
+
+# This is a good place to load any misc.
+# programs on startup ( 1>&2 )
+
+
+/sbin/hwclock --utc --systohc
+
+for A in `ls /home` 
+do
+ if getent passwd $A > /dev/null
+ then
+
+  mkdir -p /tmp/tmp-$A 
+  chmod 700 /tmp/tmp-$A 
+  chown $A:$A /tmp/tmp-$A
+
+ fi
+done
+
+
+mkdir -p /tmp/pub
+chown root:root /tmp/pub
+chmod 1777 /tmp/pub
+touch /tmp/pub
+
+# vmware network problem
+ethtool -K eth0 rx off
+ethtool -K eth0 tx off
+
+# WOL
+#ethtool -s eth0 wol g
+
+# managed by alsa
+#amixer -q sset "Front"  playback 14 toggle on
+

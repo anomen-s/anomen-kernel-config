@@ -7,14 +7,9 @@ net-misc/youtube-dl
 
 
 app-arch/unace
-~app-misc/mc-4.7.4
 app-misc/fslint
-~dev-perl/App-CLI-0.08
 ~dev-perl/SMTP-Server-1.1
 
-~dev-lang/fpc-ide-2.4.0
-~dev-util/gtk-doc-1.15
-~media-gfx/sane-backends-1.0.21
 app-text/unicode
 net-misc/freerapid-downloader
 app-misc/gpsdrive
@@ -41,3 +36,14 @@ app-editors/sublime-text
 net-misc/gerbera
 media-libs/libdmtx
 dev-ruby/hashicorp-checkpoint
+dev-ruby/rake
+sys-fs/dislocker
+media-gfx/yacreader
+app-arch/unarr
+net-news/rssguard
+media-sound/gmtp
+games-misc/wtf
+app-text/xlsx2csv
+app-arch/upx
+dev-lang/ghc
+app-admin/haskell-updater

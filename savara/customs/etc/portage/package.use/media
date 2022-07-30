@@ -1,3 +1,4 @@
 media-video/vlc lua
 media-video/mplayer bidi rtmp gsm
 media-libs/libvpx postproc
+media-libs/freetype harfbuzz

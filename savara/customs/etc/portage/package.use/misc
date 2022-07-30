@@ -68,9 +68,7 @@ dev-libs/apr-util -berkdb
 
 
 #dev-db/mysql embedded
-app-misc/gpsdrive garmin
 dev-vcs/subversion -kde
-app-cdr/k3b -musepack
 www-client/firefox mozdevelop
 media-gfx/graphicsmagick -imagemagick
 
@@ -83,7 +81,7 @@ dev-vcs/svk -bash-completion
 dev-db/postgresql-server tcl
 dev-db/sqlite extensions
 app-text/texlive extra
-dev-lang/php -sqlite
+#dev-lang/php -sqlite
 dev-db/libdbi-drivers -sqlite
 # bug? - compile failed
 #media-video/gpac -javascript
@@ -116,8 +114,10 @@ net-print/cups -usb
 net-libs/gnutls pkcs11
 net-misc/curl -adns
 #bu
-sys-power/upower deprecated
-net-analyzer/nmap -lua
+#sys-power/upower deprecated
+#net-analyzer/nmap -lua
 media-libs/mesa gles2
 sys-fs/cryptsetup -gcrypt
 www-client/firefox hwaccel gtk2
+net-wireless/bluez deprecated
+#app-misc/mc -slang

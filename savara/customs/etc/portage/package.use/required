@@ -25,3 +25,11 @@ dev-libs/xmlsec gcrypt
 dev-libs/xmlsec nss
 dev-python/PyQt5 webkit
 dev-qt/qtwebkit printsupport
+mail-client/mutt -gnutls
+media-libs/sdl2-mixer midi
+app-editors/emacs -imagemagick
+net-libs/nodejs inspector
+dev-db/mariadb -pam
+media-gfx/sane-backends -sane_backends_escl
+net-analyzer/net-snmp -mysql
+dev-libs/libdbusmenu gtk3

@@ -27,9 +27,9 @@
 # for a list of modules and their options.
 
 
-modules="cpufreq_powersave cpufreq_conservative msr ath9k_htc i2c-dev it87"
+modules="cpufreq_powersave cpufreq_conservative msr ath9k_htc i2c-dev it87 vboxdrv vboxnetflt vboxnetadp vboxpci"
 
-#modules_2_6="${modules_2_6}  vboxdrv vboxnetflt vboxnetadp" 
+#modules_2_6="${modules_2_6}  " 
 
 #OSS - loaded by alsa
 #snd_pcm_oss 

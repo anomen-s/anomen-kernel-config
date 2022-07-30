@@ -11,8 +11,6 @@ NTPCLIENT_CMD="ntpdate"
 # change the default 'pool.ntp.org' to something closer
 # to your machine.  See http://www.pool.ntp.org/ or
 # try running `netselect -s 3 pool.ntp.org`.
-#NTPCLIENT_OPTS="-s -b -u pool.ntp.org"
-
 NTPCLIENT_OPTS="-u -v tik.cesnet.cz tak.cesnet.cz "
 #NTPCLIENT_OPTS="-d -v -s -b -u tak.cesnet.cz"
 
@@ -24,4 +22,11 @@ NTPCLIENT_OPTS="-u -v tik.cesnet.cz tak.cesnet.cz "
 #NTPCLIENT_OPTS="-s -b -u \
 #	0.gentoo.pool.ntp.org 1.gentoo.pool.ntp.org \
 #	2.gentoo.pool.ntp.org 3.gentoo.pool.ntp.org"
+#NTPCLIENT_OPTS="-s -b -u \
+#	0.gentoo.pool.ntp.org 1.gentoo.pool.ntp.org \
+#	2.gentoo.pool.ntp.org 3.gentoo.pool.ntp.org"
 
+# If you use hostnames above, then you should depend on dns
+# being up & running before we try to run.  Otherwise, you
+# can disable this.
+rc_use="dns"

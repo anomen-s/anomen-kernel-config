@@ -3,25 +3,16 @@
 # to protect distfiles from "ecleaning". You can also name some specific files.
 # See `man eclean` for syntax details.
 metadata.dtd
-
-# Some packages, not to be removed if ecleaning  without --fetch-restricted
-
+dev-java/sun-javamail
+dev-java/oracle-jdk-bin
 app-crypt/truecrypt
-app-emulation/vmware-workstation
-app-emulation/emul-linux-x86-java
-app-emulation/vmware-player
-app-emulation/vmware-modules
+dev-java/java-sdk-docs
 dev-java/sun-jdk
-dev-java/sun-jmx
-dev-java/sun-jimi
+
 dev-java/sun-jms
 dev-java/sun-jce-bin
-dev-java/sun-jre-bin
-dev-java/sun-jdk
-dev-java/jsr223
-
-tahomabd.ttf
-tahoma.ttf
-
-dev-java/oracle-jdk-bin
 dev-java/oracle-jre-bin
+
+metadata.xsd
+portage-\d\d\d\d\d\d\d\d\.tar\.bz2
+

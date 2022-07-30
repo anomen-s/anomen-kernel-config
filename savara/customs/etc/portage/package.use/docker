@@ -1,2 +1,5 @@
-app-emulation/docker aufs btrfs device-mapper overlay pkcs11
+# move app-emulation/docker app-containers/docker
+app-containers/docker aufs btrfs device-mapper overlay pkcs11
 sys-fs/aufs3 ramfs
+# move app-emulation/containerd app-containers/containerd
+app-containers/containerd btrfs
