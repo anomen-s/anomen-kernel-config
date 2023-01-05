@@ -1,4 +1,5 @@
 net-mail/davmail-bin
-=dev-vcs/tortoisehg-5.5.2
-=dev-vcs/mercurial-5.5.2
+=dev-vcs/tortoisehg-6.2.1
+=dev-vcs/mercurial-6.2.1
 net-misc/postman-bin
+www-apps/chromedriver-bin

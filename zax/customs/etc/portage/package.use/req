@@ -1,4 +1,4 @@
-dev-libs/elfutils        static-libs
+#dev-libs/elfutils        static-libs
 dev-libs/xmlsec          nss
 sys-libs/zlib            minizip
 media-plugins/audacious-plugins    qt5 -gtk -gtk5 -libnotify
@@ -17,3 +17,19 @@ sys-fs/cryptsetup       -gcrypt
 media-libs/sdl-mixer     midi mod
 media-libs/sdl2-mixer midi mod
 dev-libs/xmlsec gcrypt
+media-libs/libsdl2      haptic
+
+net-libs/nodejs inspector
+dev-libs/libdbusmenu gtk3
+x11-libs/libdrm libkms
+www-servers/lighttpd -kerberos
+#sys-apps/file -python
+sys-apps/shadow -pam
+dev-lang/php -mssql
+sys-devel/gcc graphite
+app-crypt/gpgme -qt5
+dev-util/cmake -qt5
+dev-libs/libpcre2 pcre32
+sys-libs/libseccomp static-libs
+media-libs/freetype harfbuzz
+media-libs/cogl gles2

@@ -25,3 +25,13 @@ app-arch/unarr
 media-gfx/yacreader
 
 net-news/rssguard
+games-misc/cowsay
+net-nds/ApacheDirectoryStudio
+
+sci-mathematics/yafu
+net-misc/youtube-viewer
+
+dev-util/yamllint
+dev-util/difftastic
+app-text/cpdf
+dev-ml/camlpdf

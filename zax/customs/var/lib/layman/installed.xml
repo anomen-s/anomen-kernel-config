@@ -1,0 +1,13 @@
+<repositories version="1.0" encoding="unicode">
+  <repo status="unofficial" quality="experimental" priority="50">
+    <name>anomen</name>
+    <description>anomen's personal Gentoo overlay</description>
+    <homepage>https://github.com/anomen-s/anomen-overlay</homepage>
+    <owner>
+      <email>ludek_h@seznam.cz</email>
+      <name>anomen</name>
+    </owner>
+    <source type="git">https://github.com/anomen-s/anomen-overlay.git</source>
+    <feed>https://github.com/anomen-s/anomen-overlay/commits/master.atom</feed>
+  </repo>
+</repositories>

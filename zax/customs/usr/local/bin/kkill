@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if [ -z "$1" ]
+then
+ echo missing pod name!
+ exit 1
+fi
+
+kubectl delete pod --selector=app.kubernetes.io/name=$1

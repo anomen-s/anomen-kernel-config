@@ -1,1 +1,3 @@
 dev-java/oracle-jdk-bin derby javafx jce source visualvm commercial
+dev-java/openjdk doc source examples
+dev-java/openjdk-bin source

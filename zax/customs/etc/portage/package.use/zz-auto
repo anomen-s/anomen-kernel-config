@@ -1,0 +1,61 @@
+# required by dev-vcs/gitg-3.32.1::gentoo
+# required by @selected
+# required by @world (argument)
+>=app-text/gtkspell-3.0.9 vala
+# required by dev-vcs/gitg-3.32.1::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-libs/libdazzle-3.30.2 vala
+# required by www-client/firefox-68.1.0::gentoo[system-libvpx]
+# required by @selected
+# required by @world (argument)
+>=media-libs/libvpx-1.7.0 postproc
+# required by dev-qt/qtwebengine-5.13.2::gentoo
+# # required by dev-python/PyQtWebEngine-5.13.2::gentoo
+# # required by app-text/calibre-4.9.1-r1::gentoo[python_single_target_python3_6]
+# # required by @selected
+# # required by @world (argument)
+>=dev-qt/qtwebchannel-5.13.2 qml
+# # required by dev-python/PyQtWebEngine-5.13.2::gentoo
+# # required by app-text/calibre-4.9.1-r1::gentoo[python_single_target_python3_6]
+# # required by @selected
+# # required by @world (argument)
+>=dev-python/PyQt5-5.13.2 webchannel
+# # required by dev-python/PyQtWebEngine-5.13.2::gentoo
+# # required by app-text/calibre-4.9.1-r1::gentoo[python_single_target_python3_6]
+# # required by @selected
+# # required by @world (argument)
+>=dev-qt/qtwebengine-5.13.2 widgets
+# # required by dev-python/PyQt5-5.13.2::gentoo[multimedia]
+# # required by dev-python/PyQtWebEngine-5.13.2::gentoo
+# # required by app-text/calibre-4.9.1-r1::gentoo[python_single_target_python3_6]
+# # required by @selected
+# # required by @world (argument)
+>=dev-qt/qtmultimedia-5.13.2-r1 widgets
+#
+# required by dev-libs/elfutils-0.177::gentoo
+# required by sys-devel/prelink-20151030::gentoo
+# required by @selected
+# required by @world (argument)
+>=sys-libs/zlib-1.2.11-r2 static-libs
+# required by dev-libs/elfutils-0.177::gentoo[bzip2]
+# required by sys-devel/prelink-20151030::gentoo
+# required by @selected
+# required by @world (argument)
+>=app-arch/bzip2-1.0.6-r11 static-libs
+# required by dev-libs/elfutils-0.177::gentoo[lzma]
+# required by sys-devel/prelink-20151030::gentoo
+# required by @selected
+# required by @world (argument)
+>=app-arch/xz-utils-5.2.4-r2 static-libs
+# required by dev-util/itstool-2.0.6-r1::gentoo[python_single_target_python3_6]
+# required by x11-misc/shared-mime-info-1.15::gentoo
+# required by dev-lang/vala-0.48.6::gentoo
+# required by app-crypt/libsecret-0.20.3::gentoo[vala]
+# required by app-crypt/pinentry-1.1.0-r3::gentoo[gnome-keyring]
+# required by gnome-base/gnome-keyring-3.34.0::gentoo
+>=dev-libs/libxml2-2.9.9-r3 python_targets_python3_6
+# required by dev-python/python-magic-0.4.27::gentoo
+# required by games-util/lutris-0.5.10.1::gentoo[python_single_target_python3_10]
+# required by lutris (argument)
+>=sys-apps/file-5.41 -python

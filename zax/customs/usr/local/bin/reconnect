@@ -1,43 +1,57 @@
 #!/bin/sh -x
 
 
-IF0="stop"
-IF1="stop"
-IF2="stop"
+#IF0=eth0
+#IF1=eth1
+#IF2=eth2
+
+IF0=enp0s3
+IF1=enp0s8
+IF2=enp0s9
+
+IF0C="stop"
+IF1C="stop"
+IF2C="stop"
 
 if [ "x$1" = "xv" ]
 then
- IF2="restart"
+ IF2C="restart"
 elif [ "x$1" = "xw" ]
 then
- IF0="restart"
+ IF0C="restart"
  # umount SHARED DISC
 elif [ "x$1" = "xe" ]
 then
- IF0="restart"
+ IF0C="restart"
 elif [ "x$1" = "xo" -o "x$1" = "xh" ]
 then
- IF1="restart"
+ IF1C="restart"
 else
  echo invalid argument "[${1}]"
  exit 1
 fi
 
-sudo /etc/init.d/cntlm stop
+sudo /etc/init.d/cntlm --nodeps stop
 
-echo net.eth0 $IF0...
-sudo /etc/init.d/net.eth0 $IF0
+echo net.$IF0 $IF0C...
+sudo /etc/init.d/net.$IF0 restart
+sudo /etc/init.d/net.$IF0 $IF0C
+#test stop = $IF0C && sudo ifconfig $IF0 down 
 
-echo net.eth1 $IF1 ...
-sudo /etc/init.d/net.eth1 $IF1
+echo net.$IF1 $IF1C ...
+sudo /etc/init.d/net.$IF1 restart
+sudo /etc/init.d/net.$IF1 $IF1C
+#test stop = $IF1C && sudo ifconfig $IF1 down 
 
-echo net.eth2 $IF2 ...
-sudo /etc/init.d/net.eth2 $IF2
+echo net.$IF2 $IF2C ...
+sudo /etc/init.d/net.$IF2 restart
+sudo /etc/init.d/net.$IF2 $IF2C
+#test stop = $IF2C && sudo ifconfig $IF2 down 
 
 for SVC in apache2 sshd
 do
   echo START $SVC ...
-  sudo /etc/init.d/$SVC start
+  sudo /etc/init.d/$SVC --nodeps start
 done
 
 pkill -9 sshfs
@@ -47,7 +61,19 @@ rm -f $HOME/.ssh/mastersock*
 sudo /etc/local.d/update_ip.start
 sudo /etc/local.d/restart_proxy.start
 
-if [ "x$1" = "xo" -o "x$1" = "xh" ]
+screen -d -m sudo /etc/init.d/ntp-client --nodeps restart
+
+if [ "x$1" = "xh" ]
 then
  sudo sed -i -e '/nameserver/s/172.17.2.138/8.8.8.8/' /etc/resolv.conf
 fi
+
+
+if [ "x$1" = "xv" ]
+then
+ sudo sed -i -e '/nameserver [^1]/s/n/#n/;/nameserver 1[^0]/s/n/#n/' /etc/resolv.conf
+ grep -q domain /etc/resolv.conf || sudo sed -e '1 i domain gemalto.com' -i /etc/resolv.conf
+
+fi
+
+
