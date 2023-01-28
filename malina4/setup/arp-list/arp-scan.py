@@ -16,15 +16,19 @@ DB_FILE = DB_FILE_PATH + '/scan.db'
 
 def parseArguments():
     parser = argparse.ArgumentParser(description='ARP scan..')
-    parser.add_argument("-p", "--prefix", type=str, required=True, help="Address prefix")
     parser.add_argument("-d", "--db", default=DB_FILE, type=str, required=False, help="DB file")
+
+    parser.add_argument("-m", "--mapping", type=str, required=False, help="add MAC address mapping")
+
+    parser.add_argument("-p", "--prefix", type=str, required=False, help="Address prefix")
     parser.add_argument("-t", "--text", type=bool, required=False, help="Output result to stdout")
+    parser.add_argument("-v", "--verbose", type=bool, required=False, help="Verbose output")
     parser.add_argument("-w", "--wait", type=int, required=False, default=1,
                         help="Delay between pinging different hosts")
+    parser.add_argument("-W", "--wait-loop", type=int, required=False, default=1,
+                        help="Delay between iterations")
     parser.add_argument("-l", "--logfile", type=str, required=False, default="/var/log/arp-scan.log",
                         help="Logging file")
-    #    parser.add_argument('-f', dest='from', required=True, help="From")
-    #    parser.add_argument('-t', dest='to', required=True, help="To")
 
     parser.add_argument('addresses', nargs='+', help='target addresses or ranges')
 
@@ -53,19 +57,39 @@ def createdb(filename):
     con = sqlite3.connect(DB_FILE)
 
     con.execute('''CREATE TABLE IF NOT EXISTS ping (
-        date text,
-        ip text,
-        result
-        symbol text, qty real, price real)''')
+        date text NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        mac text,
+        ip text NOT NULL,
+        state int NOT NULL
+        )''')
+
+    con.execute('''CREATE TABLE IF NOT EXISTS devices (
+        mac text PRIMARY KEY,
+        hostname text,
+        vendor text
+        )''')
+
     return con
 
 
-def insert(con, ip, result):
+def insert_device(con, mac, hostname):
+    """
+    Insert record into devices tables.
+    """
+    if hostname:
+        con.execute("INSERT INTO devices (mac, hostname) VALUES (?,?)", (mac, hostname))
+    else:
+        con.execute("DELETE from devices WHERE mac = ?", (mac,))
+    con.commit()
+
+
+def insert_ping(con, mac, ip, result):
     """
     Insert record into database.
     """
     date = datetime.now().isoformat()
-    cur.execute("INSERT INTO ping VALUES (" + date + "," + ip + "," + result + ")")
+    con.execute("INSERT INTO ping (mac, ip, state) VALUES (?, ?, ?)", (mac, ip, int(result)))
+    con.commit()
 
 
 def ping(host):
@@ -81,13 +105,16 @@ def ping(host):
         return False
 
 
-def process(args, addr):
+def process(con, args, addr):
     """
     Perform ping of single address.
     Returns boolean.
     """
-    pingres = ping(args.prefix + '.' + addr)
-    logging.info(str([addr, pingres]))
+    ip = args.prefix + '.' + addr
+    pingres = ping(ip)
+    logging.info(str([ip, pingres]))
+    mac = get_arp(ip)
+    insert_ping(con, mac, ip, pingres)
     return pingres
 
 
@@ -97,7 +124,7 @@ def get_arp(addr):
     """
     with open('/proc/net/arp', 'r') as f:
         r = [l.split()[3] for l in f.readlines() if l[:len(addr)].lower() == addr.lower()]
-        return r[0] if r else None
+        return r[0] if r and (r[0] != '00:00:00:00:00:00') else None
 
 
 def arp_list_call():
@@ -128,9 +155,9 @@ def compute_addresses(args):
         raise Exception('Invalid value: %s ' % a)
 
 
-def perform_scan(args):
+def perform_scan(args, con):
     """
-    Perform scan of all adresses.
+    Perform scan of all addresses.
     """
     isfirst = [True]
 
@@ -138,10 +165,27 @@ def perform_scan(args):
         if not isfirst[0]:
             time.sleep(args.wait)
         isfirst[0] = True
-        process(args, a)
+        return process(con, args, a)
 
     r = [f(a) for a in compute_addresses(args.addresses)]
     return r
+
+
+def add_device(con, args):
+    mac = args.mapping.upper().replace('-', ':')
+    hostname = next(iter(args.addresses))
+    m = re.match("^[A-F0-9]{2}:[A-F0-9]{2}:[A-F0-9]{2}:[A-F0-9]{2}:[A-F0-9]{2}:[A-F0-9]{2}$", mac)
+    if not m:
+        raise Exception("Invalid mac address: " + mac)
+    insert_device(con, mac, hostname)
+
+
+def update_vendors(con, filename):
+    # read all prefixes
+    # scan OUI db
+    # for each
+    #   con.execute("UPDATE devices SET vendor=? WHERE substring(mac, 1, 8) = ?", (vendor, mac_prefix))
+    con.commit()
 
 
 def main():
@@ -151,10 +195,13 @@ def main():
     logging.basicConfig(filename='arp-list.log', level=logging.DEBUG)
     args = parseArguments()
     logging.info(args)
-    dbconnect()
-    logging.info(args.prefix)
-    r = perform_scan(args)
-    logging.debug('scanning result: %s' % r)
+    conn = dbconnect()
+    if args.mapping:
+        add_device(conn, args)
+    else:
+        logging.info(args.prefix)
+        r = perform_scan(args, conn)
+        logging.debug('scanning result: %s' % r)
 
 
 if __name__ == '__main__':
