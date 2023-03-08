@@ -1,0 +1,34 @@
+#!/bin/sh
+
+# install: unpack MemoryAnalyzer-*-linux.gtk.x86_64.zip to /opt/mat
+
+# todo: make an ebuild !
+
+VM=""
+for A in openjdk-bin-17 openjdk-17 openjdk-bin-11 openjdk-11
+do
+ if java-config -P "$A" > /dev/null
+ then
+   VM="$A"
+   break
+ fi 
+done
+
+if [ -z "VM" ]
+then
+ echo JVM not found
+ exit 1
+fi
+
+echo $VM
+
+P=`java-config -P $VM | grep -E '^PATH'`
+export "$P:$PATH"
+
+#export JAVA_HOME=/opt/openjdk-bin-17.0.3_p7
+#export JDK_HOME=/opt/openjdk-bin-17.0.3_p7
+#export JAVAC=/opt/openjdk-bin-17.0.3_p7/bin/javac
+
+#export PATH=/opt/openjdk-bin-17.0.3_p7/bin:$PATH
+exec /opt/mat/MemoryAnalyzer -data "$HOME/.eclipse/workspace"
+

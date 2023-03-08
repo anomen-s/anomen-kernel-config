@@ -1,9 +1,2 @@
-# required by @selected
-# required by @world (argument)
-=games-puzzle/twindistress-1.1.0 ~amd64
-# required by @selected
-# required by @world (argument)
 =net-analyzer/ssh-audit-2.5.0 ~amd64
-# required by @selected
-# required by @world (argument)
 =dev-vcs/git-crypt-0.6.0 ~amd64

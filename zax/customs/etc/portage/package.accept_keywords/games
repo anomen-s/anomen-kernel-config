@@ -13,3 +13,4 @@ games-util/lutris
 games-arcade/opentyrian
 dev-libs/angelscript
 games-util/deutex
+=games-puzzle/twindistress-1.1.0 ~amd64
