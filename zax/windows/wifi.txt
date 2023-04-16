@@ -1,0 +1,13 @@
+SSID:	***
+Protocol:	Wi-Fi 5 (802.11ac)
+Security type:	WPA2-Personal
+Network band:	5 GHz
+Network channel:	44
+Link speed (Receive/Transmit):	650/650 (Mbps)
+Link-local IPv6 address:	fe80::1920:99a1:f04a:a15%9
+IPv4 address:	*.*.*.156
+IPv4 DNS servers:	*.*.*.144
+Manufacturer:	Intel Corporation
+Description:	Intel(R) Wi-Fi 6 AX201 160MHz
+Driver version:	22.150.1.1
+Physical address (MAC):	04-56-E5-B2-2F-1E

@@ -9,7 +9,7 @@ echo "#####" layman
 /usr/bin/layman -S
 
 echo "#####" chown
-chown lhlavace:portage -R "${LDIR}/anomen"
+chown :portage -R "${LDIR}/anomen"
 
 echo "#####" emerge --sync
 
