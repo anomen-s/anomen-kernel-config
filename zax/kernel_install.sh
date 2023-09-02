@@ -28,7 +28,7 @@ echo make prepare...
 make prepare || exit 7
 
 echo make all...
-make all || exit 8
+make -j6 all || exit 8
 
 echo -n Install kernel "$KERVER" ' ?'
 read 
