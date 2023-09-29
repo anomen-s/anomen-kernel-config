@@ -1,0 +1,66 @@
+Module                  Size  Used by
+vboxvideo              45056  0
+vboxsf                 81920  0
+vboxguest             315392  5 vboxsf
+xt_conntrack           16384  2
+xt_MASQUERADE          16384  2
+xfrm_user              45056  1
+xfrm_algo              16384  1 xfrm_user
+iptable_nat            16384  1
+nf_nat                 36864  2 iptable_nat,xt_MASQUERADE
+xt_addrtype            16384  2
+iptable_filter         16384  1
+ip_tables              24576  2 iptable_filter,iptable_nat
+x_tables               36864  6 xt_conntrack,iptable_filter,xt_addrtype,ip_tables,iptable_nat,xt_MASQUERADE
+br_netfilter           28672  0
+bridge                258048  1 br_netfilter
+stp                    16384  1 bridge
+llc                    16384  2 bridge,stp
+cfg80211              389120  0
+rfkill                 24576  1 cfg80211
+8021q                  28672  0
+dm_crypt               45056  1
+encrypted_keys         24576  1 dm_crypt
+pktcdvd                36864  0
+dm_mod                122880  3 dm_crypt
+dax                    28672  1 dm_mod
+snd_hda_codec_idt      53248  1
+snd_hda_codec_generic    81920  1 snd_hda_codec_idt
+ledtrig_audio          16384  1 snd_hda_codec_generic
+crc32_pclmul           16384  0
+crc32c_intel           24576  3
+sha512_ssse3           45056  0
+snd_hda_intel          36864  3
+snd_intel_dspcfg       16384  1 snd_hda_intel
+sha512_generic         16384  1 sha512_ssse3
+vmwgfx                352256  3
+snd_hda_codec         122880  3 snd_hda_codec_generic,snd_hda_intel,snd_hda_codec_idt
+drm_ttm_helper         16384  2 vmwgfx,vboxvideo
+snd_hda_core           65536  4 snd_hda_codec_generic,snd_hda_intel,snd_hda_codec,snd_hda_codec_idt
+ttm                    57344  3 vmwgfx,vboxvideo,drm_ttm_helper
+aesni_intel           393216  2
+drm_kms_helper        143360  2 vmwgfx,vboxvideo
+snd_pcm               122880  3 snd_hda_intel,snd_hda_codec,snd_hda_core
+crypto_simd            16384  1 aesni_intel
+snd_timer              32768  1 snd_pcm
+cryptd                 20480  2 crypto_simd
+syscopyarea            16384  1 drm_kms_helper
+virtio_net             57344  0
+sysfillrect            16384  1 drm_kms_helper
+snd                    90112  12 snd_hda_codec_generic,snd_hda_intel,snd_hda_codec,snd_timer,snd_pcm,snd_hda_codec_idt
+sr_mod                 28672  0
+net_failover           20480  1 virtio_net
+sysimgblt              16384  1 drm_kms_helper
+input_leds             16384  0
+led_class              16384  2 snd_hda_codec_generic,input_leds
+failover               16384  1 net_failover
+cdrom                  36864  2 pktcdvd,sr_mod
+i2c_piix4              24576  0
+soundcore              16384  1 snd
+fb_sys_fops            16384  1 drm_kms_helper
+pata_acpi              16384  0
+button                 20480  0
+pcspkr                 16384  0
+battery                20480  0
+ac                     16384  0
+ipv6                  483328  116 bridge,br_netfilter
