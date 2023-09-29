@@ -31,6 +31,7 @@ encrypt() {
 fileenc() {
   F="$1"
   FP="${F%.gpg}"
+  echo ">>> $F <-- $FP"
   if [ -f "$FP" -a -f "$F" ]
   then
       # check if plaintext file was changed
@@ -63,6 +64,7 @@ filedec() {
   F="$1"
   FO="${F%.gpg}"
   FT="${FO}-${RANDOM}"
+  echo "<<< $F --> $FO"
   gpg --quiet --batch --passphrase-file "$PW_FILE" --output "$FT" --decrypt "$F" || exit 5
   if [ ! -e "$FO" ]
   then
