@@ -1,13 +1,13 @@
 ============ start debug info ============
-libhd version 22.1 (x86-64) [7688]
+libhd version 23.2 (x86-64) [7688]
 using /var/lib/hardware
-kernel version is 5.15
+kernel version is 6.1
 ----- /proc/cmdline -----
   root=/dev/sda3 ro
 ----- /proc/cmdline end -----
 debug = 0xff7ffff7
 probe = 0x15938fcdaa17fcf9fffe (+memory +pci +isapnp +net +floppy +misc +misc.serial +misc.par +misc.floppy +serial +cpu +bios +monitor +mouse +scsi +usb -usb.mods +modem +modem.usb +parallel +parallel.lp +parallel.zip -isa -isa.isdn +isdn +kbd +prom +sbus +int +braille +braille.alva +braille.fhp +braille.ht -ignx11 +sys -bios.vbe -isapnp.old -isapnp.new -isapnp.mod +braille.baum -manual +fb +pppoe -scan +pcmcia +fork -parallel.imm +s390 +cpuemu -sysfs -s390disks +udev +block +block.cdrom +block.part +edd +edd.mod -bios.ddc -bios.fb -bios.mode +input +block.mods +bios.vesa -cpuemu.debug -scsi.noserial +wlan -bios.crc -hal +bios.vram +bios.acpi -bios.ddc.ports=0 +modules.pata -net.eeprom +x86emu=dump -max -lxrc)
-shm: attached segment 851975 at 0x7f4105c97000
+shm: attached segment 98317 at 0x7fc37d9c7000
 >> hal.1: read hal data
 >> floppy.1: get nvram
 ----- /proc/nvram -----
@@ -301,7 +301,7 @@ shm: attached segment 851975 at 0x7f4105c97000
   ceecfff0  6a 61 7c 4a 50 7c 75 6e 69 63 6f 64 65 00 72 75  "ja|JP|unicode.ru"
   ceed0000  7c 52 55 7c 69 73 6f 38 38 35 39 2d 35 00 00 0e  "|RU|iso8859-5..."
   ceed0010  08 53 00 01 db 00 00 24 4d 45 49 00 00 db 51 54  ".S.....$MEI...QT"
-  ceed0020  00 01 03 01 55 02 00 90 06 03 10 80 20 00 00 00  "....U....... ..."
+  ceed0020  00 01 03 01 55 02 00 90 06 03 10 86 20 00 00 00  "....U....... ..."
   ceed0030  00 40 08 00 00 00 00 00 00 00 00 00 02 ff ff ff  ".@.............."
   ceed0040  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff  "................"
   ceed0050  ff ff ff ff ff 03 00 00 00 80 00 00 00 00 00 00  "................"
@@ -556,7 +556,7 @@ shm: attached segment 851975 at 0x7f4105c97000
        str6: "ru|RU|iso8859-5"
   type 0x0e [0x0053]: 0e 08 53 00 01 db 00 00
        str1: "$MEI"
-  type 0xdb [0x0054]: db 51 54 00 01 03 01 55 02 00 90 06 03 10 80 20 00 00 00 00 40 08 00 00 00 00 00 00 00 00 00 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 03 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  type 0xdb [0x0054]: db 51 54 00 01 03 01 55 02 00 90 06 03 10 86 20 00 00 00 00 40 08 00 00 00 00 00 00 00 00 00 02 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 03 00 00 00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
        str1: "MEI1"
        str2: "MEI2"
        str3: "MEI3"
@@ -719,9 +719,9 @@ shm: attached segment 851975 at 0x7f4105c97000
   410  26 00 00 72 02 80 00 20 00 00 1e 00 1e 00 00 00  "&..r... ........"
   420  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  "................"
   430  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  "................"
-  440  25 00 00 00 00 00 00 00 00 03 50 00 00 10 00 00  "%.........P....."
-  450  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  "................"
-  460  0e 0d 00 d4 03 29 30 00 00 00 00 00 55 b7 0d 00  ".....)0.....U..."
+  440  38 00 00 00 00 00 00 00 00 03 50 00 00 10 00 00  "8.........P....."
+  450  00 06 00 00 00 00 00 00 00 00 00 00 00 00 00 00  "................"
+  460  0e 0d 00 d4 03 29 30 00 00 00 00 00 50 e9 0d 00  ".....)0.....P..."
   470  00 00 00 00 00 02 00 00 14 14 14 14 01 01 01 01  "................"
   480  1e 00 3e 00 18 10 00 60 09 11 0b 00 00 01 00 00  "..>....`........"
   490  07 00 00 00 00 00 10 12 00 00 00 00 00 00 00 00  "................"
@@ -862,41 +862,41 @@ video bios: entry 0xc000:0x17dc
         ffff-ffff : pnp 00:01
 ----- /proc/ioports end -----
 ----- /proc/interrupts -----
-     0:         11          0          0          0  IR-IO-APIC    2-edge      timer
-     8:         60          0          0          0  IR-IO-APIC    8-edge      rtc0
-     9:          0          0          0          0  IR-IO-APIC    9-fasteoi   acpi
-    16:          0          0          0          4  IR-IO-APIC   16-fasteoi   i801_smbus
-    17:          0        169          0        654  IR-IO-APIC   17-fasteoi   snd_hda_intel:card1
+     0:         23          0          0          0  IR-IO-APIC    2-edge      timer
+     8:          0          0          0          0  IR-IO-APIC    8-edge      rtc0
+     9:          0          1          0          0  IR-IO-APIC    9-fasteoi   acpi
+    16:          0          0          4          0  IR-IO-APIC   16-fasteoi   i801_smbus
+    17:          0        159          0          0  IR-IO-APIC   17-fasteoi   snd_hda_intel:card1
    120:          0          0          0          0  DMAR-MSI    0-edge      dmar0
-   127:    6781759      59611          0          0  IR-PCI-MSI 376832-edge      ahci[0000:00:17.0]
-   128:          0          0     296230          0  IR-PCI-MSI 327680-edge      xhci_hcd
+   127:          0     185380          0          0  IR-PCI-MSI 376832-edge      ahci[0000:00:17.0]
+   128:          0          0     129529          0  IR-PCI-MSI 327680-edge      xhci_hcd
    129:          0          0          0          0  IR-PCI-MSI 1572864-edge      xhci_hcd
    130:          0          0          0          0  IR-PCI-MSI 1572865-edge      xhci_hcd
    131:          0          0          0          0  IR-PCI-MSI 1572866-edge      xhci_hcd
    132:          0          0          0          0  IR-PCI-MSI 1572867-edge      xhci_hcd
    133:          0          0          0          0  IR-PCI-MSI 1572868-edge      xhci_hcd
-   134:          0         36          0          0  IR-PCI-MSI 360448-edge      mei_me
-   135:          0        216          0          0  IR-PCI-MSI 514048-edge      snd_hda_intel:card0
-   137:    6201171          0      19098          0  IR-PCI-MSI 3670016-edge      iwlwifi:default_queue
-   138:    5216181          0          0          0  IR-PCI-MSI 3670017-edge      iwlwifi:queue_1
-   139:    4387811        118          0          0  IR-PCI-MSI 3670018-edge      iwlwifi:queue_2
-   140:    4982895          0         87          0  IR-PCI-MSI 3670019-edge      iwlwifi:queue_3
-   141:    4088869          0          0       1593  IR-PCI-MSI 3670020-edge      iwlwifi:queue_4
-   142:        418          0          0         33  IR-PCI-MSI 3670021-edge      iwlwifi:exception
-   143:   30178706          0          0          0  IR-PCI-MSI 524288-edge      nvidia
+   134:          0         38          0          0  IR-PCI-MSI 360448-edge      mei_me
+   136:        598          0          0          0  IR-PCI-MSI 514048-edge      snd_hda_intel:card0
+   137:          0          0     118371          0  IR-PCI-MSI 3670016-edge      iwlwifi:default_queue
+   138:      29273          0          0          0  IR-PCI-MSI 3670017-edge      iwlwifi:queue_1
+   139:          0     106223          0          0  IR-PCI-MSI 3670018-edge      iwlwifi:queue_2
+   140:          0          0      17453          0  IR-PCI-MSI 3670019-edge      iwlwifi:queue_3
+   141:          0          0          0      10235  IR-PCI-MSI 3670020-edge      iwlwifi:queue_4
+   142:          0          0          0         33  IR-PCI-MSI 3670021-edge      iwlwifi:exception
+   143:     754834          0          0          0  IR-PCI-MSI 524288-edge      nvidia
    NMI:          0          0          0          0   Non-maskable interrupts
-   LOC:  182821366  181858967  181803716  181010419   Local timer interrupts
+   LOC:    1346450    1457933    1423326    1225105   Local timer interrupts
    SPU:          0          0          0          0   Spurious interrupts
    PMI:          0          0          0          0   Performance monitoring interrupts
-   IWI:          0          4          3          7   IRQ work interrupts
-   RTR:         14          0          0          0   APIC ICR read retries
-   RES:    7027634    8514711    8463446    8586113   Rescheduling interrupts
-   CAL:   17250811   15760250   15326855   14306562   Function call interrupts
-   TLB:   13243518   12103266   11826459   11207308   TLB shootdowns
+   IWI:          0          1          0          0   IRQ work interrupts
+   RTR:          2          0          0          0   APIC ICR read retries
+   RES:      52354      49528      53548      54655   Rescheduling interrupts
+   CAL:     147525     148939     139872     122836   Function call interrupts
+   TLB:      72081      82659      86353      73921   TLB shootdowns
    TRM:          0          0          0          0   Thermal event interrupts
    THR:          0          0          0          0   Threshold APIC interrupts
    MCE:          0          0          0          0   Machine check exceptions
-   MCP:        896        892        892        892   Machine check polls
+   MCP:         72         73         73         73   Machine check polls
    ERR:          0
    MIS:          0
    PIN:          0          0          0          0   Posted-interrupt notification event
@@ -919,8 +919,8 @@ video bios: entry 0xc000:0x17dc
   model		: 158
   model name	: Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz
   stepping	: 9
-  microcode	: 0xf0
-  cpu MHz		: 3000.000
+  microcode	: 0x84
+  cpu MHz		: 3391.768
   cache size	: 6144 KB
   physical id	: 0
   siblings	: 4
@@ -934,7 +934,7 @@ video bios: entry 0xc000:0x17dc
   wp		: yes
   flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp
   vmx flags	: vnmi preemption_timer invvpid ept_x_only ept_ad ept_1gb flexpriority tsc_offset vtpr mtf vapic ept vpid unrestricted_guest ple shadow_vmcs pml ept_mode_based_exec
-  bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds mmio_stale_data
+  bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds mmio_stale_data retbleed gds
   bogomips	: 6000.00
   clflush size	: 64
   cache_alignment	: 64
@@ -947,8 +947,8 @@ video bios: entry 0xc000:0x17dc
   model		: 158
   model name	: Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz
   stepping	: 9
-  microcode	: 0xf0
-  cpu MHz		: 3000.000
+  microcode	: 0x84
+  cpu MHz		: 3391.793
   cache size	: 6144 KB
   physical id	: 0
   siblings	: 4
@@ -960,9 +960,9 @@ video bios: entry 0xc000:0x17dc
   fpu_exception	: yes
   cpuid level	: 22
   wp		: yes
-  flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d arch_capabilities
+  flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp
   vmx flags	: vnmi preemption_timer invvpid ept_x_only ept_ad ept_1gb flexpriority tsc_offset vtpr mtf vapic ept vpid unrestricted_guest ple shadow_vmcs pml ept_mode_based_exec
-  bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds mmio_stale_data
+  bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds mmio_stale_data retbleed gds
   bogomips	: 6000.00
   clflush size	: 64
   cache_alignment	: 64
@@ -975,8 +975,8 @@ video bios: entry 0xc000:0x17dc
   model		: 158
   model name	: Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz
   stepping	: 9
-  microcode	: 0xf0
-  cpu MHz		: 1399.999
+  microcode	: 0x84
+  cpu MHz		: 3326.239
   cache size	: 6144 KB
   physical id	: 0
   siblings	: 4
@@ -988,9 +988,9 @@ video bios: entry 0xc000:0x17dc
   fpu_exception	: yes
   cpuid level	: 22
   wp		: yes
-  flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d arch_capabilities
+  flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp
   vmx flags	: vnmi preemption_timer invvpid ept_x_only ept_ad ept_1gb flexpriority tsc_offset vtpr mtf vapic ept vpid unrestricted_guest ple shadow_vmcs pml ept_mode_based_exec
-  bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds mmio_stale_data
+  bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds mmio_stale_data retbleed gds
   bogomips	: 6000.00
   clflush size	: 64
   cache_alignment	: 64
@@ -1003,8 +1003,8 @@ video bios: entry 0xc000:0x17dc
   model		: 158
   model name	: Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz
   stepping	: 9
-  microcode	: 0xf0
-  cpu MHz		: 1400.184
+  microcode	: 0x84
+  cpu MHz		: 3300.234
   cache size	: 6144 KB
   physical id	: 0
   siblings	: 4
@@ -1016,9 +1016,9 @@ video bios: entry 0xc000:0x17dc
   fpu_exception	: yes
   cpuid level	: 22
   wp		: yes
-  flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d arch_capabilities
+  flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp
   vmx flags	: vnmi preemption_timer invvpid ept_x_only ept_ad ept_1gb flexpriority tsc_offset vtpr mtf vapic ept vpid unrestricted_guest ple shadow_vmcs pml ept_mode_based_exec
-  bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds mmio_stale_data
+  bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds mmio_stale_data retbleed gds
   bogomips	: 6000.00
   clflush size	: 64
   cache_alignment	: 64
@@ -1032,10 +1032,10 @@ video bios: entry 0xc000:0x17dc
   klog mem 1: 0x0
   klog mem:   0x0
   bios mem:   0x0
-  meminfo:    0x3e5f7b000
+  meminfo:    0x3e5d4f000
   xen balloon:    0x0
 >> pci.1: sysfs drivers
------ sysfs driver list (id 0x08e6e5124de4e5be) -----
+----- sysfs driver list (id 0x0395782c679a0867) -----
          psmouse: module = psmouse
 snd_hda_codec_generic: module = snd_hda_codec_generic
 snd_hda_codec_hdmi: /devices/pci0000:00/0000:00:01.0/0000:01:00.1/hdaudioC1D0
@@ -1043,8 +1043,6 @@ snd_hda_codec_hdmi: module = snd_hda_codec_hdmi
 snd_hda_codec_realtek: /devices/pci0000:00/0000:00:1f.3/hdaudioC0D0
 snd_hda_codec_realtek: module = snd_hda_codec_realtek
       parport_pc: module = parport_pc
-        coretemp: /devices/platform/coretemp.0
-        coretemp: module = coretemp
         iTCO_wdt: /devices/pci0000:00/0000:00:1f.4/iTCO_wdt
         iTCO_wdt: module = iTCO_wdt
         acpi-fan: /devices/platform/PNP0C0B:03
@@ -1057,8 +1055,6 @@ snd_hda_codec_realtek: module = snd_hda_codec_realtek
         acpi-wmi: module = wmi
   intel_rapl_msr: /devices/platform/intel_rapl_msr.0
   intel_rapl_msr: module = intel_rapl_msr
-         vboxdrv: module = vboxdrv
-         vboxdrv: /devices/platform/vboxdrv.0
       alarmtimer: /devices/pnp0/00:03/rtc/rtc0/alarmtimer.0.auto
       serial8250: /devices/platform/serial8250
           pcspkr: module = pcspkr
@@ -1101,7 +1097,6 @@ snd_hda_codec_realtek: module = snd_hda_codec_realtek
               sd: /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.2/1-10.2:1.0/host6/target6:0:0/6:0:0:0
               sd: /devices/pci0000:00/0000:00:17.0/ata1/host0/target0:0:0/0:0:0:0
      hid-generic: /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.1/0003:13BA:0018.0003
-     hid-generic: /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4/1-10.4:1.3/0003:047F:C039.0004
      hid-generic: /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.0/0003:13BA:0018.0002
      hid-generic: /devices/pci0000:00/0000:00:14.0/usb1/1-7/1-7:1.0/0003:413C:301A.0001
         rtc_cmos: /devices/pnp0/00:03
@@ -1114,19 +1109,13 @@ snd_hda_codec_realtek: module = snd_hda_codec_realtek
           system: /devices/pnp0/00:02
           system: /devices/pnp0/00:00
        ath9k_htc: module = ath9k_htc
-   snd-usb-audio: /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4/1-10.4:1.2
-   snd-usb-audio: /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4/1-10.4:1.0
-   snd-usb-audio: /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4/1-10.4:1.1
-   snd-usb-audio: module = snd_usb_audio
           usbhid: /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.1
           usbhid: /devices/pci0000:00/0000:00:14.0/usb1/1-7/1-7:1.0
-          usbhid: /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4/1-10.4:1.3
           usbhid: /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.0
           usbhid: module = usbhid
      usb-storage: /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.2/1-10.2:1.0
      usb-storage: module = usb_storage
              usb: /devices/pci0000:00/0000:00:1c.0/0000:03:00.0/usb3
-             usb: /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4
              usb: /devices/pci0000:00/0000:00:14.0/usb1/1-7
              usb: /devices/pci0000:00/0000:00:14.0/usb1/1-12
              usb: /devices/pci0000:00/0000:00:14.0/usb1
@@ -1298,7 +1287,7 @@ snd_hda_codec_realtek: module = snd_hda_codec_realtek
     device = 0xa2f0
     subvendor = 0x1458
     subdevice = 0xa182
-    irq = 135
+    irq = 136
     res[0] = 0xf7340000 0xf7343fff 0x140204
     res[4] = 0xf7320000 0xf732ffff 0x140204
     config[64]
@@ -1361,7 +1350,7 @@ snd_hda_codec_realtek: module = snd_hda_codec_realtek
     device = 0x15b8
     subvendor = 0x1458
     subdevice = 0xe000
-    irq = 136
+    irq = 135
     res[0] = 0xf7300000 0xf731ffff 0x40200
     config[64]
   pci device: name = 0000:00:14.0
@@ -1531,7 +1520,7 @@ class 02, sub_class 80 prog_if 00, hdr 0, flags <pm>, irq 16
   d0: 05 40  ".@"
 
 bus 00, slot 1f, func 3, vend:dev:s_vend:s_dev:rev 8086:a2f0:1458:a182:00
-class 04, sub_class 03 prog_if 00, hdr 0, flags <pm>, irq 135
+class 04, sub_class 03 prog_if 00, hdr 0, flags <pm>, irq 136
   addr0 f7340000, size 00004000
   addr4 f7320000, size 00010000
   00: 86 80 f0 a2 06 04 10 00 00 00 03 04 10 20 00 00  "............. .."
@@ -1594,7 +1583,7 @@ class 04, sub_class 03 prog_if 00, hdr 0, flags <pm>, irq 17
   70: 00 00 00 00 00 00 00 00 10 00  ".........."
 
 bus 00, slot 1f, func 6, vend:dev:s_vend:s_dev:rev 8086:15b8:1458:e000:00
-class 02, sub_class 00 prog_if 00, hdr 0, flags <pm>, irq 136
+class 02, sub_class 00 prog_if 00, hdr 0, flags <pm>, irq 135
   addr0 f7300000, size 00020000
   00: 86 80 b8 15 06 04 10 00 00 00 00 02 00 00 00 00  "................"
   10: 00 00 30 f7 00 00 00 00 00 00 00 00 00 00 00 00  "..0............."
@@ -1662,9 +1651,6 @@ sysfs: no such bus: ps3_system_bus
   platform device: name = PNP0C0B:01
     path = /devices/platform/PNP0C0B:01
     type = "", modalias = "acpi:PNP0C0B:", driver = "acpi-fan"
-  platform device: name = platform-framebuffer.0
-    path = /devices/platform/platform-framebuffer.0
-    type = "", modalias = "platform:platform-framebuffer", driver = ""
   platform device: name = microcode
     path = /devices/platform/microcode
     type = "", modalias = "platform:microcode", driver = ""
@@ -1688,7 +1674,7 @@ sysfs: no such bus: ps3_system_bus
     type = "", modalias = "acpi:PNP0C0B:", driver = "acpi-fan"
   platform device: name = coretemp.0
     path = /devices/platform/coretemp.0
-    type = "", modalias = "platform:coretemp", driver = "coretemp"
+    type = "", modalias = "platform:coretemp", driver = ""
   platform device: name = regulatory.0
     path = /devices/platform/regulatory.0
     type = "", modalias = "platform:regulatory", driver = ""
@@ -1710,9 +1696,6 @@ sysfs: no such bus: ps3_system_bus
   platform device: name = pcspkr
     path = /devices/platform/pcspkr
     type = "", modalias = "platform:pcspkr", driver = "pcspkr"
-  platform device: name = vboxdrv.0
-    path = /devices/platform/vboxdrv.0
-    type = "", modalias = "platform:vboxdrv", driver = "vboxdrv"
 >> pci.8: of_platform
 sysfs: no such bus: of_platform
 >> pci.9: vm
@@ -1739,6 +1722,114 @@ sysfs: no such bus: mdio
 >> monitor.4: internal db
 >> monitor.5: prom
 >> pcmcia.1: sysfs drivers
+----- sysfs driver list (id 0x2d33711f19e6a6b8) -----
+         psmouse: module = psmouse
+snd_hda_codec_generic: module = snd_hda_codec_generic
+snd_hda_codec_hdmi: /devices/pci0000:00/0000:00:01.0/0000:01:00.1/hdaudioC1D0
+snd_hda_codec_hdmi: module = snd_hda_codec_hdmi
+snd_hda_codec_realtek: /devices/pci0000:00/0000:00:1f.3/hdaudioC0D0
+snd_hda_codec_realtek: module = snd_hda_codec_realtek
+      parport_pc: module = parport_pc
+        iTCO_wdt: /devices/pci0000:00/0000:00:1f.4/iTCO_wdt
+        iTCO_wdt: module = iTCO_wdt
+        acpi-fan: /devices/platform/PNP0C0B:03
+        acpi-fan: /devices/platform/PNP0C0B:01
+        acpi-fan: /devices/platform/PNP0C0B:04
+        acpi-fan: /devices/platform/PNP0C0B:02
+        acpi-fan: /devices/platform/PNP0C0B:00
+        acpi-fan: module = fan
+        acpi-wmi: /devices/pci0000:00/PNP0C14:00
+        acpi-wmi: module = wmi
+  intel_rapl_msr: /devices/platform/intel_rapl_msr.0
+  intel_rapl_msr: module = intel_rapl_msr
+      alarmtimer: /devices/pnp0/00:03/rtc/rtc0/alarmtimer.0.auto
+      serial8250: /devices/platform/serial8250
+          pcspkr: module = pcspkr
+          pcspkr: /devices/platform/pcspkr
+      parport_pc: module = parport_pc
+        ata_piix: module = ata_piix
+        xhci_hcd: /devices/pci0000:00/0000:00:1c.0/0000:03:00.0
+        xhci_hcd: /devices/pci0000:00/0000:00:14.0
+    iosf_mbi_pci: module = iosf_mbi
+   snd_hda_intel: /devices/pci0000:00/0000:00:1f.3
+   snd_hda_intel: /devices/pci0000:00/0000:00:01.0/0000:01:00.1
+   snd_hda_intel: module = snd_hda_intel
+            ahci: /devices/pci0000:00/0000:00:17.0
+            ahci: module = ahci
+          nvidia: /devices/pci0000:00/0000:00:01.0/0000:01:00.0
+          nvidia: module = nvidia
+        pcieport: /devices/pci0000:00/0000:00:1c.0
+        pcieport: /devices/pci0000:00/0000:00:01.0
+        pcieport: /devices/pci0000:00/0000:00:1c.7
+        pcieport: /devices/pci0000:00/0000:00:1b.0
+        pcieport: /devices/pci0000:00/0000:00:1d.0
+        pcieport: /devices/pci0000:00/0000:00:1c.6
+          mei_me: /devices/pci0000:00/0000:00:16.0
+          mei_me: module = mei_me
+         iwlwifi: /devices/pci0000:00/0000:00:1d.0/0000:07:00.0
+         iwlwifi: module = iwlwifi
+          e1000e: /devices/pci0000:00/0000:00:1f.6
+          e1000e: module = e1000e
+      i801_smbus: module = i2c_i801
+      i801_smbus: /devices/pci0000:00/0000:00:1f.4
+      skl_uncore: /devices/pci0000:00/0000:00:00.0
+ nvidia-nvswitch: module = nvidia
+       processor: /devices/system/cpu/cpu3
+       processor: /devices/system/cpu/cpu1
+       processor: /devices/system/cpu/cpu2
+       processor: /devices/system/cpu/cpu0
+           ppdev: module = ppdev
+              sr: /devices/pci0000:00/0000:00:17.0/ata3/host2/target2:0:0/2:0:0:0
+              sr: module = sr_mod
+              sd: /devices/pci0000:00/0000:00:17.0/ata2/host1/target1:0:0/1:0:0:0
+              sd: /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.2/1-10.2:1.0/host6/target6:0:0/6:0:0:0
+              sd: /devices/pci0000:00/0000:00:17.0/ata1/host0/target0:0:0/0:0:0:0
+     hid-generic: /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.1/0003:13BA:0018.0003
+     hid-generic: /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.0/0003:13BA:0018.0002
+     hid-generic: /devices/pci0000:00/0000:00:14.0/usb1/1-7/1-7:1.0/0003:413C:301A.0001
+        rtc_cmos: /devices/pnp0/00:03
+          system: /devices/pnp0/00:07
+          system: /devices/pnp0/00:05
+          system: /devices/pnp0/00:01
+          system: /devices/pnp0/00:08
+          system: /devices/pnp0/00:06
+          system: /devices/pnp0/00:04
+          system: /devices/pnp0/00:02
+          system: /devices/pnp0/00:00
+       ath9k_htc: module = ath9k_htc
+          usbhid: /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.1
+          usbhid: /devices/pci0000:00/0000:00:14.0/usb1/1-7/1-7:1.0
+          usbhid: /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.0
+          usbhid: module = usbhid
+     usb-storage: /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.2/1-10.2:1.0
+     usb-storage: module = usb_storage
+             usb: /devices/pci0000:00/0000:00:1c.0/0000:03:00.0/usb3
+             usb: /devices/pci0000:00/0000:00:14.0/usb1/1-7
+             usb: /devices/pci0000:00/0000:00:14.0/usb1/1-12
+             usb: /devices/pci0000:00/0000:00:14.0/usb1
+             usb: /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.2
+             usb: /devices/pci0000:00/0000:00:14.0/usb1/1-10
+             usb: /devices/pci0000:00/0000:00:1c.0/0000:03:00.0/usb4
+             usb: /devices/pci0000:00/0000:00:14.0/usb1/1-8
+             usb: /devices/pci0000:00/0000:00:14.0/usb2
+           btusb: /devices/pci0000:00/0000:00:14.0/usb1/1-12/1-12:1.1
+           btusb: /devices/pci0000:00/0000:00:14.0/usb1/1-12/1-12:1.0
+           btusb: module = btusb
+             hub: /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10:1.0
+             hub: /devices/pci0000:00/0000:00:1c.0/0000:03:00.0/usb3/3-0:1.0
+             hub: /devices/pci0000:00/0000:00:1c.0/0000:03:00.0/usb4/4-0:1.0
+             hub: /devices/pci0000:00/0000:00:14.0/usb1/1-0:1.0
+             hub: module = usbcore
+             hub: /devices/pci0000:00/0000:00:14.0/usb2/2-0:1.0
+             uas: module = uas
+           usbfs: module = usbcore
+         thermal: /devices/LNXSYSTM:00/LNXSYBUS:01/LNXTHERM:01
+         thermal: /devices/LNXSYSTM:00/LNXSYBUS:01/LNXTHERM:00
+          button: /devices/LNXSYSTM:00/LNXPWRBN:00
+          button: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0C:00
+          button: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0E:00
+     smbus_alert: module = i2c_smbus
+----- sysfs driver list end -----
 >> pcmcia.2: pcmcia
 sysfs: no such bus: pcmcia
 >> pcmcia.3: pcmcia ctrl
@@ -1800,28 +1891,28 @@ i/o:0 0xff00 - 0xfffe (0xff) "pnp 00:07"
 i/o:0 0xffff - 0xffff (0x01) "pnp 00:01"
 i/o:0 0xffff - 0xffff (0x01) "pnp 00:01"
 i/o:0 0xffff - 0xffff (0x01) "pnp 00:01"
-irq:0  0 (       11) "2-edge      timer"
-irq:0  8 (       60) "8-edge      rtc0"
-irq:0  9 (        0) "9-fasteoi   acpi"
+irq:0  0 (       23) "2-edge      timer"
+irq:0  8 (        0) "8-edge      rtc0"
+irq:0  9 (        1) "9-fasteoi   acpi"
 irq:0 16 (        4) "16-fasteoi   i801_smbus"
-irq:0 17 (      823) "17-fasteoi   snd_hda_intel:card1"
+irq:0 17 (      159) "17-fasteoi   snd_hda_intel:card1"
 irq:0 120 (        0) "0-edge      dmar0"
-irq:0 127 (  6841370) "376832-edge      ahci[0000:00:17.0]"
-irq:0 128 (   296230) "327680-edge      xhci_hcd"
+irq:0 127 (   185380) "376832-edge      ahci[0000:00:17.0]"
+irq:0 128 (   129529) "327680-edge      xhci_hcd"
 irq:0 129 (        0) "1572864-edge      xhci_hcd"
 irq:0 130 (        0) "1572865-edge      xhci_hcd"
 irq:0 131 (        0) "1572866-edge      xhci_hcd"
 irq:0 132 (        0) "1572867-edge      xhci_hcd"
 irq:0 133 (        0) "1572868-edge      xhci_hcd"
-irq:0 134 (       36) "360448-edge      mei_me"
-irq:0 135 (      216) "514048-edge      snd_hda_intel:card0"
-irq:0 137 (  6220269) "3670016-edge      iwlwifi:default_queue"
-irq:0 138 (  5216181) "3670017-edge      iwlwifi:queue_1"
-irq:0 139 (  4387929) "3670018-edge      iwlwifi:queue_2"
-irq:0 140 (  4982982) "3670019-edge      iwlwifi:queue_3"
-irq:0 141 (  4090462) "3670020-edge      iwlwifi:queue_4"
-irq:0 142 (      451) "3670021-edge      iwlwifi:exception"
-irq:0 143 ( 30178706) "524288-edge      nvidia"
+irq:0 134 (       38) "360448-edge      mei_me"
+irq:0 136 (      598) "514048-edge      snd_hda_intel:card0"
+irq:0 137 (   118371) "3670016-edge      iwlwifi:default_queue"
+irq:0 138 (    29273) "3670017-edge      iwlwifi:queue_1"
+irq:0 139 (   106223) "3670018-edge      iwlwifi:queue_2"
+irq:0 140 (    17453) "3670019-edge      iwlwifi:queue_3"
+irq:0 141 (    10235) "3670020-edge      iwlwifi:queue_4"
+irq:0 142 (       33) "3670021-edge      iwlwifi:exception"
+irq:0 143 (   754834) "524288-edge      nvidia"
 dma:1 4 "cascade"
 ----- misc resources end -----
 >> parallel.1: pp mod
@@ -1838,18 +1929,18 @@ dma:1 4 "cascade"
 ----- parallel info end -----
 >> block.1: block modules
 ----- exec: "/sbin/modprobe ide-cd_mod " -----
-  modprobe: FATAL: Module ide-cd_mod not found in directory /lib/modules/5.15.52-gentoo-s12
+  modprobe: FATAL: Module ide-cd_mod not found in directory /lib/modules/6.1.67-gentoo-s1
 ----- return code: ? -----
 ----- exec: "/sbin/modprobe ide-disk " -----
-  modprobe: FATAL: Module ide-disk not found in directory /lib/modules/5.15.52-gentoo-s12
+  modprobe: FATAL: Module ide-disk not found in directory /lib/modules/6.1.67-gentoo-s1
 ----- return code: ? -----
 ----- exec: "/sbin/modprobe sd_mod " -----
 ----- return code: ? -----
 ----- exec: "/sbin/modprobe st " -----
-  modprobe: FATAL: Module st not found in directory /lib/modules/5.15.52-gentoo-s12
+  modprobe: FATAL: Module st not found in directory /lib/modules/6.1.67-gentoo-s1
 ----- return code: ? -----
 >> block.2: sysfs drivers
------ sysfs driver list (id 0xdb0e076ab5d852f7) -----
+----- sysfs driver list (id 0xe9e3534984925101) -----
          psmouse: module = psmouse
 snd_hda_codec_generic: module = snd_hda_codec_generic
 snd_hda_codec_hdmi: /devices/pci0000:00/0000:00:01.0/0000:01:00.1/hdaudioC1D0
@@ -1857,8 +1948,6 @@ snd_hda_codec_hdmi: module = snd_hda_codec_hdmi
 snd_hda_codec_realtek: /devices/pci0000:00/0000:00:1f.3/hdaudioC0D0
 snd_hda_codec_realtek: module = snd_hda_codec_realtek
       parport_pc: module = parport_pc
-        coretemp: /devices/platform/coretemp.0
-        coretemp: module = coretemp
         iTCO_wdt: /devices/pci0000:00/0000:00:1f.4/iTCO_wdt
         iTCO_wdt: module = iTCO_wdt
         acpi-fan: /devices/platform/PNP0C0B:03
@@ -1871,8 +1960,6 @@ snd_hda_codec_realtek: module = snd_hda_codec_realtek
         acpi-wmi: module = wmi
   intel_rapl_msr: /devices/platform/intel_rapl_msr.0
   intel_rapl_msr: module = intel_rapl_msr
-         vboxdrv: module = vboxdrv
-         vboxdrv: /devices/platform/vboxdrv.0
       alarmtimer: /devices/pnp0/00:03/rtc/rtc0/alarmtimer.0.auto
       serial8250: /devices/platform/serial8250
           pcspkr: module = pcspkr
@@ -1910,13 +1997,13 @@ snd_hda_codec_realtek: module = snd_hda_codec_realtek
        processor: /devices/system/cpu/cpu2
        processor: /devices/system/cpu/cpu0
               lp: module = lp
+           ppdev: module = ppdev
               sr: /devices/pci0000:00/0000:00:17.0/ata3/host2/target2:0:0/2:0:0:0
               sr: module = sr_mod
               sd: /devices/pci0000:00/0000:00:17.0/ata2/host1/target1:0:0/1:0:0:0
               sd: /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.2/1-10.2:1.0/host6/target6:0:0/6:0:0:0
               sd: /devices/pci0000:00/0000:00:17.0/ata1/host0/target0:0:0/0:0:0:0
      hid-generic: /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.1/0003:13BA:0018.0003
-     hid-generic: /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4/1-10.4:1.3/0003:047F:C039.0004
      hid-generic: /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.0/0003:13BA:0018.0002
      hid-generic: /devices/pci0000:00/0000:00:14.0/usb1/1-7/1-7:1.0/0003:413C:301A.0001
         rtc_cmos: /devices/pnp0/00:03
@@ -1929,19 +2016,13 @@ snd_hda_codec_realtek: module = snd_hda_codec_realtek
           system: /devices/pnp0/00:02
           system: /devices/pnp0/00:00
        ath9k_htc: module = ath9k_htc
-   snd-usb-audio: /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4/1-10.4:1.2
-   snd-usb-audio: /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4/1-10.4:1.0
-   snd-usb-audio: /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4/1-10.4:1.1
-   snd-usb-audio: module = snd_usb_audio
           usbhid: /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.1
           usbhid: /devices/pci0000:00/0000:00:14.0/usb1/1-7/1-7:1.0
-          usbhid: /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4/1-10.4:1.3
           usbhid: /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.0
           usbhid: module = usbhid
      usb-storage: /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.2/1-10.2:1.0
      usb-storage: module = usb_storage
              usb: /devices/pci0000:00/0000:00:1c.0/0000:03:00.0/usb3
-             usb: /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4
              usb: /devices/pci0000:00/0000:00:14.0/usb1/1-7
              usb: /devices/pci0000:00/0000:00:14.0/usb1/1-12
              usb: /devices/pci0000:00/0000:00:14.0/usb1
@@ -2188,7 +2269,7 @@ sysfs: no such class: scsi_tape
     scsi device: bus_id = 1:0:0:0 driver = sd
       path = /devices/pci0000:00/0000:00:17.0/ata2/host1/target1:0:0/1:0:0:0
 >> usb.1: sysfs drivers
------ sysfs driver list (id 0x729856559fa1c176) -----
+----- sysfs driver list (id 0x0c6c8a1581024f59) -----
          psmouse: module = psmouse
 snd_hda_codec_generic: module = snd_hda_codec_generic
 snd_hda_codec_hdmi: /devices/pci0000:00/0000:00:01.0/0000:01:00.1/hdaudioC1D0
@@ -2196,8 +2277,6 @@ snd_hda_codec_hdmi: module = snd_hda_codec_hdmi
 snd_hda_codec_realtek: /devices/pci0000:00/0000:00:1f.3/hdaudioC0D0
 snd_hda_codec_realtek: module = snd_hda_codec_realtek
       parport_pc: module = parport_pc
-        coretemp: /devices/platform/coretemp.0
-        coretemp: module = coretemp
         iTCO_wdt: /devices/pci0000:00/0000:00:1f.4/iTCO_wdt
         iTCO_wdt: module = iTCO_wdt
         acpi-fan: /devices/platform/PNP0C0B:03
@@ -2210,8 +2289,6 @@ snd_hda_codec_realtek: module = snd_hda_codec_realtek
         acpi-wmi: module = wmi
   intel_rapl_msr: /devices/platform/intel_rapl_msr.0
   intel_rapl_msr: module = intel_rapl_msr
-         vboxdrv: module = vboxdrv
-         vboxdrv: /devices/platform/vboxdrv.0
       alarmtimer: /devices/pnp0/00:03/rtc/rtc0/alarmtimer.0.auto
       serial8250: /devices/platform/serial8250
           pcspkr: module = pcspkr
@@ -2256,7 +2333,6 @@ snd_hda_codec_realtek: module = snd_hda_codec_realtek
               sd: /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.2/1-10.2:1.0/host6/target6:0:0/6:0:0:0
               sd: /devices/pci0000:00/0000:00:17.0/ata1/host0/target0:0:0/0:0:0:0
      hid-generic: /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.1/0003:13BA:0018.0003
-     hid-generic: /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4/1-10.4:1.3/0003:047F:C039.0004
      hid-generic: /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.0/0003:13BA:0018.0002
      hid-generic: /devices/pci0000:00/0000:00:14.0/usb1/1-7/1-7:1.0/0003:413C:301A.0001
         rtc_cmos: /devices/pnp0/00:03
@@ -2269,19 +2345,13 @@ snd_hda_codec_realtek: module = snd_hda_codec_realtek
           system: /devices/pnp0/00:02
           system: /devices/pnp0/00:00
        ath9k_htc: module = ath9k_htc
-   snd-usb-audio: /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4/1-10.4:1.2
-   snd-usb-audio: /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4/1-10.4:1.0
-   snd-usb-audio: /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4/1-10.4:1.1
-   snd-usb-audio: module = snd_usb_audio
           usbhid: /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.1
           usbhid: /devices/pci0000:00/0000:00:14.0/usb1/1-7/1-7:1.0
-          usbhid: /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4/1-10.4:1.3
           usbhid: /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.0
           usbhid: module = usbhid
      usb-storage: /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.2/1-10.2:1.0
      usb-storage: module = usb_storage
              usb: /devices/pci0000:00/0000:00:1c.0/0000:03:00.0/usb3
-             usb: /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4
              usb: /devices/pci0000:00/0000:00:14.0/usb1/1-7
              usb: /devices/pci0000:00/0000:00:14.0/usb1/1-12
              usb: /devices/pci0000:00/0000:00:14.0/usb1
@@ -2310,7 +2380,6 @@ snd_hda_codec_realtek: module = snd_hda_codec_realtek
 ----- sysfs driver list end -----
 >> usb.2: usb
   usb dev: /devices/pci0000:00/0000:00:1c.0/0000:03:00.0/usb3
-  usb dev: /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4
   usb dev: /devices/pci0000:00/0000:00:14.0/usb1/1-7
   usb dev: /devices/pci0000:00/0000:00:14.0/usb1/1-12
   usb dev: /devices/pci0000:00/0000:00:14.0/usb1
@@ -2319,28 +2388,8 @@ snd_hda_codec_realtek: module = snd_hda_codec_realtek
   usb dev: /devices/pci0000:00/0000:00:1c.0/0000:03:00.0/usb4
   usb dev: /devices/pci0000:00/0000:00:14.0/usb1/1-8
   usb dev: /devices/pci0000:00/0000:00:14.0/usb2
-  usb device: name = 1-10.4:1.2
-    path = /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4/1-10.4:1.2
-    modalias = "usb:v047FpC039d0159dc00dsc00dp00ic01isc02ip00in02"
-    bInterfaceNumber = 2
-    bInterfaceClass = 1
-    bInterfaceSubClass = 2
-    bInterfaceProtocol = 0
-    if: 1-10.4:1.2 @ /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4
-    bDeviceClass = 0
-    bDeviceSubClass = 0
-    bDeviceProtocol = 0
-    idVendor = 0x047f
-    idProduct = 0xc039
-    manufacturer = "Plantronics"
-    product = "Plantronics Blackwire 320"
-    serial = "036C849A82CD48ACBCD46A0BEC5AF795"
-    bcdDevice = 0159
-    speed = "12"
   usb device: name = usb3
     path = /devices/pci0000:00/0000:00:1c.0/0000:03:00.0/usb3
-  usb device: name = 1-10.4
-    path = /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4
   usb device: name = 1-12:1.1
     path = /devices/pci0000:00/0000:00:14.0/usb1/1-12/1-12:1.1
     modalias = "usb:v8087p0025d0002dcE0dsc01dp01icE0isc01ip01in01"
@@ -2355,24 +2404,6 @@ snd_hda_codec_realtek: module = snd_hda_codec_realtek
     idVendor = 0x8087
     idProduct = 0x0025
     bcdDevice = 0002
-    speed = "12"
-  usb device: name = 1-10.4:1.0
-    path = /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4/1-10.4:1.0
-    modalias = "usb:v047FpC039d0159dc00dsc00dp00ic01isc01ip00in00"
-    bInterfaceNumber = 0
-    bInterfaceClass = 1
-    bInterfaceSubClass = 1
-    bInterfaceProtocol = 0
-    if: 1-10.4:1.0 @ /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4
-    bDeviceClass = 0
-    bDeviceSubClass = 0
-    bDeviceProtocol = 0
-    idVendor = 0x047f
-    idProduct = 0xc039
-    manufacturer = "Plantronics"
-    product = "Plantronics Blackwire 320"
-    serial = "036C849A82CD48ACBCD46A0BEC5AF795"
-    bcdDevice = 0159
     speed = "12"
   usb device: name = 1-7
     path = /devices/pci0000:00/0000:00:14.0/usb1/1-7
@@ -2414,7 +2445,7 @@ snd_hda_codec_realtek: module = snd_hda_codec_realtek
     speed = "1.5"
   usb device: name = 3-0:1.0
     path = /devices/pci0000:00/0000:00:1c.0/0000:03:00.0/usb3/3-0:1.0
-    modalias = "usb:v1D6Bp0002d0515dc09dsc00dp01ic09isc00ip00in00"
+    modalias = "usb:v1D6Bp0002d0601dc09dsc00dp01ic09isc00ip00in00"
     bInterfaceNumber = 0
     bInterfaceClass = 9
     bInterfaceSubClass = 0
@@ -2425,10 +2456,10 @@ snd_hda_codec_realtek: module = snd_hda_codec_realtek
     bDeviceProtocol = 1
     idVendor = 0x1d6b
     idProduct = 0x0002
-    manufacturer = "Linux 5.15.52-gentoo-s12 xhci-hcd"
+    manufacturer = "Linux 6.1.67-gentoo-s1 xhci-hcd"
     product = "xHCI Host Controller"
     serial = "0000:03:00.0"
-    bcdDevice = 0515
+    bcdDevice = 0601
     speed = "480"
   usb device: name = 1-10.2
     path = /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.2
@@ -2453,7 +2484,7 @@ snd_hda_codec_realtek: module = snd_hda_codec_realtek
     speed = "1.5"
   usb device: name = 4-0:1.0
     path = /devices/pci0000:00/0000:00:1c.0/0000:03:00.0/usb4/4-0:1.0
-    modalias = "usb:v1D6Bp0003d0515dc09dsc00dp03ic09isc00ip00in00"
+    modalias = "usb:v1D6Bp0003d0601dc09dsc00dp03ic09isc00ip00in00"
     bInterfaceNumber = 0
     bInterfaceClass = 9
     bInterfaceSubClass = 0
@@ -2464,49 +2495,13 @@ snd_hda_codec_realtek: module = snd_hda_codec_realtek
     bDeviceProtocol = 3
     idVendor = 0x1d6b
     idProduct = 0x0003
-    manufacturer = "Linux 5.15.52-gentoo-s12 xhci-hcd"
+    manufacturer = "Linux 6.1.67-gentoo-s1 xhci-hcd"
     product = "xHCI Host Controller"
     serial = "0000:03:00.0"
-    bcdDevice = 0515
+    bcdDevice = 0601
     speed = "10000"
-  usb device: name = 1-10.4:1.3
-    path = /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4/1-10.4:1.3
-    modalias = "usb:v047FpC039d0159dc00dsc00dp00ic03isc00ip00in03"
-    bInterfaceNumber = 3
-    bInterfaceClass = 3
-    bInterfaceSubClass = 0
-    bInterfaceProtocol = 0
-    if: 1-10.4:1.3 @ /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4
-    bDeviceClass = 0
-    bDeviceSubClass = 0
-    bDeviceProtocol = 0
-    idVendor = 0x047f
-    idProduct = 0xc039
-    manufacturer = "Plantronics"
-    product = "Plantronics Blackwire 320"
-    serial = "036C849A82CD48ACBCD46A0BEC5AF795"
-    bcdDevice = 0159
-    speed = "12"
   usb device: name = usb4
     path = /devices/pci0000:00/0000:00:1c.0/0000:03:00.0/usb4
-  usb device: name = 1-10.4:1.1
-    path = /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4/1-10.4:1.1
-    modalias = "usb:v047FpC039d0159dc00dsc00dp00ic01isc02ip00in01"
-    bInterfaceNumber = 1
-    bInterfaceClass = 1
-    bInterfaceSubClass = 2
-    bInterfaceProtocol = 0
-    if: 1-10.4:1.1 @ /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4
-    bDeviceClass = 0
-    bDeviceSubClass = 0
-    bDeviceProtocol = 0
-    idVendor = 0x047f
-    idProduct = 0xc039
-    manufacturer = "Plantronics"
-    product = "Plantronics Blackwire 320"
-    serial = "036C849A82CD48ACBCD46A0BEC5AF795"
-    bcdDevice = 0159
-    speed = "12"
   usb device: name = 1-8
     path = /devices/pci0000:00/0000:00:14.0/usb1/1-8
   usb device: name = usb2
@@ -2530,7 +2525,7 @@ snd_hda_codec_realtek: module = snd_hda_codec_realtek
     speed = "480"
   usb device: name = 1-0:1.0
     path = /devices/pci0000:00/0000:00:14.0/usb1/1-0:1.0
-    modalias = "usb:v1D6Bp0002d0515dc09dsc00dp01ic09isc00ip00in00"
+    modalias = "usb:v1D6Bp0002d0601dc09dsc00dp01ic09isc00ip00in00"
     bInterfaceNumber = 0
     bInterfaceClass = 9
     bInterfaceSubClass = 0
@@ -2541,10 +2536,10 @@ snd_hda_codec_realtek: module = snd_hda_codec_realtek
     bDeviceProtocol = 1
     idVendor = 0x1d6b
     idProduct = 0x0002
-    manufacturer = "Linux 5.15.52-gentoo-s12 xhci-hcd"
+    manufacturer = "Linux 6.1.67-gentoo-s1 xhci-hcd"
     product = "xHCI Host Controller"
     serial = "0000:00:14.0"
-    bcdDevice = 0515
+    bcdDevice = 0601
     speed = "480"
   usb device: name = 1-12:1.0
     path = /devices/pci0000:00/0000:00:14.0/usb1/1-12/1-12:1.0
@@ -2579,7 +2574,7 @@ snd_hda_codec_realtek: module = snd_hda_codec_realtek
     speed = "1.5"
   usb device: name = 2-0:1.0
     path = /devices/pci0000:00/0000:00:14.0/usb2/2-0:1.0
-    modalias = "usb:v1D6Bp0003d0515dc09dsc00dp03ic09isc00ip00in00"
+    modalias = "usb:v1D6Bp0003d0601dc09dsc00dp03ic09isc00ip00in00"
     bInterfaceNumber = 0
     bInterfaceClass = 9
     bInterfaceSubClass = 0
@@ -2590,33 +2585,29 @@ snd_hda_codec_realtek: module = snd_hda_codec_realtek
     bDeviceProtocol = 3
     idVendor = 0x1d6b
     idProduct = 0x0003
-    manufacturer = "Linux 5.15.52-gentoo-s12 xhci-hcd"
+    manufacturer = "Linux 6.1.67-gentoo-s1 xhci-hcd"
     product = "xHCI Host Controller"
     serial = "0000:00:14.0"
-    bcdDevice = 0515
+    bcdDevice = 0601
     speed = "5000"
-removed: /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4/1-10.4:1.0
-removed: /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4/1-10.4:1.1
 removed: /devices/pci0000:00/0000:00:14.0/usb1/1-12/1-12:1.0
 >> usb.3.1: joydev mod
 >> usb.3.2: evdev mod
 ----- exec: "/sbin/modprobe evdev " -----
 ----- return code: ? -----
 >> usb.3.3: input
-  input: name = input9, path = /devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1/input9
+  input: name = input9, path = /devices/pci0000:00/0000:00:14.0/usb1/1-7/1-7:1.0/0003:413C:301A.0001/input/input9
     no dev - ignored
-  input: name = event17, path = /devices/pci0000:00/0000:00:1f.3/sound/card0/input17/event17
+  input: name = event17, path = /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.0/0003:13BA:0018.0002/input/input17/event17
     dev = 13:81
-    input device: bus = sound, bus_id = card0 driver = (null)
-      path = /devices/pci0000:00/0000:00:1f.3/sound/card0
-  input: name = input24, path = /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4/1-10.4:1.3/0003:047F:C039.0004/input/input24
-    no dev - ignored
+    input device: bus = hid, bus_id = 0003:13BA:0018.0002 driver = hid-generic
+      path = /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.0/0003:13BA:0018.0002
   input: name = input14, path = /devices/pci0000:00/0000:00:1f.3/sound/card0/input14
     no dev - ignored
-  input: name = event9, path = /devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1/input9/event9
+  input: name = event9, path = /devices/pci0000:00/0000:00:1f.3/sound/card0/input8/event9
     dev = 13:73
-    input device: bus = sound, bus_id = card1 driver = (null)
-      path = /devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1
+    input device: bus = sound, bus_id = card0 driver = (null)
+      path = /devices/pci0000:00/0000:00:1f.3/sound/card0
   input: name = input7, path = /devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1/input7
     no dev - ignored
   input: name = event15, path = /devices/pci0000:00/0000:00:1f.3/sound/card0/input15/event15
@@ -2625,43 +2616,33 @@ removed: /devices/pci0000:00/0000:00:14.0/usb1/1-12/1-12:1.0
       path = /devices/pci0000:00/0000:00:1f.3/sound/card0
   input: name = mice, path = /devices/virtual/input/mice
     dev = 13:63
-  input: name = input22, path = /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4/1-10.4:1.3/0003:047F:C039.0004/input/input22
-    no dev - ignored
-  input: name = input12, path = /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.1/0003:13BA:0018.0003/input/input12
+  input: name = input12, path = /devices/pci0000:00/0000:00:1f.3/sound/card0/input12
     no dev - ignored
   input: name = event7, path = /devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1/input7/event7
     dev = 13:71
     input device: bus = sound, bus_id = card1 driver = (null)
       path = /devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1
-  input: name = event23, path = /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4/1-10.4:1.3/0003:047F:C039.0004/input/input23/event23
-    dev = 13:87
-    input device: bus = hid, bus_id = 0003:047F:C039.0004 driver = hid-generic
-      path = /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4/1-10.4:1.3/0003:047F:C039.0004
-  input: name = input5, path = /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.0/0003:13BA:0018.0002/input/input5
+  input: name = input5, path = /devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1/input5
     no dev - ignored
-  input: name = event13, path = /devices/pci0000:00/0000:00:1f.3/sound/card0/input14/event13
+  input: name = event13, path = /devices/pci0000:00/0000:00:1f.3/sound/card0/input13/event13
     dev = 13:77
     input device: bus = sound, bus_id = card0 driver = (null)
       path = /devices/pci0000:00/0000:00:1f.3/sound/card0
-  input: name = input20, path = /devices/pci0000:00/0000:00:1f.3/sound/card0/input20
+  input: name = input20, path = /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.1/0003:13BA:0018.0003/input/input20
     no dev - ignored
-  input: name = input10, path = /devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1/input10
+  input: name = input10, path = /devices/pci0000:00/0000:00:1f.3/sound/card0/input10
     no dev - ignored
-  input: name = event5, path = /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.0/0003:13BA:0018.0002/input/input5/event5
+  input: name = event5, path = /devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1/input5/event5
     dev = 13:69
-    input device: bus = hid, bus_id = 0003:13BA:0018.0002 driver = hid-generic
-      path = /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.0/0003:13BA:0018.0002
-  input: name = event21, path = /devices/pci0000:00/0000:00:1f.3/sound/card0/input21/event21
-    dev = 13:85
-    input device: bus = sound, bus_id = card0 driver = (null)
-      path = /devices/pci0000:00/0000:00:1f.3/sound/card0
+    input device: bus = sound, bus_id = card1 driver = (null)
+      path = /devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1
   input: name = input3, path = /devices/platform/pcspkr/input/input3
     no dev - ignored
-  input: name = event11, path = /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.1/0003:13BA:0018.0003/input/input11/event11
+  input: name = event11, path = /devices/pci0000:00/0000:00:1f.3/sound/card0/input11/event11
     dev = 13:75
-    input device: bus = hid, bus_id = 0003:13BA:0018.0003 driver = hid-generic
-      path = /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.1/0003:13BA:0018.0003
-  input: name = input19, path = /devices/pci0000:00/0000:00:1f.3/sound/card0/input19
+    input device: bus = sound, bus_id = card0 driver = (null)
+      path = /devices/pci0000:00/0000:00:1f.3/sound/card0
+  input: name = input19, path = /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.1/0003:13BA:0018.0003/input/input19
     no dev - ignored
   input: name = event3, path = /devices/platform/pcspkr/input/input3/event3
     dev = 13:67
@@ -2669,92 +2650,80 @@ removed: /devices/pci0000:00/0000:00:14.0/usb1/1-12/1-12:1.0
       path = /devices/platform/pcspkr
   input: name = input1, path = /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0C:00/input/input1
     no dev - ignored
-  input: name = input17, path = /devices/pci0000:00/0000:00:1f.3/sound/card0/input17
+  input: name = input17, path = /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.0/0003:13BA:0018.0002/input/input17
     no dev - ignored
   input: name = event1, path = /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0C:00/input/input1/event1
     dev = 13:65
     input device: bus = acpi, bus_id = PNP0C0C:00 driver = button
       path = /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0C:00
-  input: name = mouse0, path = /devices/pci0000:00/0000:00:14.0/usb1/1-7/1-7:1.0/0003:413C:301A.0001/input/input4/mouse0
+  input: name = mouse0, path = /devices/pci0000:00/0000:00:14.0/usb1/1-7/1-7:1.0/0003:413C:301A.0001/input/input9/mouse0
     dev = 13:32
     input device: bus = hid, bus_id = 0003:413C:301A.0001 driver = hid-generic
       path = /devices/pci0000:00/0000:00:14.0/usb1/1-7/1-7:1.0/0003:413C:301A.0001
-  input: name = event18, path = /devices/pci0000:00/0000:00:1f.3/sound/card0/input18/event18
+  input: name = event18, path = /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.1/0003:13BA:0018.0003/input/input18/event18
     dev = 13:82
-    input device: bus = sound, bus_id = card0 driver = (null)
-      path = /devices/pci0000:00/0000:00:1f.3/sound/card0
+    input device: bus = hid, bus_id = 0003:13BA:0018.0003 driver = hid-generic
+      path = /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.1/0003:13BA:0018.0003
   input: name = input15, path = /devices/pci0000:00/0000:00:1f.3/sound/card0/input15
     no dev - ignored
-  input: name = input8, path = /devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1/input8
+  input: name = input8, path = /devices/pci0000:00/0000:00:1f.3/sound/card0/input8
     no dev - ignored
   input: name = event16, path = /devices/pci0000:00/0000:00:1f.3/sound/card0/input16/event16
     dev = 13:80
     input device: bus = sound, bus_id = card0 driver = (null)
       path = /devices/pci0000:00/0000:00:1f.3/sound/card0
-  input: name = input23, path = /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4/1-10.4:1.3/0003:047F:C039.0004/input/input23
+  input: name = input13, path = /devices/pci0000:00/0000:00:1f.3/sound/card0/input13
     no dev - ignored
-  input: name = input13, path = /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.1/0003:13BA:0018.0003/input/input13
-    no dev - ignored
-  input: name = event8, path = /devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1/input8/event8
+  input: name = event8, path = /devices/pci0000:00/0000:00:14.0/usb1/1-7/1-7:1.0/0003:413C:301A.0001/input/input9/event8
     dev = 13:72
-    input device: bus = sound, bus_id = card1 driver = (null)
-      path = /devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1
-  input: name = event24, path = /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4/1-10.4:1.3/0003:047F:C039.0004/input/input24/event24
-    dev = 13:88
-    input device: bus = hid, bus_id = 0003:047F:C039.0004 driver = hid-generic
-      path = /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4/1-10.4:1.3/0003:047F:C039.0004
+    input device: bus = hid, bus_id = 0003:413C:301A.0001 driver = hid-generic
+      path = /devices/pci0000:00/0000:00:14.0/usb1/1-7/1-7:1.0/0003:413C:301A.0001
   input: name = input6, path = /devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1/input6
     no dev - ignored
-  input: name = event14, path = /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.1/0003:13BA:0018.0003/input/input13/event14
+  input: name = event14, path = /devices/pci0000:00/0000:00:1f.3/sound/card0/input14/event14
     dev = 13:78
-    input device: bus = hid, bus_id = 0003:13BA:0018.0003 driver = hid-generic
-      path = /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.1/0003:13BA:0018.0003
-  input: name = input21, path = /devices/pci0000:00/0000:00:1f.3/sound/card0/input21
-    no dev - ignored
-  input: name = input11, path = /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.1/0003:13BA:0018.0003/input/input11
+    input device: bus = sound, bus_id = card0 driver = (null)
+      path = /devices/pci0000:00/0000:00:1f.3/sound/card0
+  input: name = input11, path = /devices/pci0000:00/0000:00:1f.3/sound/card0/input11
     no dev - ignored
   input: name = event6, path = /devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1/input6/event6
     dev = 13:70
     input device: bus = sound, bus_id = card1 driver = (null)
       path = /devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1
-  input: name = event22, path = /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4/1-10.4:1.3/0003:047F:C039.0004/input/input22/event22
-    dev = 13:86
-    input device: bus = hid, bus_id = 0003:047F:C039.0004 driver = hid-generic
-      path = /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4/1-10.4:1.3/0003:047F:C039.0004
-  input: name = input4, path = /devices/pci0000:00/0000:00:14.0/usb1/1-7/1-7:1.0/0003:413C:301A.0001/input/input4
+  input: name = input4, path = /devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1/input4
     no dev - ignored
-  input: name = event12, path = /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.1/0003:13BA:0018.0003/input/input12/event12
+  input: name = event12, path = /devices/pci0000:00/0000:00:1f.3/sound/card0/input12/event12
     dev = 13:76
-    input device: bus = hid, bus_id = 0003:13BA:0018.0003 driver = hid-generic
-      path = /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.1/0003:13BA:0018.0003
-  input: name = event4, path = /devices/pci0000:00/0000:00:14.0/usb1/1-7/1-7:1.0/0003:413C:301A.0001/input/input4/event4
-    dev = 13:68
-    input device: bus = hid, bus_id = 0003:413C:301A.0001 driver = hid-generic
-      path = /devices/pci0000:00/0000:00:14.0/usb1/1-7/1-7:1.0/0003:413C:301A.0001
-  input: name = event20, path = /devices/pci0000:00/0000:00:1f.3/sound/card0/input20/event20
-    dev = 13:84
     input device: bus = sound, bus_id = card0 driver = (null)
       path = /devices/pci0000:00/0000:00:1f.3/sound/card0
-  input: name = input2, path = /devices/LNXSYSTM:00/LNXPWRBN:00/input/input2
-    no dev - ignored
-  input: name = event10, path = /devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1/input10/event10
-    dev = 13:74
+  input: name = event4, path = /devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1/input4/event4
+    dev = 13:68
     input device: bus = sound, bus_id = card1 driver = (null)
       path = /devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1
-  input: name = input18, path = /devices/pci0000:00/0000:00:1f.3/sound/card0/input18
+  input: name = event20, path = /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.1/0003:13BA:0018.0003/input/input20/event20
+    dev = 13:84
+    input device: bus = hid, bus_id = 0003:13BA:0018.0003 driver = hid-generic
+      path = /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.1/0003:13BA:0018.0003
+  input: name = input2, path = /devices/LNXSYSTM:00/LNXPWRBN:00/input/input2
+    no dev - ignored
+  input: name = event10, path = /devices/pci0000:00/0000:00:1f.3/sound/card0/input10/event10
+    dev = 13:74
+    input device: bus = sound, bus_id = card0 driver = (null)
+      path = /devices/pci0000:00/0000:00:1f.3/sound/card0
+  input: name = input18, path = /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.1/0003:13BA:0018.0003/input/input18
     no dev - ignored
   input: name = event2, path = /devices/LNXSYSTM:00/LNXPWRBN:00/input/input2/event2
     dev = 13:66
     input device: bus = acpi, bus_id = LNXPWRBN:00 driver = button
       path = /devices/LNXSYSTM:00/LNXPWRBN:00
-  input: name = mouse1, path = /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.1/0003:13BA:0018.0003/input/input11/mouse1
+  input: name = mouse1, path = /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.1/0003:13BA:0018.0003/input/input18/mouse1
     dev = 13:33
     input device: bus = hid, bus_id = 0003:13BA:0018.0003 driver = hid-generic
       path = /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.1/0003:13BA:0018.0003
-  input: name = event19, path = /devices/pci0000:00/0000:00:1f.3/sound/card0/input19/event19
+  input: name = event19, path = /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.1/0003:13BA:0018.0003/input/input19/event19
     dev = 13:83
-    input device: bus = sound, bus_id = card0 driver = (null)
-      path = /devices/pci0000:00/0000:00:1f.3/sound/card0
+    input device: bus = hid, bus_id = 0003:13BA:0018.0003 driver = hid-generic
+      path = /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.1/0003:13BA:0018.0003
   input: name = input0, path = /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0E:00/input/input0
     no dev - ignored
   input: name = input16, path = /devices/pci0000:00/0000:00:1f.3/sound/card0/input16
@@ -2789,11 +2758,11 @@ edd: 0x80
   interface: SATA
   dev path: 0000000000000000 0000000000000000
 >> modem.1: serial
-******  started child process 25518 (15s/120s)  ******
-******  stopped child process 25518 (120s)  ******
+******  started child process 17965 (15s/120s)  ******
+******  stopped child process 17965 (120s)  ******
 >> mouse.2: serial
-******  started child process 25519 (20s/20s)  ******
-******  stopped child process 25519 (20s)  ******
+******  started child process 17966 (20s/20s)  ******
+******  stopped child process 17966 (20s)  ******
 >> input.1: joydev mod
 >> input.1.1: evdev mod
 ----- exec: "/sbin/modprobe evdev " -----
@@ -2840,32 +2809,28 @@ edd: 0x80
   B: EV=40001
   B: SND=6
   
-  I: Bus=0003 Vendor=413c Product=301a Version=0111
-  N: Name="PixArt Dell MS116 USB Optical Mouse"
-  P: Phys=usb-0000:00:14.0-7/input0
-  S: Sysfs=/devices/pci0000:00/0000:00:14.0/usb1/1-7/1-7:1.0/0003:413C:301A.0001/input/input4
-  U: Uniq=
-  H: Handlers=mouse0 event4 
-  B: PROP=0
-  B: EV=17
-  B: KEY=70000 0 0 0 0
-  B: REL=903
-  B: MSC=10
-  
-  I: Bus=0003 Vendor=13ba Product=0018 Version=0110
-  N: Name="Barcode Reader "
-  P: Phys=usb-0000:00:14.0-8/input0
-  S: Sysfs=/devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.0/0003:13BA:0018.0002/input/input5
-  U: Uniq=
-  H: Handlers=sysrq kbd leds event5 
-  B: PROP=0
-  B: EV=120013
-  B: KEY=1000000000007 ff800000000007ff febeffdff3cfffff fffffffffffffffe
-  B: MSC=10
-  B: LED=7
-  
   I: Bus=0000 Vendor=0000 Product=0000 Version=0000
   N: Name="HDA NVidia HDMI/DP,pcm=3"
+  P: Phys=ALSA
+  S: Sysfs=/devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1/input4
+  U: Uniq=
+  H: Handlers=event4 
+  B: PROP=0
+  B: EV=21
+  B: SW=140
+  
+  I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+  N: Name="HDA NVidia HDMI/DP,pcm=7"
+  P: Phys=ALSA
+  S: Sysfs=/devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1/input5
+  U: Uniq=
+  H: Handlers=event5 
+  B: PROP=0
+  B: EV=21
+  B: SW=140
+  
+  I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+  N: Name="HDA NVidia HDMI/DP,pcm=8"
   P: Phys=ALSA
   S: Sysfs=/devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1/input6
   U: Uniq=
@@ -2875,7 +2840,7 @@ edd: 0x80
   B: SW=140
   
   I: Bus=0000 Vendor=0000 Product=0000 Version=0000
-  N: Name="HDA NVidia HDMI/DP,pcm=7"
+  N: Name="HDA NVidia HDMI/DP,pcm=9"
   P: Phys=ALSA
   S: Sysfs=/devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1/input7
   U: Uniq=
@@ -2884,42 +2849,116 @@ edd: 0x80
   B: EV=21
   B: SW=140
   
-  I: Bus=0000 Vendor=0000 Product=0000 Version=0000
-  N: Name="HDA NVidia HDMI/DP,pcm=8"
-  P: Phys=ALSA
-  S: Sysfs=/devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1/input8
+  I: Bus=0003 Vendor=413c Product=301a Version=0111
+  N: Name="PixArt Dell MS116 USB Optical Mouse"
+  P: Phys=usb-0000:00:14.0-7/input0
+  S: Sysfs=/devices/pci0000:00/0000:00:14.0/usb1/1-7/1-7:1.0/0003:413C:301A.0001/input/input9
   U: Uniq=
-  H: Handlers=event8 
+  H: Handlers=mouse0 event8 
   B: PROP=0
-  B: EV=21
-  B: SW=140
+  B: EV=17
+  B: KEY=70000 0 0 0 0
+  B: REL=903
+  B: MSC=10
   
   I: Bus=0000 Vendor=0000 Product=0000 Version=0000
-  N: Name="HDA NVidia HDMI/DP,pcm=9"
+  N: Name="HDA Intel PCH Front Mic"
   P: Phys=ALSA
-  S: Sysfs=/devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1/input9
+  S: Sysfs=/devices/pci0000:00/0000:00:1f.3/sound/card0/input8
   U: Uniq=
   H: Handlers=event9 
   B: PROP=0
   B: EV=21
-  B: SW=140
+  B: SW=10
   
   I: Bus=0000 Vendor=0000 Product=0000 Version=0000
-  N: Name="HDA NVidia HDMI/DP,pcm=10"
+  N: Name="HDA Intel PCH Rear Mic"
   P: Phys=ALSA
-  S: Sysfs=/devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1/input10
+  S: Sysfs=/devices/pci0000:00/0000:00:1f.3/sound/card0/input10
   U: Uniq=
   H: Handlers=event10 
   B: PROP=0
   B: EV=21
-  B: SW=140
+  B: SW=10
+  
+  I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+  N: Name="HDA Intel PCH Line"
+  P: Phys=ALSA
+  S: Sysfs=/devices/pci0000:00/0000:00:1f.3/sound/card0/input11
+  U: Uniq=
+  H: Handlers=event11 
+  B: PROP=0
+  B: EV=21
+  B: SW=2000
+  
+  I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+  N: Name="HDA Intel PCH Line Out Front"
+  P: Phys=ALSA
+  S: Sysfs=/devices/pci0000:00/0000:00:1f.3/sound/card0/input12
+  U: Uniq=
+  H: Handlers=event12 
+  B: PROP=0
+  B: EV=21
+  B: SW=40
+  
+  I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+  N: Name="HDA Intel PCH Line Out Surround"
+  P: Phys=ALSA
+  S: Sysfs=/devices/pci0000:00/0000:00:1f.3/sound/card0/input13
+  U: Uniq=
+  H: Handlers=event13 
+  B: PROP=0
+  B: EV=21
+  B: SW=40
+  
+  I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+  N: Name="HDA Intel PCH Line Out CLFE"
+  P: Phys=ALSA
+  S: Sysfs=/devices/pci0000:00/0000:00:1f.3/sound/card0/input14
+  U: Uniq=
+  H: Handlers=event14 
+  B: PROP=0
+  B: EV=21
+  B: SW=40
+  
+  I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+  N: Name="HDA Intel PCH Line Out Side"
+  P: Phys=ALSA
+  S: Sysfs=/devices/pci0000:00/0000:00:1f.3/sound/card0/input15
+  U: Uniq=
+  H: Handlers=event15 
+  B: PROP=0
+  B: EV=21
+  B: SW=40
+  
+  I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+  N: Name="HDA Intel PCH Front Headphone"
+  P: Phys=ALSA
+  S: Sysfs=/devices/pci0000:00/0000:00:1f.3/sound/card0/input16
+  U: Uniq=
+  H: Handlers=event16 
+  B: PROP=0
+  B: EV=21
+  B: SW=4
+  
+  I: Bus=0003 Vendor=13ba Product=0018 Version=0110
+  N: Name="Barcode Reader "
+  P: Phys=usb-0000:00:14.0-8/input0
+  S: Sysfs=/devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.0/0003:13BA:0018.0002/input/input17
+  U: Uniq=
+  H: Handlers=sysrq kbd leds event17 
+  B: PROP=0
+  B: EV=120013
+  B: KEY=1000000000007 ff800000000007ff febeffdff3cfffff fffffffffffffffe
+  B: MSC=10
+  B: LED=7
   
   I: Bus=0003 Vendor=13ba Product=0018 Version=0110
   N: Name="Barcode Reader  Mouse"
   P: Phys=usb-0000:00:14.0-8/input1
-  S: Sysfs=/devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.1/0003:13BA:0018.0003/input/input11
+  S: Sysfs=/devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.1/0003:13BA:0018.0003/input/input18
   U: Uniq=
-  H: Handlers=mouse1 event11 
+  H: Handlers=mouse1 event18 
   B: PROP=0
   B: EV=17
   B: KEY=1f0000 0 0 0 0
@@ -2929,140 +2968,25 @@ edd: 0x80
   I: Bus=0003 Vendor=13ba Product=0018 Version=0110
   N: Name="Barcode Reader  System Control"
   P: Phys=usb-0000:00:14.0-8/input1
-  S: Sysfs=/devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.1/0003:13BA:0018.0003/input/input12
+  S: Sysfs=/devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.1/0003:13BA:0018.0003/input/input19
   U: Uniq=
-  H: Handlers=kbd event12 
+  H: Handlers=kbd event19 
   B: PROP=0
   B: EV=13
   B: KEY=c000 10000000000000 0
   B: MSC=10
   
-  I: Bus=0000 Vendor=0000 Product=0000 Version=0000
-  N: Name="HDA Intel PCH Front Mic"
-  P: Phys=ALSA
-  S: Sysfs=/devices/pci0000:00/0000:00:1f.3/sound/card0/input14
-  U: Uniq=
-  H: Handlers=event13 
-  B: PROP=0
-  B: EV=21
-  B: SW=10
-  
   I: Bus=0003 Vendor=13ba Product=0018 Version=0110
   N: Name="Barcode Reader  Consumer Control"
   P: Phys=usb-0000:00:14.0-8/input1
-  S: Sysfs=/devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.1/0003:13BA:0018.0003/input/input13
+  S: Sysfs=/devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.1/0003:13BA:0018.0003/input/input20
   U: Uniq=
-  H: Handlers=kbd event14 
+  H: Handlers=kbd event20 
   B: PROP=0
   B: EV=1f
   B: KEY=306ff 0 0 483ffff17aff32d bfd4444600000000 1 130c730b17c000 267bfad9415fed 9e168000004400 10000002
   B: REL=1040
   B: ABS=100000000
-  B: MSC=10
-  
-  I: Bus=0000 Vendor=0000 Product=0000 Version=0000
-  N: Name="HDA Intel PCH Rear Mic"
-  P: Phys=ALSA
-  S: Sysfs=/devices/pci0000:00/0000:00:1f.3/sound/card0/input15
-  U: Uniq=
-  H: Handlers=event15 
-  B: PROP=0
-  B: EV=21
-  B: SW=10
-  
-  I: Bus=0000 Vendor=0000 Product=0000 Version=0000
-  N: Name="HDA Intel PCH Line"
-  P: Phys=ALSA
-  S: Sysfs=/devices/pci0000:00/0000:00:1f.3/sound/card0/input16
-  U: Uniq=
-  H: Handlers=event16 
-  B: PROP=0
-  B: EV=21
-  B: SW=2000
-  
-  I: Bus=0000 Vendor=0000 Product=0000 Version=0000
-  N: Name="HDA Intel PCH Line Out Front"
-  P: Phys=ALSA
-  S: Sysfs=/devices/pci0000:00/0000:00:1f.3/sound/card0/input17
-  U: Uniq=
-  H: Handlers=event17 
-  B: PROP=0
-  B: EV=21
-  B: SW=40
-  
-  I: Bus=0000 Vendor=0000 Product=0000 Version=0000
-  N: Name="HDA Intel PCH Line Out Surround"
-  P: Phys=ALSA
-  S: Sysfs=/devices/pci0000:00/0000:00:1f.3/sound/card0/input18
-  U: Uniq=
-  H: Handlers=event18 
-  B: PROP=0
-  B: EV=21
-  B: SW=40
-  
-  I: Bus=0000 Vendor=0000 Product=0000 Version=0000
-  N: Name="HDA Intel PCH Line Out CLFE"
-  P: Phys=ALSA
-  S: Sysfs=/devices/pci0000:00/0000:00:1f.3/sound/card0/input19
-  U: Uniq=
-  H: Handlers=event19 
-  B: PROP=0
-  B: EV=21
-  B: SW=40
-  
-  I: Bus=0000 Vendor=0000 Product=0000 Version=0000
-  N: Name="HDA Intel PCH Line Out Side"
-  P: Phys=ALSA
-  S: Sysfs=/devices/pci0000:00/0000:00:1f.3/sound/card0/input20
-  U: Uniq=
-  H: Handlers=event20 
-  B: PROP=0
-  B: EV=21
-  B: SW=40
-  
-  I: Bus=0000 Vendor=0000 Product=0000 Version=0000
-  N: Name="HDA Intel PCH Front Headphone"
-  P: Phys=ALSA
-  S: Sysfs=/devices/pci0000:00/0000:00:1f.3/sound/card0/input21
-  U: Uniq=
-  H: Handlers=event21 
-  B: PROP=0
-  B: EV=21
-  B: SW=4
-  
-  I: Bus=0003 Vendor=047f Product=c039 Version=0111
-  N: Name="Plantronics Plantronics Blackwire 320 Consumer Control"
-  P: Phys=usb-0000:00:14.0-10.4/input3
-  S: Sysfs=/devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4/1-10.4:1.3/0003:047F:C039.0004/input/input22
-  U: Uniq=036C849A82CD48ACBCD46A0BEC5AF795
-  H: Handlers=kbd event22 
-  B: PROP=0
-  B: EV=13
-  B: KEY=c000000000000 0
-  B: MSC=10
-  
-  I: Bus=0003 Vendor=047f Product=c039 Version=0111
-  N: Name="Plantronics Plantronics Blackwire 320"
-  P: Phys=usb-0000:00:14.0-10.4/input3
-  S: Sysfs=/devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4/1-10.4:1.3/0003:047F:C039.0004/input/input23
-  U: Uniq=036C849A82CD48ACBCD46A0BEC5AF795
-  H: Handlers=kbd leds event23 
-  B: PROP=0
-  B: EV=20013
-  B: KEY=100000000000000 0 0 0
-  B: MSC=10
-  B: LED=80
-  
-  I: Bus=0003 Vendor=047f Product=c039 Version=0111
-  N: Name="Plantronics Plantronics Blackwire 320"
-  P: Phys=usb-0000:00:14.0-10.4/input3
-  S: Sysfs=/devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4/1-10.4:1.3/0003:047F:C039.0004/input/input24
-  U: Uniq=036C849A82CD48ACBCD46A0BEC5AF795
-  H: Handlers=event24 
-  B: PROP=0
-  B: EV=1b
-  B: KEY=1 0 0 0 0
-  B: ABS=10000000000
   B: MSC=10
   
 ----- /proc/bus/input/devices end -----
@@ -3097,58 +3021,107 @@ bus = 16, name = PC Speaker
   is_mouse = 0
   is_joystick = 0
 unknown non-USB input device
-bus = 3, name = PixArt Dell MS116 USB Optical Mouse
-  handlers = mouse0 event4
-  key = 00000000000700000000000000000000000000000000000000000000000000000000000000000000
-  rel = 0000000000000903
-  mouse buttons = 3
-  mouse wheels = 2
-  is_mouse = 1
-  is_joystick = 0
-bus = 3, name = Barcode Reader
-  handlers = sysrq kbd leds event5
-  key = 0001000000000007ff800000000007fffebeffdff3cffffffffffffffffffffe
-  mouse buttons = 0
-  mouse wheels = 0
-  is_mouse = 0
-  is_joystick = 0
 bus = 0, name = HDA NVidia HDMI/DP,pcm=3
-  handlers = event6
+  handlers = event4
   mouse buttons = 0
   mouse wheels = 0
   is_mouse = 0
   is_joystick = 0
 unknown non-USB input device
 bus = 0, name = HDA NVidia HDMI/DP,pcm=7
-  handlers = event7
+  handlers = event5
   mouse buttons = 0
   mouse wheels = 0
   is_mouse = 0
   is_joystick = 0
 unknown non-USB input device
 bus = 0, name = HDA NVidia HDMI/DP,pcm=8
-  handlers = event8
+  handlers = event6
   mouse buttons = 0
   mouse wheels = 0
   is_mouse = 0
   is_joystick = 0
 unknown non-USB input device
 bus = 0, name = HDA NVidia HDMI/DP,pcm=9
+  handlers = event7
+  mouse buttons = 0
+  mouse wheels = 0
+  is_mouse = 0
+  is_joystick = 0
+unknown non-USB input device
+bus = 3, name = PixArt Dell MS116 USB Optical Mouse
+  handlers = mouse0 event8
+  key = 00000000000700000000000000000000000000000000000000000000000000000000000000000000
+  rel = 0000000000000903
+  mouse buttons = 3
+  mouse wheels = 2
+  is_mouse = 1
+  is_joystick = 0
+bus = 0, name = HDA Intel PCH Front Mic
   handlers = event9
   mouse buttons = 0
   mouse wheels = 0
   is_mouse = 0
   is_joystick = 0
 unknown non-USB input device
-bus = 0, name = HDA NVidia HDMI/DP,pcm=10
+bus = 0, name = HDA Intel PCH Rear Mic
   handlers = event10
   mouse buttons = 0
   mouse wheels = 0
   is_mouse = 0
   is_joystick = 0
 unknown non-USB input device
+bus = 0, name = HDA Intel PCH Line
+  handlers = event11
+  mouse buttons = 0
+  mouse wheels = 0
+  is_mouse = 0
+  is_joystick = 0
+unknown non-USB input device
+bus = 0, name = HDA Intel PCH Line Out Front
+  handlers = event12
+  mouse buttons = 0
+  mouse wheels = 0
+  is_mouse = 0
+  is_joystick = 0
+unknown non-USB input device
+bus = 0, name = HDA Intel PCH Line Out Surround
+  handlers = event13
+  mouse buttons = 0
+  mouse wheels = 0
+  is_mouse = 0
+  is_joystick = 0
+unknown non-USB input device
+bus = 0, name = HDA Intel PCH Line Out CLFE
+  handlers = event14
+  mouse buttons = 0
+  mouse wheels = 0
+  is_mouse = 0
+  is_joystick = 0
+unknown non-USB input device
+bus = 0, name = HDA Intel PCH Line Out Side
+  handlers = event15
+  mouse buttons = 0
+  mouse wheels = 0
+  is_mouse = 0
+  is_joystick = 0
+unknown non-USB input device
+bus = 0, name = HDA Intel PCH Front Headphone
+  handlers = event16
+  mouse buttons = 0
+  mouse wheels = 0
+  is_mouse = 0
+  is_joystick = 0
+unknown non-USB input device
+bus = 3, name = Barcode Reader
+  handlers = sysrq kbd leds event17
+  key = 0001000000000007ff800000000007fffebeffdff3cffffffffffffffffffffe
+  mouse buttons = 0
+  mouse wheels = 0
+  is_mouse = 0
+  is_joystick = 0
 bus = 3, name = Barcode Reader  Mouse
-  handlers = mouse1 event11
+  handlers = mouse1 event18
   key = 00000000001f00000000000000000000000000000000000000000000000000000000000000000000
   rel = 0000000000000903
   mouse buttons = 5
@@ -3156,97 +3129,19 @@ bus = 3, name = Barcode Reader  Mouse
   is_mouse = 1
   is_joystick = 0
 bus = 3, name = Barcode Reader  System Control
-  handlers = kbd event12
+  handlers = kbd event19
   key = 000000000000c00000100000000000000000000000000000
   mouse buttons = 0
   mouse wheels = 0
   is_mouse = 0
   is_joystick = 0
-bus = 0, name = HDA Intel PCH Front Mic
-  handlers = event13
-  mouse buttons = 0
-  mouse wheels = 0
-  is_mouse = 0
-  is_joystick = 0
-unknown non-USB input device
 bus = 3, name = Barcode Reader  Consumer Control
-  handlers = kbd event14
+  handlers = kbd event20
   key = 00000000000306ff000000000000000000000000000000000483ffff17aff32dbfd4444600000000000000000000000100130c730b17c00000267bfad9415fed009e1680000044000000000010000002
   rel = 0000000000001040
   abs = 0000000100000000
   mouse buttons = 0
   mouse wheels = 2
-  is_mouse = 0
-  is_joystick = 0
-bus = 0, name = HDA Intel PCH Rear Mic
-  handlers = event15
-  mouse buttons = 0
-  mouse wheels = 0
-  is_mouse = 0
-  is_joystick = 0
-unknown non-USB input device
-bus = 0, name = HDA Intel PCH Line
-  handlers = event16
-  mouse buttons = 0
-  mouse wheels = 0
-  is_mouse = 0
-  is_joystick = 0
-unknown non-USB input device
-bus = 0, name = HDA Intel PCH Line Out Front
-  handlers = event17
-  mouse buttons = 0
-  mouse wheels = 0
-  is_mouse = 0
-  is_joystick = 0
-unknown non-USB input device
-bus = 0, name = HDA Intel PCH Line Out Surround
-  handlers = event18
-  mouse buttons = 0
-  mouse wheels = 0
-  is_mouse = 0
-  is_joystick = 0
-unknown non-USB input device
-bus = 0, name = HDA Intel PCH Line Out CLFE
-  handlers = event19
-  mouse buttons = 0
-  mouse wheels = 0
-  is_mouse = 0
-  is_joystick = 0
-unknown non-USB input device
-bus = 0, name = HDA Intel PCH Line Out Side
-  handlers = event20
-  mouse buttons = 0
-  mouse wheels = 0
-  is_mouse = 0
-  is_joystick = 0
-unknown non-USB input device
-bus = 0, name = HDA Intel PCH Front Headphone
-  handlers = event21
-  mouse buttons = 0
-  mouse wheels = 0
-  is_mouse = 0
-  is_joystick = 0
-unknown non-USB input device
-bus = 3, name = Plantronics Plantronics Blackwire 320 Consumer Control
-  handlers = kbd event22
-  key = 000c0000000000000000000000000000
-  mouse buttons = 0
-  mouse wheels = 0
-  is_mouse = 0
-  is_joystick = 0
-bus = 3, name = Plantronics Plantronics Blackwire 320
-  handlers = kbd leds event23
-  key = 0100000000000000000000000000000000000000000000000000000000000000
-  mouse buttons = 0
-  mouse wheels = 0
-  is_mouse = 0
-  is_joystick = 0
-bus = 3, name = Plantronics Plantronics Blackwire 320
-  handlers = event24
-  key = 00000000000000010000000000000000000000000000000000000000000000000000000000000000
-  abs = 0000010000000000
-  mouse buttons = 0
-  mouse wheels = 0
   is_mouse = 0
   is_joystick = 0
 >> kbd.2: uml
@@ -3258,8 +3153,8 @@ bus = 3, name = Plantronics Plantronics Blackwire 320
   model		: 158
   model name	: Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz
   stepping	: 9
-  microcode	: 0xf0
-  cpu MHz		: 3295.860
+  microcode	: 0x84
+  cpu MHz		: 2800.184
   cache size	: 6144 KB
   physical id	: 0
   siblings	: 4
@@ -3273,7 +3168,7 @@ bus = 3, name = Plantronics Plantronics Blackwire 320
   wp		: yes
   flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp
   vmx flags	: vnmi preemption_timer invvpid ept_x_only ept_ad ept_1gb flexpriority tsc_offset vtpr mtf vapic ept vpid unrestricted_guest ple shadow_vmcs pml ept_mode_based_exec
-  bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds mmio_stale_data
+  bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds mmio_stale_data retbleed gds
   bogomips	: 6000.00
   clflush size	: 64
   cache_alignment	: 64
@@ -3286,8 +3181,8 @@ bus = 3, name = Plantronics Plantronics Blackwire 320
   model		: 158
   model name	: Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz
   stepping	: 9
-  microcode	: 0xf0
-  cpu MHz		: 3000.000
+  microcode	: 0x84
+  cpu MHz		: 2800.124
   cache size	: 6144 KB
   physical id	: 0
   siblings	: 4
@@ -3299,9 +3194,9 @@ bus = 3, name = Plantronics Plantronics Blackwire 320
   fpu_exception	: yes
   cpuid level	: 22
   wp		: yes
-  flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d arch_capabilities
+  flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp
   vmx flags	: vnmi preemption_timer invvpid ept_x_only ept_ad ept_1gb flexpriority tsc_offset vtpr mtf vapic ept vpid unrestricted_guest ple shadow_vmcs pml ept_mode_based_exec
-  bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds mmio_stale_data
+  bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds mmio_stale_data retbleed gds
   bogomips	: 6000.00
   clflush size	: 64
   cache_alignment	: 64
@@ -3314,8 +3209,8 @@ bus = 3, name = Plantronics Plantronics Blackwire 320
   model		: 158
   model name	: Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz
   stepping	: 9
-  microcode	: 0xf0
-  cpu MHz		: 3000.000
+  microcode	: 0x84
+  cpu MHz		: 2800.042
   cache size	: 6144 KB
   physical id	: 0
   siblings	: 4
@@ -3327,9 +3222,9 @@ bus = 3, name = Plantronics Plantronics Blackwire 320
   fpu_exception	: yes
   cpuid level	: 22
   wp		: yes
-  flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d arch_capabilities
+  flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp
   vmx flags	: vnmi preemption_timer invvpid ept_x_only ept_ad ept_1gb flexpriority tsc_offset vtpr mtf vapic ept vpid unrestricted_guest ple shadow_vmcs pml ept_mode_based_exec
-  bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds mmio_stale_data
+  bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds mmio_stale_data retbleed gds
   bogomips	: 6000.00
   clflush size	: 64
   cache_alignment	: 64
@@ -3342,8 +3237,8 @@ bus = 3, name = Plantronics Plantronics Blackwire 320
   model		: 158
   model name	: Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz
   stepping	: 9
-  microcode	: 0xf0
-  cpu MHz		: 3000.000
+  microcode	: 0x84
+  cpu MHz		: 2800.001
   cache size	: 6144 KB
   physical id	: 0
   siblings	: 4
@@ -3355,9 +3250,9 @@ bus = 3, name = Plantronics Plantronics Blackwire 320
   fpu_exception	: yes
   cpuid level	: 22
   wp		: yes
-  flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d arch_capabilities
+  flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp
   vmx flags	: vnmi preemption_timer invvpid ept_x_only ept_ad ept_1gb flexpriority tsc_offset vtpr mtf vapic ept vpid unrestricted_guest ple shadow_vmcs pml ept_mode_based_exec
-  bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds mmio_stale_data
+  bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds mmio_stale_data retbleed gds
   bogomips	: 6000.00
   clflush size	: 64
   cache_alignment	: 64
@@ -3369,18 +3264,6 @@ bus = 3, name = Plantronics Plantronics Blackwire 320
 /dev/console: major 4, minor 7, name tty7
 >> fb.1: read info
 >> net.1: get network data
-  net interface: name = sit0, path = /class/net/sit0
-    type = 776
-    hw_addr = 00:00:00:00
-  sit0: ethtool permanent hw address[4]: 00:00:00:00
-    ethtool private flags: 0
-  net interface: name = lo, path = /class/net/lo
-    type = 772
-    carrier = 1
-    hw_addr = 00:00:00:00:00:00
-  lo: ethtool permanent hw address[6]: 00:00:00:00:00:00
-    GDRVINFO ethtool error: Operation not supported
-    ethtool private flags: 0
   net interface: name = eth0, path = /class/net/eth0
     type = 1
     hw_addr = 1c:1b:0d:95:0e:32
@@ -3389,6 +3272,18 @@ bus = 3, name = Plantronics Plantronics Blackwire 320
   eth0: ethtool permanent hw address[6]: 1c:1b:0d:95:0e:32
     ethtool private flags: 1
     s0ix-enabled = 0
+  net interface: name = lo, path = /class/net/lo
+    type = 772
+    carrier = 1
+    hw_addr = 00:00:00:00:00:00
+  lo: ethtool permanent hw address[6]: 00:00:00:00:00:00
+    GDRVINFO ethtool error: Operation not supported
+    ethtool private flags: 0
+  net interface: name = sit0, path = /class/net/sit0
+    type = 776
+    hw_addr = 00:00:00:00
+  sit0: ethtool permanent hw address[4]: 00:00:00:00
+    ethtool private flags: 0
   net interface: name = wlan0, path = /class/net/wlan0
     type = 1
     carrier = 1
@@ -3397,8 +3292,8 @@ bus = 3, name = Plantronics Plantronics Blackwire 320
     net driver: name = iwlwifi, path = /bus/pci/drivers/iwlwifi
   wlan0: ethtool permanent hw address[6]: 5c:87:9c:15:df:15
     ethtool private flags: 0
-  sit0: GLINK ethtool error: Operation not supported
   eth0: ethtool link state: 0
+  sit0: GLINK ethtool error: Operation not supported
 >> pppoe.1: looking for pppoe
 >> pppoe.2: discovery
 Attempt number 1
@@ -3411,12 +3306,12 @@ send failed: Network is down
 >> int.2: cdrom
 >> int.3: media
 >> int.4.1: /dev/sdb
-  read_block0: 512 bytes (4s, 999999us)
+  read_block0: 512 bytes (4s, 999997us)
   mbr sig: 0xbefb2392
 >> int.4.2: /dev/sdc
   read_block0: open(/dev/sdc) failed
 >> int.4.3: /dev/sda
-  read_block0: 512 bytes (4s, 999999us)
+  read_block0: 512 bytes (4s, 999997us)
   mbr sig: 0x9d22eaef
 >> int.4: floppy
 >> int.5: edd
@@ -3522,8 +3417,6 @@ send failed: Network is down
   old prop read: 2pkM.SE1wIdpsiiC (failed)
   prop read: W__Q.SE1wIdpsiiC (failed)
   old prop read: W__Q.SE1wIdpsiiC (failed)
-  prop read: v3K+.1w63jeivm_6 (failed)
-  old prop read: v3K+.1w63jeivm_6 (failed)
   prop read: zjpQ.m6_ozNB5r8E (failed)
   old prop read: zjpQ.m6_ozNB5r8E (failed)
   prop read: fHJ1.sdGrt+0Ng37 (failed)
@@ -3536,8 +3429,6 @@ send failed: Network is down
   old prop read: X7GA.JbnhSVJpKR2 (failed)
   prop read: zPk0.vNHThQQZKpC (failed)
   old prop read: zPk0.vNHThQQZKpC (failed)
-  prop read: MFa3.4Mcj_qCOJHD (failed)
-  old prop read: MFa3.4Mcj_qCOJHD (failed)
   prop read: k4bc.2DFUsyrieMD (failed)
   old prop read: k4bc.2DFUsyrieMD (failed)
   prop read: zFuK.KOkgO2FJ+H4 (failed)
@@ -3554,209 +3445,212 @@ send failed: Network is down
   old prop read: 4zLr.j8NaKXDZtZ6 (failed)
   prop read: xoPc.5lXXuQkv_C5 (failed)
   old prop read: xoPc.5lXXuQkv_C5 (failed)
-  prop read: wl2P.nfEXJulusj6 (failed)
-  old prop read: wl2P.nfEXJulusj6 (failed)
-  prop read: ZsBS.GQNx7L4uPNA (failed)
-  old prop read: ZsBS.GQNx7L4uPNA (failed)
   prop read: usDW.ndpeucax6V1 (failed)
   old prop read: usDW.ndpeucax6V1 (failed)
+  prop read: ZsBS.GQNx7L4uPNA (failed)
+  old prop read: ZsBS.GQNx7L4uPNA (failed)
+  prop read: wl2P.nfEXJulusj6 (failed)
+  old prop read: wl2P.nfEXJulusj6 (failed)
   prop read: AYEt.QXn1l67RSa1 (failed)
   old prop read: AYEt.QXn1l67RSa1 (failed)
 ----- kernel log -----
-  <4>[221681.088200] NVRM: API mismatch: the client has the version 525.116.03, but
-  <4>[221681.088200] NVRM: this kernel module has the version 515.86.01.  Please
-  <4>[221681.088200] NVRM: make sure that this kernel module and all NVIDIA driver
-  <4>[221681.088200] NVRM: components have the same version.
-  <4>[221681.274623] NVRM: API mismatch: the client has the version 525.116.03, but
-  <4>[221681.274623] NVRM: this kernel module has the version 515.86.01.  Please
-  <4>[221681.274623] NVRM: make sure that this kernel module and all NVIDIA driver
-  <4>[221681.274623] NVRM: components have the same version.
-  <4>[221681.461918] NVRM: API mismatch: the client has the version 525.116.03, but
-  <4>[221681.461918] NVRM: this kernel module has the version 515.86.01.  Please
-  <4>[221681.461918] NVRM: make sure that this kernel module and all NVIDIA driver
-  <4>[221681.461918] NVRM: components have the same version.
-  <4>[221681.648896] NVRM: API mismatch: the client has the version 525.116.03, but
-  <4>[221681.648896] NVRM: this kernel module has the version 515.86.01.  Please
-  <4>[221681.648896] NVRM: make sure that this kernel module and all NVIDIA driver
-  <4>[221681.648896] NVRM: components have the same version.
-  <4>[221681.835361] NVRM: API mismatch: the client has the version 525.116.03, but
-  <4>[221681.835361] NVRM: this kernel module has the version 515.86.01.  Please
-  <4>[221681.835361] NVRM: make sure that this kernel module and all NVIDIA driver
-  <4>[221681.835361] NVRM: components have the same version.
-  <4>[221682.021850] NVRM: API mismatch: the client has the version 525.116.03, but
-  <4>[221682.021850] NVRM: this kernel module has the version 515.86.01.  Please
-  <4>[221682.021850] NVRM: make sure that this kernel module and all NVIDIA driver
-  <4>[221682.021850] NVRM: components have the same version.
-  <4>[221682.208308] NVRM: API mismatch: the client has the version 525.116.03, but
-  <4>[221682.208308] NVRM: this kernel module has the version 515.86.01.  Please
-  <4>[221682.208308] NVRM: make sure that this kernel module and all NVIDIA driver
-  <4>[221682.208308] NVRM: components have the same version.
-  <4>[221682.394805] NVRM: API mismatch: the client has the version 525.116.03, but
-  <4>[221682.394805] NVRM: this kernel module has the version 515.86.01.  Please
-  <4>[221682.394805] NVRM: make sure that this kernel module and all NVIDIA driver
-  <4>[221682.394805] NVRM: components have the same version.
-  <4>[221682.581292] NVRM: API mismatch: the client has the version 525.116.03, but
-  <4>[221682.581292] NVRM: this kernel module has the version 515.86.01.  Please
-  <4>[221682.581292] NVRM: make sure that this kernel module and all NVIDIA driver
-  <4>[221682.581292] NVRM: components have the same version.
-  <4>[221682.829844] NVRM: API mismatch: the client has the version 525.116.03, but
-  <4>[221682.829844] NVRM: this kernel module has the version 515.86.01.  Please
-  <4>[221682.829844] NVRM: make sure that this kernel module and all NVIDIA driver
-  <4>[221682.829844] NVRM: components have the same version.
-  <4>[221683.016355] NVRM: API mismatch: the client has the version 525.116.03, but
-  <4>[221683.016355] NVRM: this kernel module has the version 515.86.01.  Please
-  <4>[221683.016355] NVRM: make sure that this kernel module and all NVIDIA driver
-  <4>[221683.016355] NVRM: components have the same version.
-  <4>[221683.202866] NVRM: API mismatch: the client has the version 525.116.03, but
-  <4>[221683.202866] NVRM: this kernel module has the version 515.86.01.  Please
-  <4>[221683.202866] NVRM: make sure that this kernel module and all NVIDIA driver
-  <4>[221683.202866] NVRM: components have the same version.
-  <4>[221683.389366] NVRM: API mismatch: the client has the version 525.116.03, but
-  <4>[221683.389366] NVRM: this kernel module has the version 515.86.01.  Please
-  <4>[221683.389366] NVRM: make sure that this kernel module and all NVIDIA driver
-  <4>[221683.389366] NVRM: components have the same version.
-  <4>[221683.575862] NVRM: API mismatch: the client has the version 525.116.03, but
-  <4>[221683.575862] NVRM: this kernel module has the version 515.86.01.  Please
-  <4>[221683.575862] NVRM: make sure that this kernel module and all NVIDIA driver
-  <4>[221683.575862] NVRM: components have the same version.
-  <4>[227243.127931] iwlwifi 0000:07:00.0: reached 10 old SN frames from 3c:84:6a:58:ba:70 on queue 2, stopping BA session on TID 0
-  <4>[231543.092892] iwlwifi 0000:07:00.0: reached 10 old SN frames from 3c:84:6a:58:ba:70 on queue 3, stopping BA session on TID 0
-  <3>[240459.388659] iwlwifi 0000:07:00.0: Unhandled alg: 0xc040071b
-  <3>[240459.390460] iwlwifi 0000:07:00.0: Unhandled alg: 0xc040071b
-  <6>[248536.922264] php[28970]: segfault at ffffffffffffffff ip 00007f31774ed513 sp 00007fff79627c60 error 5 in libc.so.6[7f317747e000+14b000]
-  <6>[248536.922275] Code: 00 48 8d 35 7f c4 0f 00 e8 ba 5f fe ff 66 2e 0f 1f 84 00 00 00 00 00 48 85 ff 0f 84 bf 00 00 00 55 48 8d 77 f0 53 48 83 ec 18 <48> 8b 47 f8 48 8b 1d f2 28 13 00 a8 02 64 8b 2b 75 5b 48 8b 15 7c
-  <6>[248561.538594] php[5385]: segfault at ffffffffffffffff ip 00007f7035b97513 sp 00007ffdf8e90780 error 5 in libc.so.6[7f7035b28000+14b000]
-  <6>[248561.538601] Code: 00 48 8d 35 7f c4 0f 00 e8 ba 5f fe ff 66 2e 0f 1f 84 00 00 00 00 00 48 85 ff 0f 84 bf 00 00 00 55 48 8d 77 f0 53 48 83 ec 18 <48> 8b 47 f8 48 8b 1d f2 28 13 00 a8 02 64 8b 2b 75 5b 48 8b 15 7c
-  <6>[248574.442822] php[11145]: segfault at ffffffffffffffff ip 00007fe703968513 sp 00007ffec304d5f0 error 5 in libc.so.6[7fe7038f9000+14b000]
-  <6>[248574.442829] Code: 00 48 8d 35 7f c4 0f 00 e8 ba 5f fe ff 66 2e 0f 1f 84 00 00 00 00 00 48 85 ff 0f 84 bf 00 00 00 55 48 8d 77 f0 53 48 83 ec 18 <48> 8b 47 f8 48 8b 1d f2 28 13 00 a8 02 64 8b 2b 75 5b 48 8b 15 7c
-  <4>[259108.049915] iwlwifi 0000:07:00.0: reached 10 old SN frames from 3c:84:6a:58:ba:70 on queue 2, stopping BA session on TID 0
-  <4>[259250.818137] iwlwifi 0000:07:00.0: reached 10 old SN frames from 3c:84:6a:58:ba:70 on queue 1, stopping BA session on TID 0
-  <4>[267878.786340] iwlwifi 0000:07:00.0: reached 10 old SN frames from 3c:84:6a:58:ba:70 on queue 1, stopping BA session on TID 0
-  <4>[278647.263968] iwlwifi 0000:07:00.0: reached 10 old SN frames from 3c:84:6a:58:ba:70 on queue 2, stopping BA session on TID 0
-  <4>[282533.906809] iwlwifi 0000:07:00.0: reached 10 old SN frames from 3c:84:6a:58:ba:70 on queue 1, stopping BA session on TID 0
-  <4>[282897.941659] iwlwifi 0000:07:00.0: reached 10 old SN frames from 3c:84:6a:58:ba:70 on queue 1, stopping BA session on TID 0
-  <4>[284284.571865] NVRM: API mismatch: the client has the version 525.116.03, but
-  <4>[284284.571865] NVRM: this kernel module has the version 515.86.01.  Please
-  <4>[284284.571865] NVRM: make sure that this kernel module and all NVIDIA driver
-  <4>[284284.571865] NVRM: components have the same version.
-  <4>[284284.578291] NVRM: API mismatch: the client has the version 525.116.03, but
-  <4>[284284.578291] NVRM: this kernel module has the version 515.86.01.  Please
-  <4>[284284.578291] NVRM: make sure that this kernel module and all NVIDIA driver
-  <4>[284284.578291] NVRM: components have the same version.
-  <4>[284562.105579] NVRM: API mismatch: the client has the version 525.116.03, but
-  <4>[284562.105579] NVRM: this kernel module has the version 515.86.01.  Please
-  <4>[284562.105579] NVRM: make sure that this kernel module and all NVIDIA driver
-  <4>[284562.105579] NVRM: components have the same version.
-  <4>[284562.108409] NVRM: API mismatch: the client has the version 525.116.03, but
-  <4>[284562.108409] NVRM: this kernel module has the version 515.86.01.  Please
-  <4>[284562.108409] NVRM: make sure that this kernel module and all NVIDIA driver
-  <4>[284562.108409] NVRM: components have the same version.
-  <4>[284921.674879] NVRM: API mismatch: the client has the version 525.116.03, but
-  <4>[284921.674879] NVRM: this kernel module has the version 515.86.01.  Please
-  <4>[284921.674879] NVRM: make sure that this kernel module and all NVIDIA driver
-  <4>[284921.674879] NVRM: components have the same version.
+  <5>[    5.244752] scsi 6:0:0:0: Direct-Access     Generic  STORAGE DEVICE   0903 PQ: 0 ANSI: 6
+  <5>[    5.246326] sd 6:0:0:0: [sdc] Media removed, stopped polling
+  <5>[    5.246807] sd 6:0:0:0: [sdc] Attached SCSI removable disk
+  <6>[    6.140887] EXT4-fs (sda3): re-mounted. Quota mode: none.
+  <6>[    6.164044] EXT4-fs (sda3): re-mounted. Quota mode: none.
+  <6>[    6.547692] Adding 5863720k swap on /dev/sdb3.  Priority:2 extents:1 across:5863720k 
+  <6>[    6.663488] EXT4-fs (sdb4): mounting ext3 file system using the ext4 subsystem
+  <6>[    6.924481] EXT4-fs (sdb4): mounted filesystem with ordered data mode. Quota mode: none.
+  <6>[    6.941952] EXT4-fs (sdb2): mounting ext3 file system using the ext4 subsystem
+  <6>[    7.401596] EXT4-fs (sdb2): mounted filesystem with ordered data mode. Quota mode: none.
+  <6>[   13.878384] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+  <6>[   13.878392] Bluetooth: BNEP filters: protocol multicast
+  <6>[   13.878400] Bluetooth: BNEP socket layer initialized
+  <6>[   13.881825] Bluetooth: MGMT ver 1.22
+  <6>[   13.887006] NET: Registered PF_ALG protocol family
+  <6>[   14.080876] fuse: init (API version 7.37)
+  <6>[   14.905686] wlan0: authenticate with 3c:84:6a:58:ba:70
+  <6>[   14.905721] wlan0: 80 MHz not supported, disabling VHT
+  <6>[   14.907526] wlan0: send auth to 3c:84:6a:58:ba:70 (try 1/3)
+  <6>[   14.967703] wlan0: authenticated
+  <6>[   14.969288] wlan0: associate with 3c:84:6a:58:ba:70 (try 1/3)
+  <6>[   14.981182] wlan0: RX AssocResp from 3c:84:6a:58:ba:70 (capab=0x1c11 status=0 aid=1)
+  <6>[   14.983081] wlan0: associated
+  <6>[   15.174453] IPv6: ADDRCONF(NETDEV_CHANGE): wlan0: link becomes ready
+  <6>[   15.411323] 8021q: 802.1Q VLAN Support v1.8
+  <4>[12518.880494] nvidia_uvm: module uses symbols nvUvmInterfaceDisableAccessCntr from proprietary module nvidia, inheriting taint.
+  <6>[12518.896722] nvidia-uvm: Loaded the UVM driver, major device number 241.
+  <6>[12522.006275] Bluetooth: RFCOMM TTY layer initialized
+  <6>[12522.006280] Bluetooth: RFCOMM socket layer initialized
+  <6>[12522.006283] Bluetooth: RFCOMM ver 1.11
+  <6>[12523.407934] panel-7-cpugrap[21329]: segfault at 0 ip 00007fd9d45fec19 sp 00007fff756cd348 error 4 in libc.so.6[7fd9d44d4000+150000] likely on CPU 2 (core 2, socket 0)
+  <6>[12523.407944] Code: 77 c3 66 2e 0f 1f 84 00 00 00 00 00 0f 1f 44 00 00 89 f8 48 89 fa c5 f9 ef c0 25 ff 0f 00 00 3d e0 0f 00 00 0f 87 37 01 00 00 <c5> fd 74 0f c5 fd d7 c1 85 c0 74 5b f3 0f bc c0 c5 f8 77 c3 0f 1f
+  <6>[12523.591050] panel-7-cpugrap[21502]: segfault at 0 ip 00007f0a62d47c19 sp 00007ffefbee5758 error 4 in libc.so.6[7f0a62c1d000+150000] likely on CPU 2 (core 2, socket 0)
+  <6>[12523.591060] Code: 77 c3 66 2e 0f 1f 84 00 00 00 00 00 0f 1f 44 00 00 89 f8 48 89 fa c5 f9 ef c0 25 ff 0f 00 00 3d e0 0f 00 00 0f 87 37 01 00 00 <c5> fd 74 0f c5 fd d7 c1 85 c0 74 5b f3 0f bc c0 c5 f8 77 c3 0f 1f
+  <6>[12746.532643] sr 2:0:0:0: [sr0] tag#16 UNKNOWN(0x2003) Result: hostbyte=0x00 driverbyte=DRIVER_OK cmd_age=0s
+  <6>[12746.532654] sr 2:0:0:0: [sr0] tag#16 Sense Key : 0x2 [current] 
+  <6>[12746.532661] sr 2:0:0:0: [sr0] tag#16 ASC=0x3a ASCQ=0x1 
+  <6>[12746.532667] sr 2:0:0:0: [sr0] tag#16 CDB: opcode=0x28 28 00 00 00 00 00 00 00 08 00
+  <3>[12746.532671] I/O error, dev sr0, sector 0 op 0x0:(READ) flags 0x80700 phys_seg 4 prio class 2
+  <6>[12746.563686] sr 2:0:0:0: [sr0] tag#17 UNKNOWN(0x2003) Result: hostbyte=0x00 driverbyte=DRIVER_OK cmd_age=0s
+  <6>[12746.563698] sr 2:0:0:0: [sr0] tag#17 Sense Key : 0x2 [current] 
+  <6>[12746.563704] sr 2:0:0:0: [sr0] tag#17 ASC=0x3a ASCQ=0x1 
+  <6>[12746.563710] sr 2:0:0:0: [sr0] tag#17 CDB: opcode=0x28 28 00 00 00 00 00 00 00 02 00
+  <3>[12746.563713] I/O error, dev sr0, sector 0 op 0x0:(READ) flags 0x0 phys_seg 8 prio class 2
+  <3>[12746.563723] Buffer I/O error on dev sr0, logical block 0, async page read
+  <3>[12746.563729] Buffer I/O error on dev sr0, logical block 1, async page read
+  <3>[12746.563732] Buffer I/O error on dev sr0, logical block 2, async page read
+  <3>[12746.563735] Buffer I/O error on dev sr0, logical block 3, async page read
+  <3>[12746.563738] Buffer I/O error on dev sr0, logical block 4, async page read
+  <3>[12746.563741] Buffer I/O error on dev sr0, logical block 5, async page read
+  <3>[12746.563744] Buffer I/O error on dev sr0, logical block 6, async page read
+  <3>[12746.563748] Buffer I/O error on dev sr0, logical block 7, async page read
+  <6>[12765.818583] sr 2:0:0:0: [sr0] tag#15 UNKNOWN(0x2003) Result: hostbyte=0x00 driverbyte=DRIVER_OK cmd_age=0s
+  <6>[12765.818589] sr 2:0:0:0: [sr0] tag#15 Sense Key : 0x2 [current] 
+  <6>[12765.818591] sr 2:0:0:0: [sr0] tag#15 ASC=0x3a ASCQ=0x1 
+  <6>[12765.818593] sr 2:0:0:0: [sr0] tag#15 CDB: opcode=0x28 28 00 00 00 00 00 00 00 08 00
+  <3>[12765.818595] I/O error, dev sr0, sector 0 op 0x0:(READ) flags 0x80700 phys_seg 4 prio class 2
+  <6>[12765.841589] sr 2:0:0:0: [sr0] tag#15 UNKNOWN(0x2003) Result: hostbyte=0x00 driverbyte=DRIVER_OK cmd_age=0s
+  <6>[12765.841592] sr 2:0:0:0: [sr0] tag#15 Sense Key : 0x2 [current] 
+  <6>[12765.841593] sr 2:0:0:0: [sr0] tag#15 ASC=0x3a ASCQ=0x1 
+  <6>[12765.841595] sr 2:0:0:0: [sr0] tag#15 CDB: opcode=0x28 28 00 00 00 00 00 00 00 02 00
+  <3>[12765.841596] I/O error, dev sr0, sector 0 op 0x0:(READ) flags 0x0 phys_seg 8 prio class 2
+  <3>[12765.841598] Buffer I/O error on dev sr0, logical block 0, async page read
+  <3>[12765.841600] Buffer I/O error on dev sr0, logical block 1, async page read
+  <3>[12765.841601] Buffer I/O error on dev sr0, logical block 2, async page read
+  <3>[12765.841602] Buffer I/O error on dev sr0, logical block 3, async page read
+  <3>[12765.841603] Buffer I/O error on dev sr0, logical block 4, async page read
+  <3>[12765.841603] Buffer I/O error on dev sr0, logical block 5, async page read
+  <3>[12765.841604] Buffer I/O error on dev sr0, logical block 6, async page read
+  <3>[12765.841605] Buffer I/O error on dev sr0, logical block 7, async page read
+  <6>[12816.056613] sr 2:0:0:0: [sr0] tag#31 UNKNOWN(0x2003) Result: hostbyte=0x00 driverbyte=DRIVER_OK cmd_age=0s
+  <6>[12816.056624] sr 2:0:0:0: [sr0] tag#31 Sense Key : 0x2 [current] 
+  <6>[12816.056630] sr 2:0:0:0: [sr0] tag#31 ASC=0x3a ASCQ=0x1 
+  <6>[12816.056636] sr 2:0:0:0: [sr0] tag#31 CDB: opcode=0x28 28 00 00 00 00 00 00 00 08 00
+  <3>[12816.056640] I/O error, dev sr0, sector 0 op 0x0:(READ) flags 0x80700 phys_seg 4 prio class 2
+  <5>[12816.056735] sr 2:0:0:0: [sr0] tag#24 unaligned transfer
+  <3>[12816.056744] I/O error, dev sr0, sector 0 op 0x0:(READ) flags 0x0 phys_seg 1 prio class 2
+  <3>[12816.056753] Buffer I/O error on dev sr0, logical block 0, async page read
+  <5>[12816.056777] sr 2:0:0:0: [sr0] tag#25 unaligned transfer
+  <3>[12816.056782] I/O error, dev sr0, sector 1 op 0x0:(READ) flags 0x0 phys_seg 1 prio class 2
+  <3>[12816.056788] Buffer I/O error on dev sr0, logical block 1, async page read
+  <5>[12816.056803] sr 2:0:0:0: [sr0] tag#26 unaligned transfer
+  <3>[12816.056806] I/O error, dev sr0, sector 2 op 0x0:(READ) flags 0x0 phys_seg 1 prio class 2
+  <3>[12816.056811] Buffer I/O error on dev sr0, logical block 2, async page read
+  <5>[12816.056825] sr 2:0:0:0: [sr0] tag#27 unaligned transfer
+  <3>[12816.056828] I/O error, dev sr0, sector 3 op 0x0:(READ) flags 0x0 phys_seg 1 prio class 2
+  <3>[12816.056833] Buffer I/O error on dev sr0, logical block 3, async page read
+  <5>[12816.056848] sr 2:0:0:0: [sr0] tag#28 unaligned transfer
+  <3>[12816.056851] I/O error, dev sr0, sector 4 op 0x0:(READ) flags 0x0 phys_seg 1 prio class 2
+  <3>[12816.056856] Buffer I/O error on dev sr0, logical block 4, async page read
+  <5>[12816.056870] sr 2:0:0:0: [sr0] tag#29 unaligned transfer
+  <3>[12816.056872] I/O error, dev sr0, sector 5 op 0x0:(READ) flags 0x0 phys_seg 1 prio class 2
+  <3>[12816.056877] Buffer I/O error on dev sr0, logical block 5, async page read
+  <5>[12816.056891] sr 2:0:0:0: [sr0] tag#30 unaligned transfer
+  <3>[12816.056894] I/O error, dev sr0, sector 6 op 0x0:(READ) flags 0x0 phys_seg 1 prio class 2
+  <3>[12816.056898] Buffer I/O error on dev sr0, logical block 6, async page read
+  <5>[12816.056915] sr 2:0:0:0: [sr0] tag#0 unaligned transfer
+  <3>[12816.056918] I/O error, dev sr0, sector 7 op 0x0:(READ) flags 0x0 phys_seg 1 prio class 2
+  <3>[12816.056922] Buffer I/O error on dev sr0, logical block 7, async page read
 ----- kernel log end -----
 ----- /proc/modules -----
-  sg 36864 0 - Live 0xffffffffa05d9000
-  ppdev 20480 0 - Live 0xffffffffa01ea000
-  lp 20480 0 - Live 0xffffffffa0330000
-  parport_pc 40960 0 - Live 0xffffffffa05ce000
-  parport 49152 3 ppdev,lp,parport_pc, Live 0xffffffffa0484000
-  nvidia_uvm 1191936 0 - Live 0xffffffffa3189000 (PO)
-  rfcomm 49152 4 - Live 0xffffffffa0323000
-  ccm 20480 6 - Live 0xffffffffa01e4000
-  fuse 126976 5 - Live 0xffffffffa0791000
-  cmac 16384 3 - Live 0xffffffffa01d7000
-  algif_hash 16384 1 - Live 0xffffffffa0187000
-  algif_skcipher 16384 1 - Live 0xffffffffa009a000
-  af_alg 24576 6 algif_hash,algif_skcipher, Live 0xffffffffa0054000
-  bnep 20480 2 - Live 0xffffffffa004e000
-  joydev 24576 0 - Live 0xffffffffa0025000
-  dm_mod 122880 0 - Live 0xffffffffa04d0000
-  binfmt_misc 16384 1 - Live 0xffffffffa0006000
-  nvidia_drm 61440 3 - Live 0xffffffffa05be000 (PO)
-  nvidia_modeset 1126400 5 nvidia_drm, Live 0xffffffffa3075000 (PO)
-  pktcdvd 36864 0 - Live 0xffffffffa01cd000
-  nvidia 40767488 184 nvidia_uvm,nvidia_modeset, Live 0xffffffffa0993000 (PO)
-  intel_rapl_msr 16384 0 - Live 0xffffffffa04cb000
-  intel_rapl_common 24576 1 intel_rapl_msr, Live 0xffffffffa02f3000
-  iosf_mbi 16384 1 intel_rapl_common, Live 0xffffffffa02ee000
-  hwmon_vid 16384 0 - Live 0xffffffffa0352000
-  i2c_dev 16384 0 - Live 0xffffffffa04c6000
-  x86_pkg_temp_thermal 16384 0 - Live 0xffffffffa0472000
-  intel_powerclamp 16384 0 - Live 0xffffffffa023b000
-  ath9k_htc 86016 0 - Live 0xffffffffa06b6000
-  iwlmvm 331776 0 - Live 0xffffffffa0941000
-  ath9k_common 20480 1 ath9k_htc, Live 0xffffffffa002d000
-  iTCO_wdt 16384 0 - Live 0xffffffffa0013000
-  ath9k_hw 471040 2 ath9k_htc,ath9k_common, Live 0xffffffffa0839000
-  ath 32768 3 ath9k_htc,ath9k_common,ath9k_hw, Live 0xffffffffa0247000
-  kvm_intel 225280 0 - Live 0xffffffffa06db000
-  btusb 53248 0 - Live 0xffffffffa0344000
-  mac80211 512000 2 ath9k_htc,iwlmvm, Live 0xffffffffa0713000
-  libarc4 16384 1 mac80211, Live 0xffffffffa0020000
-  drm_kms_helper 200704 1 nvidia_drm, Live 0xffffffffa090f000
-  snd_hda_codec_realtek 131072 1 - Live 0xffffffffa08ee000
-  msr 16384 0 - Live 0xffffffffa0242000
-  snd_hda_codec_generic 77824 1 snd_hda_codec_realtek, Live 0xffffffffa015b000
-  btrtl 16384 1 btusb, Live 0xffffffffa0035000
-  kvm 569344 1 kvm_intel, Live 0xffffffffa062a000
-  ledtrig_audio 16384 1 snd_hda_codec_generic, Live 0xffffffffa04ab000
-  iwlwifi 274432 1 iwlmvm, Live 0xffffffffa05e6000
-  snd_hda_codec_hdmi 65536 1 - Live 0xffffffffa049a000
-  btbcm 20480 1 btusb, Live 0xffffffffa046c000
-  cpufreq_conservative 16384 0 - Live 0xffffffffa031e000
-  drm 483328 7 nvidia_drm,nvidia,drm_kms_helper, Live 0xffffffffa0547000
-  snd_usb_audio 278528 2 - Live 0xffffffffa0502000
-  btintel 36864 1 btusb, Live 0xffffffffa047a000
-  irqbypass 16384 1 kvm, Live 0xffffffffa0287000
-  cpufreq_powersave 16384 0 - Live 0xffffffffa045d000
-  bluetooth 512000 33 rfcomm,bnep,btusb,btrtl,btbcm,btintel, Live 0xffffffffa03df000
-  snd_hwdep 16384 1 snd_usb_audio, Live 0xffffffffa033f000
-  uas 28672 0 - Live 0xffffffffa0337000
-  snd_hda_intel 32768 4 - Live 0xffffffffa0315000
-  drm_panel_orientation_quirks 24576 1 drm, Live 0xffffffffa02fc000
-  snd_usbmidi_lib 32768 1 snd_usb_audio, Live 0xffffffffa0308000
-  crc32c_intel 24576 2 - Live 0xffffffffa0280000
-  ecdh_generic 16384 2 bluetooth, Live 0xffffffffa0270000
-  usbhid 40960 0 - Live 0xffffffffa04f2000
-  snd_intel_dspcfg 16384 1 snd_hda_intel, Live 0xffffffffa0156000
-  ghash_clmulni_intel 16384 0 - Live 0xffffffffa000e000
-  snd_rawmidi 32768 1 snd_usbmidi_lib, Live 0xffffffffa021f000
-  usb_storage 65536 1 uas, Live 0xffffffffa04b5000
-  snd_hda_codec 106496 4 snd_hda_codec_realtek,snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel, Live 0xffffffffa03c4000
-  vboxnetadp 28672 0 - Live 0xffffffffa03bc000 (O)
-  snd_seq_device 16384 1 snd_rawmidi, Live 0xffffffffa01f9000
-  cfg80211 397312 6 ath9k_htc,iwlmvm,ath9k_common,ath,mac80211,iwlwifi, Live 0xffffffffa035a000
-  aesni_intel 380928 8 - Live 0xffffffffa0290000
-  vboxnetflt 32768 0 - Live 0xffffffffa0088000 (O)
-  snd_hda_core 65536 5 snd_hda_codec_realtek,snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec, Live 0xffffffffa022a000
-  ecc 36864 1 ecdh_generic, Live 0xffffffffa0276000
-  agpgart 36864 1 drm, Live 0xffffffffa0266000
-  i2c_i801 28672 0 - Live 0xffffffffa0259000
-  sr_mod 28672 0 - Live 0xffffffffa0251000
-  snd_pcm 110592 5 snd_hda_codec_hdmi,snd_usb_audio,snd_hda_intel,snd_hda_codec,snd_hda_core, Live 0xffffffffa0203000
-  crypto_simd 16384 1 aesni_intel, Live 0xffffffffa01f4000
-  pcspkr 16384 0 - Live 0xffffffffa01df000
-  rfkill 24576 5 ath9k_htc,bluetooth,cfg80211, Live 0xffffffffa00b6000
-  cryptd 20480 3 ghash_clmulni_intel,crypto_simd, Live 0xffffffffa001a000
-  e1000e 241664 0 - Live 0xffffffffa0191000
-  i2c_smbus 16384 1 i2c_i801, Live 0xffffffffa018c000
-  snd_timer 32768 1 snd_pcm, Live 0xffffffffa017e000
-  cdrom 40960 2 pktcdvd,sr_mod, Live 0xffffffffa0173000
-  vboxdrv 434176 2 vboxnetadp,vboxnetflt, Live 0xffffffffa00eb000 (O)
-  fb 65536 1 drm, Live 0xffffffffa00da000
-  mei_me 28672 0 - Live 0xffffffffa003f000
-  snd 90112 23 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_usb_audio,snd_hwdep,snd_hda_intel,snd_usbmidi_lib,snd_rawmidi,snd_hda_codec,snd_seq_device,snd_pcm,snd_timer, Live 0xffffffffa00c3000
-  fbdev 16384 1 fb, Live 0xffffffffa00be000
-  mei 90112 1 mei_me, Live 0xffffffffa009f000
-  coretemp 16384 0 - Live 0xffffffffa0095000
-  fan 16384 0 - Live 0xffffffffa005e000
-  thermal 20480 0 - Live 0xffffffffa0000000
-  video 49152 0 - Live 0xffffffffa007b000
-  backlight 16384 4 nvidia_modeset,drm_kms_helper,drm,video, Live 0xffffffffa0072000
-  wmi 24576 0 - Live 0xffffffffa0066000
-  button 20480 0 - Live 0xffffffffa0048000
+  sg 36864 0 - Live 0xffffffffa3fdf000
+  lp 20480 0 - Live 0xffffffffa0787000
+  parport_pc 40960 0 - Live 0xffffffffa3fd4000
+  ppdev 20480 0 - Live 0xffffffffa05c8000
+  parport 53248 3 lp,parport_pc,ppdev, Live 0xffffffffa0765000
+  rfcomm 49152 4 - Live 0xffffffffa05f0000
+  nvidia_uvm 1355776 0 - Live 0xffffffffa3e88000 (PO)
+  8021q 28672 0 - Live 0xffffffffa05a1000
+  ccm 20480 6 - Live 0xffffffffa059b000
+  fuse 139264 9 - Live 0xffffffffa3e65000
+  cmac 16384 3 - Live 0xffffffffa0596000
+  algif_hash 16384 1 - Live 0xffffffffa0207000
+  algif_skcipher 16384 1 - Live 0xffffffffa0500000
+  af_alg 28672 6 algif_hash,algif_skcipher, Live 0xffffffffa04f8000
+  bnep 20480 2 - Live 0xffffffffa01dd000
+  dm_mod 126976 0 - Live 0xffffffffa3e45000
+  nvidia_drm 61440 5 - Live 0xffffffffa05b8000 (PO)
+  nvidia_modeset 1253376 9 nvidia_drm, Live 0xffffffffa3d12000 (PO)
+  binfmt_misc 16384 1 - Live 0xffffffffa0015000
+  nvidia 55844864 525 nvidia_uvm,nvidia_modeset, Live 0xffffffffa07cf000 (PO)
+  pktcdvd 40960 0 - Live 0xffffffffa026e000
+  joydev 24576 0 - Live 0xffffffffa022a000
+  intel_rapl_msr 16384 0 - Live 0xffffffffa077b000
+  intel_rapl_common 24576 1 intel_rapl_msr, Live 0xffffffffa0780000
+  iosf_mbi 16384 1 intel_rapl_common, Live 0xffffffffa050c000
+  x86_pkg_temp_thermal 16384 0 - Live 0xffffffffa0776000
+  intel_powerclamp 16384 0 - Live 0xffffffffa039e000
+  kvm_intel 266240 0 - Live 0xffffffffa078d000
+  hwmon_vid 16384 0 - Live 0xffffffffa0507000
+  iTCO_wdt 16384 0 - Live 0xffffffffa0214000
+  i2c_dev 16384 0 - Live 0xffffffffa0219000
+  kvm 618496 1 kvm_intel, Live 0xffffffffa06cd000
+  iwlmvm 360448 0 - Live 0xffffffffa0674000
+  ath9k_htc 86016 0 - Live 0xffffffffa0450000
+  ath9k_common 20480 1 ath9k_htc, Live 0xffffffffa01cf000
+  irqbypass 16384 1 kvm, Live 0xffffffffa017f000
+  ath9k_hw 462848 2 ath9k_htc,ath9k_common, Live 0xffffffffa0602000
+  btusb 57344 0 - Live 0xffffffffa05e1000
+  crc32c_intel 24576 2 - Live 0xffffffffa03a3000
+  btrtl 24576 1 btusb, Live 0xffffffffa020d000
+  btbcm 24576 1 btusb, Live 0xffffffffa0336000
+  ath 32768 3 ath9k_htc,ath9k_common,ath9k_hw, Live 0xffffffffa032d000
+  btmtk 16384 1 btusb, Live 0xffffffffa0328000
+  ghash_clmulni_intel 16384 0 - Live 0xffffffffa01a9000
+  btintel 36864 1 btusb, Live 0xffffffffa051b000
+  uas 28672 0 - Live 0xffffffffa0513000
+  mac80211 577536 2 iwlmvm,ath9k_htc, Live 0xffffffffa046a000
+  usb_storage 69632 1 uas, Live 0xffffffffa05cf000
+  usbhid 40960 0 - Live 0xffffffffa05ad000
+  iwlwifi 311296 1 iwlmvm, Live 0xffffffffa0549000
+  libarc4 16384 1 mac80211, Live 0xffffffffa018d000
+  sha512_ssse3 45056 0 - Live 0xffffffffa02af000
+  sha256_ssse3 32768 0 - Live 0xffffffffa0285000
+  sha1_ssse3 32768 0 - Live 0xffffffffa027c000
+  snd_hda_codec_realtek 135168 1 - Live 0xffffffffa0527000
+  snd_hda_codec_generic 77824 1 snd_hda_codec_realtek, Live 0xffffffffa01ea000
+  sha1_generic 16384 1 sha1_ssse3, Live 0xffffffffa0197000
+  bluetooth 663552 32 rfcomm,bnep,btusb,btrtl,btbcm,btmtk,btintel, Live 0xffffffffa03ad000
+  msr 16384 0 - Live 0xffffffffa0188000
+  snd_hda_codec_hdmi 65536 1 - Live 0xffffffffa016e000
+  ledtrig_audio 16384 1 snd_hda_codec_generic, Live 0xffffffffa00a4000
+  cpufreq_conservative 16384 0 - Live 0xffffffffa01ca000
+  aesni_intel 393216 8 - Live 0xffffffffa033d000
+  cfg80211 425984 6 iwlmvm,ath9k_htc,ath9k_common,ath,mac80211,iwlwifi, Live 0xffffffffa02bf000
+  drm_kms_helper 114688 1 nvidia_drm, Live 0xffffffffa0292000
+  crypto_simd 16384 1 aesni_intel, Live 0xffffffffa019f000
+  ecdh_generic 16384 2 bluetooth, Live 0xffffffffa01a4000
+  ecc 36864 1 ecdh_generic, Live 0xffffffffa002c000
+  cpufreq_powersave 16384 0 - Live 0xffffffffa0202000
+  pcspkr 16384 0 - Live 0xffffffffa0192000
+  e1000e 241664 0 - Live 0xffffffffa0232000
+  snd_hda_intel 36864 4 - Live 0xffffffffa0220000
+  snd_intel_dspcfg 16384 1 snd_hda_intel, Live 0xffffffffa00d1000
+  cryptd 20480 3 ghash_clmulni_intel,crypto_simd, Live 0xffffffffa0007000
+  rfkill 24576 6 iwlmvm,ath9k_htc,bluetooth,cfg80211, Live 0xffffffffa01e3000
+  i2c_i801 24576 0 - Live 0xffffffffa01d6000
+  snd_hda_codec 106496 4 snd_hda_codec_realtek,snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel, Live 0xffffffffa01af000
+  i2c_smbus 16384 1 i2c_i801, Live 0xffffffffa0079000
+  sr_mod 28672 0 - Live 0xffffffffa00c9000
+  drm 487424 9 nvidia_drm,nvidia,drm_kms_helper, Live 0xffffffffa00f2000
+  snd_hda_core 69632 5 snd_hda_codec_realtek,snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec, Live 0xffffffffa00e0000
+  cdrom 36864 2 pktcdvd,sr_mod, Live 0xffffffffa00d6000
+  drm_panel_orientation_quirks 28672 1 drm, Live 0xffffffffa0071000
+  snd_pcm 118784 4 snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,snd_hda_core, Live 0xffffffffa00ab000
+  agpgart 45056 1 drm, Live 0xffffffffa0098000
+  snd_timer 32768 1 snd_pcm, Live 0xffffffffa003c000
+  snd 90112 15 snd_hda_codec_realtek,snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,snd_pcm,snd_timer, Live 0xffffffffa005a000
+  coretemp 16384 0 - Live 0xffffffffa0020000
+  video 57344 1 nvidia_modeset, Live 0xffffffffa004b000
+  backlight 16384 3 nvidia_modeset,drm,video, Live 0xffffffffa001b000
+  mei_me 28672 0 - Live 0xffffffffa000d000
+  wmi 24576 1 video, Live 0xffffffffa0000000
+  mei 94208 1 mei_me, Live 0xffffffffa0080000
+  fan 16384 0 - Live 0xffffffffa0037000
+  thermal 20480 0 - Live 0xffffffffa0026000
+  button 20480 0 - Live 0xffffffffa0045000
 ----- /proc/modules end -----
   used irqs: 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,56,57,58,59,60,61,62,63
 =========== end debug info ============
@@ -4277,7 +4171,7 @@ send failed: Network is down
     Group Name: "$MEI"
     Items: #0
   Type 219 Record: #84
-    Data 00: db 51 54 00 01 03 01 55 02 00 90 06 03 10 80 20
+    Data 00: db 51 54 00 01 03 01 55 02 00 90 06 03 10 86 20
     Data 10: 00 00 00 00 40 08 00 00 00 00 00 00 00 00 00 02
     Data 20: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
     Data 30: ff ff ff ff ff ff ff ff 03 00 00 00 80 00 00 00
@@ -4341,7 +4235,7 @@ send failed: Network is down
   Unique ID: rdCR.CxwsZFjVASF
   Hardware Class: memory
   Model: "Main Memory"
-  Memory Range: 0x00000000-0x3e5f7afff (rw)
+  Memory Range: 0x00000000-0x3e5d4efff (rw)
   Memory Size: 16 GB
   Config Status: cfg=new, avail=yes, need=no, active=unknown
 
@@ -4383,7 +4277,7 @@ send failed: Network is down
   I/O Ports: 0xf040-0xf043 (rw)
   I/O Ports: 0xf020-0xf03f (rw)
   Memory Range: 0xf734b000-0xf734b7ff (rw,non-prefetchable)
-  IRQ: 127 (6841370 events)
+  IRQ: 127 (185380 events)
   Module Alias: "pci:v00008086d0000A282sv00001458sd0000B005bc01sc06i01"
   Config Status: cfg=new, avail=yes, need=no, active=unknown
 
@@ -4497,7 +4391,7 @@ send failed: Network is down
   Driver: "mei_me"
   Driver Modules: "mei_me"
   Memory Range: 0xf734d000-0xf734dfff (rw,non-prefetchable)
-  IRQ: 134 (36 events)
+  IRQ: 134 (38 events)
   Module Alias: "pci:v00008086d0000A2BAsv00001458sd00001C3Abc07sc80i00"
   Driver Info #0:
     Driver Status: mei_me is active
@@ -4524,7 +4418,7 @@ send failed: Network is down
   Memory Range: 0xf0000000-0xf1ffffff (ro,non-prefetchable)
   I/O Ports: 0xe000-0xefff (rw)
   Memory Range: 0x000c0000-0x000dffff (rw,non-prefetchable,disabled)
-  IRQ: 143 (30178706 events)
+  IRQ: 143 (754834 events)
   I/O Ports: 0x3c0-0x3df (rw)
   Module Alias: "pci:v000010DEd00001D01sv00001462sd00008C98bc03sc00i00"
   Driver Info #0:
@@ -4607,7 +4501,7 @@ send failed: Network is down
   Driver Modules: "snd_hda_intel"
   Memory Range: 0xf7340000-0xf7343fff (rw,non-prefetchable)
   Memory Range: 0xf7320000-0xf732ffff (rw,non-prefetchable)
-  IRQ: 135 (216 events)
+  IRQ: 136 (598 events)
   Module Alias: "pci:v00008086d0000A2F0sv00001458sd0000A182bc04sc03i00"
   Driver Info #0:
     Driver Status: snd_hda_intel is active
@@ -4696,7 +4590,7 @@ send failed: Network is down
   Driver: "snd_hda_intel"
   Driver Modules: "snd_hda_intel"
   Memory Range: 0xf7080000-0xf7083fff (rw,non-prefetchable)
-  IRQ: 17 (823 events)
+  IRQ: 17 (159 events)
   Module Alias: "pci:v000010DEd00000FB8sv00001462sd00008C98bc04sc03i00"
   Driver Info #0:
     Driver Status: snd_hda_intel is active
@@ -4719,7 +4613,7 @@ send failed: Network is down
   Driver Modules: "e1000e"
   Device File: eth0
   Memory Range: 0xf7300000-0xf731ffff (rw,non-prefetchable)
-  IRQ: 136 (no events)
+  IRQ: 135 (no events)
   HW Address: 1c:1b:0d:95:0e:32
   Permanent HW Address: 1c:1b:0d:95:0e:32
   Link detected: no
@@ -4742,7 +4636,7 @@ send failed: Network is down
   SubDevice: pci 0x5007 
   Driver: "xhci_hcd"
   Memory Range: 0xf7330000-0xf733ffff (rw,non-prefetchable)
-  IRQ: 128 (296230 events)
+  IRQ: 128 (129529 events)
   Module Alias: "pci:v00008086d0000A2AFsv00001458sd00005007bc0Csc03i30"
   Config Status: cfg=new, avail=yes, need=no, active=unknown
 
@@ -4950,27 +4844,7 @@ send failed: Network is down
   Config Status: cfg=new, avail=yes, need=no, active=unknown
   Attached to: #40 (Disk)
 
-44: USB 00.2: 0401 Multimedia audio controller
-  [Created at usb.122]
-  Unique ID: v3K+.1w63jeivm_6
-  Parent ID: fHJ1.sdGrt+0Ng37
-  SysFS ID: /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4/1-10.4:1.2
-  SysFS BusID: 1-10.4:1.2
-  Hardware Class: sound
-  Model: "Plantronics Blackwire 320"
-  Hotplug: USB
-  Vendor: usb 0x047f "Plantronics, Inc."
-  Device: usb 0xc039 "Plantronics Blackwire 320"
-  Revision: "1.59"
-  Serial ID: "036C849A82CD48ACBCD46A0BEC5AF795"
-  Driver: "snd-usb-audio"
-  Driver Modules: "snd_usb_audio"
-  Speed: 12 Mbps
-  Module Alias: "usb:v047FpC039d0159dc00dsc00dp00ic01isc02ip00in02"
-  Config Status: cfg=new, avail=yes, need=no, active=unknown
-  Attached to: #47 (Hub)
-
-45: USB 00.1: 11500 Bluetooth Device
+44: USB 00.1: 11500 Bluetooth Device
   [Created at usb.122]
   Unique ID: zjpQ.m6_ozNB5r8E
   Parent ID: k4bc.2DFUsyrieMD
@@ -4990,9 +4864,9 @@ send failed: Network is down
     Driver Status: btusb is active
     Driver Activation Cmd: "modprobe btusb"
   Config Status: cfg=new, avail=yes, need=no, active=unknown
-  Attached to: #55 (Hub)
+  Attached to: #51 (Hub)
 
-47: USB 00.0: 10a00 Hub
+45: USB 00.0: 10a00 Hub
   [Created at usb.122]
   Unique ID: fHJ1.sdGrt+0Ng37
   Parent ID: k4bc.2DFUsyrieMD
@@ -5009,9 +4883,9 @@ send failed: Network is down
   Speed: 480 Mbps
   Module Alias: "usb:v1A40p0201d0100dc09dsc00dp02ic09isc00ip02in00"
   Config Status: cfg=new, avail=yes, need=no, active=unknown
-  Attached to: #55 (Hub)
+  Attached to: #51 (Hub)
 
-48: USB 00.1: 10503 USB Mouse
+46: USB 00.1: 10503 USB Mouse
   [Created at usb.122]
   Unique ID: QR8P.37EKwGhPrN3
   Parent ID: k4bc.2DFUsyrieMD
@@ -5027,7 +4901,7 @@ send failed: Network is down
   Driver: "usbhid"
   Driver Modules: "usbhid"
   Device File: /dev/input/mice (/dev/input/mouse1)
-  Device Files: /dev/input/mice, /dev/input/mouse1, /dev/input/event11
+  Device Files: /dev/input/mice, /dev/input/mouse1, /dev/input/event18
   Device Number: char 13:63 (char 13:33)
   Speed: 1.5 Mbps
   Module Alias: "usb:v13BAp0018d0001dc00dsc00dp00ic03isc01ip02in01"
@@ -5037,9 +4911,9 @@ send failed: Network is down
     XFree86 Protocol: explorerps/2
     GPM Protocol: exps2
   Config Status: cfg=new, avail=yes, need=no, active=unknown
-  Attached to: #55 (Hub)
+  Attached to: #51 (Hub)
 
-49: USB 00.0: 10a00 Hub
+47: USB 00.0: 10a00 Hub
   [Created at usb.122]
   Unique ID: uIhY.029GFTetOb3
   Parent ID: svHJ.5vsY0BNH9b4
@@ -5050,16 +4924,16 @@ send failed: Network is down
   Hotplug: USB
   Vendor: usb 0x1d6b "Linux Foundation"
   Device: usb 0x0002 "2.0 root hub"
-  Revision: "5.15"
+  Revision: "6.01"
   Serial ID: "0000:03:00.0"
   Driver: "hub"
   Driver Modules: "usbcore"
   Speed: 480 Mbps
-  Module Alias: "usb:v1D6Bp0002d0515dc09dsc00dp01ic09isc00ip00in00"
+  Module Alias: "usb:v1D6Bp0002d0601dc09dsc00dp01ic09isc00ip00in00"
   Config Status: cfg=new, avail=yes, need=no, active=unknown
   Attached to: #12 (USB Controller)
 
-50: USB 00.0: 10503 USB Mouse
+48: USB 00.0: 10503 USB Mouse
   [Created at usb.122]
   Unique ID: X7GA.JbnhSVJpKR2
   Parent ID: k4bc.2DFUsyrieMD
@@ -5075,7 +4949,7 @@ send failed: Network is down
   Driver: "usbhid"
   Driver Modules: "usbhid"
   Device File: /dev/input/mice (/dev/input/mouse0)
-  Device Files: /dev/input/mice, /dev/input/mouse0, /dev/input/event4
+  Device Files: /dev/input/mice, /dev/input/mouse0, /dev/input/event8
   Device Number: char 13:63 (char 13:32)
   Speed: 1.5 Mbps
   Module Alias: "usb:v413Cp301Ad0100dc00dsc00dp00ic03isc01ip02in00"
@@ -5085,9 +4959,9 @@ send failed: Network is down
     XFree86 Protocol: explorerps/2
     GPM Protocol: exps2
   Config Status: cfg=new, avail=yes, need=no, active=unknown
-  Attached to: #55 (Hub)
+  Attached to: #51 (Hub)
 
-51: USB 00.0: 10a00 Hub
+49: USB 00.0: 10a00 Hub
   [Created at usb.122]
   Unique ID: zPk0.vNHThQQZKpC
   Parent ID: svHJ.5vsY0BNH9b4
@@ -5098,40 +4972,15 @@ send failed: Network is down
   Hotplug: USB
   Vendor: usb 0x1d6b "Linux Foundation"
   Device: usb 0x0003 "3.0 root hub"
-  Revision: "5.15"
+  Revision: "6.01"
   Serial ID: "0000:03:00.0"
   Driver: "hub"
   Driver Modules: "usbcore"
-  Module Alias: "usb:v1D6Bp0003d0515dc09dsc00dp03ic09isc00ip00in00"
+  Module Alias: "usb:v1D6Bp0003d0601dc09dsc00dp03ic09isc00ip00in00"
   Config Status: cfg=new, avail=yes, need=no, active=unknown
   Attached to: #12 (USB Controller)
 
-52: USB 00.3: 0000 Unclassified device
-  [Created at usb.122]
-  Unique ID: MFa3.4Mcj_qCOJHD
-  Parent ID: fHJ1.sdGrt+0Ng37
-  SysFS ID: /devices/pci0000:00/0000:00:14.0/usb1/1-10/1-10.4/1-10.4:1.3
-  SysFS BusID: 1-10.4:1.3
-  Hardware Class: unknown
-  Model: "Plantronics Blackwire 320"
-  Hotplug: USB
-  Vendor: usb 0x047f "Plantronics, Inc."
-  Device: usb 0xc039 "Plantronics Blackwire 320"
-  Revision: "1.59"
-  Serial ID: "036C849A82CD48ACBCD46A0BEC5AF795"
-  Driver: "usbhid"
-  Driver Modules: "usbhid"
-  Device File: /dev/input/event23
-  Device Number: char 13:87
-  Speed: 12 Mbps
-  Module Alias: "usb:v047FpC039d0159dc00dsc00dp00ic03isc00ip00in03"
-  Driver Info #0:
-    Driver Status: usbhid is active
-    Driver Activation Cmd: "modprobe usbhid"
-  Config Status: cfg=new, avail=yes, need=no, active=unknown
-  Attached to: #47 (Hub)
-
-55: USB 00.0: 10a00 Hub
+51: USB 00.0: 10a00 Hub
   [Created at usb.122]
   Unique ID: k4bc.2DFUsyrieMD
   Parent ID: MZfG.jnEMRkHshUA
@@ -5142,16 +4991,16 @@ send failed: Network is down
   Hotplug: USB
   Vendor: usb 0x1d6b "Linux Foundation"
   Device: usb 0x0002 "2.0 root hub"
-  Revision: "5.15"
+  Revision: "6.01"
   Serial ID: "0000:00:14.0"
   Driver: "hub"
   Driver Modules: "usbcore"
   Speed: 480 Mbps
-  Module Alias: "usb:v1D6Bp0002d0515dc09dsc00dp01ic09isc00ip00in00"
+  Module Alias: "usb:v1D6Bp0002d0601dc09dsc00dp01ic09isc00ip00in00"
   Config Status: cfg=new, avail=yes, need=no, active=unknown
   Attached to: #31 (USB Controller)
 
-57: USB 00.0: 10800 Keyboard
+53: USB 00.0: 10800 Keyboard
   [Created at usb.122]
   Unique ID: zFuK.KOkgO2FJ+H4
   Parent ID: k4bc.2DFUsyrieMD
@@ -5165,17 +5014,17 @@ send failed: Network is down
   Revision: "0.01"
   Driver: "usbhid"
   Driver Modules: "usbhid"
-  Device File: /dev/input/event5
-  Device Number: char 13:69
+  Device File: /dev/input/event17
+  Device Number: char 13:81
   Speed: 1.5 Mbps
   Module Alias: "usb:v13BAp0018d0001dc00dsc00dp00ic03isc01ip01in00"
   Driver Info #0:
     XkbRules: xfree86
     XkbModel: pc104
   Config Status: cfg=new, avail=yes, need=no, active=unknown
-  Attached to: #55 (Hub)
+  Attached to: #51 (Hub)
 
-58: USB 00.0: 10a00 Hub
+54: USB 00.0: 10a00 Hub
   [Created at usb.122]
   Unique ID: pBe4.xYNhIwdOaa6
   Parent ID: MZfG.jnEMRkHshUA
@@ -5186,71 +5035,71 @@ send failed: Network is down
   Hotplug: USB
   Vendor: usb 0x1d6b "Linux Foundation"
   Device: usb 0x0003 "3.0 root hub"
-  Revision: "5.15"
+  Revision: "6.01"
   Serial ID: "0000:00:14.0"
   Driver: "hub"
   Driver Modules: "usbcore"
-  Module Alias: "usb:v1D6Bp0003d0515dc09dsc00dp03ic09isc00ip00in00"
+  Module Alias: "usb:v1D6Bp0003d0601dc09dsc00dp03ic09isc00ip00in00"
   Config Status: cfg=new, avail=yes, need=no, active=unknown
   Attached to: #31 (USB Controller)
 
-59: None 00.0: 10103 CPU
-  [Created at cpu.462]
+55: None 00.0: 10103 CPU
+  [Created at cpu.509]
   Unique ID: rdCR.j8NaKXDZtZ6
   Hardware Class: cpu
   Arch: X86-64
   Vendor: "GenuineIntel"
   Model: 6.158.9 "Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz"
   Features: fpu,vme,de,pse,tsc,msr,pae,mce,cx8,apic,sep,mtrr,pge,mca,cmov,pat,pse36,clflush,dts,acpi,mmx,fxsr,sse,sse2,ss,ht,tm,pbe,syscall,nx,pdpe1gb,rdtscp,lm,constant_tsc,art,arch_perfmon,pebs,bts,rep_good,nopl,xtopology,nonstop_tsc,cpuid,aperfmperf,pni,pclmulqdq,dtes64,monitor,ds_cpl,vmx,est,tm2,ssse3,sdbg,fma,cx16,xtpr,pdcm,pcid,sse4_1,sse4_2,x2apic,movbe,popcnt,tsc_deadline_timer,aes,xsave,avx,f16c,rdrand,lahf_lm,abm,3dnowprefetch,cpuid_fault,invpcid_single,pti,ibrs,ibpb,stibp,tpr_shadow,vnmi,flexpriority,ept,vpid,ept_ad,fsgsbase,tsc_adjust,bmi1,avx2,smep,bmi2,erms,invpcid,mpx,rdseed,adx,smap,clflushopt,intel_pt,xsaveopt,xsavec,xgetbv1,xsaves,dtherm,ida,arat,pln,pts,hwp,hwp_notify,hwp_act_window,hwp_epp
-  Clock: 3295 MHz
+  Clock: 2800 MHz
   BogoMips: 6000.00
   Cache: 6144 kb
   Units/Processor: 16
   Config Status: cfg=new, avail=yes, need=no, active=unknown
 
-60: None 01.0: 10103 CPU
-  [Created at cpu.462]
+56: None 01.0: 10103 CPU
+  [Created at cpu.509]
   Unique ID: wkFv.j8NaKXDZtZ6
   Hardware Class: cpu
   Arch: X86-64
   Vendor: "GenuineIntel"
   Model: 6.158.9 "Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz"
-  Features: fpu,vme,de,pse,tsc,msr,pae,mce,cx8,apic,sep,mtrr,pge,mca,cmov,pat,pse36,clflush,dts,acpi,mmx,fxsr,sse,sse2,ss,ht,tm,pbe,syscall,nx,pdpe1gb,rdtscp,lm,constant_tsc,art,arch_perfmon,pebs,bts,rep_good,nopl,xtopology,nonstop_tsc,cpuid,aperfmperf,pni,pclmulqdq,dtes64,monitor,ds_cpl,vmx,est,tm2,ssse3,sdbg,fma,cx16,xtpr,pdcm,pcid,sse4_1,sse4_2,x2apic,movbe,popcnt,tsc_deadline_timer,aes,xsave,avx,f16c,rdrand,lahf_lm,abm,3dnowprefetch,cpuid_fault,invpcid_single,pti,ssbd,ibrs,ibpb,stibp,tpr_shadow,vnmi,flexpriority,ept,vpid,ept_ad,fsgsbase,tsc_adjust,bmi1,avx2,smep,bmi2,erms,invpcid,mpx,rdseed,adx,smap,clflushopt,intel_pt,xsaveopt,xsavec,xgetbv1,xsaves,dtherm,ida,arat,pln,pts,hwp,hwp_notify,hwp_act_window,hwp_epp,md_clear,flush_l1d,arch_capabilities
-  Clock: 3000 MHz
+  Features: fpu,vme,de,pse,tsc,msr,pae,mce,cx8,apic,sep,mtrr,pge,mca,cmov,pat,pse36,clflush,dts,acpi,mmx,fxsr,sse,sse2,ss,ht,tm,pbe,syscall,nx,pdpe1gb,rdtscp,lm,constant_tsc,art,arch_perfmon,pebs,bts,rep_good,nopl,xtopology,nonstop_tsc,cpuid,aperfmperf,pni,pclmulqdq,dtes64,monitor,ds_cpl,vmx,est,tm2,ssse3,sdbg,fma,cx16,xtpr,pdcm,pcid,sse4_1,sse4_2,x2apic,movbe,popcnt,tsc_deadline_timer,aes,xsave,avx,f16c,rdrand,lahf_lm,abm,3dnowprefetch,cpuid_fault,invpcid_single,pti,ibrs,ibpb,stibp,tpr_shadow,vnmi,flexpriority,ept,vpid,ept_ad,fsgsbase,tsc_adjust,bmi1,avx2,smep,bmi2,erms,invpcid,mpx,rdseed,adx,smap,clflushopt,intel_pt,xsaveopt,xsavec,xgetbv1,xsaves,dtherm,ida,arat,pln,pts,hwp,hwp_notify,hwp_act_window,hwp_epp
+  Clock: 2800 MHz
   BogoMips: 6000.00
   Cache: 6144 kb
   Units/Processor: 16
   Config Status: cfg=new, avail=yes, need=no, active=unknown
 
-61: None 02.0: 10103 CPU
-  [Created at cpu.462]
+57: None 02.0: 10103 CPU
+  [Created at cpu.509]
   Unique ID: +rIN.j8NaKXDZtZ6
   Hardware Class: cpu
   Arch: X86-64
   Vendor: "GenuineIntel"
   Model: 6.158.9 "Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz"
-  Features: fpu,vme,de,pse,tsc,msr,pae,mce,cx8,apic,sep,mtrr,pge,mca,cmov,pat,pse36,clflush,dts,acpi,mmx,fxsr,sse,sse2,ss,ht,tm,pbe,syscall,nx,pdpe1gb,rdtscp,lm,constant_tsc,art,arch_perfmon,pebs,bts,rep_good,nopl,xtopology,nonstop_tsc,cpuid,aperfmperf,pni,pclmulqdq,dtes64,monitor,ds_cpl,vmx,est,tm2,ssse3,sdbg,fma,cx16,xtpr,pdcm,pcid,sse4_1,sse4_2,x2apic,movbe,popcnt,tsc_deadline_timer,aes,xsave,avx,f16c,rdrand,lahf_lm,abm,3dnowprefetch,cpuid_fault,invpcid_single,pti,ssbd,ibrs,ibpb,stibp,tpr_shadow,vnmi,flexpriority,ept,vpid,ept_ad,fsgsbase,tsc_adjust,bmi1,avx2,smep,bmi2,erms,invpcid,mpx,rdseed,adx,smap,clflushopt,intel_pt,xsaveopt,xsavec,xgetbv1,xsaves,dtherm,ida,arat,pln,pts,hwp,hwp_notify,hwp_act_window,hwp_epp,md_clear,flush_l1d,arch_capabilities
-  Clock: 3000 MHz
+  Features: fpu,vme,de,pse,tsc,msr,pae,mce,cx8,apic,sep,mtrr,pge,mca,cmov,pat,pse36,clflush,dts,acpi,mmx,fxsr,sse,sse2,ss,ht,tm,pbe,syscall,nx,pdpe1gb,rdtscp,lm,constant_tsc,art,arch_perfmon,pebs,bts,rep_good,nopl,xtopology,nonstop_tsc,cpuid,aperfmperf,pni,pclmulqdq,dtes64,monitor,ds_cpl,vmx,est,tm2,ssse3,sdbg,fma,cx16,xtpr,pdcm,pcid,sse4_1,sse4_2,x2apic,movbe,popcnt,tsc_deadline_timer,aes,xsave,avx,f16c,rdrand,lahf_lm,abm,3dnowprefetch,cpuid_fault,invpcid_single,pti,ibrs,ibpb,stibp,tpr_shadow,vnmi,flexpriority,ept,vpid,ept_ad,fsgsbase,tsc_adjust,bmi1,avx2,smep,bmi2,erms,invpcid,mpx,rdseed,adx,smap,clflushopt,intel_pt,xsaveopt,xsavec,xgetbv1,xsaves,dtherm,ida,arat,pln,pts,hwp,hwp_notify,hwp_act_window,hwp_epp
+  Clock: 2800 MHz
   BogoMips: 6000.00
   Cache: 6144 kb
   Units/Processor: 16
   Config Status: cfg=new, avail=yes, need=no, active=unknown
 
-62: None 03.0: 10103 CPU
-  [Created at cpu.462]
+58: None 03.0: 10103 CPU
+  [Created at cpu.509]
   Unique ID: 4zLr.j8NaKXDZtZ6
   Hardware Class: cpu
   Arch: X86-64
   Vendor: "GenuineIntel"
   Model: 6.158.9 "Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz"
-  Features: fpu,vme,de,pse,tsc,msr,pae,mce,cx8,apic,sep,mtrr,pge,mca,cmov,pat,pse36,clflush,dts,acpi,mmx,fxsr,sse,sse2,ss,ht,tm,pbe,syscall,nx,pdpe1gb,rdtscp,lm,constant_tsc,art,arch_perfmon,pebs,bts,rep_good,nopl,xtopology,nonstop_tsc,cpuid,aperfmperf,pni,pclmulqdq,dtes64,monitor,ds_cpl,vmx,est,tm2,ssse3,sdbg,fma,cx16,xtpr,pdcm,pcid,sse4_1,sse4_2,x2apic,movbe,popcnt,tsc_deadline_timer,aes,xsave,avx,f16c,rdrand,lahf_lm,abm,3dnowprefetch,cpuid_fault,invpcid_single,pti,ssbd,ibrs,ibpb,stibp,tpr_shadow,vnmi,flexpriority,ept,vpid,ept_ad,fsgsbase,tsc_adjust,bmi1,avx2,smep,bmi2,erms,invpcid,mpx,rdseed,adx,smap,clflushopt,intel_pt,xsaveopt,xsavec,xgetbv1,xsaves,dtherm,ida,arat,pln,pts,hwp,hwp_notify,hwp_act_window,hwp_epp,md_clear,flush_l1d,arch_capabilities
-  Clock: 3000 MHz
+  Features: fpu,vme,de,pse,tsc,msr,pae,mce,cx8,apic,sep,mtrr,pge,mca,cmov,pat,pse36,clflush,dts,acpi,mmx,fxsr,sse,sse2,ss,ht,tm,pbe,syscall,nx,pdpe1gb,rdtscp,lm,constant_tsc,art,arch_perfmon,pebs,bts,rep_good,nopl,xtopology,nonstop_tsc,cpuid,aperfmperf,pni,pclmulqdq,dtes64,monitor,ds_cpl,vmx,est,tm2,ssse3,sdbg,fma,cx16,xtpr,pdcm,pcid,sse4_1,sse4_2,x2apic,movbe,popcnt,tsc_deadline_timer,aes,xsave,avx,f16c,rdrand,lahf_lm,abm,3dnowprefetch,cpuid_fault,invpcid_single,pti,ibrs,ibpb,stibp,tpr_shadow,vnmi,flexpriority,ept,vpid,ept_ad,fsgsbase,tsc_adjust,bmi1,avx2,smep,bmi2,erms,invpcid,mpx,rdseed,adx,smap,clflushopt,intel_pt,xsaveopt,xsavec,xgetbv1,xsaves,dtherm,ida,arat,pln,pts,hwp,hwp_notify,hwp_act_window,hwp_epp
+  Clock: 2800 MHz
   BogoMips: 6000.00
   Cache: 6144 kb
   Units/Processor: 16
   Config Status: cfg=new, avail=yes, need=no, active=unknown
 
-63: Serial 00.0: 10801 Console
+59: Serial 00.0: 10801 Console
   [Created at kbd.178]
   Unique ID: xoPc.5lXXuQkv_C5
   Hardware Class: keyboard
@@ -5259,26 +5108,7 @@ send failed: Network is down
   Device File: /dev/tty7
   Config Status: cfg=new, avail=yes, need=no, active=unknown
 
-64: None 00.0: 10781 Network Interface
-  [Created at net.126]
-  Unique ID: wl2P.nfEXJulusj6
-  SysFS ID: /class/net/sit0
-  Hardware Class: network interface
-  Model: "Network Interface"
-  Device File: sit0
-  Config Status: cfg=new, avail=yes, need=no, active=unknown
-
-65: None 00.0: 10700 Loopback
-  [Created at net.126]
-  Unique ID: ZsBS.GQNx7L4uPNA
-  SysFS ID: /class/net/lo
-  Hardware Class: network interface
-  Model: "Loopback network interface"
-  Device File: lo
-  Link detected: yes
-  Config Status: cfg=new, avail=yes, need=no, active=unknown
-
-66: None 00.0: 10701 Ethernet
+60: None 00.0: 10701 Ethernet
   [Created at net.126]
   Unique ID: usDW.ndpeucax6V1
   Parent ID: rBUF.D6r1saAhQK5
@@ -5295,7 +5125,26 @@ send failed: Network is down
   Config Status: cfg=new, avail=yes, need=no, active=unknown
   Attached to: #30 (Ethernet controller)
 
-67: None 00.0: 1070a WLAN
+61: None 00.0: 10700 Loopback
+  [Created at net.126]
+  Unique ID: ZsBS.GQNx7L4uPNA
+  SysFS ID: /class/net/lo
+  Hardware Class: network interface
+  Model: "Loopback network interface"
+  Device File: lo
+  Link detected: yes
+  Config Status: cfg=new, avail=yes, need=no, active=unknown
+
+62: None 00.0: 10781 Network Interface
+  [Created at net.126]
+  Unique ID: wl2P.nfEXJulusj6
+  SysFS ID: /class/net/sit0
+  Hardware Class: network interface
+  Model: "Network Interface"
+  Device File: sit0
+  Config Status: cfg=new, avail=yes, need=no, active=unknown
+
+63: None 00.0: 1070a WLAN
   [Created at net.126]
   Unique ID: AYEt.QXn1l67RSa1
   Parent ID: y9sn.42LULsJAqu6

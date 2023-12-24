@@ -213,5 +213,12 @@
 + CONFIG_CRYPTO_USER
 + CONFIG_EXFAT_FS
 
+5.15.52-gentoo-s12
+==================
+
+6.1.67-gentoo-s1
+==================
++ CONFIG_JUMP_LABEL (virtualbox)
+
 TODO
 ====

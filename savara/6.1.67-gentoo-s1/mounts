@@ -1,7 +1,7 @@
 /dev/root / ext4 rw,relatime 0 0
-devtmpfs /dev devtmpfs rw,nosuid,noexec,relatime,size=10240k,nr_inodes=2043201,mode=755 0 0
+devtmpfs /dev devtmpfs rw,nosuid,noexec,relatime,size=10240k,nr_inodes=2042943,mode=755 0 0
 none /proc proc rw,relatime 0 0
-tmpfs /run tmpfs rw,nosuid,nodev,size=3270140k,nr_inodes=819200,mode=755 0 0
+tmpfs /run tmpfs rw,nosuid,nodev,size=3269696k,nr_inodes=819200,mode=755 0 0
 sysfs /sys sysfs rw,nosuid,nodev,noexec,relatime 0 0
 securityfs /sys/kernel/security securityfs rw,nosuid,nodev,noexec,relatime 0 0
 debugfs /sys/kernel/debug debugfs rw,nosuid,nodev,noexec,relatime 0 0
@@ -27,6 +27,8 @@ binfmt_misc /proc/sys/fs/binfmt_misc binfmt_misc rw,nosuid,nodev,noexec,relatime
 /dev/sdb4 /home ext3 rw,relatime 0 0
 /dev/sdb2 /mnt/work ext3 rw,relatime 0 0
 none /sys/fs/fuse/connections fusectl rw,relatime 0 0
-tmpfs /run/user/1000 tmpfs rw,nosuid,nodev,relatime,size=1635068k,nr_inodes=408767,mode=700,uid=1000,gid=1000 0 0
+tmpfs /run/user/1000 tmpfs rw,nosuid,nodev,relatime,size=1634844k,nr_inodes=408711,mode=700,uid=1000,gid=1000 0 0
 gvfsd-fuse /run/user/1000/gvfs fuse.gvfsd-fuse rw,nosuid,nodev,relatime,user_id=1000,group_id=1000 0 0
-tmpfs /run/user/0 tmpfs rw,nosuid,nodev,relatime,size=1635068k,nr_inodes=408767,mode=700 0 0
+portal /run/user/1000/doc fuse.portal rw,nosuid,nodev,relatime,user_id=1000,group_id=1000 0 0
+portal /home/ffp_oe/.cache/doc fuse.portal rw,nosuid,nodev,relatime,user_id=1014,group_id=100 0 0
+portal /home/ffp_email/.cache/doc fuse.portal rw,nosuid,nodev,relatime,user_id=1035,group_id=100 0 0

@@ -150,7 +150,7 @@
 
 00:1f.3 Audio device: Intel Corporation 200 Series PCH HD Audio
 	Subsystem: Gigabyte Technology Co., Ltd 200 Series PCH HD Audio
-	Flags: bus master, fast devsel, latency 32, IRQ 135, IOMMU group 11
+	Flags: bus master, fast devsel, latency 32, IRQ 136, IOMMU group 11
 	Memory at f7340000 (64-bit, non-prefetchable) [size=16K]
 	Memory at f7320000 (64-bit, non-prefetchable) [size=64K]
 	Capabilities: [50] Power Management version 3
@@ -168,7 +168,7 @@
 
 00:1f.6 Ethernet controller: Intel Corporation Ethernet Connection (2) I219-V
 	Subsystem: Gigabyte Technology Co., Ltd Ethernet Connection (2) I219-V
-	Flags: bus master, fast devsel, latency 0, IRQ 136, IOMMU group 12
+	Flags: bus master, fast devsel, latency 0, IRQ 135, IOMMU group 12
 	Memory at f7300000 (32-bit, non-prefetchable) [size=128K]
 	Capabilities: [c8] Power Management version 3
 	Capabilities: [d0] MSI: Enable+ Count=1/1 Maskable- 64bit+

@@ -4,6 +4,7 @@
 
 # System settings:
 ROOT=/dev/sda3
+BUILDER_ACCOUNT=builder
 
 echo make prepare
 make prepare || exit 5
@@ -16,17 +17,20 @@ echo "Root: $ROOT"
 echo -n Build '&' install kernel "$KERVER" ' ?'
 read 
 
-echo chown portage...
-chown portage . -R || exit 4
+echo chown $BUILDER_ACCOUNT...
+chown $BUILDER_ACCOUNT -R . || exit 4
+
+echo chmod ...
+chmod -R a+rX -R . || exit 5
 
 echo make clean...
-su portage -c "make clean" || exit 6
+su $BUILDER_ACCOUNT -c "make clean" || exit 6
 
 echo make prepare...
-su portage -c "make prepare" || exit 7
+su $BUILDER_ACCOUNT -c "make prepare" || exit 7
 
 echo make all...
-su portage -c "make all" || exit 8
+su $BUILDER_ACCOUNT -c "make -j 4 all" || exit 8
 
 echo make modules_install...
 make modules_install || exit 10

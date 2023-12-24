@@ -28,18 +28,19 @@ savara
           description: System Memory
           physical id: 3d
           slot: System board or motherboard
-          size: 15GiB
+          size: 16GiB
         *-bank:0
              description: [empty]
              physical id: 0
              slot: ChannelA-DIMM0
         *-bank:1
-             description: DIMM DDR4 Synchronous 2400 MHz (0.4 ns) [empty]
+             description: DIMM DDR4 Synchronous 2400 MHz (0.4 ns)
              product: CMK16GX4M2A2400C14
              vendor: AMI
              physical id: 1
              serial: 00000000
              slot: ChannelA-DIMM1
+             size: 8GiB
              width: 64 bits
              clock: 2400MHz (0.4ns)
         *-bank:2
@@ -47,12 +48,13 @@ savara
              physical id: 2
              slot: ChannelB-DIMM0
         *-bank:3
-             description: DIMM DDR4 Synchronous 2400 MHz (0.4 ns) [empty]
+             description: DIMM DDR4 Synchronous 2400 MHz (0.4 ns)
              product: CMK16GX4M2A2400C14
              vendor: AMI
              physical id: 3
              serial: 00000000
              slot: ChannelB-DIMM1
+             size: 8GiB
              width: 64 bits
              clock: 2400MHz (0.4ns)
      *-cache:0
@@ -88,12 +90,12 @@ savara
           version: 6.158.9
           serial: To Be Filled By O.E.M.
           slot: U3E1
-          size: 3016MHz
+          size: 1512MHz
           capacity: 4005MHz
           width: 64 bits
           clock: 100MHz
-          capabilities: lm fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp x86-64 constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp ssbd md_clear flush_l1d arch_capabilities cpufreq
-          configuration: cores=4 enabledcores=4 microcode=240 threads=4
+          capabilities: lm fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp x86-64 constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp cpufreq
+          configuration: cores=4 enabledcores=4 microcode=132 threads=4
      *-pci
           description: Host bridge
           product: Xeon E3-1200 v6/7th Gen Core Processor Host Bridge/DRAM Registers
@@ -137,7 +139,6 @@ savara
                 bus info: pci@0000:01:00.1
                 logical name: card1
                 logical name: /dev/snd/controlC1
-                logical name: /dev/snd/pcmC1D10p
                 logical name: /dev/snd/pcmC1D3p
                 logical name: /dev/snd/pcmC1D7p
                 logical name: /dev/snd/pcmC1D8p
@@ -149,30 +150,25 @@ savara
                 configuration: driver=snd_hda_intel latency=0
                 resources: irq:17 memory:f7080000-f7083fff
               *-input:0
-                   product: HDA NVidia HDMI/DP,pcm=10
-                   physical id: 0
-                   logical name: input10
-                   logical name: /dev/input/event10
-              *-input:1
                    product: HDA NVidia HDMI/DP,pcm=3
+                   physical id: 0
+                   logical name: input4
+                   logical name: /dev/input/event4
+              *-input:1
+                   product: HDA NVidia HDMI/DP,pcm=7
                    physical id: 1
+                   logical name: input5
+                   logical name: /dev/input/event5
+              *-input:2
+                   product: HDA NVidia HDMI/DP,pcm=8
+                   physical id: 2
                    logical name: input6
                    logical name: /dev/input/event6
-              *-input:2
-                   product: HDA NVidia HDMI/DP,pcm=7
-                   physical id: 2
+              *-input:3
+                   product: HDA NVidia HDMI/DP,pcm=9
+                   physical id: 3
                    logical name: input7
                    logical name: /dev/input/event7
-              *-input:3
-                   product: HDA NVidia HDMI/DP,pcm=8
-                   physical id: 3
-                   logical name: input8
-                   logical name: /dev/input/event8
-              *-input:4
-                   product: HDA NVidia HDMI/DP,pcm=9
-                   physical id: 4
-                   logical name: input9
-                   logical name: /dev/input/event9
         *-generic UNCLAIMED
              description: System peripheral
              product: Xeon E3-1200 v5/v6 / E3-1500 v5 / 6th/7th/8th Gen Core Processor Gaussian Mixture Model
@@ -199,11 +195,11 @@ savara
              resources: irq:128 memory:f7330000-f733ffff
            *-usbhost:0
                 product: xHCI Host Controller
-                vendor: Linux 5.15.52-gentoo-s12 xhci-hcd
+                vendor: Linux 6.1.67-gentoo-s1 xhci-hcd
                 physical id: 0
                 bus info: usb@1
                 logical name: usb1
-                version: 5.15
+                version: 6.01
                 capabilities: usb-2.00
                 configuration: driver=hub slots=12 speed=480Mbit/s
               *-usb:0
@@ -212,30 +208,30 @@ savara
                    vendor: PixArt
                    physical id: 7
                    bus info: usb@1:7
-                   logical name: input4
-                   logical name: /dev/input/event4
+                   logical name: input9
+                   logical name: /dev/input/event8
                    logical name: /dev/input/mouse0
                    version: 1.00
                    capabilities: usb-2.00 usb
                    configuration: driver=usbhid maxpower=100mA speed=2Mbit/s
               *-usb:1
                    description: Keyboard
-                   product: Barcode Reader
+                   product: Barcode Reader  Consumer Control
                    vendor: PCPlay
                    physical id: 8
                    bus info: usb@1:8
-                   logical name: input11
-                   logical name: /dev/input/event11
+                   logical name: input17
+                   logical name: /dev/input/event17
+                   logical name: input17::capslock
+                   logical name: input17::numlock
+                   logical name: input17::scrolllock
+                   logical name: input18
+                   logical name: /dev/input/event18
                    logical name: /dev/input/mouse1
-                   logical name: input12
-                   logical name: /dev/input/event12
-                   logical name: input13
-                   logical name: /dev/input/event14
-                   logical name: input5
-                   logical name: /dev/input/event5
-                   logical name: input5::capslock
-                   logical name: input5::numlock
-                   logical name: input5::scrolllock
+                   logical name: input19
+                   logical name: /dev/input/event19
+                   logical name: input20
+                   logical name: /dev/input/event20
                    version: 0.01
                    capabilities: usb-1.10 usb
                    configuration: driver=usbhid maxpower=400mA speed=2Mbit/s
@@ -248,7 +244,7 @@ savara
                    version: 1.00
                    capabilities: usb-2.00
                    configuration: driver=hub maxpower=100mA slots=7 speed=480Mbit/s
-                 *-usb:0
+                 *-usb
                       description: Mass storage device
                       product: USB Storage
                       vendor: Genesys Logic, Inc.
@@ -258,16 +254,6 @@ savara
                       serial: 000000000903
                       capabilities: usb-2.00 scsi
                       configuration: driver=usb-storage maxpower=500mA speed=480Mbit/s
-                 *-usb:1
-                      description: Audio device
-                      product: Plantronics Blackwire 320
-                      vendor: Plantronics
-                      physical id: 4
-                      bus info: usb@1:a.4
-                      version: 1.59
-                      serial: 036C849A82CD48ACBCD46A0BEC5AF795
-                      capabilities: usb-2.00 audio-control
-                      configuration: driver=usbhid maxpower=100mA speed=12Mbit/s
               *-usb:3
                    description: Bluetooth wireless interface
                    product: Wireless-AC 9260 Bluetooth Adapter
@@ -279,11 +265,11 @@ savara
                    configuration: driver=btusb maxpower=100mA speed=12Mbit/s
            *-usbhost:1
                 product: xHCI Host Controller
-                vendor: Linux 5.15.52-gentoo-s12 xhci-hcd
+                vendor: Linux 6.1.67-gentoo-s1 xhci-hcd
                 physical id: 1
                 bus info: usb@2
                 logical name: usb2
-                version: 5.15
+                version: 6.01
                 capabilities: usb-3.00
                 configuration: driver=hub slots=6 speed=5000Mbit/s
         *-communication
@@ -352,13 +338,12 @@ savara
                    physical id: 3
                    bus info: scsi@0:0.0.0,3
                    logical name: /dev/sda3
-                   logical name: /
                    version: 1.0
                    serial: f3c99980-752a-423a-9b77-c75a46f0bd1f
                    size: 40GiB
                    capacity: 40GiB
                    capabilities: primary journaled extended_attributes large_files huge_files dir_nlink recover extents ext4 ext2 initialized
-                   configuration: created=2016-01-15 18:00:56 filesystem=ext4 label=SYSTEM lastmountpoint=/ modified=2022-12-08 23:18:45 mount.fstype=ext4 mount.options=rw,relatime mounted=2023-01-25 23:20:48 state=mounted
+                   configuration: created=2016-01-15 18:00:56 filesystem=ext4 label=SYSTEM lastmountpoint=/ modified=2023-08-06 17:49:52 mounted=2023-12-24 14:55:01 state=clean
            *-disk:1
                 description: ATA Disk
                 product: WDC WD5000AAKS-0
@@ -395,7 +380,7 @@ savara
                    size: 37GiB
                    capacity: 37GiB
                    capabilities: primary journaled extended_attributes large_files recover ext3 ext2 initialized
-                   configuration: created=2021-10-24 12:15:06 filesystem=ext3 label=WD500_PART2 lastmountpoint=/mnt/work modified=2023-01-25 23:20:48 mount.fstype=ext3 mount.options=rw,relatime mounted=2023-01-25 23:20:48 state=mounted
+                   configuration: created=2021-10-24 12:15:06 filesystem=ext3 label=WD500_PART2 lastmountpoint=/mnt/work modified=2023-12-24 14:55:02 mount.fstype=ext3 mount.options=rw,relatime mounted=2023-12-24 14:55:02 state=mounted
               *-volume:2
                    description: Linux swap volume
                    physical id: 3
@@ -419,7 +404,7 @@ savara
                    size: 422GiB
                    capacity: 422GiB
                    capabilities: primary journaled extended_attributes large_files recover ext3 ext2 initialized
-                   configuration: created=2008-05-22 18:14:03 filesystem=ext3 label=WD500_SHARE lastmountpoint=/home modified=2023-01-25 23:20:48 mount.fstype=ext3 mount.options=rw,relatime mounted=2023-01-25 23:20:48 state=mounted
+                   configuration: created=2008-05-22 18:14:03 filesystem=ext3 label=WD500_SHARE lastmountpoint=/home modified=2023-12-24 14:55:01 mount.fstype=ext3 mount.options=rw,relatime mounted=2023-12-24 14:55:01 state=mounted
            *-cdrom
                 description: DVD-RAM writer
                 product: DVDRW LH-20A1L
@@ -469,20 +454,20 @@ savara
                 resources: irq:16 memory:f7200000-f7207fff
               *-usbhost:0
                    product: xHCI Host Controller
-                   vendor: Linux 5.15.52-gentoo-s12 xhci-hcd
+                   vendor: Linux 6.1.67-gentoo-s1 xhci-hcd
                    physical id: 0
                    bus info: usb@3
                    logical name: usb3
-                   version: 5.15
+                   version: 6.01
                    capabilities: usb-2.00
                    configuration: driver=hub slots=2 speed=480Mbit/s
               *-usbhost:1
                    product: xHCI Host Controller
-                   vendor: Linux 5.15.52-gentoo-s12 xhci-hcd
+                   vendor: Linux 6.1.67-gentoo-s1 xhci-hcd
                    physical id: 1
                    bus info: usb@4
                    logical name: usb4
-                   version: 5.15
+                   version: 6.01
                    capabilities: usb-3.10
                    configuration: driver=hub slots=2 speed=10000Mbit/s
         *-pci:3
@@ -543,7 +528,7 @@ savara
                 width: 64 bits
                 clock: 33MHz
                 capabilities: pm msi pciexpress msix bus_master cap_list ethernet physical wireless
-                configuration: broadcast=yes driver=iwlwifi driverversion=5.15.52-gentoo-s12 firmware=46.50fdb42f.0 9260-th-b0-jf-b0- ip=172.17.2.40 latency=0 link=yes multicast=yes wireless=IEEE 802.11
+                configuration: broadcast=yes driver=iwlwifi driverversion=6.1.67-gentoo-s1 firmware=46.ff18e32a.0 9260-th-b0-jf-b0- ip=172.17.2.40 latency=0 link=yes multicast=yes wireless=IEEE 802.11
                 resources: irq:16 memory:f7100000-f7103fff
         *-isa
              description: ISA bridge
@@ -631,47 +616,47 @@ savara
              clock: 33MHz
              capabilities: pm msi bus_master cap_list
              configuration: driver=snd_hda_intel latency=32
-             resources: irq:135 memory:f7340000-f7343fff memory:f7320000-f732ffff
+             resources: irq:136 memory:f7340000-f7343fff memory:f7320000-f732ffff
            *-input:0
-                product: HDA Intel PCH Front Mic
-                physical id: 0
-                logical name: input14
-                logical name: /dev/input/event13
-           *-input:1
                 product: HDA Intel PCH Rear Mic
+                physical id: 0
+                logical name: input10
+                logical name: /dev/input/event10
+           *-input:1
+                product: HDA Intel PCH Line
                 physical id: 1
+                logical name: input11
+                logical name: /dev/input/event11
+           *-input:2
+                product: HDA Intel PCH Line Out Front
+                physical id: 2
+                logical name: input12
+                logical name: /dev/input/event12
+           *-input:3
+                product: HDA Intel PCH Line Out Surround
+                physical id: 3
+                logical name: input13
+                logical name: /dev/input/event13
+           *-input:4
+                product: HDA Intel PCH Line Out CLFE
+                physical id: 4
+                logical name: input14
+                logical name: /dev/input/event14
+           *-input:5
+                product: HDA Intel PCH Line Out Side
+                physical id: 5
                 logical name: input15
                 logical name: /dev/input/event15
-           *-input:2
-                product: HDA Intel PCH Line
-                physical id: 2
+           *-input:6
+                product: HDA Intel PCH Front Headphone
+                physical id: 6
                 logical name: input16
                 logical name: /dev/input/event16
-           *-input:3
-                product: HDA Intel PCH Line Out Front
-                physical id: 3
-                logical name: input17
-                logical name: /dev/input/event17
-           *-input:4
-                product: HDA Intel PCH Line Out Surround
-                physical id: 4
-                logical name: input18
-                logical name: /dev/input/event18
-           *-input:5
-                product: HDA Intel PCH Line Out CLFE
-                physical id: 5
-                logical name: input19
-                logical name: /dev/input/event19
-           *-input:6
-                product: HDA Intel PCH Line Out Side
-                physical id: 6
-                logical name: input20
-                logical name: /dev/input/event20
            *-input:7
-                product: HDA Intel PCH Front Headphone
+                product: HDA Intel PCH Front Mic
                 physical id: 7
-                logical name: input21
-                logical name: /dev/input/event21
+                logical name: input8
+                logical name: /dev/input/event9
         *-serial
              description: SMBus
              product: 200 Series/Z370 Chipset Family SMBus Controller
@@ -696,8 +681,8 @@ savara
              width: 32 bits
              clock: 33MHz
              capabilities: pm msi bus_master cap_list ethernet physical tp 10bt 10bt-fd 100bt 100bt-fd 1000bt-fd autonegotiation
-             configuration: autonegotiation=on broadcast=yes driver=e1000e driverversion=5.15.52-gentoo-s12 firmware=0.2-4 latency=0 link=no multicast=yes port=twisted pair
-             resources: irq:136 memory:f7300000-f731ffff
+             configuration: autonegotiation=on broadcast=yes driver=e1000e driverversion=6.1.67-gentoo-s1 firmware=0.2-4 latency=0 link=no multicast=yes port=twisted pair
+             resources: irq:135 memory:f7300000-f731ffff
      *-scsi
           physical id: 1
           bus info: usb@1:10.2
@@ -726,53 +711,27 @@ savara
        version: To Be Filled By O.E.M.
        serial: To Be Filled By O.E.M.
        capacity: 32768mWh
-  *-sound
-       description: P320
-       physical id: 2
-       logical name: card2
-       logical name: /dev/snd/controlC2
-       logical name: /dev/snd/pcmC2D0c
-       logical name: /dev/snd/pcmC2D0p
   *-input:0
        product: Sleep Button
-       physical id: 3
+       physical id: 2
        logical name: input0
        logical name: /dev/input/event0
        capabilities: platform
   *-input:1
        product: Power Button
-       physical id: 4
+       physical id: 3
        logical name: input1
        logical name: /dev/input/event1
        capabilities: platform
   *-input:2
        product: Power Button
-       physical id: 5
+       physical id: 4
        logical name: input2
        logical name: /dev/input/event2
        capabilities: platform
   *-input:3
-       product: Plantronics Plantronics Blackwire 320 Consumer Control
-       physical id: 6
-       logical name: input22
-       logical name: /dev/input/event22
-       capabilities: usb
-  *-input:4
-       product: Plantronics Plantronics Blackwire 320
-       physical id: 7
-       logical name: input23
-       logical name: /dev/input/event23
-       logical name: input23::mute
-       capabilities: usb
-  *-input:5
-       product: Plantronics Plantronics Blackwire 320
-       physical id: 8
-       logical name: input24
-       logical name: /dev/input/event24
-       capabilities: usb
-  *-input:6
        product: PC Speaker
-       physical id: 9
+       physical id: 5
        logical name: input3
        logical name: /dev/input/event3
        capabilities: isa
