@@ -1,0 +1,309 @@
+malina4
+    description: Computer
+    product: Raspberry Pi 4 Model B Rev 1.5
+    serial: 10000000c94ef91d
+    width: 64 bits
+    capabilities: smp cp15_barrier setend swp tagged_addr_disabled
+  *-core
+       description: Motherboard
+       physical id: 0
+     *-cpu:0
+          description: CPU
+          product: cpu
+          physical id: 1
+          bus info: cpu@0
+          size: 1800MHz
+          capacity: 1800MHz
+          capabilities: fp asimd evtstrm crc32 cpuid cpufreq
+        *-cache
+             description: L1 Cache
+             physical id: 0
+             size: 32KiB
+     *-cpu:1
+          description: CPU
+          product: cpu
+          physical id: 2
+          bus info: cpu@1
+          size: 1800MHz
+          capacity: 1800MHz
+          capabilities: fp asimd evtstrm crc32 cpuid cpufreq
+        *-cache
+             description: L1 Cache
+             physical id: 0
+             size: 32KiB
+     *-cpu:2
+          description: CPU
+          product: cpu
+          physical id: 3
+          bus info: cpu@2
+          size: 1800MHz
+          capacity: 1800MHz
+          capabilities: fp asimd evtstrm crc32 cpuid cpufreq
+        *-cache
+             description: L1 Cache
+             physical id: 0
+             size: 32KiB
+     *-cpu:3
+          description: CPU
+          product: cpu
+          physical id: 4
+          bus info: cpu@3
+          size: 1800MHz
+          capacity: 1800MHz
+          capabilities: fp asimd evtstrm crc32 cpuid cpufreq
+        *-cache
+             description: L1 Cache
+             physical id: 0
+             size: 32KiB
+     *-cpu:4 DISABLED
+          description: CPU
+          product: l2-cache0
+          physical id: 5
+          bus info: cpu@4
+     *-memory
+          description: System memory
+          physical id: 6
+          size: 3792MiB
+     *-pci
+          description: PCI bridge
+          product: BCM2711 PCIe Bridge
+          vendor: Broadcom Inc. and subsidiaries
+          physical id: 0
+          bus info: pci@0000:00:00.0
+          version: 20
+          width: 32 bits
+          clock: 33MHz
+          capabilities: pci pm pciexpress normal_decode bus_master cap_list
+          configuration: driver=pcieport
+          resources: irq:27 memory:600000000-6000fffff
+        *-usb
+             description: USB controller
+             product: VL805/806 xHCI USB 3.0 Controller
+             vendor: VIA Technologies, Inc.
+             physical id: 0
+             bus info: pci@0000:01:00.0
+             version: 01
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm msi pciexpress xhci bus_master cap_list
+             configuration: driver=xhci_hcd latency=0
+             resources: irq:30 memory:600000000-600000fff
+           *-usbhost:0
+                product: xHCI Host Controller
+                vendor: Linux 6.6.31+rpt-rpi-v8 xhci-hcd
+                physical id: 0
+                bus info: usb@1
+                logical name: usb1
+                version: 6.06
+                capabilities: usb-2.00
+                configuration: driver=hub slots=1 speed=480Mbit/s
+              *-usb
+                   description: USB hub
+                   product: USB2.0 Hub
+                   vendor: VIA Labs, Inc.
+                   physical id: 1
+                   bus info: usb@1:1
+                   version: 4.21
+                   capabilities: usb-2.10
+                   configuration: driver=hub maxpower=100mA slots=4 speed=480Mbit/s
+                 *-usb:0
+                      description: Keyboard
+                      product: Logitech Logitech USB Keyboard
+                      vendor: Logitech
+                      physical id: 3
+                      bus info: usb@1:1.3
+                      logical name: input0
+                      logical name: /dev/input/event0
+                      logical name: input0::capslock
+                      logical name: input0::compose
+                      logical name: input0::kana
+                      logical name: input0::numlock
+                      logical name: input0::scrolllock
+                      version: 28.00
+                      capabilities: usb-1.10 usb
+                      configuration: driver=usbhid maxpower=100mA speed=2Mbit/s
+                 *-usb:1
+                      description: Mouse
+                      product: Logitech USB Optical Mouse
+                      vendor: Logitech
+                      physical id: 4
+                      bus info: usb@1:1.4
+                      logical name: input5
+                      logical name: /dev/input/event5
+                      logical name: /dev/input/mouse0
+                      version: 63.00
+                      capabilities: usb-2.00 usb
+                      configuration: driver=usbhid maxpower=100mA speed=2Mbit/s
+           *-usbhost:1
+                product: xHCI Host Controller
+                vendor: Linux 6.6.31+rpt-rpi-v8 xhci-hcd
+                physical id: 1
+                bus info: usb@2
+                logical name: usb2
+                version: 6.06
+                capabilities: usb-3.00
+                configuration: driver=hub slots=4 speed=5000Mbit/s
+              *-usb
+                   description: Mass storage device
+                   product: X832
+                   vendor: SupTronics
+                   physical id: 2
+                   bus info: usb@2:2
+                   logical name: scsi0
+                   version: 1.00
+                   serial: 202006000014
+                   capabilities: usb-3.00 scsi
+                   configuration: driver=uas speed=5000Mbit/s
+                 *-disk
+                      description: SCSI Disk
+                      product: 2115
+                      vendor: ASMT
+                      physical id: 0.0.0
+                      bus info: scsi@0:0.0.0
+                      logical name: /dev/sda
+                      version: 0
+                      serial: 410000600202
+                      size: 74GiB (80GB)
+                      capabilities: partitioned partitioned:dos
+                      configuration: ansiversion=6 logicalsectorsize=512 sectorsize=512 signature=21d28e16
+                    *-volume
+                         description: EXT4 volume
+                         vendor: Linux
+                         physical id: 1
+                         bus info: scsi@0:0.0.0,1
+                         logical name: /dev/sda1
+                         logical name: /media/ludek/FUJITSU_80G
+                         version: 1.0
+                         serial: cd4a05ec-df8e-4683-a449-49a837f722c3
+                         size: 74GiB
+                         capacity: 74GiB
+                         capabilities: primary bootable journaled extended_attributes large_files huge_files dir_nlink recover extents ext4 ext2 initialized
+                         configuration: created=2016-01-10 19:08:49 filesystem=ext4 label=FUJITSU_80G lastmountpoint=/media/ludek/FUJITSU_80G modified=2024-11-06 07:48:25 mount.fstype=ext4 mount.options=rw,nosuid,nodev,relatime,errors=remount-ro mounted=2024-11-06 07:48:25 state=mounted
+  *-mmc0
+       description: MMC Host
+       physical id: 1
+       logical name: mmc0
+     *-device
+          description: SD Card
+          product: SD64G
+          vendor: Unknown (39)
+          physical id: 5048
+          logical name: /dev/mmcblk0
+          version: 6.0
+          date: 06/2023
+          serial: 3663306767
+          size: 57GiB (62GB)
+          capabilities: sd partitioned partitioned:dos
+          configuration: logicalsectorsize=512 sectorsize=512 signature=085bc46c
+        *-volume:0 UNCLAIMED
+             description: Windows FAT volume
+             vendor: mkfs.fat
+             physical id: 1
+             version: FAT32
+             serial: d3e6-3f09
+             size: 511MiB
+             capacity: 512MiB
+             capabilities: primary fat initialized
+             configuration: FATs=2 filesystem=fat label=bootfs
+        *-volume:1
+             description: EXT4 volume
+             vendor: Linux
+             physical id: 2
+             logical name: /dev/mmcblk0p2
+             logical name: /
+             version: 1.0
+             serial: cb6f0e18-5add-4177-ab98-e9f0235e06b3
+             size: 57GiB
+             capacity: 57GiB
+             capabilities: primary journaled extended_attributes large_files dir_nlink recover extents ext4 ext2 initialized
+             configuration: created=2023-10-10 06:04:14 filesystem=ext4 label=rootfs lastmountpoint=/ modified=2024-11-23 18:24:10 mount.fstype=ext4 mount.options=rw,noatime mounted=2024-11-06 07:48:06 state=mounted
+  *-mmc1
+       description: MMC Host
+       physical id: 2
+       logical name: mmc1
+     *-device
+          description: SDIO Device
+          physical id: 1
+          bus info: mmc@1:0001
+          serial: 0
+          capabilities: sdio
+        *-interface:0
+             description: Wireless interface
+             product: 43430
+             vendor: Broadcom
+             physical id: 1
+             bus info: mmc@1:0001:1
+             logical name: mmc1:0001:1
+             logical name: wlan0
+             serial: d8:3a:dd:94:a8:20
+             capabilities: ethernet physical wireless
+             configuration: broadcast=yes driver=brcmfmac driverversion=7.45.16.144 firmware=01-b677b91b ip=172.17.2.124 multicast=yes wireless=IEEE 802.11
+        *-interface:1
+             product: 43430
+             vendor: Broadcom
+             physical id: 2
+             bus info: mmc@1:0001:2
+             logical name: mmc1:0001:2
+        *-bt
+             description: BlueTooth interface
+             product: 43430
+             vendor: Broadcom
+             physical id: 3
+             bus info: mmc@1:0001:3
+             logical name: mmc1:0001:3
+             capabilities: wireless bluetooth
+             configuration: wireless=BlueTooth
+  *-sound:0
+       description: vc4hdmi0
+       physical id: 3
+       logical name: card0
+       logical name: /dev/snd/controlC0
+       logical name: /dev/snd/pcmC0D0p
+  *-sound:1
+       description: vc4hdmi1
+       physical id: 4
+       logical name: card1
+       logical name: /dev/snd/controlC1
+       logical name: /dev/snd/pcmC1D0p
+  *-sound:2
+       description: Headphones
+       physical id: 5
+       logical name: card2
+       logical name: /dev/snd/controlC2
+       logical name: /dev/snd/pcmC2D0p
+  *-graphics
+       product: vc4drmfb
+       physical id: 6
+       logical name: /dev/fb0
+       capabilities: fb
+       configuration: depth=16 resolution=1920,1080
+  *-input:0
+       product: vc4-hdmi-0
+       physical id: 7
+       logical name: input1
+       logical name: /dev/input/event1
+       capabilities: cec
+  *-input:1
+       product: vc4-hdmi-0 HDMI Jack
+       physical id: 8
+       logical name: input2
+       logical name: /dev/input/event2
+  *-input:2
+       product: vc4-hdmi-1
+       physical id: 9
+       logical name: input3
+       logical name: /dev/input/event3
+       capabilities: cec
+  *-input:3
+       product: vc4-hdmi-1 HDMI Jack
+       physical id: a
+       logical name: input4
+       logical name: /dev/input/event4
+  *-network
+       description: Ethernet interface
+       physical id: b
+       logical name: eth0
+       serial: d8:3a:dd:94:a8:1f
+       capacity: 1Gbit/s
+       capabilities: ethernet physical tp mii 10bt 10bt-fd 100bt 100bt-fd 1000bt 1000bt-fd autonegotiation
+       configuration: autonegotiation=on broadcast=yes driver=bcmgenet driverversion=6.6.31+rpt-rpi-v8 link=no multicast=yes port=twisted pair
