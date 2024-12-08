@@ -1,0 +1,47 @@
+Module                  Size  Used by
+shpchp                 29606  0 
+arc4                   12391  2 
+asus_nb_wmi            12391  0 
+asus_wmi               16587  1 asus_nb_wmi
+sparse_keymap          12656  1 asus_wmi
+coretemp               12441  0 
+iwlwifi               266564  0 
+serio_raw              12440  0 
+crc32c_intel           12441  0 
+i2c_i801               16534  0 
+iTCO_wdt               16534  0 
+ghash_clmulni_intel    12567  0 
+btusb                  16534  0 
+mac80211              354552  1 iwlwifi
+iTCO_vendor_support    12640  1 iTCO_wdt
+microcode              20803  0 
+joydev                 16536  0 
+bluetooth             192811  1 btusb
+cfg80211              138085  2 iwlwifi,mac80211
+rfkill                 17294  3 cfg80211,bluetooth,asus_wmi
+raid10                 32930  0 
+raid456                53468  0 
+async_raid6_recov      12506  1 raid456
+async_pq               12535  2 raid456,async_raid6_recov
+raid6_pq               82623  2 async_pq,async_raid6_recov
+async_xor              12482  3 async_pq,raid456,async_raid6_recov
+xor                    12426  1 async_xor
+async_memcpy           12418  2 raid456,async_raid6_recov
+async_tx               12625  5 async_pq,raid456,async_xor,async_memcpy,async_raid6_recov
+raid1                  28847  0 
+raid0                  16516  0 
+multipath              12391  0 
+linear                 12391  0 
+usb_storage            42893  2 
+r8169                  45294  0 
+nouveau               570117  0 
+mii                    12679  1 r8169
+i915                  349976  1 
+ttm                    54082  1 nouveau
+drm_kms_helper         26398  2 i915,nouveau
+drm                   183652  4 ttm,i915,drm_kms_helper,nouveau
+i2c_algo_bit           12478  2 i915,nouveau
+i2c_core               22165  6 drm,i915,i2c_i801,drm_kms_helper,i2c_algo_bit,nouveau
+mxm_wmi                12517  1 nouveau
+video                  16669  2 i915,nouveau
+wmi                    16838  3 mxm_wmi,nouveau,asus_wmi
