@@ -1,5 +1,6 @@
 # For more options and information see
 # http://rpf.io/configtxt
+# https://www.raspberrypi.com/documentation/computers/config_txt.html
 # Some settings may impact device functionality. See link above for details
 
 # uncomment if you get no picture on HDMI for a default "safe" mode
@@ -18,6 +19,9 @@
 
 # Blue LED: Set GPIO25 to be an output set to 1
 gpio=25=op,dh
+
+# decrease max temperature - default is 85
+temp_limit=75
 
 # uncomment to force a console size. By default it will be display's size minus
 # overscan.
@@ -69,7 +73,7 @@ dtoverlay=i2c-sensor,bmp180
 dtoverlay=ds2482
 
 # DHT11
-dtoverlay=dht11,gpiopin=18
+#dtoverlay=dht11,gpiopin=18
 
 # Disable wifi
 dtoverlay=disable-wifi

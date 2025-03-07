@@ -1,0 +1,312 @@
+Mar 27 10:05:09 malina4 kernel: [6379635.735086] task:kworker/0:1     state:D stack:    0 pid:29376 ppid:     2 flags:0x00000000
+Mar 27 10:05:10 malina4 kernel: [6379635.735113] Workqueue: events_freezable mmc_rescan
+Mar 27 10:05:12 malina4 kernel: [6379635.735125] Backtrace: 
+Mar 27 10:05:16 malina4 kernel: [6379635.735142] [<c0b91740>] (__schedule) from [<c0b92118>] (schedule+0x68/0xe4)
+Mar 27 10:05:19 malina4 kernel: [6379635.735152]  r10:c222c000 r9:ffffe000 r8:00000000 r7:00000000 r6:68000013 r5:d3b76c80
+Mar 27 10:05:21 malina4 kernel: [6379635.735158]  r4:ffffe000
+Mar 27 10:05:22 malina4 kernel: [6379635.735168] [<c0b920b0>] (schedule) from [<c09976d8>] (__mmc_claim_host+0xe0/0x238)
+Mar 27 10:05:24 malina4 kernel: [6379635.735175]  r5:c222c228 r4:00000002
+Mar 27 10:05:25 malina4 kernel: [6379635.735185] [<c09975f8>] (__mmc_claim_host) from [<c0997868>] (mmc_get_card+0x38/0x3c)
+Mar 27 10:05:30 malina4 kernel: [6379635.735193]  r10:00000000 r9:00000000 r8:00000000 r7:efef4d00 r6:c222c228 r5:00000000
+Mar 27 10:05:34 malina4 kernel: [6379635.735200]  r4:c222c800
+Mar 27 10:05:35 malina4 kernel: [6379635.735210] [<c0997830>] (mmc_get_card) from [<c09a1538>] (mmc_sd_detect+0x24/0x7c)
+Mar 27 10:05:39 malina4 kernel: [6379635.735217]  r5:c222c000 r4:c222c000
+Mar 27 10:05:42 malina4 kernel: [6379635.735226] [<c09a1514>] (mmc_sd_detect) from [<c099a0cc>] (mmc_rescan+0xdc/0x3b0)
+Mar 27 10:05:45 malina4 kernel: [6379635.735233]  r5:c222c000 r4:c222c28c
+Mar 27 10:05:47 malina4 kernel: [6379635.735245] [<c0999ff0>] (mmc_rescan) from [<c023dddc>] (process_one_work+0x250/0x5a0)
+Mar 27 10:05:48 malina4 kernel: [6379635.735253]  r9:00000000 r8:00000000 r7:efef4d00 r6:efef16c0 r5:ccf1c880 r4:c222c28c
+Mar 27 10:05:49 malina4 kernel: [6379635.735263] [<c023db8c>] (process_one_work) from [<c023e18c>] (worker_thread+0x60/0x5c4)
+Mar 27 10:05:50 malina4 kernel: [6379635.735271]  r10:efef16c0 r9:c1203d00 r8:efef16d8 r7:00000008 r6:efef16c0 r5:ccf1c894
+Mar 27 10:05:50 malina4 kernel: [6379635.735277]  r4:ccf1c880
+Mar 27 10:05:50 malina4 kernel: [6379635.735288] [<c023e12c>] (worker_thread) from [<c0245c6c>] (kthread+0x170/0x174)
+Mar 27 10:05:50 malina4 kernel: [6379635.735296]  r10:d366fe74 r9:ccf1c880 r8:c023e12c r7:cfcb8000 r6:00000000 r5:c5251c80
+Mar 27 10:05:50 malina4 kernel: [6379635.735302]  r4:cbdd1440
+Mar 27 10:05:50 malina4 kernel: [6379635.735312] [<c0245afc>] (kthread) from [<c02000ec>] (ret_from_fork+0x14/0x28)
+Mar 27 10:05:50 malina4 kernel: [6379635.735319] Exception stack(0xcfcb9fb0 to 0xcfcb9ff8)
+Mar 27 10:05:50 malina4 kernel: [6379635.735326] 9fa0:                                     00000000 00000000 00000000 00000000
+Mar 27 10:05:50 malina4 kernel: [6379635.735334] 9fc0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+Mar 27 10:05:50 malina4 kernel: [6379635.735342] 9fe0: 00000000 00000000 00000000 00000000 00000013 00000000
+Mar 27 10:05:50 malina4 kernel: [6379635.735350]  r10:00000000 r9:00000000 r8:00000000 r7:00000000 r6:00000000 r5:c0245afc
+Mar 27 10:05:50 malina4 kernel: [6379635.735356]  r4:c5251c80
+Mar 27 10:07:12 malina4 kernel: [6379758.616533] task:kworker/0:1     state:D stack:    0 pid:29376 ppid:     2 flags:0x00000000
+Mar 27 10:07:14 malina4 kernel: [6379758.616559] Workqueue: events_freezable mmc_rescan
+Mar 27 10:07:16 malina4 kernel: [6379758.616571] Backtrace: 
+Mar 27 10:07:20 malina4 kernel: [6379758.616588] [<c0b91740>] (__schedule) from [<c0b92118>] (schedule+0x68/0xe4)
+Mar 27 10:07:21 malina4 kernel: [6379758.616597]  r10:c222c000 r9:ffffe000 r8:00000000 r7:00000000 r6:68000013 r5:d3b76c80
+Mar 27 10:07:23 malina4 kernel: [6379758.616604]  r4:ffffe000
+Mar 27 10:07:25 malina4 kernel: [6379758.616614] [<c0b920b0>] (schedule) from [<c09976d8>] (__mmc_claim_host+0xe0/0x238)
+Mar 27 10:07:27 malina4 kernel: [6379758.616621]  r5:c222c228 r4:00000002
+Mar 27 10:07:30 malina4 kernel: [6379758.616631] [<c09975f8>] (__mmc_claim_host) from [<c0997868>] (mmc_get_card+0x38/0x3c)
+Mar 27 10:07:32 malina4 kernel: [6379758.616640]  r10:00000000 r9:00000000 r8:00000000 r7:efef4d00 r6:c222c228 r5:00000000
+Mar 27 10:07:34 malina4 kernel: [6379758.616646]  r4:c222c800
+Mar 27 10:07:38 malina4 kernel: [6379758.616656] [<c0997830>] (mmc_get_card) from [<c09a1538>] (mmc_sd_detect+0x24/0x7c)
+Mar 27 10:07:40 malina4 kernel: [6379758.616662]  r5:c222c000 r4:c222c000
+Mar 27 10:07:42 malina4 kernel: [6379758.616672] [<c09a1514>] (mmc_sd_detect) from [<c099a0cc>] (mmc_rescan+0xdc/0x3b0)
+Mar 27 10:07:46 malina4 kernel: [6379758.616679]  r5:c222c000 r4:c222c28c
+Mar 27 10:07:47 malina4 kernel: [6379758.616690] [<c0999ff0>] (mmc_rescan) from [<c023dddc>] (process_one_work+0x250/0x5a0)
+Mar 27 10:07:49 malina4 kernel: [6379758.616699]  r9:00000000 r8:00000000 r7:efef4d00 r6:efef16c0 r5:ccf1c880 r4:c222c28c
+Mar 27 10:07:49 malina4 kernel: [6379758.616708] [<c023db8c>] (process_one_work) from [<c023e18c>] (worker_thread+0x60/0x5c4)
+Mar 27 10:07:49 malina4 kernel: [6379758.616716]  r10:efef16c0 r9:c1203d00 r8:efef16d8 r7:00000008 r6:efef16c0 r5:ccf1c894
+Mar 27 10:07:49 malina4 kernel: [6379758.616723]  r4:ccf1c880
+Mar 27 10:07:49 malina4 kernel: [6379758.616732] [<c023e12c>] (worker_thread) from [<c0245c6c>] (kthread+0x170/0x174)
+Mar 27 10:07:49 malina4 kernel: [6379758.616740]  r10:d366fe74 r9:ccf1c880 r8:c023e12c r7:cfcb8000 r6:00000000 r5:c5251c80
+Mar 27 10:07:49 malina4 kernel: [6379758.616747]  r4:cbdd1440
+Mar 27 10:07:49 malina4 kernel: [6379758.616756] [<c0245afc>] (kthread) from [<c02000ec>] (ret_from_fork+0x14/0x28)
+Mar 27 10:07:49 malina4 kernel: [6379758.616763] Exception stack(0xcfcb9fb0 to 0xcfcb9ff8)
+Mar 27 10:07:49 malina4 kernel: [6379758.616770] 9fa0:                                     00000000 00000000 00000000 00000000
+Mar 27 10:07:49 malina4 kernel: [6379758.616778] 9fc0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+Mar 27 10:07:49 malina4 kernel: [6379758.616786] 9fe0: 00000000 00000000 00000000 00000000 00000013 00000000
+Mar 27 10:07:49 malina4 kernel: [6379758.616794]  r10:00000000 r9:00000000 r8:00000000 r7:00000000 r6:00000000 r5:c0245afc
+Mar 27 10:07:49 malina4 kernel: [6379758.616800]  r4:c5251c80
+Mar 27 10:09:12 malina4 kernel: [6379881.497999] task:kworker/0:1     state:D stack:    0 pid:29376 ppid:     2 flags:0x00000000
+Mar 27 10:09:15 malina4 kernel: [6379881.498025] Workqueue: events_freezable mmc_rescan
+Mar 27 10:09:18 malina4 kernel: [6379881.498037] Backtrace: 
+Mar 27 10:09:19 malina4 kernel: [6379881.498054] [<c0b91740>] (__schedule) from [<c0b92118>] (schedule+0x68/0xe4)
+Mar 27 10:09:21 malina4 kernel: [6379881.498064]  r10:c222c000 r9:ffffe000 r8:00000000 r7:00000000 r6:68000013 r5:d3b76c80
+Mar 27 10:09:24 malina4 kernel: [6379881.498071]  r4:ffffe000
+Mar 27 10:09:26 malina4 kernel: [6379881.498081] [<c0b920b0>] (schedule) from [<c09976d8>] (__mmc_claim_host+0xe0/0x238)
+Mar 27 10:09:28 malina4 kernel: [6379881.498088]  r5:c222c228 r4:00000002
+Mar 27 10:09:31 malina4 kernel: [6379881.498097] [<c09975f8>] (__mmc_claim_host) from [<c0997868>] (mmc_get_card+0x38/0x3c)
+Mar 27 10:09:34 malina4 kernel: [6379881.498106]  r10:00000000 r9:00000000 r8:00000000 r7:efef4d00 r6:c222c228 r5:00000000
+Mar 27 10:09:36 malina4 kernel: [6379881.498112]  r4:c222c800
+Mar 27 10:09:38 malina4 kernel: [6379881.498122] [<c0997830>] (mmc_get_card) from [<c09a1538>] (mmc_sd_detect+0x24/0x7c)
+Mar 27 10:09:41 malina4 kernel: [6379881.498129]  r5:c222c000 r4:c222c000
+Mar 27 10:09:43 malina4 kernel: [6379881.498138] [<c09a1514>] (mmc_sd_detect) from [<c099a0cc>] (mmc_rescan+0xdc/0x3b0)
+Mar 27 10:09:45 malina4 kernel: [6379881.498145]  r5:c222c000 r4:c222c28c
+Mar 27 10:09:47 malina4 kernel: [6379881.498157] [<c0999ff0>] (mmc_rescan) from [<c023dddc>] (process_one_work+0x250/0x5a0)
+Mar 27 10:09:50 malina4 kernel: [6379881.498165]  r9:00000000 r8:00000000 r7:efef4d00 r6:efef16c0 r5:ccf1c880 r4:c222c28c
+Mar 27 10:09:52 malina4 kernel: [6379881.498175] [<c023db8c>] (process_one_work) from [<c023e18c>] (worker_thread+0x60/0x5c4)
+Mar 27 10:09:54 malina4 kernel: [6379881.498183]  r10:efef16c0 r9:c1203d00 r8:efef16d8 r7:00000008 r6:efef16c0 r5:ccf1c894
+Mar 27 10:09:56 malina4 kernel: [6379881.498189]  r4:ccf1c880
+Mar 27 10:09:57 malina4 kernel: [6379881.498199] [<c023e12c>] (worker_thread) from [<c0245c6c>] (kthread+0x170/0x174)
+Mar 27 10:09:58 malina4 kernel: [6379881.498207]  r10:d366fe74 r9:ccf1c880 r8:c023e12c r7:cfcb8000 r6:00000000 r5:c5251c80
+Mar 27 10:10:00 malina4 kernel: [6379881.498213]  r4:cbdd1440
+Mar 27 10:10:03 malina4 kernel: [6379881.498223] [<c0245afc>] (kthread) from [<c02000ec>] (ret_from_fork+0x14/0x28)
+Mar 27 10:10:04 malina4 kernel: [6379881.498230] Exception stack(0xcfcb9fb0 to 0xcfcb9ff8)
+Mar 27 10:10:05 malina4 kernel: [6379881.498237] 9fa0:                                     00000000 00000000 00000000 00000000
+Mar 27 10:10:06 malina4 kernel: [6379881.498245] 9fc0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+Mar 27 10:10:08 malina4 kernel: [6379881.498253] 9fe0: 00000000 00000000 00000000 00000000 00000013 00000000
+Mar 27 10:10:12 malina4 kernel: [6379881.498261]  r10:00000000 r9:00000000 r8:00000000 r7:00000000 r6:00000000 r5:c0245afc
+Mar 27 10:10:13 malina4 kernel: [6379881.498267]  r4:c5251c80
+Mar 27 10:11:14 malina4 kernel: [6380004.379518] task:kworker/0:1     state:D stack:    0 pid:29376 ppid:     2 flags:0x00000000
+Mar 27 10:11:16 malina4 kernel: [6380004.379546] Workqueue: events_freezable mmc_rescan
+Mar 27 10:11:17 malina4 kernel: [6380004.379558] Backtrace: 
+Mar 27 10:11:18 malina4 kernel: [6380004.379575] [<c0b91740>] (__schedule) from [<c0b92118>] (schedule+0x68/0xe4)
+Mar 27 10:11:20 malina4 kernel: [6380004.379585]  r10:c222c000 r9:ffffe000 r8:00000000 r7:00000000 r6:68000013 r5:d3b76c80
+Mar 27 10:11:22 malina4 kernel: [6380004.379591]  r4:ffffe000
+Mar 27 10:11:23 malina4 kernel: [6380004.379601] [<c0b920b0>] (schedule) from [<c09976d8>] (__mmc_claim_host+0xe0/0x238)
+Mar 27 10:11:25 malina4 kernel: [6380004.379608]  r5:c222c228 r4:00000002
+Mar 27 10:11:26 malina4 kernel: [6380004.379617] [<c09975f8>] (__mmc_claim_host) from [<c0997868>] (mmc_get_card+0x38/0x3c)
+Mar 27 10:11:27 malina4 kernel: [6380004.379626]  r10:00000000 r9:00000000 r8:00000000 r7:efef4d00 r6:c222c228 r5:00000000
+Mar 27 10:11:29 malina4 kernel: [6380004.379632]  r4:c222c800
+Mar 27 10:11:31 malina4 kernel: [6380004.379642] [<c0997830>] (mmc_get_card) from [<c09a1538>] (mmc_sd_detect+0x24/0x7c)
+Mar 27 10:11:33 malina4 kernel: [6380004.379648]  r5:c222c000 r4:c222c000
+Mar 27 10:11:35 malina4 kernel: [6380004.379658] [<c09a1514>] (mmc_sd_detect) from [<c099a0cc>] (mmc_rescan+0xdc/0x3b0)
+Mar 27 10:11:37 malina4 kernel: [6380004.379664]  r5:c222c000 r4:c222c28c
+Mar 27 10:11:40 malina4 kernel: [6380004.379677] [<c0999ff0>] (mmc_rescan) from [<c023dddc>] (process_one_work+0x250/0x5a0)
+Mar 27 10:11:41 malina4 kernel: [6380004.379685]  r9:00000000 r8:00000000 r7:efef4d00 r6:efef16c0 r5:ccf1c880 r4:c222c28c
+Mar 27 10:11:43 malina4 kernel: [6380004.379695] [<c023db8c>] (process_one_work) from [<c023e18c>] (worker_thread+0x60/0x5c4)
+Mar 27 10:11:45 malina4 kernel: [6380004.379703]  r10:efef16c0 r9:c1203d00 r8:efef16d8 r7:00000008 r6:efef16c0 r5:ccf1c894
+Mar 27 10:11:46 malina4 kernel: [6380004.379709]  r4:ccf1c880
+Mar 27 10:11:47 malina4 kernel: [6380004.379719] [<c023e12c>] (worker_thread) from [<c0245c6c>] (kthread+0x170/0x174)
+Mar 27 10:11:49 malina4 kernel: [6380004.379727]  r10:d366fe74 r9:ccf1c880 r8:c023e12c r7:cfcb8000 r6:00000000 r5:c5251c80
+Mar 27 10:11:52 malina4 kernel: [6380004.379734]  r4:cbdd1440
+Mar 27 10:11:52 malina4 kernel: [6380004.379744] [<c0245afc>] (kthread) from [<c02000ec>] (ret_from_fork+0x14/0x28)
+Mar 27 10:11:52 malina4 kernel: [6380004.379750] Exception stack(0xcfcb9fb0 to 0xcfcb9ff8)
+Mar 27 10:11:52 malina4 kernel: [6380004.379758] 9fa0:                                     00000000 00000000 00000000 00000000
+Mar 27 10:11:52 malina4 kernel: [6380004.379766] 9fc0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+Mar 27 10:11:52 malina4 kernel: [6380004.379774] 9fe0: 00000000 00000000 00000000 00000000 00000013 00000000
+Mar 27 10:11:52 malina4 kernel: [6380004.379782]  r10:00000000 r9:00000000 r8:00000000 r7:00000000 r6:00000000 r5:c0245afc
+Mar 27 10:11:52 malina4 kernel: [6380004.379788]  r4:c5251c80
+Mar 27 10:13:20 malina4 kernel: [6380127.260952] task:kworker/0:1     state:D stack:    0 pid:29376 ppid:     2 flags:0x00000000
+Mar 27 10:13:23 malina4 kernel: [6380127.260979] Workqueue: events_freezable mmc_rescan
+Mar 27 10:13:25 malina4 kernel: [6380127.260991] Backtrace: 
+Mar 27 10:13:25 malina4 kernel: [6380127.261010] [<c0b91740>] (__schedule) from [<c0b92118>] (schedule+0x68/0xe4)
+Mar 27 10:13:25 malina4 kernel: [6380127.261019]  r10:c222c000 r9:ffffe000 r8:00000000 r7:00000000 r6:68000013 r5:d3b76c80
+Mar 27 10:13:25 malina4 kernel: [6380127.261026]  r4:ffffe000
+Mar 27 10:13:25 malina4 kernel: [6380127.261036] [<c0b920b0>] (schedule) from [<c09976d8>] (__mmc_claim_host+0xe0/0x238)
+Mar 27 10:13:25 malina4 kernel: [6380127.261043]  r5:c222c228 r4:00000002
+Mar 27 10:13:25 malina4 kernel: [6380127.261052] [<c09975f8>] (__mmc_claim_host) from [<c0997868>] (mmc_get_card+0x38/0x3c)
+Mar 27 10:13:25 malina4 kernel: [6380127.261060]  r10:00000000 r9:00000000 r8:00000000 r7:efef4d00 r6:c222c228 r5:00000000
+Mar 27 10:13:25 malina4 kernel: [6380127.261067]  r4:c222c800
+Mar 27 10:13:25 malina4 kernel: [6380127.261077] [<c0997830>] (mmc_get_card) from [<c09a1538>] (mmc_sd_detect+0x24/0x7c)
+Mar 27 10:13:25 malina4 kernel: [6380127.261083]  r5:c222c000 r4:c222c000
+Mar 27 10:13:25 malina4 kernel: [6380127.261093] [<c09a1514>] (mmc_sd_detect) from [<c099a0cc>] (mmc_rescan+0xdc/0x3b0)
+Mar 27 10:13:25 malina4 kernel: [6380127.261100]  r5:c222c000 r4:c222c28c
+Mar 27 10:13:25 malina4 kernel: [6380127.261111] [<c0999ff0>] (mmc_rescan) from [<c023dddc>] (process_one_work+0x250/0x5a0)
+Mar 27 10:13:25 malina4 kernel: [6380127.261119]  r9:00000000 r8:00000000 r7:efef4d00 r6:efef16c0 r5:ccf1c880 r4:c222c28c
+Mar 27 10:13:25 malina4 kernel: [6380127.261129] [<c023db8c>] (process_one_work) from [<c023e18c>] (worker_thread+0x60/0x5c4)
+Mar 27 10:13:25 malina4 kernel: [6380127.261137]  r10:efef16c0 r9:c1203d00 r8:efef16d8 r7:00000008 r6:efef16c0 r5:ccf1c894
+Mar 27 10:13:25 malina4 kernel: [6380127.261143]  r4:ccf1c880
+Mar 27 10:13:25 malina4 kernel: [6380127.261153] [<c023e12c>] (worker_thread) from [<c0245c6c>] (kthread+0x170/0x174)
+Mar 27 10:13:25 malina4 kernel: [6380127.261161]  r10:d366fe74 r9:ccf1c880 r8:c023e12c r7:cfcb8000 r6:00000000 r5:c5251c80
+Mar 27 10:13:25 malina4 kernel: [6380127.261167]  r4:cbdd1440
+Mar 27 10:13:25 malina4 kernel: [6380127.261177] [<c0245afc>] (kthread) from [<c02000ec>] (ret_from_fork+0x14/0x28)
+Mar 27 10:13:25 malina4 kernel: [6380127.261183] Exception stack(0xcfcb9fb0 to 0xcfcb9ff8)
+Mar 27 10:13:25 malina4 kernel: [6380127.261191] 9fa0:                                     00000000 00000000 00000000 00000000
+Mar 27 10:13:25 malina4 kernel: [6380127.261199] 9fc0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+Mar 27 10:13:25 malina4 kernel: [6380127.261206] 9fe0: 00000000 00000000 00000000 00000000 00000013 00000000
+Mar 27 10:13:25 malina4 kernel: [6380127.261214]  r10:00000000 r9:00000000 r8:00000000 r7:00000000 r6:00000000 r5:c0245afc
+Mar 27 10:13:25 malina4 kernel: [6380127.261221]  r4:c5251c80
+Mar 27 10:14:53 malina4 kernel: [6380229.422138] bcmgenet fd580000.ethernet eth0: Link is Down
+Mar 27 10:14:59 malina4 kernel: [6380234.622274] bcmgenet fd580000.ethernet eth0: Link is Up - 1Gbps/Full - flow control rx/tx
+Mar 27 10:15:21 malina4 kernel: [6380250.152466] task:kworker/0:1     state:D stack:    0 pid:29376 ppid:     2 flags:0x00000000
+Mar 27 10:15:23 malina4 kernel: [6380250.152493] Workqueue: events_freezable mmc_rescan
+Mar 27 10:15:26 malina4 kernel: [6380250.152507] Backtrace: 
+Mar 27 10:15:28 malina4 kernel: [6380250.152526] [<c0b91740>] (__schedule) from [<c0b92118>] (schedule+0x68/0xe4)
+Mar 27 10:15:30 malina4 kernel: [6380250.152539]  r10:c222c000 r9:ffffe000 r8:00000000 r7:00000000 r6:68000013 r5:d3b76c80
+Mar 27 10:15:31 malina4 kernel: [6380250.152547]  r4:ffffe000
+Mar 27 10:15:31 malina4 kernel: [6380250.152559] [<c0b920b0>] (schedule) from [<c09976d8>] (__mmc_claim_host+0xe0/0x238)
+Mar 27 10:15:31 malina4 kernel: [6380250.152566]  r5:c222c228 r4:00000002
+Mar 27 10:15:31 malina4 kernel: [6380250.152575] [<c09975f8>] (__mmc_claim_host) from [<c0997868>] (mmc_get_card+0x38/0x3c)
+Mar 27 10:15:31 malina4 kernel: [6380250.152583]  r10:00000000 r9:00000000 r8:00000000 r7:efef4d00 r6:c222c228 r5:00000000
+Mar 27 10:15:31 malina4 kernel: [6380250.152590]  r4:c222c800
+Mar 27 10:15:31 malina4 kernel: [6380250.152600] [<c0997830>] (mmc_get_card) from [<c09a1538>] (mmc_sd_detect+0x24/0x7c)
+Mar 27 10:15:31 malina4 kernel: [6380250.152606]  r5:c222c000 r4:c222c000
+Mar 27 10:15:31 malina4 kernel: [6380250.152616] [<c09a1514>] (mmc_sd_detect) from [<c099a0cc>] (mmc_rescan+0xdc/0x3b0)
+Mar 27 10:15:31 malina4 kernel: [6380250.152622]  r5:c222c000 r4:c222c28c
+Mar 27 10:15:31 malina4 kernel: [6380250.152634] [<c0999ff0>] (mmc_rescan) from [<c023dddc>] (process_one_work+0x250/0x5a0)
+Mar 27 10:15:31 malina4 kernel: [6380250.152642]  r9:00000000 r8:00000000 r7:efef4d00 r6:efef16c0 r5:ccf1c880 r4:c222c28c
+Mar 27 10:15:31 malina4 kernel: [6380250.152651] [<c023db8c>] (process_one_work) from [<c023e18c>] (worker_thread+0x60/0x5c4)
+Mar 27 10:15:31 malina4 kernel: [6380250.152660]  r10:efef16c0 r9:c1203d00 r8:efef16d8 r7:00000008 r6:efef16c0 r5:ccf1c894
+Mar 27 10:15:31 malina4 kernel: [6380250.152666]  r4:ccf1c880
+Mar 27 10:15:31 malina4 kernel: [6380250.152676] [<c023e12c>] (worker_thread) from [<c0245c6c>] (kthread+0x170/0x174)
+Mar 27 10:15:31 malina4 kernel: [6380250.152684]  r10:d366fe74 r9:ccf1c880 r8:c023e12c r7:cfcb8000 r6:00000000 r5:c5251c80
+Mar 27 10:15:31 malina4 kernel: [6380250.152690]  r4:cbdd1440
+Mar 27 10:15:31 malina4 kernel: [6380250.152700] [<c0245afc>] (kthread) from [<c02000ec>] (ret_from_fork+0x14/0x28)
+Mar 27 10:15:31 malina4 kernel: [6380250.152707] Exception stack(0xcfcb9fb0 to 0xcfcb9ff8)
+Mar 27 10:15:31 malina4 kernel: [6380250.152714] 9fa0:                                     00000000 00000000 00000000 00000000
+Mar 27 10:15:31 malina4 kernel: [6380250.152722] 9fc0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+Mar 27 10:15:31 malina4 kernel: [6380250.152730] 9fe0: 00000000 00000000 00000000 00000000 00000013 00000000
+Mar 27 10:15:31 malina4 kernel: [6380250.152738]  r10:00000000 r9:00000000 r8:00000000 r7:00000000 r6:00000000 r5:c0245afc
+Mar 27 10:15:31 malina4 kernel: [6380250.152744]  r4:c5251c80
+Mar 27 10:17:25 malina4 kernel: [6380373.023919] task:kworker/0:1     state:D stack:    0 pid:29376 ppid:     2 flags:0x00000000
+Mar 27 10:17:28 malina4 kernel: [6380373.023945] Workqueue: events_freezable mmc_rescan
+Mar 27 10:17:30 malina4 kernel: [6380373.023957] Backtrace: 
+Mar 27 10:17:33 malina4 kernel: [6380373.023974] [<c0b91740>] (__schedule) from [<c0b92118>] (schedule+0x68/0xe4)
+Mar 27 10:17:36 malina4 kernel: [6380373.023984]  r10:c222c000 r9:ffffe000 r8:00000000 r7:00000000 r6:68000013 r5:d3b76c80
+Mar 27 10:17:39 malina4 kernel: [6380373.023990]  r4:ffffe000
+Mar 27 10:17:40 malina4 kernel: [6380373.024000] [<c0b920b0>] (schedule) from [<c09976d8>] (__mmc_claim_host+0xe0/0x238)
+Mar 27 10:17:43 malina4 kernel: [6380373.024007]  r5:c222c228 r4:00000002
+Mar 27 10:17:45 malina4 kernel: [6380373.024017] [<c09975f8>] (__mmc_claim_host) from [<c0997868>] (mmc_get_card+0x38/0x3c)
+Mar 27 10:17:45 malina4 kernel: [6380373.024025]  r10:00000000 r9:00000000 r8:00000000 r7:efef4d00 r6:c222c228 r5:00000000
+Mar 27 10:17:45 malina4 kernel: [6380373.024032]  r4:c222c800
+Mar 27 10:17:45 malina4 kernel: [6380373.024042] [<c0997830>] (mmc_get_card) from [<c09a1538>] (mmc_sd_detect+0x24/0x7c)
+Mar 27 10:17:45 malina4 kernel: [6380373.024048]  r5:c222c000 r4:c222c000
+Mar 27 10:17:45 malina4 kernel: [6380373.024058] [<c09a1514>] (mmc_sd_detect) from [<c099a0cc>] (mmc_rescan+0xdc/0x3b0)
+Mar 27 10:17:45 malina4 kernel: [6380373.024065]  r5:c222c000 r4:c222c28c
+Mar 27 10:17:45 malina4 kernel: [6380373.024077] [<c0999ff0>] (mmc_rescan) from [<c023dddc>] (process_one_work+0x250/0x5a0)
+Mar 27 10:17:45 malina4 kernel: [6380373.024085]  r9:00000000 r8:00000000 r7:efef4d00 r6:efef16c0 r5:ccf1c880 r4:c222c28c
+Mar 27 10:17:45 malina4 kernel: [6380373.024094] [<c023db8c>] (process_one_work) from [<c023e18c>] (worker_thread+0x60/0x5c4)
+Mar 27 10:17:45 malina4 kernel: [6380373.024102]  r10:efef16c0 r9:c1203d00 r8:efef16d8 r7:00000008 r6:efef16c0 r5:ccf1c894
+Mar 27 10:17:45 malina4 kernel: [6380373.024109]  r4:ccf1c880
+Mar 27 10:17:45 malina4 kernel: [6380373.024119] [<c023e12c>] (worker_thread) from [<c0245c6c>] (kthread+0x170/0x174)
+Mar 27 10:17:45 malina4 kernel: [6380373.024127]  r10:d366fe74 r9:ccf1c880 r8:c023e12c r7:cfcb8000 r6:00000000 r5:c5251c80
+Mar 27 10:17:45 malina4 kernel: [6380373.024133]  r4:cbdd1440
+Mar 27 10:17:45 malina4 kernel: [6380373.024142] [<c0245afc>] (kthread) from [<c02000ec>] (ret_from_fork+0x14/0x28)
+Mar 27 10:17:45 malina4 kernel: [6380373.024149] Exception stack(0xcfcb9fb0 to 0xcfcb9ff8)
+Mar 27 10:17:45 malina4 kernel: [6380373.024157] 9fa0:                                     00000000 00000000 00000000 00000000
+Mar 27 10:17:45 malina4 kernel: [6380373.024165] 9fc0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+Mar 27 10:17:45 malina4 kernel: [6380373.024172] 9fe0: 00000000 00000000 00000000 00000000 00000013 00000000
+Mar 27 10:17:45 malina4 kernel: [6380373.024180]  r10:00000000 r9:00000000 r8:00000000 r7:00000000 r6:00000000 r5:c0245afc
+Mar 27 10:17:45 malina4 kernel: [6380373.024187]  r4:c5251c80
+Mar 27 10:19:28 malina4 kernel: [6380495.915393] task:kworker/0:1     state:D stack:    0 pid:29376 ppid:     2 flags:0x00000000
+Mar 27 10:19:28 malina4 kernel: [6380495.915419] Workqueue: events_freezable mmc_rescan
+Mar 27 10:19:28 malina4 kernel: [6380495.915431] Backtrace: 
+Mar 27 10:19:28 malina4 kernel: [6380495.915448] [<c0b91740>] (__schedule) from [<c0b92118>] (schedule+0x68/0xe4)
+Mar 27 10:19:28 malina4 kernel: [6380495.915458]  r10:c222c000 r9:ffffe000 r8:00000000 r7:00000000 r6:68000013 r5:d3b76c80
+Mar 27 10:19:28 malina4 kernel: [6380495.915464]  r4:ffffe000
+Mar 27 10:19:28 malina4 kernel: [6380495.915474] [<c0b920b0>] (schedule) from [<c09976d8>] (__mmc_claim_host+0xe0/0x238)
+Mar 27 10:19:28 malina4 kernel: [6380495.915481]  r5:c222c228 r4:00000002
+Mar 27 10:19:28 malina4 kernel: [6380495.915491] [<c09975f8>] (__mmc_claim_host) from [<c0997868>] (mmc_get_card+0x38/0x3c)
+Mar 27 10:19:28 malina4 kernel: [6380495.915499]  r10:00000000 r9:00000000 r8:00000000 r7:efef4d00 r6:c222c228 r5:00000000
+Mar 27 10:19:28 malina4 kernel: [6380495.915506]  r4:c222c800
+Mar 27 10:19:28 malina4 kernel: [6380495.915515] [<c0997830>] (mmc_get_card) from [<c09a1538>] (mmc_sd_detect+0x24/0x7c)
+Mar 27 10:19:28 malina4 kernel: [6380495.915522]  r5:c222c000 r4:c222c000
+Mar 27 10:19:28 malina4 kernel: [6380495.915532] [<c09a1514>] (mmc_sd_detect) from [<c099a0cc>] (mmc_rescan+0xdc/0x3b0)
+Mar 27 10:19:28 malina4 kernel: [6380495.915538]  r5:c222c000 r4:c222c28c
+Mar 27 10:19:28 malina4 kernel: [6380495.915550] [<c0999ff0>] (mmc_rescan) from [<c023dddc>] (process_one_work+0x250/0x5a0)
+Mar 27 10:19:28 malina4 kernel: [6380495.915558]  r9:00000000 r8:00000000 r7:efef4d00 r6:efef16c0 r5:ccf1c880 r4:c222c28c
+Mar 27 10:19:28 malina4 kernel: [6380495.915568] [<c023db8c>] (process_one_work) from [<c023e18c>] (worker_thread+0x60/0x5c4)
+Mar 27 10:19:28 malina4 kernel: [6380495.915576]  r10:efef16c0 r9:c1203d00 r8:efef16d8 r7:00000008 r6:efef16c0 r5:ccf1c894
+Mar 27 10:19:28 malina4 kernel: [6380495.915582]  r4:ccf1c880
+Mar 27 10:19:28 malina4 kernel: [6380495.915592] [<c023e12c>] (worker_thread) from [<c0245c6c>] (kthread+0x170/0x174)
+Mar 27 10:19:28 malina4 kernel: [6380495.915600]  r10:d366fe74 r9:ccf1c880 r8:c023e12c r7:cfcb8000 r6:00000000 r5:c5251c80
+Mar 27 10:19:28 malina4 kernel: [6380495.915606]  r4:cbdd1440
+Mar 27 10:19:28 malina4 kernel: [6380495.915615] [<c0245afc>] (kthread) from [<c02000ec>] (ret_from_fork+0x14/0x28)
+Mar 27 10:19:28 malina4 kernel: [6380495.915622] Exception stack(0xcfcb9fb0 to 0xcfcb9ff8)
+Mar 27 10:19:28 malina4 kernel: [6380495.915630] 9fa0:                                     00000000 00000000 00000000 00000000
+Mar 27 10:19:28 malina4 kernel: [6380495.915638] 9fc0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+Mar 27 10:19:28 malina4 kernel: [6380495.915645] 9fe0: 00000000 00000000 00000000 00000000 00000013 00000000
+Mar 27 10:19:28 malina4 kernel: [6380495.915653]  r10:00000000 r9:00000000 r8:00000000 r7:00000000 r6:00000000 r5:c0245afc
+Mar 27 10:19:28 malina4 kernel: [6380495.915660]  r4:c5251c80
+Mar 27 10:21:28 malina4 kernel: [6380618.786862] task:kworker/0:1     state:D stack:    0 pid:29376 ppid:     2 flags:0x00000000
+Mar 27 10:21:28 malina4 kernel: [6380618.786890] Workqueue: events_freezable mmc_rescan
+Mar 27 10:21:28 malina4 kernel: [6380618.786902] Backtrace: 
+Mar 27 10:21:28 malina4 kernel: [6380618.786918] [<c0b91740>] (__schedule) from [<c0b92118>] (schedule+0x68/0xe4)
+Mar 27 10:21:28 malina4 kernel: [6380618.786928]  r10:c222c000 r9:ffffe000 r8:00000000 r7:00000000 r6:68000013 r5:d3b76c80
+Mar 27 10:21:28 malina4 kernel: [6380618.786935]  r4:ffffe000
+Mar 27 10:21:28 malina4 kernel: [6380618.786944] [<c0b920b0>] (schedule) from [<c09976d8>] (__mmc_claim_host+0xe0/0x238)
+Mar 27 10:21:28 malina4 kernel: [6380618.786952]  r5:c222c228 r4:00000002
+Mar 27 10:21:28 malina4 kernel: [6380618.786961] [<c09975f8>] (__mmc_claim_host) from [<c0997868>] (mmc_get_card+0x38/0x3c)
+Mar 27 10:21:28 malina4 kernel: [6380618.786970]  r10:00000000 r9:00000000 r8:00000000 r7:efef4d00 r6:c222c228 r5:00000000
+Mar 27 10:21:28 malina4 kernel: [6380618.786976]  r4:c222c800
+Mar 27 10:21:28 malina4 kernel: [6380618.786986] [<c0997830>] (mmc_get_card) from [<c09a1538>] (mmc_sd_detect+0x24/0x7c)
+Mar 27 10:21:28 malina4 kernel: [6380618.786993]  r5:c222c000 r4:c222c000
+Mar 27 10:21:28 malina4 kernel: [6380618.787002] [<c09a1514>] (mmc_sd_detect) from [<c099a0cc>] (mmc_rescan+0xdc/0x3b0)
+Mar 27 10:21:28 malina4 kernel: [6380618.787009]  r5:c222c000 r4:c222c28c
+Mar 27 10:21:28 malina4 kernel: [6380618.787020] [<c0999ff0>] (mmc_rescan) from [<c023dddc>] (process_one_work+0x250/0x5a0)
+Mar 27 10:21:28 malina4 kernel: [6380618.787028]  r9:00000000 r8:00000000 r7:efef4d00 r6:efef16c0 r5:ccf1c880 r4:c222c28c
+Mar 27 10:21:28 malina4 kernel: [6380618.787038] [<c023db8c>] (process_one_work) from [<c023e18c>] (worker_thread+0x60/0x5c4)
+Mar 27 10:21:28 malina4 kernel: [6380618.787046]  r10:efef16c0 r9:c1203d00 r8:efef16d8 r7:00000008 r6:efef16c0 r5:ccf1c894
+Mar 27 10:21:28 malina4 kernel: [6380618.787052]  r4:ccf1c880
+Mar 27 10:21:28 malina4 kernel: [6380618.787062] [<c023e12c>] (worker_thread) from [<c0245c6c>] (kthread+0x170/0x174)
+Mar 27 10:21:28 malina4 kernel: [6380618.787070]  r10:d366fe74 r9:ccf1c880 r8:c023e12c r7:cfcb8000 r6:00000000 r5:c5251c80
+Mar 27 10:21:28 malina4 kernel: [6380618.787077]  r4:cbdd1440
+Mar 27 10:21:28 malina4 kernel: [6380618.787086] [<c0245afc>] (kthread) from [<c02000ec>] (ret_from_fork+0x14/0x28)
+Mar 27 10:21:28 malina4 kernel: [6380618.787093] Exception stack(0xcfcb9fb0 to 0xcfcb9ff8)
+Mar 27 10:21:28 malina4 kernel: [6380618.787100] 9fa0:                                     00000000 00000000 00000000 00000000
+Mar 27 10:21:28 malina4 kernel: [6380618.787108] 9fc0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+Mar 27 10:21:28 malina4 kernel: [6380618.787115] 9fe0: 00000000 00000000 00000000 00000000 00000013 00000000
+Mar 27 10:21:28 malina4 kernel: [6380618.787124]  r10:00000000 r9:00000000 r8:00000000 r7:00000000 r6:00000000 r5:c0245afc
+Mar 27 10:21:28 malina4 kernel: [6380618.787130]  r4:c5251c80
+Mar 27 10:23:28 malina4 kernel: [6380741.668332] task:kworker/0:1     state:D stack:    0 pid:29376 ppid:     2 flags:0x00000000
+Mar 27 10:23:28 malina4 kernel: [6380741.668359] Workqueue: events_freezable mmc_rescan
+Mar 27 10:23:28 malina4 kernel: [6380741.668370] Backtrace: 
+Mar 27 10:23:28 malina4 kernel: [6380741.668388] [<c0b91740>] (__schedule) from [<c0b92118>] (schedule+0x68/0xe4)
+Mar 27 10:23:28 malina4 kernel: [6380741.668397]  r10:c222c000 r9:ffffe000 r8:00000000 r7:00000000 r6:68000013 r5:d3b76c80
+Mar 27 10:23:28 malina4 kernel: [6380741.668404]  r4:ffffe000
+Mar 27 10:23:28 malina4 kernel: [6380741.668414] [<c0b920b0>] (schedule) from [<c09976d8>] (__mmc_claim_host+0xe0/0x238)
+Mar 27 10:23:28 malina4 kernel: [6380741.668421]  r5:c222c228 r4:00000002
+Mar 27 10:23:28 malina4 kernel: [6380741.668431] [<c09975f8>] (__mmc_claim_host) from [<c0997868>] (mmc_get_card+0x38/0x3c)
+Mar 27 10:23:28 malina4 kernel: [6380741.668439]  r10:00000000 r9:00000000 r8:00000000 r7:efef4d00 r6:c222c228 r5:00000000
+Mar 27 10:23:28 malina4 kernel: [6380741.668445]  r4:c222c800
+Mar 27 10:23:28 malina4 kernel: [6380741.668455] [<c0997830>] (mmc_get_card) from [<c09a1538>] (mmc_sd_detect+0x24/0x7c)
+Mar 27 10:23:28 malina4 kernel: [6380741.668462]  r5:c222c000 r4:c222c000
+Mar 27 10:23:28 malina4 kernel: [6380741.668471] [<c09a1514>] (mmc_sd_detect) from [<c099a0cc>] (mmc_rescan+0xdc/0x3b0)
+Mar 27 10:23:28 malina4 kernel: [6380741.668478]  r5:c222c000 r4:c222c28c
+Mar 27 10:23:28 malina4 kernel: [6380741.668490] [<c0999ff0>] (mmc_rescan) from [<c023dddc>] (process_one_work+0x250/0x5a0)
+Mar 27 10:23:28 malina4 kernel: [6380741.668498]  r9:00000000 r8:00000000 r7:efef4d00 r6:efef16c0 r5:ccf1c880 r4:c222c28c
+Mar 27 10:23:28 malina4 kernel: [6380741.668508] [<c023db8c>] (process_one_work) from [<c023e18c>] (worker_thread+0x60/0x5c4)
+Mar 27 10:23:28 malina4 kernel: [6380741.668516]  r10:efef16c0 r9:c1203d00 r8:efef16d8 r7:00000008 r6:efef16c0 r5:ccf1c894
+Mar 27 10:23:28 malina4 kernel: [6380741.668522]  r4:ccf1c880
+Mar 27 10:23:28 malina4 kernel: [6380741.668532] [<c023e12c>] (worker_thread) from [<c0245c6c>] (kthread+0x170/0x174)
+Mar 27 10:23:28 malina4 kernel: [6380741.668540]  r10:d366fe74 r9:ccf1c880 r8:c023e12c r7:cfcb8000 r6:00000000 r5:c5251c80
+Mar 27 10:23:28 malina4 kernel: [6380741.668546]  r4:cbdd1440
+Mar 27 10:23:28 malina4 kernel: [6380741.668555] [<c0245afc>] (kthread) from [<c02000ec>] (ret_from_fork+0x14/0x28)
+Mar 27 10:23:28 malina4 kernel: [6380741.668562] Exception stack(0xcfcb9fb0 to 0xcfcb9ff8)
+Mar 27 10:23:28 malina4 kernel: [6380741.668570] 9fa0:                                     00000000 00000000 00000000 00000000
+Mar 27 10:23:28 malina4 kernel: [6380741.668578] 9fc0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+Mar 27 10:23:28 malina4 kernel: [6380741.668585] 9fe0: 00000000 00000000 00000000 00000000 00000013 00000000
+Mar 27 10:23:28 malina4 kernel: [6380741.668593]  r10:00000000 r9:00000000 r8:00000000 r7:00000000 r6:00000000 r5:c0245afc
+Mar 27 10:23:28 malina4 kernel: [6380741.668600]  r4:c5251c80
+Mar 27 10:32:04 malina4 kernel: [6381260.304414] usb 1-1.4.2: new low-speed USB device number 6 using xhci_hcd
+Mar 27 10:32:07 malina4 kernel: [6381260.568522] usb 1-1.4.2: New USB device found, idVendor=04d9, idProduct=1503, bcdDevice= 4.03
+Mar 27 10:32:09 malina4 kernel: [6381260.568533] usb 1-1.4.2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+Mar 27 10:32:12 malina4 kernel: [6381260.568541] usb 1-1.4.2: Product: USB Keyboard
+Mar 27 10:32:15 malina4 kernel: [6381260.568548] usb 1-1.4.2: Manufacturer:  
+Mar 27 10:32:18 malina4 kernel: [6381260.628857] input:   USB Keyboard as /devices/platform/scb/fd500000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0/usb1/1-1/1-1.4/1-1.4.2/1-1.4.2:1.0/0003:04D9:1503.0001/input/input1
+Mar 27 10:32:20 malina4 kernel: [6381260.695260] hid-generic 0003:04D9:1503.0001: input,hidraw0: USB HID v1.10 Keyboard [  USB Keyboard] on usb-0000:01:00.0-1.4.2/input0
+Mar 27 10:32:20 malina4 kernel: [6381260.721330] input:   USB Keyboard System Control as /devices/platform/scb/fd500000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0/usb1/1-1/1-1.4/1-1.4.2/1-1.4.2:1.1/0003:04D9:1503.0002/input/input2
+Mar 27 10:32:20 malina4 kernel: [6381260.784701] input:   USB Keyboard Consumer Control as /devices/platform/scb/fd500000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0/usb1/1-1/1-1.4/1-1.4.2/1-1.4.2:1.1/0003:04D9:1503.0002/input/input3
+Mar 27 10:32:20 malina4 kernel: [6381260.784895] hid-generic 0003:04D9:1503.0002: input,hidraw1: USB HID v1.10 Device [  USB Keyboard] on usb-0000:01:00.0-1.4.2/input1

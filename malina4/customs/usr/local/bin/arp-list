@@ -16,7 +16,7 @@ ARP=`readtable`
 #echo $ARP
 #echo 
 #for A in ARP ; do echo $ARP ; done
-seq 144 160  \
+seq 144 168  \
  | sed "s/^/$NET/" \
  | xargs sudo arp-scan --timeout=2000 --numeric  --plain \
  | grep -E '^[0-9][0-9.]' \

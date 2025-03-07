@@ -15,17 +15,20 @@ function reloadingImage()
 </head>
 <body>
 
-<h2><a href="/media/">media</a></h2> (<a href="/rescan.php">rescan</a>)
+<h2><a href="/media/">media</a> / <a href="/media/NOVE/">NOVÉ</a> (<a href="/rescan.php">rescan</a>)</h2>
+
+<h2><a href="/fotky">fotky</a></h2>
+
 <h2><a href="/fm">sdílení souborů</a></h2>
 
-<h2><a href="/scan/">scanner</a></h2>
+<!--h2><a href="/scan/">scanner</a></h2-->
 <h2><a href="/network.php">LAN</a></h2>
 
 <h2><a href="/wiki/">wiki</a></h2>
 <h2><a href="/gpx/">gpx</a></h2>
 
 
-<h2><a href="https://banan:631/">Tiskárny</a></h2>
+<h2><a href="https://malina4:631/">Tiskárny</a></h2>
 <ul>
 <li>http://banan:631/printers/Samsung_ML1640</li>
 <li>http://banan:631/printers/Canon_MP150</li>

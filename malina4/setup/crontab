@@ -1,0 +1,90 @@
+# Edit this file to introduce tasks to be run by cron.
+# 
+# Each task to run has to be defined through a single line
+# indicating with different fields when the task will be run
+# and what command to run for the task
+# 
+# To define the time you can provide concrete values for
+# minute (m), hour (h), day of month (dom), month (mon),
+# and day of week (dow) or use '*' in these fields (for 'any').
+# 
+# Notice that tasks will be started based on the cron's system
+# daemon's notion of time and timezones.
+# 
+# Output of the crontab jobs (including errors) is sent through
+# email to the user the crontab file belongs to (unless redirected).
+# 
+# For example, you can run a backup of all your user accounts
+# at 5 a.m every week with:
+# 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
+# 
+# For more information see the manual pages of crontab(5) and cron(8)
+# 
+# m h  dom mon dow   command
+
+# day of the week (0 - 6) (Sunday to Saturday)
+MAILTO="" 
+
+#   
+30 07 * * * /usr/local/bin/treelight disco
+31 07 * * * /usr/local/bin/treelight nodisco    
+    
+45 07 * * * /usr/local/bin/treelight disco
+46 07 * * * /usr/local/bin/treelight nodisco    
+
+# night light    
+45 21 * * * /usr/local/bin/treelight white
+01 07 * * * /usr/local/bin/treelight nowhite 
+   
+# services restart (dnsmasq, squid)    
+04 04 * * * /usr/sbin/service squid stop
+06 04 * * * /bin/rm -f /var/log/squid/netdb.state   
+10 04 * * * /usr/sbin/service squid start     
+08 04 * * * echo "" > /run/dnsmasq/dnsmasq.log
+
+# net monitoring    
+20 04 * * * /usr/local/sbin/netstats.sh 
+#01,16,31,46 * * * * /usr/local/sbin/arpstats.sh     
+
+# media restrict mode    
+01 20 * * * /var/media/r-mode-off.sh --check
+06 08 * * * /var/media/r-mode-on.sh --check
+
+# skola
+#00 07 * * 1-5 /usr/local/bin/buzzer
+30 07 * * 1-5 /usr/local/bin/buzzer
+# Z mat
+#30 13 * * 4 /usr/local/bin/buzzer
+# Z fletna
+#10 16 * * 4 /usr/local/bin/buzzer
+# Z vytvarka
+#45 13 * * 1 /usr/local/bin/buzzer
+# Z ang
+#00 14 * * 2 /usr/local/bin/buzzer
+#50 14 * * 2 /usr/local/bin/buzzer
+# Z skaut
+#30 15 * * 2 /usr/local/bin/buzzer
+#30 17 * * 2 /usr/local/bin/buzzer
+# V nauka
+#15 16 * * 1 /usr/local/bin/buzzer
+# klavesy
+#45 18 * * 2 /usr/local/bin/buzzer
+# V ang
+#05 16 * * 3 /usr/local/bin/buzzer
+# hv
+#50 16 * * 4 /usr/local/bin/buzzer
+# fitstop
+#55 09 * * 3 /usr/local/bin/buzzer
+
+# dnsmasq
+#55 03 * * * /usr/local/sbin/dnsmasq-reload video cleanbrowsing  
+#55 05 * * 0,6 /usr/local/sbin/dnsmasq-reload empty cleanbrowsing
+
+#58 07 * * *   /usr/local/sbin/dnsmasq-reload empty cleanbrowsing  
+#58 19 * * *   /usr/local/sbin/dnsmasq-reload empty google
+
+#GOG
+#07 07 * * 1 curl 'https://www.gog.com/giveaway/claim' -b /usr/local/etc/gog.cookies -c /usr/local/etc/gog.cookies
+#07 07 * * 4 curl 'https://www.gog.com/giveaway/claim' -b /usr/local/etc/gog.cookies -c /usr/local/etc/gog.cookies
+
+

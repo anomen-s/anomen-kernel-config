@@ -1,15 +1,18 @@
 #!/bin/sh
 
-TMP=`mktemp -d -t youtube-dl-XXXXXX`
-DEST=/usr/local/bin/youtube-dl
+TMP=`mktemp -d -t yt-dlp-XXXXXX`
+DEST=/usr/local/bin/yt-dlp
 
-wget https://youtube-dl.org/downloads/latest/youtube-dl -O "$TMP/youtube-dl" || exit 1
+#F=https://youtube-dl.org/downloads/latest/youtube-dl
+F=https://github.com/yt-dlp/yt-dlp/releases/download/2024.04.09/yt-dlp
 
-test -s "$TMP/youtube-dl" || exit 2
+wget "$F" -O "$TMP/yt-dlp" || exit 1
 
-test -s "$DEST" && mv -f -v "$DEST" "$TMP/youtube-dl.bak"
+test -s "$TMP/yt-dlp" || exit 2
 
-cp -v -f "$TMP/youtube-dl" "$DEST" || exit 3
+test -s "$DEST" && mv -f -v "$DEST" "$TMP/yt-dlp.bak"
+
+cp -v -f "$TMP/yt-dlp" "$DEST" || exit 3
 
 chmod 755 "$DEST"
 

@@ -1,9 +1,11 @@
 #!/bin/sh
 
+CMD=yt-dlp
+
 mkdir -p /mnt/work/downloads/yt
 cd /mnt/work/downloads/yt
 
-export OPENSSL_CONF=/etc/ssl/openssl-weak.cnf
+#export OPENSSL_CONF=/etc/ssl/openssl-weak.cnf
 
 P=$$
 test -z "$2" || P="${P}-${2}"
@@ -11,11 +13,11 @@ test -z "$2" || P="${P}-${2}"
 mkdir "$P"
 cd "$P"
 
-echo youtube-dl "$P" "$@"
+echo $CMD "$P" "$@"
 
 echo "$@" >> history.txt
 
-screen -d -m -S "yt-$P"  bash -c "youtube-dl --merge-output-format mkv -v --all-subs '$@' > output.log 2> error.log"
+screen -d -m -S "yt-$P"  bash -c "$CMD --merge-output-format mkv -v --all-subs '$@' > output.log 2> error.log"
 
 
 
