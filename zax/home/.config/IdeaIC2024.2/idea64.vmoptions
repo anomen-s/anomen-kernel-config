@@ -1,0 +1,8 @@
+# custom IntelliJ IDEA VM options
+
+-Djava.net.preferIPv4Stack=true
+-Dawt.useSystemAAFontSettings=lcd
+-Dsun.java2d.renderer=sun.java2d.marlin.MarlinRenderingEngine
+-Duser.language=cs
+-Duser.country=CZ
+

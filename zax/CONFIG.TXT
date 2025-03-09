@@ -186,3 +186,6 @@ m CONFIG_USB_NET_CDC_SUBSET (usb tethering)
 
 TODO
 ====
+* make hardening.config
+* CONFIG_USB_SERIAL_CP210X, CONFIG_USB_SERIAL_CH341, ...
+* CONFIG_UHID (net-wireless/bluez)

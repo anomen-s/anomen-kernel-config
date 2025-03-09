@@ -1,4 +1,4 @@
 #!/bin/sh
 
-exec screen -d -m -S vnch vncviewer localhost::15901
+exec screen -d -m -S vnch vncviewer -SendClipboard -SendPrimary -PasswordFile "$HOME/.vnc/passwd" localhost::15901
 

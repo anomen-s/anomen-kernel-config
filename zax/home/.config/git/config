@@ -19,4 +19,15 @@
 [alias]
 	s = status -b .
 	d = diff .
+	dw = diff -w .
+	dc = diff --cached .
 	cm = commit
+	l = log --summary
+	lg = log --all --graph
+	lp = log --patch 
+	b = !git --no-pager branch --list --all --verbose --sort=committerdate --sort=upstream
+	bc = !git --no-pager log -1 --oneline HEAD
+	k = !screen -d -m gitk --all
+	p = pull --prune --rebase
+	out = push --dry-run
+	head = show --pretty=fuller -U25 HEAD
