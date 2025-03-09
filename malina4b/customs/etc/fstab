@@ -1,0 +1,14 @@
+proc            /proc           proc    defaults          0       0
+PARTUUID=085bc46c-01  /boot/firmware  vfat    defaults          0       2
+PARTUUID=085bc46c-02  /               ext4    defaults,noatime  0       1
+
+LABEL=SSD_61730215_SW none swap sw 0 0
+
+LABEL=WD_61732237_1 /mnt/ext    ntfs-3g defaults,noatime,nofail 0       0
+LABEL=WD_61732237_2 /mnt/ext2   ntfs-3g defaults,noatime,nofail 0       0
+
+LABEL=SSD_61730215_W /mnt/work ext4    defaults,noatime,nofail 0       0
+# LABEL=FUJITSU_80G /mnt/work     ext4    defaults,noatime,nofail 0       0
+
+# UUID=85e27a3b-a08f-4789-a66b-f5458ac6f231 /mnt/work_old ext4    defaults,noatime,nofail 0       0
+

@@ -1,0 +1,24 @@
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+
+
+# I2C
+#   -> RTC
+echo ds1307 0x68 > /sys/bus/i2c/devices/i2c-1/new_device
+# 1W bridge
+echo ds2482 0x18 > /sys/bus/i2c/devices/i2c-1/new_device
+# bmp180 (temp/pressure
+echo bmp180 0x77 > /sys/bus/i2c/devices/i2c-1/new_device
+
+/usr/local/sbin/gpio_blink25
+

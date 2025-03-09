@@ -41,6 +41,8 @@
 * asid:61732237
 
 ## USB3-to-SATA
+* USB3.0 high speed (scsi)
+* USB ID: 2109:0711
 * possible bug: reports one sector less than capacity of WD60EFZX drive
 * asid:61732127
 
@@ -48,11 +50,14 @@
 * Samsung840EVO-250G
 * asid:61730215
 
-## UST-to-SATA
-*
+## USB-to-SATA
+* JMicron Generic
+* USB ID: 152d:0578
 
 
 # Webcam
+* Creative Live! Cam Vista IM
+* USB Id: 041e:4052
 
 # PIR
 * GPIO: ?

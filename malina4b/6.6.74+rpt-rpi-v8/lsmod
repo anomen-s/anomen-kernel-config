@@ -1,0 +1,106 @@
+Module                  Size  Used by
+joydev                 24576  0
+st                     57344  0
+sr_mod                 24576  0
+cdrom                  40960  1 sr_mod
+xt_conntrack           12288  1
+nft_chain_nat          12288  3
+xt_MASQUERADE          12288  1
+nf_nat                 53248  2 nft_chain_nat,xt_MASQUERADE
+nf_conntrack_netlink    45056  0
+nf_conntrack          151552  4 xt_conntrack,nf_nat,nf_conntrack_netlink,xt_MASQUERADE
+nf_defrag_ipv6         20480  1 nf_conntrack
+nf_defrag_ipv4         12288  1 nf_conntrack
+xfrm_user              49152  1
+xfrm_algo              16384  1 xfrm_user
+xt_addrtype            12288  2
+nft_compat             16384  4
+nf_tables             266240  57 nft_compat,nft_chain_nat
+nfnetlink              20480  4 nft_compat,nf_conntrack_netlink,nf_tables
+br_netfilter           32768  0
+bridge                262144  1 br_netfilter
+stp                    12288  1 bridge
+llc                    16384  2 bridge,stp
+w1_therm               24576  0
+bmp280_i2c             12288  0
+ds2482                 12288  0
+bmp280                 36864  1 bmp280_i2c
+industrialio           98304  1 bmp280
+rtc_ds1307             28672  0
+wire                   40960  2 ds2482,w1_therm
+regmap_i2c             12288  2 bmp280_i2c,rtc_ds1307
+cn                     12288  1 wire
+rfcomm                 53248  4
+snd_seq_dummy          12288  0
+snd_hrtimer            12288  1
+snd_seq                81920  7 snd_seq_dummy
+snd_seq_device         16384  1 snd_seq
+overlay               143360  0
+cmac                   12288  3
+algif_hash             12288  1
+aes_arm64              12288  3
+aes_generic            32768  1 aes_arm64
+algif_skcipher         12288  1
+af_alg                 24576  6 algif_hash,algif_skcipher
+bnep                   24576  2
+brcmfmac_wcc           12288  0
+binfmt_misc            16384  1
+brcmfmac              360448  1 brcmfmac_wcc
+hci_uart               49152  0
+rpivid_hevc            45056  0
+bcm2835_codec          45056  0
+btbcm                  24576  1 hci_uart
+brcmutil               24576  1 brcmfmac
+bluetooth             618496  33 hci_uart,btbcm,bnep,rfcomm
+bcm2835_isp            28672  0
+cfg80211              983040  1 brcmfmac
+bcm2835_v4l2           40960  0
+gspca_ov519            49152  0
+v4l2_mem2mem           45056  2 bcm2835_codec,rpivid_hevc
+bcm2835_mmal_vchiq     36864  3 bcm2835_codec,bcm2835_v4l2,bcm2835_isp
+videobuf2_dma_contig    16384  3 bcm2835_codec,rpivid_hevc,bcm2835_isp
+gspca_main             28672  1 gspca_ov519
+ecdh_generic           16384  2 bluetooth
+videobuf2_vmalloc      12288  2 gspca_main,bcm2835_v4l2
+videobuf2_memops       12288  2 videobuf2_vmalloc,videobuf2_dma_contig
+ecc                    36864  1 ecdh_generic
+videobuf2_v4l2         32768  6 gspca_main,bcm2835_codec,bcm2835_v4l2,rpivid_hevc,v4l2_mem2mem,bcm2835_isp
+videodev              303104  8 gspca_main,gspca_ov519,bcm2835_codec,videobuf2_v4l2,bcm2835_v4l2,rpivid_hevc,v4l2_mem2mem,bcm2835_isp
+sg                     32768  0
+rfkill                 32768  6 bluetooth,cfg80211
+videobuf2_common       69632  10 gspca_main,bcm2835_codec,videobuf2_vmalloc,videobuf2_dma_contig,videobuf2_v4l2,bcm2835_v4l2,rpivid_hevc,v4l2_mem2mem,videobuf2_memops,bcm2835_isp
+libaes                 12288  3 aes_arm64,bluetooth,aes_generic
+raspberrypi_hwmon      12288  0
+mc                     61440  7 videodev,bcm2835_codec,videobuf2_v4l2,videobuf2_common,rpivid_hevc,v4l2_mem2mem,bcm2835_isp
+vc_sm_cma              28672  2 bcm2835_mmal_vchiq,bcm2835_isp
+snd_bcm2835            24576  1
+raspberrypi_gpiomem    12288  0
+nvmem_rmem             12288  0
+uio_pdrv_genirq        12288  0
+uio                    20480  1 uio_pdrv_genirq
+i2c_dev                16384  0
+fuse                  139264  9
+dm_mod                143360  0
+ip_tables              32768  0
+x_tables               49152  5 xt_conntrack,nft_compat,xt_addrtype,ip_tables,xt_MASQUERADE
+ipv6                  569344  95 bridge,br_netfilter
+vc4                   380928  11
+snd_soc_hdmi_codec     20480  2
+drm_display_helper     16384  1 vc4
+cec                    53248  1 vc4
+drm_dma_helper         24576  2 vc4
+drm_kms_helper        212992  2 drm_dma_helper,vc4
+snd_soc_core          286720  2 vc4,snd_soc_hdmi_codec
+snd_compress           16384  1 snd_soc_core
+v3d                    90112  8
+gpu_sched              49152  1 v3d
+drm_shmem_helper       24576  1 v3d
+drm                   643072  20 gpu_sched,drm_kms_helper,drm_dma_helper,v3d,vc4,drm_shmem_helper,drm_display_helper
+snd_pcm_dmaengine      16384  1 snd_soc_core
+snd_pcm               139264  5 snd_bcm2835,snd_soc_hdmi_codec,snd_compress,snd_soc_core,snd_pcm_dmaengine
+drm_panel_orientation_quirks    28672  1 drm
+i2c_brcmstb            12288  0
+i2c_bcm2835            16384  0
+snd_timer              36864  3 snd_seq,snd_hrtimer,snd_pcm
+snd                   110592  12 snd_seq,snd_seq_device,snd_bcm2835,snd_soc_hdmi_codec,snd_timer,snd_compress,snd_soc_core,snd_pcm
+backlight              24576  2 drm_kms_helper,drm

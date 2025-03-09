@@ -1,0 +1,18 @@
+#!/bin/sh
+
+DELAY=${1:-1}
+PIN=27
+
+/usr/local/bin/treelight disco
+
+# output with no pull and driving high
+pinctrl set $PIN op pn dh
+
+sleep "$DELAY"
+
+# input with pull down
+pinctrl set $PIN ip pd
+
+sleep 2
+
+/usr/local/bin/treelight nodisco
