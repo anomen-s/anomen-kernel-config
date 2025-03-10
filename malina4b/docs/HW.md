@@ -60,6 +60,8 @@
 # Webcam
 * Creative Live! Cam Vista IM
 * USB Id: 041e:4052
+* asid:61730212
+* module: gspca_ov519
 
 # PIR
 * GPIO: ?

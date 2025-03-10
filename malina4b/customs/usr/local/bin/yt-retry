@@ -1,0 +1,19 @@
+#!/bin/sh
+
+if [ ! -e history.txt ]
+then
+  echo history.txt not found
+  exit
+fi
+
+CMD=/usr/local/bin/yt-dlp
+
+URL=`head -n 1 history.txt`
+
+echo $CMD "(retry)" "$URL"
+
+echo "retry:" >> history.txt
+echo "$URL" >> history.txt
+exec screen -d -m -S "yt-retry" bash -c "python3.8 $CMD --print-json --print-traffic -v --merge-output-format mkv --no-write-auto-subs --convert-subs srt --sub-format srt --sub-langs all --write-subs --embed-subs  '$URL' > output.log >> error.log"
+
+

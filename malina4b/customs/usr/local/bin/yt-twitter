@@ -1,0 +1,21 @@
+#!/bin/sh
+
+if [ ! -s $HOME/.config/ytd-twitter.conf ]
+then
+ echo "Missing ~/.config/ytd-twitter.conf"
+ exit 1
+fi
+
+. $HOME/.config/ytd-twitter.conf
+
+cd ~/downloads
+echo twitter User: "$TW_USER"
+echo -n "Enter URL: "
+while read URL
+do
+ screen -S twitter-dl \
+ python3.8 /usr/local/bin/yt-dlp "$URL" --username "$TW_USER" --password "$TW_PASS"  --sub-langs all --write-subs --embed-subs --merge-output-format mkv -v --no-write-auto-subs --convert-subs srt --sub-format srt
+ echo "*******************"
+ echo -n "Enter URL: "
+done
+

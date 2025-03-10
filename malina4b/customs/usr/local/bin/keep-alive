@@ -2,6 +2,10 @@
 
 T=${1:-1}
 
+echo "$@"
+hostname
+date
+
 while true
 do
 

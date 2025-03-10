@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# malina4b version
+
 DELAY=${1:-1}
 PIN=27
 
