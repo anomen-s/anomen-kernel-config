@@ -1,0 +1,46 @@
+#!/bin/sh
+
+# Interactive rename
+
+filename="$1"
+
+if [ "x" = "x$filename" ]
+then
+ echo missing filename
+ exit 1
+fi
+
+filename_no_ext="${filename%.*}"
+extension="${filename##*.}"
+echo "File:              $filename"
+echo "Filename w/o ext.: $filename_no_ext"
+echo "File extension:    $extension"
+
+N=$(rlwrap -pYellow -S 'New name:          '  -P "${filename_no_ext}" -o cat)
+
+NN="${N}.${extension}"
+
+# If user cancels the operation, exit
+if [ $? -ne 0 ]; then
+    exit $?
+fi
+
+if [ -z "$N" ]
+then
+ echo "No file name given"
+ exit 1
+fi
+
+if [ "x$NN" = "x$filename" ]
+then
+ echo "No change in filename."
+ exit 0
+fi
+
+if [ -e "$NN" ]
+then
+ echo "File already exists"
+ exit 0
+fi
+
+mv -i -v "$filename" "$NN"

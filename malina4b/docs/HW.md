@@ -17,7 +17,9 @@
 * 2x USB-A
 
 # USB QC module
+* XFW-KC42-2
 * 2x USB-A
+* asid:61732328
 
 # USB Hub
 * Power: 5V, Berg to barrel-5*2.1
@@ -67,7 +69,7 @@
 # DIY HAT
 * GPIOP 25 (PIN 22) - Blue LED
 
-# Treelight
+## Treelight
 * GPIO
   * DISCO=24
   * WHITE=23
