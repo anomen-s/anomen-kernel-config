@@ -31,7 +31,7 @@ run() {
  fi
 }
 
-for CMD in dmesg glxinfo hwinfo lshw lsmod vainfo uptime lscpu vdpauinfo xdriinfo
+for CMD in dmesg glxinfo hwinfo lshw lsmod vainfo uptime lscpu vdpauinfo xdriinfo xdpyinfo
 do
  run "$CMD" "" "$CMD"
 done
