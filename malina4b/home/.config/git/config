@@ -1,0 +1,35 @@
+[core]
+	quotepath = false
+[user]
+        name = anomen
+        email = ludek.h@gmail.com
+[diff]
+        color = auto
+[branch]
+        color = auto
+[color]
+        branch = auto
+        commit = auto
+        diff = auto
+        status = auto
+[push]
+	default = simple
+[pull]
+#	rebase = true
+[credential]
+	helper = store
+
+[alias]
+	s = status -b .
+	d = diff .
+	cm = commit
+	dw = diff -w .
+	dc = diff --cached .
+	l = log --summary
+	lg = log --all --graph
+	lp = log --patch
+	b = !git --no-pager branch --list --all --verbose --sort=committerdate --sort=upstream
+	k = !screen -d -m gitk --all
+	p = pull --prune --rebase
+	out = push --dry-run
+	head = show --pretty=fuller -U25 HEAD

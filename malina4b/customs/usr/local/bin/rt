@@ -1,0 +1,10 @@
+#!/bin/sh
+
+DIR=/mnt/work/downloads
+
+cd "$DIR"
+
+# port range for tunnels on modem
+exec screen -S rt \
+  rtorrent -o "port_range=14405-14409,directory=$DIR"
+
