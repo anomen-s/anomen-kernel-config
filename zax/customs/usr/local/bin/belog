@@ -1,8 +1,0 @@
-#!/bin/sh
-
-for F
-do
-echo "$F"
-sed -i -e "s/.ACTIVE. ExecuteThread: '\(.*\)' for queue: 'weblogic.kernel.Default .self-tuning.'/\1/" "$F"
-done
-

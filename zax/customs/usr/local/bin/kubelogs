@@ -1,0 +1,21 @@
+#!/bin/sh
+
+if [ "x" == "x$1" ]
+then
+  echo $0 pod-name [container] [kubectl logs params]
+  exit 1
+fi
+
+S=$1
+
+if [ "x" != "x$2" ]
+then
+ C="-c $2"
+ shift
+fi
+
+shift
+
+POD=`kubectl get pod --selector=app.kubernetes.io/name=$S -o jsonpath='{.items[].metadata.name}'`
+
+kubectl logs $C $POD $@

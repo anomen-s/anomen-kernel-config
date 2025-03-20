@@ -1,4 +1,4 @@
 #!/bin/sh
-mvn dependency:tree -o -Doutput=target/dependency.txt -DoutputFile=target/dependency.txt
+mvn dependency:tree -o -Doutput=target/dependency.txt -DoutputFile=target/dependency.txt -Dverbose=true
 mvn help:effective-pom -o -Doutput=target/eff.pom.xml
 

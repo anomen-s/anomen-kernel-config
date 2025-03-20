@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# this script creates .profile for for autoexec during login
+
+# remove ssh keys from known hosts to avoid problems after minikube restart
+# create "cqlsh", "nodetool", ... aliases/functions
+# copy docker config.json
+# add swap disk
+
+TMPD=`mktemp -d`
+ssh-add -L > "$TMPD/authorized_keys.host"
+cp /usr/local/libexec/sshm-profile "$TMPD/.profile"
+
+scp -o UserKnownHostsFile=/dev/null \
+    "$TMPD/.profile" \
+    "$HOME/.docker/config.json" \
+    "$TMPD/authorized_keys.host" \
+    minikube:/home/docker/
+
+rm -rf "$TMPD"
+
+exec ssh -o UserKnownHostsFile=/dev/null minikube
+

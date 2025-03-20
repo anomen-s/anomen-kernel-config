@@ -1,0 +1,5 @@
+#!/bin/sh
+pkill -9 sshfs
+$HOME/sshfs/umount.sh
+rm -f $HOME/.ssh/mastersock*
+
