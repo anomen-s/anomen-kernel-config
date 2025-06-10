@@ -1,6 +1,9 @@
 # Setup
 * https://www.microsoft.com/en-us/software-download/windows10
 
+# Make bootable Flash drive
+* https://rufus.ie/
+
 # Activation
 * https://py-kms.readthedocs.io/en/latest/
 * https://github.com/SystemRage/py-kms
