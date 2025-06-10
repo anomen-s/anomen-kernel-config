@@ -1,0 +1,6 @@
+#!/bin/sh
+
+for pubkey_file in /etc/ssh/*.pub
+do
+  ssh-keygen -l -f ${pubkey_file}
+done
