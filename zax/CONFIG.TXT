@@ -184,8 +184,12 @@ m CONFIG_USB_NET_CDC_SUBSET (usb tethering)
 + CONFIG_IP_NF_TARGET_REDIRECT (docker)
 + CONFIG_BRIDGE_VLAN_FILTERING (docker)
 
+6.12.41-gentoo-z57
+==================
++ CONFIG_UHID (net-wireless/bluez)
++ CONFIG_USB_SERIAL_CP210X, CONFIG_USB_SERIAL_CH341, ...
+* make hardening.config
+
+
 TODO
 ====
-* make hardening.config
-* CONFIG_USB_SERIAL_CP210X, CONFIG_USB_SERIAL_CH341, ...
-* CONFIG_UHID (net-wireless/bluez)
