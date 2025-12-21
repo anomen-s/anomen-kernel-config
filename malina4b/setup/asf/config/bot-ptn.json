@@ -1,0 +1,10 @@
+{
+  "AcceptGifts": true,
+  "Enabled": true,
+  "FarmingOrders": [
+    1
+  ],
+  "SteamLogin": "XXX",
+  "SteamPassword": "XXX",
+ "GamesPlayedWhileIdle" : [1000]
+}
