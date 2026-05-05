@@ -20,7 +20,8 @@ if [[ "$filename" == *.* && "$filename" != .* ]]
 then
     extension="${filename##*.}"
 else
-    extension=""
+  echo "No extension !"
+  exit 1
 fi
 
 echo "File:              $filename"
@@ -29,9 +30,9 @@ echo "File extension:    $extension"
 
 if which rlwrap > /dev/null
 then
- N=$(rlwrap -pYellow -S 'New name:          '  -P "${filename_no_ext}" -o cat)
+ N=$(rlwrap -pYellow -S 'New extension:     '  -P "${extension}" -o cat)
 else
- echo 'New name:          '
+ echo 'New extension:     '
  read N
 fi
 
@@ -42,20 +43,15 @@ fi
 
 if [ -z "$N" ]
 then
- echo "No file name given"
+ echo "No extension given"
  exit 1
 fi
 
-if [ -n "${extension}" ]
-then
- NN="${N}.${extension}"
-else
- NN="${N}"
-fi
+NN="${filename_no_ext}.${N}"
 
 if [ "x$NN" = "x$filename" ]
 then
- echo "No change in filename."
+ echo "No change in extension."
  exit 0
 fi
 

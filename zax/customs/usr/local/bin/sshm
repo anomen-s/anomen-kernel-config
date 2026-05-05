@@ -10,9 +10,11 @@
 TMPD=`mktemp -d`
 ssh-add -L > "$TMPD/authorized_keys.host"
 cp /usr/local/libexec/sshm-profile "$TMPD/.profile"
+date --utc "+%m%d%H%M%Y.%S" > "$TMPD/.ts"
 
 scp -o UserKnownHostsFile=/dev/null \
     "$TMPD/.profile" \
+    "$TMPD/.ts" \
     "$HOME/.docker/config.json" \
     "$TMPD/authorized_keys.host" \
     minikube:/home/docker/
