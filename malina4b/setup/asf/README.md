@@ -3,7 +3,7 @@
 ```
  sudo useradd -m asf
  sudo passwd asf
- wget https://github.com/JustArchiNET/ArchiSteamFarm/releases/download/6.1.5.2/ASF-linux-arm64.zip
+ wget https://github.com/JustArchiNET/ArchiSteamFarm/releases/download/6.3.6.1/ASF-linux-arm64.zip
 ```
 
 * create files in `config`

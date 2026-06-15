@@ -22,6 +22,7 @@
 [alias]
 	s = status -b .
 	d = diff .
+	dc = diff --cached .
 	cm = commit
 	dw = diff -w .
 	dc = diff --cached .
