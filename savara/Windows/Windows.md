@@ -8,7 +8,10 @@
 * https://py-kms.readthedocs.io/en/latest/
 * https://github.com/SystemRage/py-kms
 ```
-docker run -d --name py-kms --restart always -p 1688:1688 -v /etc/localtime:/etc/localtime:ro ghcr.io/py-kms-organization/py-kms
+docker run -d --name py-kms --restart always -p 1680:8080 -p 1688:1688 -v /etc/localtime:/etc/localtime:ro ghcr.io/py-kms-organization/py-kms:python3
+
+# 1688 - kms port
+# 1680 - UI
 ```
 
 ```
