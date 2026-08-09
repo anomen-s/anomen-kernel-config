@@ -1,0 +1,14 @@
+/dev/root / ext4 rw,noatime 0 0
+devtmpfs /dev devtmpfs rw,nosuid,noexec,relatime,size=10240k,nr_inodes=1754259,mode=755 0 0
+proc /proc proc rw,nosuid,nodev,noexec,relatime 0 0
+tmpfs /run tmpfs rw,nosuid,nodev,size=2807756k,nr_inodes=819200,mode=755 0 0
+sysfs /sys sysfs rw,nosuid,nodev,noexec,relatime 0 0
+fusectl /sys/fs/fuse/connections fusectl rw,nosuid,nodev,noexec,relatime 0 0
+bpf /sys/fs/bpf bpf rw,nosuid,nodev,noexec,relatime 0 0
+cgroup2 /sys/fs/cgroup cgroup2 rw,nosuid,nodev,noexec,relatime,nsdelegate 0 0
+mqueue /dev/mqueue mqueue rw,nosuid,nodev,noexec,relatime 0 0
+devpts /dev/pts devpts rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000 0 0
+shm /dev/shm tmpfs rw,nosuid,nodev,noexec,relatime 0 0
+/dev/mapper/home /home ext4 rw,noatime 0 0
+tmpfs /run/user/1000 tmpfs rw,nosuid,nodev,relatime,size=1403876k,nr_inodes=350969,mode=700,uid=1000,gid=1000 0 0
+gvfsd-fuse /run/user/1000/gvfs fuse.gvfsd-fuse rw,nosuid,nodev,relatime,user_id=1000,group_id=1000 0 0

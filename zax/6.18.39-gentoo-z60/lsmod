@@ -1,0 +1,64 @@
+Module                  Size  Used by
+snd_hrtimer            12288  1
+snd_seq                94208  6
+snd_seq_device         12288  1 snd_seq
+xt_conntrack           12288  2
+xt_MASQUERADE          12288  2
+bridge                348160  0
+stp                    12288  1 bridge
+llc                    12288  2 bridge,stp
+xfrm_user              61440  1
+xfrm_algo              16384  1 xfrm_user
+ip6_tables             36864  0
+iptable_nat            12288  1
+nf_nat                 49152  2 iptable_nat,xt_MASQUERADE
+xt_addrtype            12288  2
+iptable_filter         12288  1
+ip_tables              36864  2 iptable_filter,iptable_nat
+x_tables               53248  7 xt_conntrack,iptable_filter,xt_addrtype,ip6_tables,ip_tables,iptable_nat,xt_MASQUERADE
+nf_tables             376832  0
+vboxsf                 90112  1
+cfg80211              528384  0
+rfkill                 40960  1 cfg80211
+8021q                  36864  0
+ipv6                  610304  655 bridge
+libsha1                32768  1 ipv6
+dm_crypt               57344  1
+encrypted_keys         20480  1 dm_crypt
+dm_mod                167936  3 dm_crypt
+dax                    40960  1 dm_mod
+snd_hda_codec_idt      57344  1
+snd_hda_codec_generic   102400  1 snd_hda_codec_idt
+vboxvideo              32768  0
+drm_vram_helper        16384  1 vboxvideo
+snd_hda_intel          36864  1
+snd_intel_dspcfg       12288  1 snd_hda_intel
+virtio_net            102400  0
+net_failover           24576  1 virtio_net
+snd_hda_codec         163840  3 snd_hda_codec_generic,snd_hda_intel,snd_hda_codec_idt
+failover               12288  1 net_failover
+snd_hda_core           90112  4 snd_hda_codec_generic,snd_hda_intel,snd_hda_codec,snd_hda_codec_idt
+snd_pcm               163840  3 snd_hda_intel,snd_hda_codec,snd_hda_core
+snd_timer              49152  3 snd_seq,snd_hrtimer,snd_pcm
+vmwgfx                446464  2
+input_leds             12288  0
+sr_mod                 28672  0
+led_class              12288  2 snd_hda_codec_generic,input_leds
+snd                   131072  12 snd_hda_codec_generic,snd_seq,snd_seq_device,snd_hda_intel,snd_hda_codec,snd_timer,snd_pcm,snd_hda_codec_idt
+drm_client_lib         12288  2 vmwgfx,vboxvideo
+cdrom                  49152  1 sr_mod
+drm_ttm_helper         12288  4 vmwgfx,drm_vram_helper,vboxvideo
+aesni_intel            98304  1
+ttm                    98304  3 vmwgfx,drm_vram_helper,drm_ttm_helper
+i2c_piix4              20480  0
+soundcore              12288  1 snd
+drm_kms_helper        196608  5 vmwgfx,drm_vram_helper,vboxvideo,drm_ttm_helper,drm_client_lib
+e1000                 143360  0
+ac                     12288  0
+vboxguest             385024  7 vboxsf
+button                 16384  0
+i2c_smbus              12288  1 i2c_piix4
+pcspkr                 12288  0
+pata_acpi              12288  0
+battery                24576  0
+gf128mul               12288  1 aesni_intel

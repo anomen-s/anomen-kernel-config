@@ -1,0 +1,50 @@
+Module                  Size  Used by
+vboxsf                 90112  0
+vboxguest             385024  5 vboxsf
+snd_hrtimer            12288  1
+snd_seq                94208  6
+snd_seq_device         12288  1 snd_seq
+cfg80211              524288  0
+rfkill                 40960  1 cfg80211
+8021q                  36864  0
+ipv6                  602112  70
+libsha1                32768  1 ipv6
+dm_crypt               57344  1
+encrypted_keys         20480  1 dm_crypt
+dm_mod                163840  3 dm_crypt
+dax                    40960  1 dm_mod
+vboxvideo              32768  0
+drm_vram_helper        16384  1 vboxvideo
+snd_hda_codec_idt      57344  1
+snd_hda_codec_generic   102400  1 snd_hda_codec_idt
+virtio_net            102400  0
+net_failover           24576  1 virtio_net
+failover               12288  1 net_failover
+snd_hda_intel          36864  1
+snd_intel_dspcfg       12288  1 snd_hda_intel
+usblp                  20480  0
+snd_hda_codec         163840  3 snd_hda_codec_generic,snd_hda_intel,snd_hda_codec_idt
+snd_hda_core           90112  4 snd_hda_codec_generic,snd_hda_intel,snd_hda_codec,snd_hda_codec_idt
+input_leds             12288  0
+snd_pcm               163840  3 snd_hda_intel,snd_hda_codec,snd_hda_core
+vmwgfx                442368  1
+sr_mod                 28672  0
+led_class              12288  2 snd_hda_codec_generic,input_leds
+drm_client_lib         12288  2 vmwgfx,vboxvideo
+cdrom                  49152  1 sr_mod
+drm_ttm_helper         12288  4 vmwgfx,drm_vram_helper,vboxvideo
+snd_timer              49152  3 snd_seq,snd_hrtimer,snd_pcm
+ttm                    98304  3 vmwgfx,drm_vram_helper,drm_ttm_helper
+i2c_piix4              20480  0
+aesni_intel            94208  1
+snd                   131072  12 snd_hda_codec_generic,snd_seq,snd_seq_device,snd_hda_intel,snd_hda_codec,snd_timer,snd_pcm,snd_hda_codec_idt
+drm_kms_helper        196608  5 vmwgfx,drm_vram_helper,vboxvideo,drm_ttm_helper,drm_client_lib
+soundcore              12288  1 snd
+e1000                 143360  0
+pata_acpi              12288  0
+i2c_smbus              12288  1 i2c_piix4
+button                 16384  0
+ac                     12288  0
+pcspkr                 12288  0
+gf128mul               12288  1 aesni_intel
+battery                24576  0

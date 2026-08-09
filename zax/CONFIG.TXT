@@ -190,9 +190,28 @@ m CONFIG_USB_NET_CDC_SUBSET (usb tethering)
 + CONFIG_USB_SERIAL_CP210X, CONFIG_USB_SERIAL_CH341, ...
 * make hardening.config
 
+6.18.39-gentoo-z58
+==================
+* make hardening.config
+* note: CONFIG_NUMA not needed
+* note: CONFIG_BPF_SYSCALL - keep, no benefit to disable it
++ CONFIG_HZ_250 (testing..)
++ CONFIG_NO_HZ_IDLE
++ VBOXVIDEO module
+
+6.18.39-gentoo-z59
+==================
++ CONFIG_X86_NATIVE_CPU
++ CONFIG_MODULE_SIG
++ CONFIG_IP_NF_IPTABLES_LEGACY
+
+6.18.39-gentoo-z60
+==================
+* CONFIG_NF_TABLES, .... (docker)
 
 TODO
 ====
-* heavy VMM CPU load
-** VBox issue - need to restart virtio_net
-** CONFIG_NO_HZ_IDLE (test this?)
+* heavy VMM CPU load - VBox issue - need to restart virtio_net
+* 2026-07: font rendering issue - use VBoxSVGA or disable 3D Accelerationn
+* 2026-07: delay during memory init
+* cmd line init_on_alloc=0 init_on_free=0
