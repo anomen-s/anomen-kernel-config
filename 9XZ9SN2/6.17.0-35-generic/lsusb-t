@@ -1,0 +1,34 @@
+/:  Bus 001.Port 001: Dev 001, Class=root_hub, Driver=xhci_hcd/16p, 480M
+    |__ Port 004: Dev 002, If 0, Class=Hub, Driver=hub/5p, 480M
+        |__ Port 001: Dev 004, If 0, Class=Hub, Driver=hub/4p, 480M
+            |__ Port 001: Dev 007, If 0, Class=Hub, Driver=hub/4p, 480M
+                |__ Port 001: Dev 011, If 0, Class=Human Interface Device, Driver=usbhid, 1.5M
+                |__ Port 001: Dev 011, If 1, Class=Human Interface Device, Driver=[none], 1.5M
+                |__ Port 002: Dev 014, If 0, Class=Human Interface Device, Driver=usbhid, 12M
+                |__ Port 003: Dev 017, If 0, Class=Printer, Driver=usblp, 12M
+                |__ Port 004: Dev 019, If 0, Class=Human Interface Device, Driver=usbhid, 1.5M
+        |__ Port 003: Dev 006, If 0, Class=Hub, Driver=hub/6p, 480M
+            |__ Port 002: Dev 010, If 0, Class=Hub, Driver=hub/4p, 480M
+                |__ Port 003: Dev 013, If 0, Class=Hub, Driver=hub/4p, 12M
+                    |__ Port 001: Dev 018, If 0, Class=Audio, Driver=snd-usb-audio, 12M
+                    |__ Port 001: Dev 018, If 1, Class=Audio, Driver=snd-usb-audio, 12M
+                    |__ Port 001: Dev 018, If 2, Class=Audio, Driver=snd-usb-audio, 12M
+                    |__ Port 001: Dev 018, If 3, Class=Human Interface Device, Driver=usbhid, 12M
+                |__ Port 004: Dev 016, If 0, Class=Human Interface Device, Driver=usbhid, 12M
+                |__ Port 004: Dev 016, If 1, Class=Human Interface Device, Driver=usbhid, 12M
+                |__ Port 004: Dev 016, If 2, Class=Human Interface Device, Driver=usbhid, 12M
+                |__ Port 004: Dev 016, If 3, Class=Human Interface Device, Driver=usbhid, 12M
+            |__ Port 003: Dev 012, If 0, Class=Chip/SmartCard, Driver=[none], 12M
+            |__ Port 005: Dev 015, If 0, Class=Human Interface Device, Driver=usbhid, 480M
+        |__ Port 005: Dev 009, If 0, Class=Human Interface Device, Driver=usbhid, 480M
+        |__ Port 005: Dev 009, If 1, Class=Vendor Specific Class, Driver=[none], 480M
+    |__ Port 010: Dev 005, If 0, Class=Application Specific Interface, Driver=[none], 12M
+    |__ Port 010: Dev 005, If 1, Class=Chip/SmartCard, Driver=[none], 12M
+    |__ Port 011: Dev 008, If 0, Class=Video, Driver=uvcvideo, 480M
+    |__ Port 011: Dev 008, If 1, Class=Video, Driver=uvcvideo, 480M
+/:  Bus 002.Port 001: Dev 001, Class=root_hub, Driver=xhci_hcd/10p, 5000M
+    |__ Port 005: Dev 002, If 0, Class=Hub, Driver=hub/4p, 5000M
+        |__ Port 001: Dev 003, If 0, Class=Hub, Driver=hub/4p, 5000M
+            |__ Port 001: Dev 005, If 0, Class=Hub, Driver=hub/4p, 5000M
+        |__ Port 003: Dev 004, If 0, Class=Hub, Driver=hub/4p, 5000M
+        |__ Port 004: Dev 006, If 0, Class=Vendor Specific Class, Driver=r8152, 5000M

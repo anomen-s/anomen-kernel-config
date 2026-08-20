@@ -1,0 +1,43 @@
+[   20.645380] audit: type=1400 audit(1691578574.650:91): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.firefox" pid=1229 comm="apparmor_parser"
+[   20.708193] audit: type=1400 audit(1691578574.714:92): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.chromium" pid=1230 comm="apparmor_parser"
+[   20.719485] audit: type=1400 audit(1691578574.726:93): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.sublime-text.subl" pid=1336 comm="apparmor_parser"
+[   20.719569] audit: type=1400 audit(1691578574.726:94): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.sublime-text" pid=1335 comm="apparmor_parser"
+[   20.731024] audit: type=1400 audit(1691578574.738:95): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.firefox.geckodriver" pid=1338 comm="apparmor_parser"
+[   20.731275] audit: type=1400 audit(1691578574.738:96): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.firefox.firefox" pid=1337 comm="apparmor_parser"
+[   20.735521] audit: type=1400 audit(1691578574.742:97): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.firefox.hook.connect-plug-host-hunspell" pid=1340 comm="apparmor_parser"
+[   21.724357] wlp1s0: authenticate with 3c:84:6a:58:ba:70
+[   21.724371] wlp1s0: 80 MHz not supported, disabling VHT
+[   21.735716] wlp1s0: send auth to 3c:84:6a:58:ba:70 (try 1/3)
+[   21.760459] wlp1s0: authenticated
+[   21.762745] wlp1s0: associate with 3c:84:6a:58:ba:70 (try 1/3)
+[   21.775529] wlp1s0: RX AssocResp from 3c:84:6a:58:ba:70 (capab=0x1c11 status=0 aid=1)
+[   21.777815] wlp1s0: associated
+[   21.955459] IPv6: ADDRCONF(NETDEV_CHANGE): wlp1s0: link becomes ready
+[   23.685205] kauditd_printk_skb: 38 callbacks suppressed
+[   23.685225] audit: type=1326 audit(1691578577.690:136): auid=4294967295 uid=0 gid=0 ses=4294967295 subj=snap.cups.cupsd pid=1659 comm="cups-proxyd" exe="/snap/cups/980/sbin/cups-proxyd" sig=0 arch=c000003e syscall=314 compat=0 ip=0x7f618a240a3d code=0x50000
+[   24.372334] audit: type=1400 audit(1691578578.378:137): apparmor="STATUS" operation="profile_load" profile="unconfined" name="docker-default" pid=1725 comm="apparmor_parser"
+[   24.438211] bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+[   24.441466] Bridge firewalling registered
+[   24.523919] Initializing XFRM netlink socket
+[   24.707929] audit: type=1326 audit(1691578578.714:138): auid=4294967295 uid=0 gid=0 ses=4294967295 subj=snap.cups.cupsd pid=1658 comm="cupsd" exe="/snap/cups/980/sbin/cupsd" sig=0 arch=c000003e syscall=93 compat=0 ip=0x7f0caab0ac4b code=0x50000
+[ 1523.645560] Bluetooth: RFCOMM TTY layer initialized
+[ 1523.645566] Bluetooth: RFCOMM socket layer initialized
+[ 1523.645571] Bluetooth: RFCOMM ver 1.11
+[ 4853.769529] loop27: detected capacity change from 0 to 20971520
+[ 4853.823479] EXT4-fs (dm-0): mounting ext3 file system using the ext4 subsystem
+[ 4853.832027] EXT4-fs (dm-0): mounted filesystem 779b0897-199d-4f0b-9736-ef6288432f3d with ordered data mode. Quota mode: none.
+[ 5622.736794] audit: type=1326 audit(1691584176.949:139): auid=4294967295 uid=1000 gid=1000 ses=4294967295 subj=snap.firefox.firefox pid=14346 comm="firefox" exe="/snap/firefox/2987/usr/lib/firefox/firefox" sig=0 arch=c000003e syscall=314 compat=0 ip=0x7ff3e2bff73d code=0x50000
+[ 5627.318708] audit: type=1400 audit(1691584181.529:140): apparmor="DENIED" operation="open" class="file" profile="snap.firefox.firefox" name="/etc/igfx_user_feature.txt" pid=14624 comm="vaapitest" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+[ 5627.320713] audit: type=1400 audit(1691584181.533:141): apparmor="DENIED" operation="open" class="file" profile="snap.firefox.firefox" name="/etc/igfx_user_feature.txt" pid=14624 comm="vaapitest" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+[ 5627.322661] audit: type=1400 audit(1691584181.533:142): apparmor="DENIED" operation="open" class="file" profile="snap.firefox.firefox" name="/etc/igfx_user_feature.txt" pid=14624 comm="vaapitest" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+[ 5627.322668] audit: type=1400 audit(1691584181.533:143): apparmor="DENIED" operation="open" class="file" profile="snap.firefox.firefox" name="/etc/igfx_user_feature.txt" pid=14624 comm="vaapitest" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+[ 5644.870043] audit: type=1400 audit(1691584199.081:144): apparmor="DENIED" operation="open" class="file" profile="snap.firefox.firefox" name="/etc/igfx_user_feature.txt" pid=14346 comm="FSBroker14912" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+[ 5644.871283] audit: type=1400 audit(1691584199.085:145): apparmor="DENIED" operation="open" class="file" profile="snap.firefox.firefox" name="/etc/igfx_user_feature.txt" pid=14346 comm="FSBroker14912" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+[ 5644.898674] audit: type=1400 audit(1691584199.109:146): apparmor="DENIED" operation="open" class="file" profile="snap.firefox.firefox" name="/etc/igfx_user_feature.txt" pid=14346 comm="FSBroker14912" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+[ 5644.898951] audit: type=1400 audit(1691584199.109:147): apparmor="DENIED" operation="open" class="file" profile="snap.firefox.firefox" name="/etc/igfx_user_feature.txt" pid=14346 comm="FSBroker14912" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+[ 5644.899277] audit: type=1400 audit(1691584199.113:148): apparmor="DENIED" operation="open" class="file" profile="snap.firefox.firefox" name="/etc/igfx_user_feature.txt" pid=14346 comm="FSBroker14912" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+[ 5644.899454] audit: type=1400 audit(1691584199.113:149): apparmor="DENIED" operation="open" class="file" profile="snap.firefox.firefox" name="/etc/igfx_user_feature.txt" pid=14346 comm="FSBroker14912" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+[ 5644.900983] audit: type=1400 audit(1691584199.113:150): apparmor="DENIED" operation="open" class="file" profile="snap.firefox.firefox" name="/etc/igfx_user_feature.txt" pid=14346 comm="FSBroker14912" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+[ 5644.901846] audit: type=1400 audit(1691584199.113:151): apparmor="DENIED" operation="open" class="file" profile="snap.firefox.firefox" name="/etc/igfx_user_feature.txt" pid=14346 comm="FSBroker14912" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+[ 5644.902053] audit: type=1400 audit(1691584199.113:152): apparmor="DENIED" operation="open" class="file" profile="snap.firefox.firefox" name="/etc/igfx_user_feature.txt" pid=14346 comm="FSBroker14912" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+[ 5644.902215] audit: type=1400 audit(1691584199.113:153): apparmor="DENIED" operation="open" class="file" profile="snap.firefox.firefox" name="/etc/igfx_user_feature.txt" pid=14346 comm="FSBroker14912" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0

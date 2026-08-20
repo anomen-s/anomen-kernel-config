@@ -1,0 +1,580 @@
+9xz9sn2
+    popis: Notebook
+    produkt: Latitude 5580 (07D1)
+    výrobce: Dell Inc.
+    sériové číslo: 9XZ9SN2
+    šířka: 64 bits
+    schopnosti: smbios-3.0.0 dmi-3.0.0 smp vsyscall32
+    konfigurace: boot=normal chassis=notebook family=Latitude sku=07D1 uuid=4c4c4544-0058-5a10-8039-b9c04f534e32
+  *-core
+       popis: Základní deska
+       produkt: 00C016
+       výrobce: Dell Inc.
+       fyzické id: 0
+       verze: A00
+       sériové číslo: /9XZ9SN2/CNCMK0085B005B/
+     *-firmware
+          popis: BIOS
+          výrobce: Dell Inc.
+          fyzické id: 0
+          verze: 1.25.0
+          date: 06/08/2022
+          velikost: 64KiB
+          kapacita: 16MiB
+          schopnosti: pci pnp upgrade shadowing cdboot bootselect edd int13floppynec int13floppy1200 int13floppy720 int13floppy2880 int5printscreen int9keyboard int14serial int17printer acpi usb smartbattery biosbootspecification netboot uefi
+     *-memory
+          popis: Systémová paměť
+          fyzické id: 45
+          slot: Systémová deska nebo základní deska
+          velikost: 32GiB
+        *-bank:0
+             popis: SODIMM DDR4 Synchronní Unbuffered (Unregistered) 2400 MHz (0,4 ns)
+             produkt: K821PJ-MIE
+             výrobce: AMD
+             fyzické id: 0
+             sériové číslo: 36654D25
+             slot: DIMM A
+             velikost: 16GiB
+             šířka: 64 bits
+             takt: 2400MHz (0.4ns)
+        *-bank:1
+             popis: SODIMM DDR4 Synchronní Unbuffered (Unregistered) 2400 MHz (0,4 ns)
+             produkt: K821PJ-MIE
+             výrobce: AMD
+             fyzické id: 1
+             sériové číslo: 365F0730
+             slot: DIMM B
+             velikost: 16GiB
+             šířka: 64 bits
+             takt: 2400MHz (0.4ns)
+     *-cache:0
+          popis: L1 cache
+          fyzické id: 49
+          slot: L1 Cache
+          velikost: 256KiB
+          kapacita: 256KiB
+          schopnosti: synchronous internal write-back unified
+          konfigurace: level=1
+     *-cache:1
+          popis: L2 cache
+          fyzické id: 4a
+          slot: L2 Cache
+          velikost: 1MiB
+          kapacita: 1MiB
+          schopnosti: synchronous internal write-back unified
+          konfigurace: level=2
+     *-cache:2
+          popis: L3 cache
+          fyzické id: 4b
+          slot: L3 Cache
+          velikost: 6MiB
+          kapacita: 6MiB
+          schopnosti: synchronous internal write-back unified
+          konfigurace: level=3
+     *-cpu
+          popis: Procesor
+          produkt: Intel(R) Core(TM) i5-6440HQ CPU @ 2.60GHz
+          výrobce: Intel Corp.
+          fyzické id: 4c
+          informace o sběrnici: cpu@0
+          verze: 6.94.3
+          sériové číslo: To Be Filled By O.E.M.
+          slot: U3E1
+          velikost: 3058MHz
+          kapacita: 3500MHz
+          šířka: 64 bits
+          takt: 100MHz
+          schopnosti: lm fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp x86-64 constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d arch_capabilities cpufreq
+          konfigurace: cores=4 enabledcores=4 microcode=240 threads=4
+     *-pci
+          popis: Host bridge
+          produkt: Xeon E3-1200 v5/E3-1500 v5/6th Gen Core Processor Host Bridge/DRAM Registers
+          výrobce: Intel Corporation
+          fyzické id: 100
+          informace o sběrnici: pci@0000:00:00.0
+          verze: 07
+          šířka: 32 bits
+          takt: 33MHz
+          konfigurace: driver=skl_uncore
+          prostředky: irq:0
+        *-display
+             popis: VGA compatible controller
+             produkt: HD Graphics 530
+             výrobce: Intel Corporation
+             fyzické id: 2
+             informace o sběrnici: pci@0000:00:02.0
+             logický název: /dev/fb0
+             verze: 06
+             šířka: 64 bits
+             takt: 33MHz
+             schopnosti: pciexpress msi pm vga_controller bus_master cap_list rom fb
+             konfigurace: depth=32 driver=i915 latency=0 resolution=1920,1080
+             prostředky: irq:129 paměť:ee000000-eeffffff paměť:d0000000-dfffffff ioport:f000(velikost=64) paměť:c0000-dffff
+        *-generic:0
+             popis: Signal processing controller
+             produkt: Xeon E3-1200 v5/E3-1500 v5/6th Gen Core Processor Thermal Subsystem
+             výrobce: Intel Corporation
+             fyzické id: 4
+             informace o sběrnici: pci@0000:00:04.0
+             verze: 07
+             šířka: 64 bits
+             takt: 33MHz
+             schopnosti: msi pm cap_list
+             konfigurace: driver=proc_thermal latency=0
+             prostředky: irq:16 paměť:ef240000-ef247fff
+        *-pci:0
+             popis: PCI bridge
+             produkt: 100 Series/C230 Series Chipset Family PCI Express Root Port #2
+             výrobce: Intel Corporation
+             fyzické id: 1c
+             informace o sběrnici: pci@0000:00:1c.0
+             verze: f1
+             šířka: 32 bits
+             takt: 33MHz
+             schopnosti: pci pciexpress msi pm normal_decode bus_master cap_list
+             konfigurace: driver=pcieport
+             prostředky: irq:122 paměť:ef100000-ef1fffff
+           *-network
+                popis: Bezdrátové rozhraní
+                produkt: Wireless 8265 / 8275
+                výrobce: Intel Corporation
+                fyzické id: 0
+                informace o sběrnici: pci@0000:01:00.0
+                logický název: wlp1s0
+                verze: 78
+                sériové číslo: b4:6b:fc:c2:7d:e2
+                šířka: 64 bits
+                takt: 33MHz
+                schopnosti: pm msi pciexpress bus_master cap_list ethernet physical wireless
+                konfigurace: broadcast=yes driver=iwlwifi driverversion=5.15.0-46-generic firmware=36.ca7b901d.0 8265-36.ucode ip=172.17.2.164 latency=0 link=yes multicast=yes wireless=IEEE 802.11
+                prostředky: irq:131 paměť:ef100000-ef101fff
+        *-pci:1
+             popis: PCI bridge
+             produkt: 100 Series/C230 Series Chipset Family PCI Express Root Port #3
+             výrobce: Intel Corporation
+             fyzické id: 1c.2
+             informace o sběrnici: pci@0000:00:1c.2
+             verze: f1
+             šířka: 32 bits
+             takt: 33MHz
+             schopnosti: pci pciexpress msi pm normal_decode bus_master cap_list
+             konfigurace: driver=pcieport
+             prostředky: irq:123 paměť:ef000000-ef0fffff
+           *-generic
+                popis: MMC Host
+                produkt: RTS525A PCI Express Card Reader
+                výrobce: Realtek Semiconductor Co., Ltd.
+                fyzické id: 0
+                informace o sběrnici: pci@0000:02:00.0
+                logický název: mmc0
+                verze: 01
+                šířka: 32 bits
+                takt: 33MHz
+                schopnosti: pm msi pciexpress bus_master cap_list
+                konfigurace: driver=rtsx_pci latency=0
+                prostředky: irq:127 paměť:ef000000-ef000fff
+        *-pci:2
+             popis: PCI bridge
+             produkt: 100 Series/C230 Series Chipset Family PCI Express Root Port #5
+             výrobce: Intel Corporation
+             fyzické id: 1c.4
+             informace o sběrnici: pci@0000:00:1c.4
+             verze: f1
+             šířka: 32 bits
+             takt: 33MHz
+             schopnosti: pci pciexpress msi pm normal_decode bus_master cap_list
+             konfigurace: driver=pcieport
+             prostředky: irq:124 ioport:2000(velikost=4096) paměť:cf800000-cf9fffff ioport:cfa00000(velikost=2097152)
+        *-isa
+             popis: ISA bridge
+             produkt: CM238 Chipset LPC/eSPI Controller
+             výrobce: Intel Corporation
+             fyzické id: 1f
+             informace o sběrnici: pci@0000:00:1f.0
+             verze: 31
+             šířka: 32 bits
+             takt: 33MHz
+             schopnosti: isa
+             konfigurace: latency=0
+           *-pnp00:00
+                produkt: PnP device PNP0c02
+                fyzické id: 0
+                schopnosti: pnp
+                konfigurace: driver=system
+           *-pnp00:01
+                produkt: PnP device PNP0c02
+                fyzické id: 1
+                schopnosti: pnp
+                konfigurace: driver=system
+           *-pnp00:02
+                produkt: PnP device PNP0b00
+                fyzické id: 2
+                schopnosti: pnp
+                konfigurace: driver=rtc_cmos
+           *-pnp00:03
+                produkt: PnP device INT3f0d
+                fyzické id: 3
+                schopnosti: pnp
+                konfigurace: driver=system
+           *-pnp00:04
+                produkt: PnP device PNP0303
+                fyzické id: 4
+                schopnosti: pnp
+                konfigurace: driver=i8042 kbd
+           *-pnp00:05
+                produkt: PnP device PNP0c02
+                fyzické id: 5
+                schopnosti: pnp
+                konfigurace: driver=system
+           *-pnp00:06
+                produkt: PnP device PNP0c02
+                fyzické id: 6
+                schopnosti: pnp
+                konfigurace: driver=system
+           *-pnp00:07
+                produkt: PnP device PNP0c02
+                fyzické id: 7
+                schopnosti: pnp
+                konfigurace: driver=system
+           *-pnp00:08
+                produkt: PnP device PNP0c02
+                fyzické id: 8
+                schopnosti: pnp
+                konfigurace: driver=system
+           *-pnp00:09
+                produkt: PnP device PNP0c31
+                fyzické id: 9
+                schopnosti: pnp
+                konfigurace: driver=tpm_tis
+        *-memory UNCLAIMED
+             popis: Memory controller
+             produkt: 100 Series/C230 Series Chipset Family Power Management Controller
+             výrobce: Intel Corporation
+             fyzické id: 1f.2
+             informace o sběrnici: pci@0000:00:1f.2
+             verze: 31
+             šířka: 32 bits
+             takt: 33MHz (30.3ns)
+             konfigurace: latency=0
+             prostředky: paměť:ef24c000-ef24ffff
+        *-multimedia
+             popis: Audio device
+             produkt: CM238 HD Audio Controller
+             výrobce: Intel Corporation
+             fyzické id: 1f.3
+             informace o sběrnici: pci@0000:00:1f.3
+             logický název: card0
+             logický název: /dev/snd/controlC0
+             logický název: /dev/snd/hwC0D0
+             logický název: /dev/snd/hwC0D2
+             logický název: /dev/snd/pcmC0D0c
+             logický název: /dev/snd/pcmC0D0p
+             logický název: /dev/snd/pcmC0D10p
+             logický název: /dev/snd/pcmC0D3p
+             logický název: /dev/snd/pcmC0D7p
+             logický název: /dev/snd/pcmC0D8p
+             logický název: /dev/snd/pcmC0D9p
+             verze: 31
+             šířka: 64 bits
+             takt: 33MHz
+             schopnosti: pm msi bus_master cap_list
+             konfigurace: driver=snd_hda_intel latency=32
+             prostředky: irq:132 paměť:ef248000-ef24bfff paměť:ef220000-ef22ffff
+           *-input:0
+                produkt: HDA Intel PCH Headphone Mic
+                fyzické id: 0
+                logický název: input12
+                logický název: /dev/input/event12
+           *-input:1
+                produkt: HDA Intel PCH HDMI/DP,pcm=3
+                fyzické id: 1
+                logický název: input13
+                logický název: /dev/input/event13
+           *-input:2
+                produkt: HDA Intel PCH HDMI/DP,pcm=7
+                fyzické id: 2
+                logický název: input14
+                logický název: /dev/input/event14
+           *-input:3
+                produkt: HDA Intel PCH HDMI/DP,pcm=8
+                fyzické id: 3
+                logický název: input15
+                logický název: /dev/input/event15
+           *-input:4
+                produkt: HDA Intel PCH HDMI/DP,pcm=9
+                fyzické id: 4
+                logický název: input16
+                logický název: /dev/input/event16
+           *-input:5
+                produkt: HDA Intel PCH HDMI/DP,pcm=10
+                fyzické id: 5
+                logický název: input17
+                logický název: /dev/input/event17
+        *-serial
+             popis: SMBus
+             produkt: 100 Series/C230 Series Chipset Family SMBus
+             výrobce: Intel Corporation
+             fyzické id: 1f.4
+             informace o sběrnici: pci@0000:00:1f.4
+             verze: 31
+             šířka: 64 bits
+             takt: 33MHz
+             konfigurace: driver=i801_smbus latency=0
+             prostředky: irq:16 paměť:ef252000-ef2520ff ioport:f040(velikost=32)
+        *-network
+             popis: Ethernet interface
+             produkt: Ethernet Connection (5) I219-LM
+             výrobce: Intel Corporation
+             fyzické id: 1f.6
+             informace o sběrnici: pci@0000:00:1f.6
+             logický název: enp0s31f6
+             verze: 31
+             sériové číslo: 10:65:30:11:67:0c
+             kapacita: 1Gbit/s
+             šířka: 32 bits
+             takt: 33MHz
+             schopnosti: pm msi bus_master cap_list ethernet physical tp 10bt 10bt-fd 100bt 100bt-fd 1000bt-fd autonegotiation
+             konfigurace: autonegotiation=on broadcast=yes driver=e1000e driverversion=5.15.0-46-generic firmware=0.1-4 latency=0 link=no multicast=yes port=twisted pair
+             prostředky: irq:128 paměť:ef200000-ef21ffff
+        *-usb
+             popis: USB controller
+             produkt: 100 Series/C230 Series Chipset Family USB 3.0 xHCI Controller
+             výrobce: Intel Corporation
+             fyzické id: 14
+             informace o sběrnici: pci@0000:00:14.0
+             verze: 31
+             šířka: 64 bits
+             takt: 33MHz
+             schopnosti: pm msi xhci bus_master cap_list
+             konfigurace: driver=xhci_hcd latency=0
+             prostředky: irq:126 paměť:ef230000-ef23ffff
+           *-usbhost:0
+                produkt: xHCI Host Controller
+                výrobce: Linux 5.15.0-46-generic xhci-hcd
+                fyzické id: 0
+                informace o sběrnici: usb@1
+                logický název: usb1
+                verze: 5.15
+                schopnosti: usb-2.00
+                konfigurace: driver=hub slots=16 speed=480Mbit/s
+              *-usb:0
+                   popis: Bezdrátové rozhraní Bluetooth
+                   produkt: Bluetooth wireless interface
+                   výrobce: Intel Corp.
+                   fyzické id: 6
+                   informace o sběrnici: usb@1:6
+                   verze: 0.10
+                   schopnosti: bluetooth usb-2.00
+                   konfigurace: driver=btusb maxpower=100mA speed=12Mbit/s
+              *-usb:1 UNCLAIMED
+                   popis: Čtečka čipových karet
+                   produkt: 5880
+                   výrobce: Broadcom Corp
+                   fyzické id: a
+                   informace o sběrnici: usb@1:a
+                   verze: 1.01
+                   sériové číslo: 0123456789ABCD
+                   schopnosti: usb-1.10
+                   konfigurace: maxpower=100mA speed=12Mbit/s
+              *-usb:2
+                   popis: Video
+                   produkt: Integrated_Webcam_HD
+                   výrobce: CNFGH19N4914102A8542
+                   fyzické id: b
+                   informace o sběrnici: usb@1:b
+                   verze: 68.25
+                   schopnosti: usb-2.00
+                   konfigurace: driver=uvcvideo maxpower=500mA speed=480Mbit/s
+           *-usbhost:1
+                produkt: xHCI Host Controller
+                výrobce: Linux 5.15.0-46-generic xhci-hcd
+                fyzické id: 1
+                informace o sběrnici: usb@2
+                logický název: usb2
+                verze: 5.15
+                schopnosti: usb-3.00
+                konfigurace: driver=hub slots=10 speed=5000Mbit/s
+        *-generic:1
+             popis: Signal processing controller
+             produkt: 100 Series/C230 Series Chipset Family Thermal Subsystem
+             výrobce: Intel Corporation
+             fyzické id: 14.2
+             informace o sběrnici: pci@0000:00:14.2
+             verze: 31
+             šířka: 64 bits
+             takt: 33MHz
+             schopnosti: pm msi cap_list
+             konfigurace: driver=intel_pch_thermal latency=0
+             prostředky: irq:18 paměť:ef258000-ef258fff
+        *-generic:2
+             popis: Signal processing controller
+             produkt: 100 Series/C230 Series Chipset Family Serial IO I2C Controller #0
+             výrobce: Intel Corporation
+             fyzické id: 15
+             informace o sběrnici: pci@0000:00:15.0
+             verze: 31
+             šířka: 64 bits
+             takt: 33MHz
+             schopnosti: pm bus_master cap_list
+             konfigurace: driver=intel-lpss latency=0
+             prostředky: irq:16 paměť:ef257000-ef257fff
+        *-generic:3
+             popis: Signal processing controller
+             produkt: 100 Series/C230 Series Chipset Family Serial IO I2C Controller #1
+             výrobce: Intel Corporation
+             fyzické id: 15.1
+             informace o sběrnici: pci@0000:00:15.1
+             verze: 31
+             šířka: 64 bits
+             takt: 33MHz
+             schopnosti: pm bus_master cap_list
+             konfigurace: driver=intel-lpss latency=0
+             prostředky: irq:17 paměť:ef256000-ef256fff
+        *-communication
+             popis: Communication controller
+             produkt: 100 Series/C230 Series Chipset Family MEI Controller #1
+             výrobce: Intel Corporation
+             fyzické id: 16
+             informace o sběrnici: pci@0000:00:16.0
+             verze: 31
+             šířka: 64 bits
+             takt: 33MHz
+             schopnosti: pm msi bus_master cap_list
+             konfigurace: driver=mei_me latency=0
+             prostředky: irq:130 paměť:ef255000-ef255fff
+        *-raid
+             popis: RAID bus controller
+             produkt: SATA Controller [RAID mode]
+             výrobce: Intel Corporation
+             fyzické id: 17
+             informace o sběrnici: pci@0000:00:17.0
+             logický název: scsi2
+             verze: 31
+             šířka: 32 bits
+             takt: 66MHz
+             schopnosti: raid msi pm bus_master cap_list emulated
+             konfigurace: driver=ahci latency=0
+             prostředky: irq:125 paměť:ef250000-ef251fff paměť:ef254000-ef2540ff ioport:f090(velikost=8) ioport:f080(velikost=4) ioport:f060(velikost=32) paměť:ef253000-ef2537ff
+           *-disk
+                popis: ATA Disk
+                produkt: Samsung SSD 860
+                fyzické id: 0.0.0
+                informace o sběrnici: scsi@2:0.0.0
+                logický název: /dev/sda
+                verze: 2B6Q
+                sériové číslo: S4CNNG0KC34491A
+                velikost: 465GiB (500GB)
+                schopnosti: gpt-1.00 partitioned partitioned:gpt
+                konfigurace: ansiversion=5 guid=7b8d2733-a470-463b-8071-63d59efdda5e logicalsectorsize=512 sectorsize=512
+              *-volume:0
+                   popis: Windows FAT svazek
+                   výrobce: mkfs.fat
+                   fyzické id: 1
+                   informace o sběrnici: scsi@2:0.0.0,1
+                   logický název: /dev/sda1
+                   logický název: /boot/efi
+                   verze: FAT32
+                   sériové číslo: c0ae-4e09
+                   velikost: 510MiB
+                   kapacita: 511MiB
+                   schopnosti: boot fat initialized
+                   konfigurace: FATs=2 filesystem=fat mount.fstype=vfat mount.options=rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro name=EFI System Partition state=mounted
+              *-volume:1
+                   popis: EXT4 svazek
+                   výrobce: Linux
+                   fyzické id: 2
+                   informace o sběrnici: scsi@2:0.0.0,2
+                   logický název: /dev/sda2
+                   logický název: /
+                   logický název: /var/snap/firefox/common/host-hunspell
+                   verze: 1.0
+                   sériové číslo: 8185983e-e4a8-4059-b1db-2334d99eb8d3
+                   velikost: 465GiB
+                   schopnosti: journaled extended_attributes large_files huge_files dir_nlink recover 64bit extents ext4 ext2 initialized
+                   konfigurace: created=2021-09-19 15:32:59 filesystem=ext4 lastmountpoint=/ modified=2023-03-10 21:26:44 mount.fstype=ext4 mount.options=ro,noexec,noatime,errors=remount-ro mounted=2023-03-10 21:26:45 state=mounted
+  *-battery
+       produkt: DELL C7J700A
+       výrobce: BYD
+       fyzické id: 1
+       verze: 10/25/2020
+       sériové číslo: 0D7F
+       slot: Sys. Battery Bay
+       kapacita: 67990mWh
+       konfigurace: voltage=7,6V
+  *-input:0
+       produkt: Lid Switch
+       fyzické id: 2
+       logický název: input0
+       logický název: /dev/input/event0
+       schopnosti: platform
+  *-input:1
+       produkt: Power Button
+       fyzické id: 3
+       logický název: input1
+       logický název: /dev/input/event1
+       schopnosti: platform
+  *-input:2
+       produkt: Dell WMI hotkeys
+       fyzické id: 4
+       logický název: input10
+       logický název: /dev/input/event10
+       schopnosti: platform
+  *-input:3
+       produkt: Integrated_Webcam_HD: Integrate
+       fyzické id: 5
+       logický název: input11
+       logický název: /dev/input/event11
+       schopnosti: usb
+  *-input:4
+       produkt: Sleep Button
+       fyzické id: 6
+       logický název: input2
+       logický název: /dev/input/event2
+       schopnosti: platform
+  *-input:5
+       produkt: Power Button
+       fyzické id: 7
+       logický název: input3
+       logický název: /dev/input/event3
+       schopnosti: platform
+  *-input:6
+       produkt: AT Translated Set 2 keyboard
+       fyzické id: 8
+       logický název: input4
+       logický název: /dev/input/event4
+       logický název: input4::capslock
+       logický název: input4::numlock
+       logický název: input4::scrolllock
+       schopnosti: i8042
+  *-input:7
+       produkt: DLL07D1:01 044E:120B
+       fyzické id: 9
+       logický název: input5
+       logický název: /dev/input/event6
+       logický název: /dev/input/mouse1
+       schopnosti: i2c
+  *-input:8
+       produkt: DualPoint Stick
+       fyzické id: a
+       logický název: input6
+       logický název: /dev/input/event5
+       logický název: /dev/input/mouse0
+       schopnosti: i2c
+  *-input:9
+       produkt: Video Bus
+       fyzické id: b
+       logický název: input7
+       logický název: /dev/input/event7
+       schopnosti: platform
+  *-input:10
+       produkt: Intel HID events
+       fyzické id: c
+       logický název: input8
+       logický název: /dev/input/event8
+       schopnosti: platform
+  *-input:11
+       produkt: Intel HID 5 button array
+       fyzické id: d
+       logický název: input9
+       logický název: /dev/input/event9
+       schopnosti: platform
