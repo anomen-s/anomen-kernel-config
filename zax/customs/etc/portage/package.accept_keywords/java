@@ -1,9 +1,5 @@
-dev-util/idea-ultimate
-dev-util/idea-community
-dev-java/keystore-explorer
-dev-util/soapui
+dev-util/intellij-idea
 dev-util/insomnia
-dev-java/openjdk-bin:11
 dev-db/dbeaver-bin
 dev-java/openjfx:11
 app-eselect/eselect-gradle
@@ -11,3 +7,8 @@ dev-java/jd-gui
 dev-util/dex2jar-bin
 
 dev-db/sqldeveloper
+dev-java/openjdk:11
+
+dev-java/portecle
+dev-java/keystore-explorer
+dev-util/soapui

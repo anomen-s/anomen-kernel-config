@@ -12,3 +12,16 @@ app-office/libreoffice gtk2
 media-libs/mesa gles1 gles2 openmax xa vdpau 
 x11-libs/motif xft
 www-servers/lighttpd dbi
+media-gfx/imagemagick corefonts
+
+dev-db/sqldeveloper postgres
+sys-apps/groff uchardet
+app-dicts/myspell-en l10n_en-GB l10n_en-US
+net-misc/curl -gnutls
+sys-libs/readline utils
+media-libs/freetype utils
+mail-client/claws-mail litehtml webkit xface rss
+media-gfx/graphviz postscript
+net-fs/samba -ldap
+media-video/pipewire extra
+

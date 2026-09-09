@@ -1,7 +1,1 @@
-app-admin/helm
-sys-cluster/kubectl
 sys-cluster/minikube
-dev-go/go-bindata
-sys-cluster/kubelet
-sys-cluster/kubeadm
-sys-cluster/k9scli

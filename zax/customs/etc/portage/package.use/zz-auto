@@ -1,11 +1,3 @@
-# required by dev-vcs/gitg-3.32.1::gentoo
-# required by @selected
-# required by @world (argument)
->=app-text/gtkspell-3.0.9 vala
-# required by dev-vcs/gitg-3.32.1::gentoo
-# required by @selected
-# required by @world (argument)
->=dev-libs/libdazzle-3.30.2 vala
 # required by www-client/firefox-68.1.0::gentoo[system-libvpx]
 # required by @selected
 # required by @world (argument)
@@ -20,7 +12,8 @@
 # # required by app-text/calibre-4.9.1-r1::gentoo[python_single_target_python3_6]
 # # required by @selected
 # # required by @world (argument)
->=dev-python/PyQt5-5.13.2 webchannel
+# move dev-python/PyQt5 dev-python/pyqt5
+>=dev-python/pyqt5-5.13.2 webchannel
 # # required by dev-python/PyQtWebEngine-5.13.2::gentoo
 # # required by app-text/calibre-4.9.1-r1::gentoo[python_single_target_python3_6]
 # # required by @selected
@@ -48,14 +41,166 @@
 # required by @selected
 # required by @world (argument)
 >=app-arch/xz-utils-5.2.4-r2 static-libs
-# required by dev-util/itstool-2.0.6-r1::gentoo[python_single_target_python3_6]
-# required by x11-misc/shared-mime-info-1.15::gentoo
-# required by dev-lang/vala-0.48.6::gentoo
-# required by app-crypt/libsecret-0.20.3::gentoo[vala]
-# required by app-crypt/pinentry-1.1.0-r3::gentoo[gnome-keyring]
-# required by gnome-base/gnome-keyring-3.34.0::gentoo
->=dev-libs/libxml2-2.9.9-r3 python_targets_python3_6
-# required by dev-python/python-magic-0.4.27::gentoo
-# required by games-util/lutris-0.5.10.1::gentoo[python_single_target_python3_10]
-# required by lutris (argument)
 >=sys-apps/file-5.41 -python
+
+# required by x11-terms/guake-3.9.0::gentoo[python_single_target_python3_11]
+# required by @selected
+# required by @world (argument)
+>=dev-python/gpep517-16 python_targets_python3_11
+# required by x11-terms/guake-3.9.0::gentoo[python_single_target_python3_11]
+# required by @selected
+# required by @world (argument)
+>=dev-python/setuptools-69.5.1-r1 python_targets_python3_11
+# required by dev-python/setuptools-69.5.1-r1::gentoo
+# required by dev-python/mako-1.3.5::gentoo
+# required by media-libs/mesa-24.0.7::gentoo
+# required by media-plugins/gst-plugins-vaapi-1.22.11-r1::gentoo[gles2,opengl]
+# required by media-plugins/gst-plugins-meta-1.20.6::gentoo[vaapi]
+# required by @selected
+# required by @world (argument)
+>=dev-python/jaraco-text-3.12.0 python_targets_python3_11
+# required by dev-python/setuptools-69.5.1-r1::gentoo
+# required by dev-python/mako-1.3.5::gentoo
+# required by media-libs/mesa-24.0.7::gentoo
+# required by media-plugins/gst-plugins-vaapi-1.22.11-r1::gentoo[gles2,opengl]
+# required by media-plugins/gst-plugins-meta-1.20.6::gentoo[vaapi]
+# required by @selected
+# required by @world (argument)
+>=dev-python/more-itertools-10.2.0 python_targets_python3_11
+# required by dev-python/setuptools-69.5.1-r1::gentoo
+# required by dev-python/mako-1.3.5::gentoo
+# required by media-libs/mesa-24.0.7::gentoo
+# required by media-plugins/gst-plugins-vaapi-1.22.11-r1::gentoo[gles2,opengl]
+# required by media-plugins/gst-plugins-meta-1.20.6::gentoo[vaapi]
+# required by @selected
+# required by @world (argument)
+>=dev-python/ordered-set-4.1.0 python_targets_python3_11
+# required by dev-python/setuptools-69.5.1-r1::gentoo
+# required by dev-python/mako-1.3.5::gentoo
+# required by media-libs/mesa-24.0.7::gentoo
+# required by media-plugins/gst-plugins-vaapi-1.22.11-r1::gentoo[gles2,opengl]
+# required by media-plugins/gst-plugins-meta-1.20.6::gentoo[vaapi]
+# required by @selected
+# required by @world (argument)
+>=dev-python/packaging-24.0 python_targets_python3_11
+# required by dev-python/setuptools-69.5.1-r1::gentoo
+# required by dev-python/mako-1.3.5::gentoo
+# required by media-libs/mesa-24.0.7::gentoo
+# required by media-plugins/gst-plugins-vaapi-1.22.11-r1::gentoo[gles2,opengl]
+# required by media-plugins/gst-plugins-meta-1.20.6::gentoo[vaapi]
+# required by @selected
+# required by @world (argument)
+>=dev-python/platformdirs-4.2.2 python_targets_python3_11
+# required by dev-python/setuptools-69.5.1-r1::gentoo
+# required by dev-python/mako-1.3.5::gentoo
+# required by media-libs/mesa-24.0.7::gentoo
+# required by media-plugins/gst-plugins-vaapi-1.22.11-r1::gentoo[gles2,opengl]
+# required by media-plugins/gst-plugins-meta-1.20.6::gentoo[vaapi]
+# required by @selected
+# required by @world (argument)
+>=dev-python/wheel-0.43.0 python_targets_python3_11
+# required by dev-python/setuptools-69.5.1-r1::gentoo
+# required by dev-python/mako-1.3.5::gentoo
+# required by media-libs/mesa-24.0.7::gentoo
+# required by media-plugins/gst-plugins-vaapi-1.22.11-r1::gentoo[gles2,opengl]
+# required by media-plugins/gst-plugins-meta-1.20.6::gentoo[vaapi]
+# required by @selected
+# required by @world (argument)
+>=dev-python/setuptools-scm-8.1.0 python_targets_python3_11
+# required by dev-python/jaraco-text-3.12.0::gentoo
+# required by dev-python/setuptools-69.5.1-r1::gentoo
+# required by dev-python/mako-1.3.5::gentoo
+# required by media-libs/mesa-24.0.7::gentoo
+# required by media-plugins/gst-plugins-vaapi-1.22.11-r1::gentoo[gles2,opengl]
+# required by media-plugins/gst-plugins-meta-1.20.6::gentoo[vaapi]
+# required by @selected
+# required by @world (argument)
+>=dev-python/flit-core-3.9.0 python_targets_python3_11
+# required by dev-python/jaraco-text-3.12.0::gentoo
+# required by dev-python/setuptools-69.5.1-r1::gentoo
+# required by dev-python/mako-1.3.5::gentoo
+# required by media-libs/mesa-24.0.7::gentoo
+# required by media-plugins/gst-plugins-vaapi-1.22.11-r1::gentoo[gles2,opengl]
+# required by media-plugins/gst-plugins-meta-1.20.6::gentoo[vaapi]
+# required by @selected
+# required by @world (argument)
+>=dev-python/jaraco-context-5.3.0 python_targets_python3_11
+# required by dev-python/jaraco-text-3.12.0::gentoo
+# required by dev-python/setuptools-69.5.1-r1::gentoo
+# required by dev-python/mako-1.3.5::gentoo
+# required by media-libs/mesa-24.0.7::gentoo
+# required by media-plugins/gst-plugins-vaapi-1.22.11-r1::gentoo[gles2,opengl]
+# required by media-plugins/gst-plugins-meta-1.20.6::gentoo[vaapi]
+# required by @selected
+# required by @world (argument)
+>=dev-python/jaraco-functools-4.0.1 python_targets_python3_11
+# required by dev-python/jaraco-context-5.3.0::gentoo[python_targets_python3_10,python_targets_python3_11]
+# required by dev-python/jaraco-text-3.12.0::gentoo
+# required by dev-python/setuptools-69.5.1-r1::gentoo
+# required by dev-python/mako-1.3.5::gentoo
+# required by media-libs/mesa-24.0.7::gentoo
+# required by media-plugins/gst-plugins-vaapi-1.22.11-r1::gentoo[gles2,opengl]
+# required by media-plugins/gst-plugins-meta-1.20.6::gentoo[vaapi]
+# required by @selected
+# required by @world (argument)
+>=dev-python/backports-tarfile-1.1.1 python_targets_python3_11
+# required by dev-python/gpep517-16::gentoo
+# required by dev-python/mako-1.3.5::gentoo
+# required by media-libs/mesa-24.0.7::gentoo
+# required by media-plugins/gst-plugins-vaapi-1.22.11-r1::gentoo[gles2,opengl]
+# required by media-plugins/gst-plugins-meta-1.20.6::gentoo[vaapi]
+# required by @selected
+# required by @world (argument)
+>=dev-python/installer-0.7.0 python_targets_python3_11
+# required by x11-terms/guake-3.9.0::gentoo[python_single_target_python3_11]
+# required by @selected
+# required by @world (argument)
+>=dev-python/pygobject-3.46.0 python_targets_python3_11
+# required by x11-terms/guake-3.9.0::gentoo[python_single_target_python3_11]
+# required by @selected
+# required by @world (argument)
+>=dev-python/dbus-python-1.3.2 python_targets_python3_11
+
+*/* python_targets_python3_11
+# required by x11-terms/guake-3.9.0::gentoo[python_single_target_python3_11]
+# required by @selected
+# required by @world (argument)
+>=dev-python/pyyaml-6.0.1-r1 python_targets_python3_11
+# required by dev-python/pyyaml-6.0.1-r1::gentoo
+# required by dev-python/markups-4.0.0::gentoo
+# required by app-editors/retext-8.0.2::gentoo[python_single_target_python3_12]
+# required by @selected
+# required by @world (argument)
+>=dev-python/cython-3.0.10 python_targets_python3_11
+# required by dev-python/setuptools-73.0.1::gentoo
+# required by app-crypt/gpgme-1.23.2-r1::gentoo[python_targets_python3_12]
+# required by app-office/libreoffice-24.2.6.2::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-python/trove-classifiers-2024.7.2 python_targets_python3_11
+# required by dev-python/setuptools-75.6.0-r1::gentoo
+# required by dev-libs/glib-2.80.5-r1::gentoo[introspection]
+# required by media-plugins/gst-plugins-cdparanoia-1.24.11::gentoo
+# required by media-plugins/gst-plugins-meta-1.24.11::gentoo[cdda]
+# required by @selected
+# required by @world (argument)
+>=dev-python/jaraco-collections-5.1.0 python_targets_python3_11
+# required by dev-python/pyqt6-webengine-6.8.0::gentoo
+# required by app-text/calibre-7.20.0::gentoo[python_single_target_python3_12]
+# required by @selected
+# required by @world (argument)
+>=dev-python/pyqt6-6.8.0 quick webchannel
+# required by xfce-base/xfce4-panel-4.18.6::gentoo[dbusmenu]
+# required by xfce-base/thunar-4.18.11::gentoo[trash-panel-plugin]
+# required by xfce-base/thunar-volman-4.18.0::gentoo
+# required by xfce-base/xfce4-meta-4.18-r1::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-libs/libdbusmenu-16.04.0-r2 gtk3
+# required by app-text/mandoc-1.14.6::gentoo[cgi]
+# required by sys-libs/efivar-39-r1::gentoo
+# required by sys-boot/efibootmgr-18-r2::gentoo
+# required by sys-boot/grub-2.12-r7::gentoo[grub_platforms_efi-64,-grub_platforms_efi-32]
+# required by @selected
+# required by @world (argument)
+>=virtual/zlib-1.3.1-r1 static-libs

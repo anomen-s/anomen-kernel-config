@@ -4,7 +4,8 @@ sys-libs/zlib            minizip
 media-plugins/audacious-plugins    qt5 -gtk -gtk5 -libnotify
 media-sound/audacious    -gtk
 dev-lang/python          sqlite
-dev-python/PyQt5         webkit
+# move dev-python/PyQt5 dev-python/pyqt5
+dev-python/pyqt5         webkit
 app-crypt/pinentry       gnome-keyring
 media-libs/gd            fontconfig
 sys-devel/gcc            gcj
@@ -19,8 +20,6 @@ media-libs/sdl2-mixer midi mod
 dev-libs/xmlsec gcrypt
 media-libs/libsdl2      haptic
 
-net-libs/nodejs inspector
-dev-libs/libdbusmenu gtk3
 x11-libs/libdrm libkms
 www-servers/lighttpd -kerberos
 #sys-apps/file -python
@@ -28,8 +27,29 @@ sys-apps/shadow -pam
 dev-lang/php -mssql
 sys-devel/gcc graphite
 app-crypt/gpgme -qt5
-dev-util/cmake -qt5
+# move dev-util/cmake dev-build/cmake
+dev-build/cmake -qt5
 dev-libs/libpcre2 pcre32
 sys-libs/libseccomp static-libs
 media-libs/freetype harfbuzz
 media-libs/cogl gles2
+sci-mathematics/octave -imagemagick
+net-misc/openssh -X509
+# move dev-python/PyQt6 dev-python/pyqt6
+dev-python/pyqt6 quick
+# move dev-python/PyQt6 dev-python/pyqt6
+dev-python/pyqt6 qml
+# move dev-python/PyQt6 dev-python/pyqt6
+dev-python/pyqt6 webchannel
+dev-qt/qtmultimedia  gstreamer -eglfs -vaapi -ffmpeg
+dev-lang/python:2.7 -tk
+net-analyzer/rrdtool graph
+www-client/elinks libcss
+xfce-base/libxfce4ui vala
+xfce-base/libxfce4util vala
+xfce-base/xfce4-panel vala introspection
+xfce-base/xfconf vala
+x11-libs/gtk+ wayland
+media-libs/mesa wayland
+app-crypt/gpgme -qt6
+net-firewall/iptables nftables

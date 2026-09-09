@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# 2026-09
+# quick-and-dirty wrapper script for broken guake shortcut key
+# invoked by global xfce4 binding
+
+#sleep 1
+F="${XDG_RUNTIME_DIR:-/tmp}/guake-state-$USER"
+echo "File: $F" >> "/tmp/guake-$USER.log"
+
+if [ ! -e "$F" ]
+then
+ touch "$F"
+fi
+
+#if [ 1 = `guake --is-visible` ]
+#then
+# echo 1 > "$F"
+#fi
+
+if [ 1 = `cat "$F"` ]
+then
+ date  >> "/tmp/guake-$USER.log"
+ echo "Hiding: " `cat "$F"` "x" >> "/tmp/guake-$USER.log"
+ echo 0 > "$F"
+# guake --hide
+else
+ date  >> "/tmp/guake-$USER.log"
+ echo "Show "  `cat "$F"` "x" >> "/tmp/guake-$USER.log"
+ echo 1 > "$F"
+ guake --show
+fi

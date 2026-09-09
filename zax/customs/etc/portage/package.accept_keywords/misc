@@ -8,11 +8,7 @@ app-editors/sublime-text
 media-video/mkvalidator
 app-text/diffpdf
 dev-util/memfetch
-dev-java/portecle
 dev-util/asn1c
-dev-java/keystore-explorer
-dev-util/soapui
-mail-mta/spamsink
 dev-db/dbvis
 app-text/unicode
 app-emulation/wine
@@ -25,13 +21,20 @@ app-arch/unarr
 media-gfx/yacreader
 
 net-news/rssguard
-games-misc/cowsay
 net-nds/ApacheDirectoryStudio
 
-sci-mathematics/yafu
 net-misc/youtube-viewer
 
 dev-util/yamllint
 dev-util/difftastic
 app-text/cpdf
 dev-ml/camlpdf
+sys-apps/x86info
+app-crypt/johntheripper-jumbo
+
+app-misc/eobcanka
+net-analyzer/ssh-audit
+net-libs/librist
+dev-python/pathspec
+app-admin/keepassxc
+=x11-terms/guake-3.10.1

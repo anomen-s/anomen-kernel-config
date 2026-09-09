@@ -1,1 +1,1 @@
-../../usr/portage/profiles/default/linux/amd64/17.1/desktop
+../../mnt/work/portage/profiles/default/linux/amd64/23.0/desktop

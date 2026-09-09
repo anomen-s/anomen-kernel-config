@@ -1,0 +1,4 @@
+dev-vcs/git tk
+
+app-text/gtkspell vala
+dev-libs/libdazzle vala
