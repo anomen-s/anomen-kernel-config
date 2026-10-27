@@ -23,6 +23,7 @@ else
     extension=""
 fi
 
+echo "!!! use imv !!!"
 echo "File:              $filename"
 echo "Filename w/o ext.: $filename_no_ext"
 echo "File extension:    $extension"
